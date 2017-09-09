@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安家网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+
+    </style>
+</head>
+
+<script>
+//    window.onload=function () {
+////        $('#yourElement').animateCss('bounceInLeft');
+//    }
+
+</script>
+<body>
+
+<div  id="mycontainer" class="container" >
+    <div class="row">
+        <div class="col-md-6">
+<nav class="navbar  navbar-mycolor navbar-fixed-top"  >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo1.png" alt="" style="width: 80px;height: 50px;margin-top: -11px">
+            </a>
+            <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
+                    data-target="#navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar icon-bar-success"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse " id="navbar-collapse" >
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
+                <li ><a href="#" ><span ></span>租房</a></li>
+                <li><a href="#"><span class="nav-lvju"><img src="images/lvju.png" alt=""></span>合租房</a></li>
+                <li><a href="#"><span ></span>小区</a></li>
+                <li><a href="#"><span ></span>经纪人</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>业主</a></li>
+                <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a href="#"><span ></span>注册</a></li>
+                <li><a href="#"><span ></span>登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+        </div>
+    </div>
+    <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document" style="background-color: rgba(0,0,0,0.13)">
+            <div class="modal-content" id="mymodal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="mycontainer-sousuo">
+            <div class="input-group input-group-lg col-md-12 ">
+                <h1 class="animated bounceInLeft " id="topanimate" >毕业实习没住处，快来找月付！</h1>
+                <input type="text"  class="form-control animated bounceInRight" id="form-control" placeholder="请输入城市·区域名开始找房" >
+                <span class="input-group-btn" id="input-group-btn">
+                <button class="btn btn-success animated bounceInRight "  id="dowebok" type="button" >开始找房</button>
+      </span>
+</div>
+    </div>
+
+</div>
+<div class="gongju">
+    <div class="col-md-3 col-sm-6" >
+        <img src="images/ditulogo.png" alt="">
+             <h4>地图找房</h4>
+        <p>为你精确定位，位置以及周边配套设施一览无余</p>
+    </div>
+    <div class="col-md-3 col-sm-6" >
+        <img src="images/hezulogo.png" alt="">
+        <h4>找租房</h4>
+        <p>为你精心挑选房源，适合上班族。</p>
+    </div>
+    <div class="col-md-3 col-sm-6" >
+        <img src="images/zufanglogo.png" alt="">
+        <h4>找合租房</h4>
+        <p>毕业出来工作，手头没钱不如来合租。认识一俩朋友，也是不错！</p>
+    </div>
+    <div class="col-md-3 col-sm-6" >
+        <img src="images/jisuanqilogo.png" alt="">
+        <h4>计算器</h4>
+        <p>生活就待精打细算</p>
+    </div>
+
+</div>
+<div class="house-list">
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div href="#" class="thumbnail">
+                <img src="images/h1.jpg" alt="">
+                <div class="caption">
+                    <h3>马家堡 星河城 东南三区</h3>
+                    <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div href="#" class="thumbnail">
+                <img src="images/h1.jpg" alt="">
+                <div class="caption">
+                    <h3>马家堡 星河城 东南三区</h3>
+                    <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div href="#" class="thumbnail">
+                <img src="images/h1.jpg" alt="">
+                <div class="caption">
+                    <h3>马家堡 星河城 东南三区</h3>
+                    <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div href="#" class="thumbnail">
+                <img src="images/h1.jpg" alt="">
+                <div class="caption">
+                    <h3>马家堡 星河城 东南三区</h3>
+                    <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
