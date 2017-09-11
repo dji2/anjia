@@ -18,7 +18,7 @@ router.post('/login', function (req, res, next) {
     if (user) {
         console.log(user);
         userdao.getPasswordById(user.telephone, function (result) {
-            console.log('565656');
+            console.log('565656 ');
             if (result == 'e004') {
                 res.json({"stateCode": result});
             } else {
