@@ -25,11 +25,12 @@ exports.userDao={
     },
     addUser:function (user,callback) {
 
-        this.getPasswordById(userSql.getPasswordById.telephone,function (result) {
+        this.getPasswordById(user.telephone,function (result) {
             if(result.length==0){
                 pool.getConnection(function (error,client) {
                     if(error){
-                        return
+                        console.log("数据库连接错误");
+                        return;
                     }
                     client.query(userSql.addUser,[user.telephone,user.password,'',81],function (error,result) {
                         if(error){
@@ -37,7 +38,8 @@ exports.userDao={
                             return;
                         }
                         callback(result.affectedRows);
-                        client.end();
+
+                        client.release();
                     })
                 })
             }else {

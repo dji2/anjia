@@ -89,7 +89,7 @@ var sms = {
     }
 }
 
-sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
-    console.log(data);
-});
+// sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
+//     console.log(data);
+// });
 module.exports = sms;

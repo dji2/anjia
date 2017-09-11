@@ -18,7 +18,6 @@ router.post('/login', function (req, res, next) {
     if (user) {
         console.log(user);
         userdao.getPasswordById(user.telephone, function (result) {
-            console.log('565656 ');
             if (result == 'e004') {
                 res.json({"stateCode": result});
             } else {
@@ -43,6 +42,27 @@ router.post('/login', function (req, res, next) {
                 }
             }
         })
+    }
+});
+
+
+router.post('/regist', function (req, res, next) {
+    console.log("route regist");
+    var user  = req.body;
+
+    if(user){
+        console.log(user);
+        user.password=util.MD5(user.password);
+        console.log(user);
+        userdao.addUser(user,function (result) {
+            if(result == 1){
+                console.log("注册成功");
+                res.json({"stateCode": 6});
+            }else{
+                res.json({"stateCode": 7});
+                console.log("注册失败");
+            }
+        });
     }
 });
 router.post('/upload', function (request, response, next) {
@@ -110,9 +130,7 @@ router.post('/upload', function (request, response, next) {
 
 
 });
-router.post('/adduser', function (req, res, next) {
-    res.send('respond with a resource');
-});
+
 
 router.post('/getUserIcon', function (req, res, next) {
     var user_telephone=req.body.telephone;
