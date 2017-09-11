@@ -5,43 +5,75 @@ var formidable=require('formidable');
 var AVATAR_UPLOAD_FOLDER='/uploads/';
 var fs = require('fs');
 var userdao = require('./../dao/userDAO').userDao;
+var sms = require('./../utils/sendMessage');
+
+
+
+
+router.post('/check', function (req, res, next) {
+    var user = req.body;
+    var checkCode  =parseInt(Math.random()*1000000) ;
+    var obj = {
+        PhoneNumbers: '18362202673',
+        TemplateCode: 'SMS_95040006',//模板编号
+        TemplateParam: '{"number":"1314520"}',//变量名
+    };
+    obj.PhoneNumbers = user.telephone;
+    var o = JSON.parse(obj.TemplateParam);
+    o.number = checkCode;
+    console.log(o.number);
+    obj.TemplateParam = JSON.stringify(o);
+    // sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
+    //     console.log(data);
+    // });
+
+
+});
+
 router.get('/login', function (req, res, next) {
     var user = req.query;
     console.log('here');
     console.log(user);
     res.json({"stateCode": 3});
 });
+
+
 router.post('/login', function (req, res, next) {
     console.log("route login");
     var user = req.body;
-
+    console.log("checkcode"+checkCode);
     if (user) {
         console.log(user);
-        userdao.getPasswordById(user.telephone, function (result) {
-            if (result == 'e004') {
-                res.json({"stateCode": result});
-            } else {
-                if (result.length == 0) {
-                    res.json({"stateCode": 3});
+        if(user.code == checkCode){
+            userdao.getPasswordById(user.telephone, function (result) {
+                if (result == 'e004') {
+                    res.json({"stateCode": result});
                 } else {
-                    if (result[0].password == util.MD5(user.password)) {
-
-                        //产生令牌
-                        var _token = util.createUnique();
-                        console.log(_token);
-                        userdao.createToken(user.telephone, _token, function (result) {
-                            console.log(result);
-                            if (result.affectedRows == 1) {
-                                res.json({"stateCode": 1, "token": _token});
-                            }
-                        });
-
+                    if (result.length == 0) {
+                        res.json({"stateCode": 3});
                     } else {
-                        res.json({"stateCode": 2});
+                        if (result[0].password == util.MD5(user.password)) {
+
+                            //产生令牌
+                            var _token = util.createUnique();
+                            console.log(_token);
+                            userdao.createToken(user.telephone, _token, function (result) {
+                                console.log(result);
+                                if (result.affectedRows == 1) {
+                                    res.json({"stateCode": 1, "token": _token});
+                                }
+                            });
+
+                        } else {
+                            res.json({"stateCode": 2});
+                        }
                     }
                 }
-            }
-        })
+            })
+        }else{
+            res.json({"stateCode": 9});
+        }
+
     }
 });
 

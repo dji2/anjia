@@ -8,8 +8,8 @@ var http = require('http');
 var alidayuUrl = 'http://dysmsapi.aliyuncs.com/';
 // var OPAPI = require('opapi');
 var config = {
-    AppKey: 'LTAI44wVH1TGSUP5',
-    AppSecret: 'P7s7Y25WEt50y86wOoIDO52WWkH1f0'
+    AppKey: 'LTAITnHD8Sfhfet3',
+    AppSecret: 'DTfV8EP6a7OjBCjCA93loVv4l6yuA4'
 };
 var obj = {
     AccessKeyId: config.AppKey,
@@ -17,11 +17,11 @@ var obj = {
     Format: 'JSON',
     PhoneNumbers: '15503878257',
     RegionId: 'cn-hangzhou',
-    SignName: '安家网',//输入模板名称
+    SignName: '安家',//输入模板名称
     SignatureMethod: 'HMAC-SHA1',
     SignatureNonce: uuid.v1(),
     SignatureVersion: '1.0',
-    TemplateCode: 'SMS_90805001',//模板编号
+    TemplateCode: 'SMS_95040006',//模板编号
     TemplateParam: '{"number":"1314520"}',//变量名
     Timestamp: '',
     Version: '2017-05-25'
