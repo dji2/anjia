@@ -6,13 +6,13 @@ var AVATAR_UPLOAD_FOLDER='/uploads/';
 var fs = require('fs');
 var userdao = require('./../dao/userDAO').userDao;
 var sms = require('./../utils/sendMessage');
-
+var checkCode="121212";
 
 
 
 router.post('/check', function (req, res, next) {
     var user = req.body;
-    var checkCode  =parseInt(Math.random()*1000000) ;
+    checkCode  =parseInt(Math.random()*1000000) ;
     var obj = {
         PhoneNumbers: '18362202673',
         TemplateCode: 'SMS_95040006',//模板编号
@@ -44,7 +44,7 @@ router.post('/login', function (req, res, next) {
     console.log("checkcode"+checkCode);
     if (user) {
         console.log(user);
-        if(user.code == checkCode){
+
             userdao.getPasswordById(user.telephone, function (result) {
                 if (result == 'e004') {
                     res.json({"stateCode": result});
@@ -70,9 +70,7 @@ router.post('/login', function (req, res, next) {
                     }
                 }
             })
-        }else{
-            res.json({"stateCode": 9});
-        }
+
 
     }
 });
@@ -81,20 +79,26 @@ router.post('/login', function (req, res, next) {
 router.post('/regist', function (req, res, next) {
     console.log("route regist");
     var user  = req.body;
-
+    console.log("checkcode"+checkCode);
     if(user){
         console.log(user);
-        user.password=util.MD5(user.password);
-        console.log(user);
-        userdao.addUser(user,function (result) {
-            if(result == 1){
-                console.log("注册成功");
-                res.json({"stateCode": 6});
-            }else{
-                res.json({"stateCode": 7});
-                console.log("注册失败");
-            }
-        });
+        if(user.code == checkCode){
+            user.password=util.MD5(user.password);
+            console.log(user);
+            userdao.addUser(user,function (result) {
+                console.log(result);
+                if(result == 1){
+                    console.log("注册成功");
+                    res.json({"stateCode": 6});
+                }else{
+                    res.json({"stateCode": 7});
+                    console.log("注册失败");
+                }
+            });
+        }else{
+            res.json({"stateCode": 9});
+        }
+
     }
 });
 router.post('/upload', function (request, response, next) {
