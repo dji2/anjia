@@ -8,6 +8,7 @@
   background-repeat:no-repeat;
   /*position: fixed;*/
   position: static;
+  margin-left: -105px;
   overflow-x:hidden;
 }
 

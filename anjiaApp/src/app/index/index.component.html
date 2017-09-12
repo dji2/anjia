@@ -1,58 +1,60 @@
 
-<div class="mybody">
+<div class="mybody" style="width:1349px;">
+
 <div id="mycontainer"  >
-    <nav class="navbar " id="myself-nav" >
-      <div class="container-fluid">
-        <div class="navbar-header " >
-          <a class="navbar-brand" href="#">
-            <img src="../assets/images/logo1.png" alt="" style="width: 40px;height: 30px;margin-top: -11px">
-          </a>
-          <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
-                  data-target="#navbar-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar icon-bar-success"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse " id="navbar-collapse" >
-          <ul class="nav navbar-nav navbar-right ">
-            <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
-            <li ><a href="#" ><span ></span>租房</a></li>
-            <li><a href="#"><span class="nav-lvju"><img src="../assets/images/lvju.png" alt="" ></span>合租房</a></li>
-            <li><a href="#"><span ></span>小区</a></li>
-            <li><a href="#"><span ></span>经纪人</a></li>
-            <li><a href="#"><span ></span>业主</a></li>
-            <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span ></span>注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
-          </ul>
-        </div>
+  <nav class="navbar "   *ngIf="!_hiddenNavs" id="myself-nav" >
+    <div class="container-fluid">
+      <div class="navbar-header " >
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/logo1.png" alt="" style="width: 40px;height: 30px;margin-top: -11px">
+        </a>
+        <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
+                data-target="#navbar-collapse">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar icon-bar-success"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
+      <div class="collapse navbar-collapse " id="navbar-collapse" >
+        <ul class="nav navbar-nav navbar-right ">
+          <li class="active "><a routerLink='/index' routerLinkActive="active"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
+          <li ><a routerLink="/search" routerLinkActive="active" ><span ></span>租房</a></li>
+          <li><a href="#"><span class="nav-lvju"><img src="../assets/images/lvju.png" alt="" ></span>合租房</a></li>
+          <li><a href="#"><span ></span>小区</a></li>
+          <li><a routerLink="/personal-center" routerLinkActive="active"><span ></span>经纪人</a></li>
+          <li><a href="#"><span ></span>业主</a></li>
+          <li data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a routerLink="/login" routerLinkActive="active"><span ></span>注册</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+        </ul>
+      </div>
+    </div>
 
-      <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document" >
-          <div class="modal-content" id="mymodal-content" >
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
-            </div>
-            <app-login></app-login>
-
+    <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document" >
+        <div class="modal-content" id="mymodal-content" >
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
           </div>
+          <app-login></app-login>
+
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
     <div class="row " >
-
       <div class="input-group input-group-lg col-md-12 ">
         <h1 class="animated bounceInLeft " id="topanimate" >毕业实习没住处，快来找月付！</h1>
-        <input type="text"  class="form-control animated bounceInRight  "  placeholder="请输入城市·区域名开始找房" >
+        <input type="text"  class="form-control animated bounceInRight"  placeholder="请输入城市·区域名开始找房" >
         <span class="input-group-btn " id="input-group-btn">
                 <button class="btn btn-success animated bounceInRight"  type="button" >开始找房</button>
       </span>
       </div>
     </div>
 </div>
+
+
     <div class="row gongju">
       <div class="col-md-3 col-sm-6" >
         <img class="animated rubberBand" src="../assets/images/ditulogo.png" alt="">
