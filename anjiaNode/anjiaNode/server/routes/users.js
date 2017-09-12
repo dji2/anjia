@@ -23,9 +23,9 @@ router.post('/check', function (req, res, next) {
     o.number = checkCode;
     console.log(o.number);
     obj.TemplateParam = JSON.stringify(o);
-    // sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
-    //     console.log(data);
-    // });
+    sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
+        console.log(data);
+    });
 
 
 });
@@ -86,11 +86,14 @@ router.post('/regist', function (req, res, next) {
             user.password=util.MD5(user.password);
             console.log(user);
             userdao.addUser(user,function (result) {
-                console.log(result);
+                console.log("注册返回值"+result);
                 if(result == 1){
                     console.log("注册成功");
                     res.json({"stateCode": 6});
-                }else{
+                }else if(result == 5){
+                    res.json({"stateCode": 5});
+                    console.log("用户已存在");
+                } else{
                     res.json({"stateCode": 7});
                     console.log("注册失败");
                 }
