@@ -2,3 +2,7 @@
   text-decoration: none;
   background: gray;
 }
+.container{
+  width: 100%;
+  overflow-x:hidden;
+}

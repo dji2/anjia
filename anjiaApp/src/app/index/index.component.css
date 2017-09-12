@@ -1,61 +1,176 @@
 
-ul,li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/*ul,li{*/
+  /*list-style: none;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
+/*.position_container{*/
+  /*width: 100%;*/
+  /*height: 180px;*/
+  /*border: solid 1px gainsboro;*/
+  /*display: flex;*/
+  /*padding: 20px;*/
+  /*box-sizing: border-box;*/
+/*}*/
+
+/*.position_container .position_left{*/
+  /*flex: 6;*/
+
+  /*border-right: dotted 1px grey;*/
+/*}*/
+
+/*.position_container .position_right{*/
+  /*flex: 4;*/
+  /*!*background: red;*!*/
+/*}*/
+
+/*.position_container .position_left .position_left_01{*/
+  /*font-size: 1.5em;*/
+  /*color: #31b0d5;*/
+
+/*}*/
+
+/*.position_container .position_left .position_left_01:hover{*/
+  /*color: red;*/
+  /*cursor: default;*/
+/*}*/
+
+/*.position_container .position_left .position_left_02{*/
+
+  /*width: 100%;*/
+  /*height: 40%;*/
+/*}*/
+
+/*.position_container .position_left .position_left_02 ul li{*/
+  /*float: left;*/
+  /*padding-right: 20px;*/
+  /*padding-left: 10px;*/
+  /*text-align: left;*/
+  /*font-size: 1.1em;*/
+  /*margin-top: 20px;*/
+  /*border-right: solid 1px grey;*/
+/*}*/
+
+/*.position_container .position_left .position_left_02 ul li:first-child{*/
+  /*padding-left: 0px;*/
+  /*color: red;*/
+/*}*/
+
+/*.position_container .position_left .position_left_02 ul li:last-child{*/
+  /*border-right: none;*/
+/*}*/
+
+.mybody{
+  background: url(../../assets/images/anbg.png)  ;
+  background-size:100% 660px;
+  background-repeat:no-repeat;
+  /*position: fixed;*/
+  position: static;
+  margin-left: 0px;
+  overflow-x:hidden;
 }
-.position_container{
+
+.navbar-collapse ul li a{
+  color: white;
+}
+
+
+.navbar-collapse ul li a:hover{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-lvju img{
+  width: 20px;
+}
+
+
+
+
+.input-group{
+  margin: 0 auto;
+  margin-top: 300px;
+  width: 50%;
+}
+
+
+#mycontainer{
+  background-color: rgba(14, 70, 48, 0.22);
+
+  height: 660px;
+}
+#topanimate{
+
+  font-size: 38px;
+  color: rgba(254, 255, 211, 1);
+  text-align: center;
+  margin-left: 180px;
+  margin-top: -150px;
+
+}
+#mymodal-content{
+
+  width: 500px;
+  height: 500px;
+  margin-left: 420px;
+  margin-top: 120px;
+
+}
+
+.gongju{
   width: 100%;
-  height: 180px;
-  border: solid 1px gainsboro;
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.position_container .position_left{
-  flex: 6;
-
-  border-right: dotted 1px grey;
-}
-
-.position_container .position_right{
-  flex: 4;
-  /*background: red;*/
-}
-
-.position_container .position_left .position_left_01{
-  font-size: 1.5em;
-  color: #31b0d5;
+  height: 350px;
+  margin-top: 100px;
 
 }
+.gongju img{
+  width: 76px;
+  height: 65px;
+  margin: 0 auto 17px auto;
+  display: block;
+  transition: width 0.1s;
+  -webkit-transition: width 0.1s; /* Safari */
+}
+.gongju img:hover{
 
-.position_container .position_left .position_left_01:hover{
-  color: red;
-  cursor: default;
+  animation-name: pulse;
+}
+.gongju h4{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+.gongju p{
+  text-align: center;
 }
 
-.position_container .position_left .position_left_02{
+.house-list{
+  margin: -100px 50px 70px 50px;
+}
 
+.house-list .house-list-title h4{
+  margin-left: 2px;
+
+}
+.house-list p,h4{
+  text-align: center;
+}
+.house-list img{
   width: 100%;
-  height: 40%;
 }
 
-.position_container .position_left .position_left_02 ul li{
-  float: left;
-  padding-right: 20px;
-  padding-left: 10px;
-  text-align: left;
-  font-size: 1.1em;
-  margin-top: 20px;
-  border-right: solid 1px grey;
+.house-list .price{
+  margin-top: -40px;
+  width: 80px;
+  height: 20px;
+  background-color: rgba(100, 177, 145, 0.82);
+  position: absolute;
+  margin-left: 1px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.position_container .position_left .position_left_02 ul li:first-child{
-  padding-left: 0px;
-  color: red;
-}
-
-.position_container .position_left .position_left_02 ul li:last-child{
-  border-right: none;
-}
