@@ -1,6 +1,5 @@
 .search{
   height: 60px;
-  border-bottom: solid 1px gainsboro;
   padding-top: 13px;
 }
 .zufang {
@@ -39,6 +38,10 @@
   text-align: center;
 }
 /*租房导航-----------------*/
+.bg{
+  background-color: #F1F1F1;
+  border-top: solid 1px gainsboro;
+}
 .nav-zufang{
   padding: 18px 10px 12px 26px;
   background: #fff;
@@ -52,7 +55,7 @@ dl {
 .dl-lst dt {
   width: 42px;
   overflow: hidden;
-  /*float: left;*/
+  float: left;
   height: 27px;
   line-height: 27px;
   font-size: 12px;
@@ -112,18 +115,6 @@ dl {
 }
 input{
   outline: none;
-  /*resize: none;*/
-  /*-webkit-appearance: textfield;*/
-  /*background-color: white;*/
-  /*-webkit-rtl-ordering: logical;*/
-  /*user-select: text;*/
-  /*cursor: auto;*/
-  /*text-rendering: auto;*/
-  /*letter-spacing: normal;*/
-  /*word-spacing: normal;*/
-  /*text-transform: none;*/
-  /*text-indent: 0px;*/
-  /*text-shadow: none;*/
 }
 /*房屋排序-------------------*/
 .main-box {
@@ -181,10 +172,7 @@ a {
   text-decoration: none;
   outline: none;
 }
-/*a:-webkit-any-link {*/
-/*color: -webkit-link;*/
-/*cursor: auto;*/
-/*}*/
+
 .house-list .pic-panel img {
   width: 173px;
   height: 130px;
@@ -202,16 +190,7 @@ img{
   height: 130px;
   /*width: 75%;*/
 }
-/*.house-list h2 {*/
-/*overflow: hidden;*/
-/*text-overflow: ellipsis;*/
-/*font-size: 20px;*/
-/*white-space: nowrap;*/
-/*width: 100%;*/
-/*height: 32px;*/
-/*line-height: 20px;*/
-/*vertical-align: middle;*/
-/*}*/
+
 .info-panel h2{
   margin-top: -5px;
 }
