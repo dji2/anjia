@@ -9,6 +9,8 @@ import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { OwnerComponent } from './owner/owner.component';
+import { RentHouseComponent } from './rent-house/rent-house.component';
 
 //导入路由模块
 
@@ -34,7 +36,9 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     SearchComponent,
     PageNotFoundComponent,
     LoginComponent,
-    PositionDetailComponent
+    PositionDetailComponent,
+    OwnerComponent,
+    RentHouseComponent
   ],
   imports: [
     BrowserModule,
