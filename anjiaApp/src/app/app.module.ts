@@ -9,7 +9,9 @@ import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-
+import { OwnerComponent } from './owner/owner.component';
+import { HousesComponent } from './houses/houses.component';
+import { FooterComponent } from './footer/footer.component';
 //导入路由模块
 
 import {AppRoutingModule} from './app-routing.module';
@@ -27,6 +29,7 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,10 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     SearchComponent,
     PageNotFoundComponent,
     LoginComponent,
-    PositionDetailComponent
+    PositionDetailComponent,
+    OwnerComponent,
+    HousesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

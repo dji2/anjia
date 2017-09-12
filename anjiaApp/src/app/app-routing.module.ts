@@ -8,7 +8,8 @@ import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
-
+import { OwnerComponent } from './owner/owner.component';
+import { HousesComponent } from './houses/houses.component';
 
 const routes: Routes = [
 
@@ -22,8 +23,16 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
+    path: 'houses',
+    component: HousesComponent
+  },
+  {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'owner',
+    component: OwnerComponent
   },
   {
     path: 'detail/:id',
