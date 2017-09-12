@@ -4,12 +4,14 @@ import {FormsModule} from '@angular/forms'
 
 import { PersonalCenterComponent } from './personal-center.component';
 import { SettingComponent } from './setting/setting.component';
-import { MyMenusComponent } from './my-menus/my-menus.component';
-import { MyCollectonsComponent } from './my-collectons/my-collectons.component';
+import { MyRentComponent } from './my-rent/my-rent.component';
 
 //导入路由模块
 
 import {PersonalCenterRoutingModule} from './personal-center-routing.module';
+import { MyRecordComponent } from './my-record/my-record.component';
+import { MyCommunityComponent } from './my-community/my-community.component';
+
 
 
 
@@ -17,8 +19,10 @@ import {PersonalCenterRoutingModule} from './personal-center-routing.module';
   declarations: [
     PersonalCenterComponent,
     SettingComponent,
-    MyMenusComponent,
-    MyCollectonsComponent
+    MyRentComponent,
+    MyRecordComponent,
+    MyCommunityComponent,
+    MyRentComponent
   ],
   imports: [
     BrowserModule,
