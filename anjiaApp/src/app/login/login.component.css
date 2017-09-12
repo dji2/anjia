@@ -1,37 +1,8 @@
-.btn-login{
-  width: 300px;
-  height: 50px;
-  margin-left: 35px;
-
-}
-#form-control{
-  margin-top: 35px
+.ng-valid[required], .ng-valid.required{
+  border-left: 5px solid #42A948; /* green */
 }
 
-#yzm-register{
-  margin-left: 308px;
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
 }
 
-.btn-register{
-  width: 300px;
-  height: 50px;
-  margin-left: 110px;
-}
-
-.form-group{
-  margin-top: 20px;
-}
-#tel-input{
-  position: relative;
-}
-.tel-yzm{
-  position: absolute;
-  margin-top: -32px;
-  margin-left: 500px;
-  width: 90px;
-  height: 30px;
-}
-*{
-  margin: 0;
-  padding: 0;
-}

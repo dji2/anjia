@@ -1,16 +1,13 @@
 /**
  * Created by lzhan on 2017/9/3.
  */
-import { NgModule } from '@angular/core';
+import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { OwnerComponent } from './owner/owner.component';
-import { RentHouseComponent } from './rent-house/rent-house.component';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
-
 
 
 const routes: Routes = [
@@ -27,14 +24,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'owner',
-    component: OwnerComponent
-  },
-  {
-    path: 'rent-house',
-    component: RentHouseComponent
   },
   {
     path: 'detail/:id',

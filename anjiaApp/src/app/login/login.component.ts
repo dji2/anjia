@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
   toLogin(login_form){
     let that=this;
     that.userSer.login(login_form.form.value,function (result) {
-
+      alert(result.stateCode);
       if(result.stateCode==1){
-        that.router.navigate(['/index',3]);
+        that.router.navigate(['/index']);
       }else {
         alert(result.stateCode);
         that.login_res='用户名或密码错误';

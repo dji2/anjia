@@ -9,8 +9,6 @@ import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { OwnerComponent } from './owner/owner.component';
-import { RentHouseComponent } from './rent-house/rent-house.component';
 
 //导入路由模块
 
@@ -26,8 +24,6 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 import {GlobalPropertyService} from './services/global-property.service';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavComponent } from './nav/nav.component';
 
 
 
@@ -38,11 +34,7 @@ import { NavComponent } from './nav/nav.component';
     SearchComponent,
     PageNotFoundComponent,
     LoginComponent,
-    PositionDetailComponent,
-    OwnerComponent,
-    RentHouseComponent,
-    FooterComponent,
-    NavComponent
+    PositionDetailComponent
   ],
   imports: [
     BrowserModule,

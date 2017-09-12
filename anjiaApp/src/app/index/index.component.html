@@ -1,190 +1,26 @@
 
-<div class="mybody">
-<div id="mycontainer"  >
-    <nav class="navbar " id="myself-nav" >
-      <div class="container-fluid">
-        <div class="navbar-header " >
-          <a class="navbar-brand" href="#">
-            <img src="../assets/images/logo1.png" alt="" style="width: 40px;height: 30px;margin-top: -11px">
-          </a>
-          <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
-                  data-target="#navbar-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar icon-bar-success"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+<div class="row">
+  <div class="col-md-2">广告位</div>
+  <div class="col-md-10">
+    <div class="position_container" *ngFor="let position of positions" (click)="toPositionDetail(position.id)">
+      <div class="position_left">
+        <div class="position_left_01">
+          {{position.name}}
         </div>
-        <div class="collapse navbar-collapse " id="navbar-collapse" >
-          <ul class="nav navbar-nav navbar-right ">
-            <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
-            <li ><a href="#" ><span ></span>租房</a></li>
-            <li><a href="#"><span class="nav-lvju"><img src="../assets/images/lvju.png" alt="" ></span>合租房</a></li>
-            <li><a href="#"><span ></span>小区</a></li>
-            <li><a href="#"><span ></span>经纪人</a></li>
-            <li><a href="#"><span ></span>业主</a></li>
-            <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span ></span>注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+        <div class="position_left_02">
+          <ul>
+            <li>{{position.salary}}</li>
+            <li>{{position.city_name}}</li>
+            <li>{{position.education}}</li>
+            <li>{{position.years_working}}</li>
           </ul>
         </div>
-      </div>
-
-      <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document" >
-          <div class="modal-content" id="mymodal-content" >
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
-            </div>
-            <app-login></app-login>
-
-          </div>
+        <div class="position_left_03">
+          4小时前 | 投递后：5天以内反馈
         </div>
       </div>
-    </nav>
-    <div class="row " >
-
-      <div class="input-group input-group-lg col-md-12 ">
-        <h1 class="animated bounceInLeft " id="topanimate" >毕业实习没住处，快来找月付！</h1>
-        <input type="text"  class="form-control animated bounceInRight  "  placeholder="请输入城市·区域名开始找房" >
-        <span class="input-group-btn " id="input-group-btn">
-                <button class="btn btn-success animated bounceInRight"  type="button" >开始找房</button>
-      </span>
-      </div>
+      <div class="position_right"></div>
     </div>
-</div>
-    <div class="row gongju">
-      <div class="col-md-3 col-sm-6" >
-        <img class="animated rubberBand" src="../assets/images/ditulogo.png" alt="">
-        <h4>地图找房</h4>
-        <p>为你精确定位</p>
-      </div>
-      <div class="col-md-3 col-sm-6" >
-        <img  class="animated rubberBand" src="../assets/images/hezulogo.png" alt="">
-        <h4>找租房</h4>
-        <p>为你精心挑选房源，适合上班族。</p>
-      </div>
-      <div class="col-md-3 col-sm-6" >
-        <img  class="animated rubberBand"  src="../assets/images/zufanglogo.png" alt="">
-        <h4>找合租房</h4>
-        <p>毕业出来工作，手头没钱不如来合租。认识一俩朋友，也是不错！</p>
-      </div>
-      <div class="col-md-3 col-sm-6"  >
-        <img  class="animated rubberBand"  src="../assets/images/jisuanqilogo.png" alt="">
-        <h4>计算器</h4>
-        <p>生活就待精打细算</p>
-      </div>
-
-    </div>
-    <div class="house-list" >
-      <div class="row house-list-title">
-        <h2>更多好房，为你而选</h2>
-        <span style="margin-left:90%"><a href="">更多在租房>></a></span>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div href="#" class="thumbnail">
-            <img src="../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>马家堡 星河城 东南三区</h4>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class=" row myfooter"  >
-
-      <ul class=" footer-nav" >
-        <li  ><a href="#">关于安家网</a> <span class="footer-line">|</span></li>
-        <li ><a href="#">联系我们</a><span class="footer-line">|</span></li>
-        <li ><a href="#">用户协议</a><span class="footer-line">|</span></li>
-        <li ><a href="#">友情链接</a><span class="footer-line">|</span></li>
-        <li><a href="#">渠道招商</a></li>
-      </ul>
-      <div class="footer-information" >
-        <br>
-        <p> 安家网（地球）科技有限公司 | 网络经营许可证 京ICP备16057509号-2</p>
-        <p>  © Copyright©2010-2017 链家网Aianjia.com版权所有</p>
-        <p><img src="../assets/images/gonganbeianicon.png" alt="">京公网安备 110110110110110号</p>
-      </div>
-
-    </div>
-
   </div>
-
+</div>
 
