@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
 import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
+import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
+
 
 const routes: Routes = [
 
@@ -36,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: 'detail/:id',
-    component: PositionDetailComponent
+    component: HousesDetailsComponent
   },
   {
     path: '',
