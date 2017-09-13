@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import {UsersService} from './../services/users.service';
+
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -12,14 +11,12 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   login_res:string;
+  register_res:string;
+
   constructor(
     private userSer:UsersService,
     private router:Router
-
   ) { }
-
-  // _telephone='13812790421';
-  // _password='1234567';
 
   ngOnInit() {
   }
@@ -27,7 +24,9 @@ export class LoginComponent implements OnInit {
   toLogin(login_form){
     let that=this;
     that.userSer.login(login_form.form.value,function (result) {
+      // 弹出接收后台数据数值
       alert(result.stateCode);
+
       if(result.stateCode==1){
         that.router.navigate(['/index']);
       }else {
@@ -36,4 +35,7 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+
+
 }

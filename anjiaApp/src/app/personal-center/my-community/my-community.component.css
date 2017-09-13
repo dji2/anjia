@@ -1,0 +1,16 @@
+.community{
+  width: 768px;
+  height: 190px;
+  margin-left: 36px;
+  margin-top: 81px;
+  border-bottom: dashed 1px #999999;
+}
+.pic{
+  width: 171px;
+  height: 133px;
+  float: left;
+}
+.info{
+  float: left;
+  margin-left: 50px;
+}

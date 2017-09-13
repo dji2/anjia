@@ -5,8 +5,9 @@ import {NgModule}             from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PersonalCenterComponent} from './personal-center.component';
 import {SettingComponent} from './setting/setting.component';
-import {MyMenusComponent} from './my-menus/my-menus.component';
-import {MyCollectonsComponent} from './my-collectons/my-collectons.component';
+import {MyRentComponent} from './my-rent/my-rent.component';
+import {MyCommunityComponent} from './my-community/my-community.component';
+import {MyRecordComponent} from './my-record/my-record.component';
 const routes: Routes = [
 
   {
@@ -18,17 +19,18 @@ const routes: Routes = [
         component: SettingComponent,
       },
       {
-        path: 'menus',
-        component: MyMenusComponent,
+        path: 'rent',
+        component: MyRentComponent,
       },
       {
-        path: 'collections',
-        component: MyCollectonsComponent,
+        path: 'community',
+        component: MyCommunityComponent,
       },
       {
-        path: '',
-        component: MyMenusComponent,
-      }]
+        path:'record',
+        component: MyRecordComponent,
+      }
+      ]
   }
 
 ];

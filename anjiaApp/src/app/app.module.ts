@@ -49,7 +49,8 @@ import { HousesDetailsComponent } from './houses/houses-details/houses-details.c
     FormsModule,
     HttpClientModule,
     PersonalCenterModule,  //这里一定要放在根路由上面
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [GlobalPropertyService],
   bootstrap: [AppComponent]

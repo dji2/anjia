@@ -1,8 +1,62 @@
 .ng-valid[required], .ng-valid.required{
-  border-left: 5px solid #42A948; /* green */
+  border-left: 5px solid #59a956; /* green */
+
 }
 
 .ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+  border-left: 5px solid #a9372c; /* red */
+
+}
+
+.btn-login{
+  width: 380px;
+  height: 50px;
+
+
+}
+#form-control{
+  margin-top: 35px
+}
+
+#yzm-register{
+  margin-left: 308px;
+}
+
+.btn-register{
+  width: 380px;
+  height: 50px;
+  margin-top: 50px;
+
+
+}
+
+.form-group{
+  margin-top: 20px;
+}
+#tel-input{
+  position: relative;
+}
+.tel-yzm{
+  position: absolute;
+  margin-top: -40px;
+
+   height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.form-group{
+  width: 380px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.alert-danger{
+  line-height: 30px;
+  width: 380px;
+  height: 30px;
+  margin: 0 auto;
 }
 
