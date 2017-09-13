@@ -47,7 +47,8 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     FormsModule,
     HttpClientModule,
     PersonalCenterModule,  //这里一定要放在根路由上面
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [GlobalPropertyService],
   bootstrap: [AppComponent]
