@@ -26,6 +26,7 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 import {GlobalPropertyService} from './services/global-property.service';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
+import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 
 
 
@@ -40,7 +41,8 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     PositionDetailComponent,
     OwnerComponent,
     HousesComponent,
-    FooterComponent
+    FooterComponent,
+    HousesDetailsComponent
   ],
   imports: [
     BrowserModule,

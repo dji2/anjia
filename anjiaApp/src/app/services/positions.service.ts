@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class PositionsService {
 
-  url:string='http://localhost:3000/positions';
+  url:string='http://10.40.4.20:3000/houses';
   constructor(
     private http:HttpClient
   ) {
@@ -17,14 +17,14 @@ export class PositionsService {
       callback(result);
     })
   }
-  getPositionById(id,callback){
-    this.getAllPositions(function (positions) {
-      let po=positions.filter(function (item,index) {
-         if(item.id==id){
+  getPositionById(houseId,callback){
+    this.getAllPositions(function (houses) {
+      let ho=houses.filter(function (item,index) {
+         if(item.houseId==houseId){
            return item;
          }
       });
-      callback(po);
+      callback(ho);
 
     })
   }
