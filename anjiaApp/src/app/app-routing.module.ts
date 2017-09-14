@@ -11,6 +11,7 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
 import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'owner',
     component: OwnerComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'detail/:id',

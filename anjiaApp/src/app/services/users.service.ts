@@ -20,9 +20,31 @@ export class UsersService {
       function (error) {
         console.log(error.message);
       }
-
     )
   }
+
+  register(user,callback){
+    this.http.post(this.url+'/register',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
+  getCodeByphone(user,callback){
+    this.http.post(this.url+'/getcodebyphone',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
 
   addUser(){
 

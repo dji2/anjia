@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from './../services/users.service';
-
 import {Router} from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,6 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   login_res:string;
-  register_res:string;
 
   constructor(
     private userSer:UsersService,
@@ -22,9 +22,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   //单例  单一的实例
-  toLogin(login_form){
+  toLogin(loginForm){
     let that=this;
-    that.userSer.login(login_form.form.value,function (result) {
+    that.userSer.login(loginForm.form.value,function (result) {
       // 弹出接收后台数据数值
       alert(result.stateCode);
 
