@@ -26,6 +26,8 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 import {GlobalPropertyService} from './services/global-property.service';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
+import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -40,7 +42,9 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     PositionDetailComponent,
     OwnerComponent,
     HousesComponent,
-    FooterComponent
+    FooterComponent,
+    HousesDetailsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +52,8 @@ import { PositionDetailComponent } from './positons/position-detail/position-det
     HttpClientModule,
     PersonalCenterModule,  //这里一定要放在根路由上面
     AppRoutingModule
+
+
   ],
   providers: [GlobalPropertyService],
   bootstrap: [AppComponent]

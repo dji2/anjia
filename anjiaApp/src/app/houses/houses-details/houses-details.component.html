@@ -1,0 +1,108 @@
+<div class="search col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
+  <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5"><span class="zufang">租房</span></div>
+  <div class="col-md-7 col-lg-7 col-sm-7 col-xs-7">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default search-button" type="button">搜索</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="bg col-md-12 col-lg-12">
+  <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
+    <div class="introduce"> 链家网苏州站 > 苏州租房 > 姑苏租房 > 平江新城租房 > 仲雅苑北区小区租房 > 当前房源</div>
+
+    <div style="height: 130px;text-align: center;background-color: #FCFCFC;border: 1px solid #ebebeb">
+      <h2 style="white-space: nowrap;margin-top: 40px">{{house.houseName}}</h2>
+    </div>
+    <div class="details">
+      <div class="lunbo"></div>
+      <div class="detail">
+        <div class="houseInfo">
+          <div class="prices"><span>{{house.housePrice}}</span>元/月</div>
+          <div class="room"><span>{{house.room}}</span>室<span>{{house.livingroom}}</span>厅</div>
+          <div class="area"><span>{{house.area}}</span>平</div>
+        </div>
+        <table class="aroundInfo">
+          <tr>
+            <td class="title" nowrap>楼层：</td>
+            <td width="50%">中区/11层</td>
+            <td class="title" nowrap>朝向：</td>
+            <td width="50%">{{house.aspect}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>区域：</td>
+            <td width="50%">{{house.areaName}}</td>
+            <td class="title" nowrap>上架：</td>
+            <td width="50%">{{house.startTime}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>小区：</td>
+            <td colspan="3">{{house.introduce}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>地址：</td>
+            <td colspan="3">{{house.address}}</td>
+          </tr>
+        </table>
+        <div class="owner">
+          <span>张三</span>
+          <br>
+          <span style="color: red">18861886666</span>
+        </div>
+        <div class="startTime">
+          上传时间：<span>2017-09-10T16:00:00.000</span>
+        </div>
+      </div>
+    </div>
+
+
+    <ul>
+      <li><a href="./search#section1" class="on">周边配套 </a></li>
+      <li><a href="./search#section2" class="on">看房记录 </a></li>
+      <li><a href="./search#section3" class="on">相似房源 </a></li>
+
+    </ul>
+
+
+    <nav class="col-sm-2" id="myScrollspy">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white"
+         class="container-fluid">
+      <div style="font-size: 28px;height: 40px">周边配套</div>
+    </div>
+    <div id="section2"
+         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
+         class="container-fluid">
+      <div style="font-size: 28px;height: 40px">看房记录</div>
+    </div>
+    <div id="section3"
+         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
+         class="container-fluid">
+      <div style="font-size: 28px;height: 40px">相似房源</div>
+    </div>
+    <div>
+      <h1>Section 4-1</h1>
+      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+    </div>
+    <div id="section42">
+      <h1>Section 4-2</h1>
+      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+    </div>
+
+
+  </div>
+
+</div>

@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
 import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
+import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
+import { RegisterComponent } from './register/register.component';
+
 
 const routes: Routes = [
 
@@ -35,8 +38,12 @@ const routes: Routes = [
     component: OwnerComponent
   },
   {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
     path: 'detail/:id',
-    component: PositionDetailComponent
+    component: HousesDetailsComponent
   },
   {
     path: '',

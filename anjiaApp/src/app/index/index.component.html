@@ -23,8 +23,8 @@
             <li><a href="#"><span ></span>小区</a></li>
             <li><a href="#"><span ></span>经纪人</a></li>
             <li><a href="#"><span ></span>业主</a></li>
-            <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span ></span>注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+            <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+
           </ul>
         </div>
       </div>
@@ -36,7 +36,34 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
             </div>
-            <app-login></app-login>
+            <div class="modal-body" >
+
+              <div >
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist" >
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="home">
+                    <app-login></app-login>
+                    <!--填写注册信息-->
+
+                  </div>
+
+                  <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
+
+
+                  <div role="tabpanel" class="tab-pane" id="profile">
+                   <!--填写注册信息-->
+                    <app-register></app-register>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
 
           </div>
         </div>

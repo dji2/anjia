@@ -1,0 +1,179 @@
+body {
+  position: relative;
+}
+ul.nav-pills {
+  top: 10px;
+  position: fixed;
+}
+.bibibi div {
+  height: 250px;
+  font-size: 28px;
+}
+
+/*#section41 {color: #fff; background-color: #00bcd4;}*/
+/*#section42 {color: #fff; background-color: #009688;}*/
+
+/*@media screen and (max-width: 810px) {*/
+  /*#section1, #section2, #section3, #section41, #section42  {*/
+    /*margin-left: 150px;*/
+  /*}*/
+/*}*/
+
+
+.search{
+  height: 60px;
+  padding-top: 13px;
+}
+.zufang {
+  background-color: #1AAD68;
+  color: white;
+  width: 57px;
+  height: 26px;
+  line-height: 25px;
+  font-size: 14px;
+  padding: 0 14px;
+  margin: 3px 0 0 12px;
+  border-radius: 2px
+}
+.search-button{
+  width: 100px;
+  border: 1px solid #aa4741;
+  border-radius: 2px;
+  background: #c7524b;
+  color: #fff;
+  font-size: 14px;
+}
+.introduce{
+  height: 34px;
+  line-height: 34px;
+  background: #FCFCFC;
+  clear: both;
+}
+.bg{
+  background-color: #F1F1F1;
+  box-sizing: border-box;
+  border-top: solid 1px gainsboro;
+}
+/*轮播---------------*/
+.details{
+  height: 500px;
+  padding: 36px;
+  border: 1px solid #ebebeb;
+  background-color: white;
+}
+.lunbo{
+  height: 420px;
+  float: left;
+  width: 48%;
+  background-color: gainsboro;
+}
+/*右边------------------*/
+.detail{
+  height: 420px;
+  float: right;
+  width: 48%;
+  /*background-color: yellow;*/
+}
+.houseInfo{
+  box-sizing: border-box;
+  width: 100%;
+  height: 82px;
+  border: 1px solid #e4e3e3;
+  padding: 15px 0;
+  background-color: #fcfcfc;
+}
+.aroundInfo {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+table{
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+.owner{
+  font-size: 28px;
+  padding: 22px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e3e3;
+}
+.startTime{
+  margin-top: 20px;
+  font-size: 12px;
+  color: #333333;
+  text-align: justify;
+}
+.prices{
+  display: table-cell;
+  width: 175px;
+  color: #e4393c;
+}
+.room {
+  display: table-cell;
+  width: 125px;
+  border-left: 1px solid #e4e3e3;
+  border-right: 1px solid #e4e3e3;
+}
+.area {
+  display: table-cell;
+  width: 135px;
+}
+.houseInfo span{
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.aroundInfo td {
+  padding: 8px 0;
+}
+.title {
+  color: #888;
+  text-align: right;
+}
+/*周边配套------------*/
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin-top: 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(13,3,9,0.2);
+  border-radius: 2px;
+  padding: 0;
+  /*position: static;*/
+}
+li a.on {
+  color: #ffffff;
+  background-color: #39ac6a;
+}
+li a {
+  display: inline-block;
+  width: 138px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+  text-align: center;
+  /*color: #555555;*/
+  /*background-color: #ffffff;*/
+  position: relative;
+  text-decoration: none;
+}
+li a.on:after {
+  position: absolute;
+  bottom: -8px;
+  color: #39ac6a;
+  display: block;
+  line-height: 1;
+  left: 62px;
+  content: '▼';
+}
