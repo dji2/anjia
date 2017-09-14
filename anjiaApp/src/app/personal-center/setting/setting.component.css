@@ -1,5 +1,21 @@
-.nav{
-  margin-left: 30px;
+/*.nav{*/
+  /*margin-left: 30px;*/
+  /*background-color: #F5F5F5;*/
+  /*font-size: 17px;*/
+/*}*/
+ul{
+  height: 40px;
+  width: 780px;
+  /*margin-left: 10px;*/
   background-color: #F5F5F5;
   font-size: 17px;
+}
+li{
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: #F5F5F5;
+}
+li:hover{
+  background-color: #b9b9b9;
 }
