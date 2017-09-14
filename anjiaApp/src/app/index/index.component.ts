@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
 
-
 //导入服务
 
 import {PositionsService} from './../services/positions.service';
