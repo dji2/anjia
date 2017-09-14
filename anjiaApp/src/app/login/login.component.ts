@@ -10,9 +10,18 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+
+// if( rgpsw1 == pswconfirm1 ){
+//
+// }
+
+
+
+
   login_res:string;
   register_res:string;
-
+  rgpsw1:string;
+  pswconfirm1:string;
   constructor(
     private userSer:UsersService,
     private router:Router
@@ -37,5 +46,11 @@ export class LoginComponent implements OnInit {
   }
 
 
+  // check(){
+  // if( rgpsw1== pswconfirm1){
+  //   alert('hello')
+  // }
+  //
+  // }
 
 }
