@@ -1,0 +1,114 @@
+<form class="form-horizontal"  #registerForm="ngForm" style="margin-top:10px">
+  <!--输入手机号-->
+  <div class="form-group form-group-lg">
+    <div class="col-sm-12">
+      <input type="text" class="form-control" pattern="^1[34578]\d{9}$" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="register-telephone" placeholder="请输入手机号" required>
+      <button class="tel-yzm  btn btn-success btn-group-lg " [disabled]="rgtel.invalid" id="yzm-register">发送验证码</button>
+    </div>
+  </div>
+  <div *ngIf="rgtel.invalid && (rgtel.dirty || rgtel.touched)"
+       class="alert alert-danger">
+    <div *ngIf="rgtel?.errors?.required">
+      <span class="glyphicon glyphicon-triangle-right"></span>号码不能为空
+    </div>
+    <div *ngIf="rgtel.errors.pattern">
+      <span class="glyphicon glyphicon-triangle-right"></span>号码格式不正确
+    </div>
+
+  </div>
+
+
+  <!--手机收到的验证码框-->
+  <div class="form-group form-group-lg">
+    <div class="col-sm-12">
+      <input type="text" class="form-control" id="telyzm" #yzm="ngModel" minlength="6" maxlength="6" pattern="^[0-9]{6}$"  [(ngModel)]="registeryzm" name="telyzm" placeholder="请输入您手机收到的验证码" required>
+    </div>
+  </div>
+  <div *ngIf="yzm.invalid && (yzm.dirty || yzm.touched)"
+       class="alert alert-danger">
+
+    <div *ngIf="yzm.errors.required">
+      <span class="glyphicon glyphicon-triangle-right"></span>请输入您手机上的六位验证码
+    </div>
+
+    <div *ngIf="yzm.errors.pattern">
+      <span class="glyphicon glyphicon-triangle-right"></span>验证码格式不正确
+    </div>
+  </div>
+
+  <!--请输入你的昵称-->
+
+  <div class="form-group form-group-lg">
+    <div class="col-sm-12 form-group-lg">
+      <input type="text" class="form-control" #user_name="ngModel" [(ngModel)]="user_name1"  maxlength="8" id=username name=username placeholder="昵称" required>
+    </div>
+  </div>
+  <div *ngIf="user_name.invalid && (user_name.dirty || user_name.touched)"
+       class="alert alert-danger">
+    <div *ngIf="user_name.errors.required">
+      <span class="glyphicon glyphicon-triangle-right"></span>昵称不能为空
+    </div>
+    <div *ngIf="user_name.errors.maxlength">
+      <span class="glyphicon glyphicon-triangle-right"></span>
+    </div>
+  </div>
+
+
+  <!--请输入密码-->
+  <div class="form-group form-group-lg">
+    <div class="col-sm-12 form-group-lg">
+
+      <input type="password" class="form-control"  #myrgpsw="ngModel"  [(ngModel)]="rgpsw1" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,20}$" id="register-password" name="register-password" placeholder="请输入密码"  required>
+
+    </div>
+  </div>
+  <div *ngIf="myrgpsw.invalid && (myrgpsw.dirty || myrgpsw.touched)"
+       class="alert alert-danger">
+    <div *ngIf="myrgpsw.errors.required">
+      <span class="glyphicon glyphicon-triangle-right"></span>密码不能为空
+    </div>
+    <div *ngIf="myrgpsw.errors.minlength&&myrgpsw.errors.maxlength">
+      <span class="glyphicon glyphicon-triangle-right"></span> 密码大于六位且小于12位
+    </div>
+    <div *ngIf="myrgpsw.errors.pattern">
+      <span class="glyphicon glyphicon-triangle-right"></span> 密码由8-20位数字和字母组成
+    </div>
+  </div>
+
+
+  <!--请重新输入密码-->
+  <div class="form-group form-group-lg">
+    <div class="col-sm-12">
+
+      <input type="password" class="form-control"  #pswconfirm="ngModel"  [(ngModel)]="pswconfirm1" name="password_confirm" id="password_confirm" placeholder="请再次确认密码" required>
+    </div>
+
+  </div>
+  <!--密码错误提示信息-->
+
+  <div *ngIf=" pswconfirm.value != myrgpsw.value"   class="alert alert-danger">
+    <span class="glyphicon glyphicon-triangle-right"></span>两次密码不一致
+  </div>
+
+
+  <!--我已阅读并同意-->
+  <div class="form-group form-group-lg" >
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 我已阅读并同意 <a href="" style="color: #3c763d"> 安家用户使用协议</a>
+        </label>
+      </div>
+    </div>
+  </div>
+  <!--注册按钮-->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" (click)="toLogin(registerForm)" [disabled]="registerForm.form.invalid" class="btn btn-success btn-register ">注册</button>
+      <div *ngIf="register_res"
+           class="alert alert-danger">
+        {{register_res}}
+      </div>
+    </div>
+  </div>
+</form>
