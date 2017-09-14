@@ -12,7 +12,7 @@
 
 <div class="bg col-md-12 col-lg-12">
   <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
-    <div class="introduce">  链家网苏州站 >  苏州租房 >  姑苏租房 >  平江新城租房 >  仲雅苑北区小区租房 >  当前房源</div>
+    <div class="introduce"> 链家网苏州站 > 苏州租房 > 姑苏租房 > 平江新城租房 > 仲雅苑北区小区租房 > 当前房源</div>
 
     <div style="height: 130px;text-align: center;background-color: #FCFCFC;border: 1px solid #ebebeb">
       <h2 style="white-space: nowrap;margin-top: 40px">{{house.houseName}}</h2>
@@ -22,7 +22,7 @@
       <div class="detail">
         <div class="houseInfo">
           <div class="prices"><span>{{house.housePrice}}</span>元/月</div>
-          <div class="room"><span>3</span>室<span>2</span>厅</div>
+          <div class="room"><span>{{house.room}}</span>室<span>{{house.livingroom}}</span>厅</div>
           <div class="area"><span>{{house.area}}</span>平</div>
         </div>
         <table class="aroundInfo">
@@ -57,23 +57,50 @@
         </div>
       </div>
     </div>
+
+
     <ul>
-      <li><a href=""  class="on">周边配套 </a></li>
-      <li><a href=""  class="on">看房记录 </a></li>
-      <li><a href=""  class="on">相似房源 </a></li>
+      <li><a href="./search#section1" class="on">周边配套 </a></li>
+      <li><a href="./search#section2" class="on">看房记录 </a></li>
+      <li><a href="./search#section3" class="on">相似房源 </a></li>
 
     </ul>
-    <div style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white">
-      <div style="font-size: 28px;height: 40px">周边配套(map)</div>
+
+
+    <nav class="col-sm-2" id="myScrollspy">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white"
+         class="container-fluid">
+      <div style="font-size: 28px;height: 40px">周边配套</div>
     </div>
-    <div style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px">
+    <div id="section2"
+         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
+         class="container-fluid">
       <div style="font-size: 28px;height: 40px">看房记录</div>
     </div>
-    <div style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px">
+    <div id="section3"
+         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
+         class="container-fluid">
       <div style="font-size: 28px;height: 40px">相似房源</div>
     </div>
-
-
+    <div>
+      <h1>Section 4-1</h1>
+      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+    </div>
+    <div id="section42">
+      <h1>Section 4-2</h1>
+      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+    </div>
 
 
   </div>

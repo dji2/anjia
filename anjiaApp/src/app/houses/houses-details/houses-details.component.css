@@ -1,3 +1,25 @@
+body {
+  position: relative;
+}
+ul.nav-pills {
+  top: 10px;
+  position: fixed;
+}
+.bibibi div {
+  height: 250px;
+  font-size: 28px;
+}
+
+/*#section41 {color: #fff; background-color: #00bcd4;}*/
+/*#section42 {color: #fff; background-color: #009688;}*/
+
+/*@media screen and (max-width: 810px) {*/
+  /*#section1, #section2, #section3, #section41, #section42  {*/
+    /*margin-left: 150px;*/
+  /*}*/
+/*}*/
+
+
 .search{
   height: 60px;
   padding-top: 13px;
@@ -128,6 +150,7 @@ ul {
   box-shadow: 0 1px 3px rgba(13,3,9,0.2);
   border-radius: 2px;
   padding: 0;
+  /*position: static;*/
 }
 li a.on {
   color: #ffffff;
