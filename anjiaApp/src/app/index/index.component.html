@@ -1,6 +1,7 @@
 
 <div class="mybody row" >
   <div id="mycontainer" >
+    <!--导航-->
     <nav class="navbar " id="myself-nav" >
       <div class="container-fluid">
         <div class="navbar-header " >
@@ -42,7 +43,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" >
                   <li role="presentation" class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
-                  <li role="presentation" style="border-bottom: 2px solid #2a763d;" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                  <li role="presentation"  ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
@@ -70,47 +71,53 @@
         </div>
       </div>
     </nav>
-    <div class="row " >
-
+    <!--搜索框-->
+    <div class="row " id="mian-serch">
       <div class="input-group input-group-lg col-md-12 ">
         <h1 class="animated bounceInLeft " id="topanimate" >毕业实习没住处，快来找月付！</h1>
-        <input type="text"  class="form-control animated bounceInRight  "  placeholder="请输入城市·区域名开始找房" >
+        <input type="text"  class="form-control animated bounceInRight"  id="indexsearch" placeholder="请输入城市·区域名开始找房" >
         <span class="input-group-btn " id="input-group-btn">
                 <button class="btn btn-success animated bounceInRight"  type="button" >开始找房</button>
       </span>
       </div>
     </div>
+
+
   </div>
+
+  <!--小工具-->
   <div class="row gongju">
-    <div class="col-md-3 col-sm-6" >
+    <div class="col-md-3 col-sm-6 col-xs-6" >
       <img class="animated rubberBand" src="../../assets/images/ditulogo.png" alt="">
       <h4>地图找房</h4>
       <p>为你精确定位</p>
     </div>
-    <div class="col-md-3 col-sm-6" >
+    <div class="col-md-3 col-sm-6 col-xs-6" >
       <img  class="animated rubberBand" src="../../assets/images/hezulogo.png" alt="">
       <h4>找租房</h4>
       <p>为你精心挑选房源，适合上班族。</p>
     </div>
-    <div class="col-md-3 col-sm-6" >
+    <div class="col-md-3 col-sm-6 col-xs-6" >
       <img  class="animated rubberBand"  src="../../assets/images/zufanglogo.png" alt="">
       <h4>找合租房</h4>
       <p>毕业出来工作，手头没钱不如来合租。认识一俩朋友，也是不错！</p>
     </div>
-    <div class="col-md-3 col-sm-6"  >
+    <div class="col-md-3 col-sm-6 col-xs-6"  >
       <img  class="animated rubberBand"  src="../../assets/images/jisuanqilogo.png" alt="">
       <h4>计算器</h4>
       <p>生活就待精打细算</p>
     </div>
 
   </div>
+
+  <!--房屋列表-->
   <div class="house-list" >
-    <div class="row house-list-title">
-      <h2>更多好房，为你而选</h2>
+    <div class="row house-list-title col-md-12 col-lg-12 col-sm-12">
+      <h2 >更多好房，为你而选</h2>
       <span style="margin-left:90%"><a href="/houses">更多在租房>></a></span>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h1.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -120,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h2.jpg" alt="">
           <span class="house-list price">4000/月</span>
@@ -130,7 +137,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h3.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -140,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h4.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -152,7 +159,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h5.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -162,7 +169,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h6.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -172,7 +179,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h7.jpg" alt="">
           <span class="house-list price">3000/月</span>
@@ -182,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="col-lg-3 col-md-6 col-sm-6 ">
         <div href="#" class="thumbnail">
           <img src="../../assets/images/h8.jpg" alt="">
           <span class="house-list price">3000/月</span>
