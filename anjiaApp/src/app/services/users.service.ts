@@ -4,9 +4,11 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class UsersService {
+  url:string='http://10.40.4.64:3000/users';
 
-  url:string='http://localhost:3000/users';
-  constructor(
+
+
+   constructor(
     private http:HttpClient
   ) {
 
@@ -35,12 +37,16 @@ export class UsersService {
   }
 
   getCodeByphone(user,callback){
-    this.http.post(this.url+'/getcodebyphone',user).subscribe(
+    const that=this;
+    // alert(that.url);
+    that.http.post(this.url+'/check',user).subscribe(
+
       function (result) {
+
         callback(result);
       },
       function (error) {
-        console.log(error.message);
+        alert(error.message);
       }
     )
   }

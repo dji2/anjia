@@ -21,7 +21,6 @@ export class RegisterComponent implements OnInit {
   reg_res: any;
   num: any;
 
-
   constructor(
     private userSer:UsersService,
     private router:Router,
@@ -38,10 +37,11 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  getCode(rgtel){
-    const that = this;
-    console.log(rgtel.form.value);
-    that.userSer.getCodeByphone(rgtel.form.value, function (result) {
+  getCode(registerForm){
+    let that = this;
+    alert("sdsdsds");
+    // console.log(registerForm.form.value);
+    that.userSer.getCodeByphone("{'phone':'18362202331'}", function (result) {
       if (result.stageCode == '1') {
         that.code_res = ' 该手机号已经注册过 ';
         console.log(that.code_res);
