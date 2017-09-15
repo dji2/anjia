@@ -25,8 +25,6 @@ export class RegisterComponent implements OnInit {
     private userSer:UsersService,
     private router:Router,
     private glo: GlobalPropertyService
-
-
   ) { }
 
   ngOnInit() {
@@ -38,11 +36,11 @@ export class RegisterComponent implements OnInit {
   }
 
   getCode(registerForm){
+
     let that = this;
-    alert("sdsdsds");
-    // console.log(registerForm.form.value);
-    that.userSer.getCodeByphone("{'phone':'18362202331'}", function (result) {
-      if (result.stageCode == '1') {
+    that.userSer.getCodeByphone(registerForm.form.value, function (result) {
+      alert(result);
+      if (result.stageCode == '10') {
         that.code_res = ' 该手机号已经注册过 ';
         console.log(that.code_res);
       }else if (result.stageCode == 'e004'){

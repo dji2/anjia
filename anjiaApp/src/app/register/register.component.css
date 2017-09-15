@@ -34,7 +34,6 @@
 .tel-yzm{
   position: absolute;
   margin-top: -40px;
-
   height: 35px;
   text-align: center;
   line-height: 35px;
@@ -48,6 +47,7 @@
   margin: 0 auto;
   margin-top: 10px;
 }
+
 .alert-danger{
   line-height: 20px;
   width: 380px;
@@ -55,3 +55,6 @@
   margin: 0 auto;
 }
 
+#yzm-register{
+  margin-left: 280px;
+}

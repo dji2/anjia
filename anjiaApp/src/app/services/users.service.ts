@@ -26,7 +26,7 @@ export class UsersService {
   }
 
   register(user,callback){
-    this.http.post(this.url+'/register',user).subscribe(
+    this.http.post(this.url+'/regist',user).subscribe(
       function (result) {
         callback(result);
       },

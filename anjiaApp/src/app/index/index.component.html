@@ -32,7 +32,7 @@
       <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document" >
           <div class="modal-content" id="mymodal-content" >
-            <div class="modal-header">
+            <div class="modal-header" style="background-color: rgba(4,118,14,0.64)">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
             </div>
@@ -41,27 +41,28 @@
               <div >
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" >
-                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
-                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                  <li role="presentation" class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
+                  <li role="presentation" style="border-bottom: 2px solid #2a763d;" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
+
+                  <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
                   <div role="tabpanel" class="tab-pane active" id="home">
                     <app-login></app-login>
                     <!--填写注册信息-->
 
                   </div>
 
-                  <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
+                  <!--///////////////////////////////////////////下边是注册信息表/////////////////////////-->
 
-
+                  <!--填写注册信息-->
                   <div role="tabpanel" class="tab-pane" id="profile">
-                   <!--填写注册信息-->
                     <app-register></app-register>
                   </div>
 
-                </div>
 
+                </div>
               </div>
             </div>
 
@@ -106,7 +107,7 @@
   <div class="house-list" >
     <div class="row house-list-title">
       <h2>更多好房，为你而选</h2>
-      <span style="margin-left:90%"><a href="">更多在租房>></a></span>
+      <span style="margin-left:90%"><a href="/houses">更多在租房>></a></span>
     </div>
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6">
