@@ -1,0 +1,42 @@
+.upload{
+  width: 753px;
+  height: 485px;
+  /*background-color: red;*/
+}
+.div1{
+  float: left;
+  /*width: 753px;*/
+  height: 41px;
+  background-color: #00ae66;
+  width: 144px;
+  position:relative;
+  border-radius:5px;
+  margin: 28px;
+}
+.div2{
+  color: white;
+  text-align:center;
+  padding-top:12px;
+  font-size:15px;
+  font-weight:800;
+  /*margin: 20px;*/
+}
+.inputstyle{
+  /*margin: 20px;*/
+  width: 144px;
+  height: 41px;
+  cursor: pointer;
+  font-size: 30px;
+  outline: medium none;
+  position: absolute;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  opacity:0;
+  left:0px;
+  top: 0px;
+}
+.big{
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 100px;
+}
