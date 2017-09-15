@@ -11,6 +11,9 @@ import { MyRentComponent } from './my-rent/my-rent.component';
 import {PersonalCenterRoutingModule} from './personal-center-routing.module';
 import { MyRecordComponent } from './my-record/my-record.component';
 import { MyCommunityComponent } from './my-community/my-community.component';
+import { UploadComponent } from './setting/upload/upload.component';
+import { NicknameComponent } from './setting/nickname/nickname.component';
+import { PasswordComponent } from './setting/password/password.component';
 
 
 
@@ -22,7 +25,10 @@ import { MyCommunityComponent } from './my-community/my-community.component';
     MyRentComponent,
     MyRecordComponent,
     MyCommunityComponent,
-    MyRentComponent
+    MyRentComponent,
+    UploadComponent,
+    NicknameComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,

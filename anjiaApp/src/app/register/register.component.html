@@ -4,8 +4,8 @@
   <!--输入手机号-->
   <div class="form-group form-group-lg">
     <div class="col-sm-12">
-      <input type="text" class="form-control" pattern="^1[34578]\d{9}$" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="register-telephone" placeholder="请输入手机号" required>
-      <button class="tel-yzm  btn btn-success btn-group-lg " (click)="getCode(rgtel)"  [disabled]="rgtel.invalid" id="yzm-register">{{code_mes}}</button>
+      <input type="text" class="form-control" pattern="^1[34578]\d{9}$" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="telephone" placeholder="请输入手机号" required>
+      <button class="tel-yzm  btn btn-success btn-group-lg " (click)="getCode(registerForm)"  [disabled]="rgtel.invalid" id="yzm-register" >{{code_mes}}</button>
     </div>
   </div>
   <div *ngIf="rgtel.invalid && (rgtel.dirty || rgtel.touched)"
@@ -22,9 +22,9 @@
   <!--手机收到的验证码框-->
   <div class="form-group form-group-lg">
     <div class="col-sm-12">
-      <input type="text" class="form-control" id="telyzm" #yzm="ngModel" minlength="6" maxlength="6" pattern="^[0-9]{6}$"  [(ngModel)]="registeryzm" name="telyzm" placeholder="请输入您手机收到的验证码" required>
+      <input type="text" class="form-control" id="telyzm" #yzm="ngModel" minlength="6" maxlength="6" pattern="^[0-9]{6}$"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
     </div>
-    {{registeryzm}}
+
   </div>
   <div *ngIf="yzm.invalid && (yzm.dirty || yzm.touched)"
        class="alert alert-danger">
@@ -59,7 +59,7 @@
   <div class="form-group form-group-lg">
     <div class="col-sm-12 form-group-lg">
 
-      <input type="password" class="form-control"  #myrgpsw="ngModel"  [(ngModel)]="rgpsw1" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,20}$" id="register-password" name="register-password" placeholder="请输入密码"  required>
+      <input type="password" class="form-control"  #myrgpsw="ngModel"  [(ngModel)]="rgpsw1" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,20}$" id="register-password" name="password" placeholder="请输入密码"  required>
 
     </div>
   </div>
@@ -106,10 +106,11 @@
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" (click)="toRegister(registerForm)" [disabled]="registerForm.form.invalid" class="btn btn-success btn-register ">注册</button>
 
-      <div *ngIf="reg_res"
+      <div *ngIf="code_res"
            class="alert alert-danger">
-          {{reg_res}}
+          {{code_res}}
       </div>
     </div>
+
   </div>
 </form>

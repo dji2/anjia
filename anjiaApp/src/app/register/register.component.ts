@@ -21,13 +21,10 @@ export class RegisterComponent implements OnInit {
   reg_res: any;
   num: any;
 
-
   constructor(
     private userSer:UsersService,
     private router:Router,
     private glo: GlobalPropertyService
-
-
   ) { }
 
   ngOnInit() {
@@ -38,11 +35,12 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  getCode(rgtel){
-    const that = this;
-    console.log(rgtel.form.value);
-    that.userSer.getCodeByphone(rgtel.form.value, function (result) {
-      if (result.stageCode == '1') {
+  getCode(registerForm){
+
+    let that = this;
+    that.userSer.getCodeByphone(registerForm.form.value, function (result) {
+      alert(result);
+      if (result.stageCode == '10') {
         that.code_res = ' 该手机号已经注册过 ';
         console.log(that.code_res);
       }else if (result.stageCode == 'e004'){

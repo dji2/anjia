@@ -12,10 +12,11 @@ var checkCode="121212";
 
 router.post('/check', function (req, res, next) {
     var user = req.body;
+    console.log(user);
     checkCode  =parseInt(Math.random()*1000000) ;
     var obj = {
         PhoneNumbers: '18362202673',
-        TemplateCode: 'SMS_95040006',//模板编号
+        TemplateCode: 'SMS_95065005',//模板编号
         TemplateParam: '{"number":"1314520"}',//变量名
     };
     obj.PhoneNumbers = user.telephone;
@@ -26,7 +27,7 @@ router.post('/check', function (req, res, next) {
     sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
         console.log(data);
     });
-
+    res.json({"stateCode": 10});
 
 });
 
