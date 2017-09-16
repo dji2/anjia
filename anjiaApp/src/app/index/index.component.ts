@@ -5,6 +5,9 @@ import {Router} from '@angular/router';
 //导入服务
 
 import {PositionsService} from './../services/positions.service';
+declare var $ :any;
+
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -24,6 +27,13 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    $(document).ready(function(){
+      $("#zf").click(function(){
+        $("#topanimate").hide(1000);
+      });
+    });
+
     let that = this;
     // let val=that.route.snapshot.paramMap.get('val');
     // that.text=val;
