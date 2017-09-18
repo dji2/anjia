@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
+// 管道
 
 //导入服务
 
 import {PositionsService} from './../services/positions.service';
+
 declare var $ :any;
 
 
@@ -15,14 +17,17 @@ declare var $ :any;
   providers: [PositionsService]
 })
 export class IndexComponent implements OnInit {
+  new_houses:any;
 
   text: string = '';
-
   positions: any;
+houses:any;
 
   constructor(private route: ActivatedRoute,
               private router:Router,
-              private ps: PositionsService) {
+
+              private house: PositionsService
+  ) {
 
   }
 
@@ -63,13 +68,14 @@ export class IndexComponent implements OnInit {
     });
 
     let that = this;
-    // let val=that.route.snapshot.paramMap.get('val');
-    // that.text=val;
 
-    that.ps.getAllPositions(function (result) {
-      that.positions = result;
+    that.house.getAllHouses(function (result) {
+
+      that.new_houses =result.slice(0, 8);
+     console.log( that.new_houses);
+
+
     })
-
   }
 
 
