@@ -69,10 +69,10 @@ houses:any;
 
     let that = this;
 
-    that.house.getAllHouses(function (result) {
+    that.house.getAllPositions(function (result) {
 
       that.new_houses =result.slice(0, 8);
-     console.log( that.new_houses);
+
 
 
     })

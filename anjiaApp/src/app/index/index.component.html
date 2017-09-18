@@ -1,5 +1,8 @@
 
 <div class="mybody row" >
+
+
+
   <div id="mycontainer" >
     <!--导航-->
     <nav class="navbar " id="myself-nav" >
@@ -118,105 +121,111 @@
         <h2 >更多好房，为你而选</h2>
         <span style="margin-left:90%"><a href="/houses">更多在租房>></a></span>
       </div>
-      <div class="row"  style="margin: 0 40px">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"  >
-          <div href="#" class="thumbnail" id="houses-style">
+
+      <div class="row" id="out-house-style" >
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 " id="house-setting" *ngFor="let house of new_houses;"    >
+
+          <div href="#" class="thumbnail" id="houses-style" >
+
             <img src="../../assets/images/h1.jpg" alt="">
-            <span class="house-list price">3000/月</span>
+            <span class="house-list price">{{house.housePrice}}/月</span>
             <div class="caption">
               <a href="">
-              <h4>南北直通，厨卫全明，出行方便，低区出入方便</h4>
+              <h4>{{house.houseName}}</h4>
               </a>
-              <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+              <p> {{i}}星河西区 三室一厅 <span>{{house.area}}m<sup>2</sup></span></p>
 
             </div>
           </div>
-        </div>
 
 
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h2.jpg" alt="">
-            <span class="house-list price">4000/月</span>
-            <div class="caption">
-              <h4>稀缺南北通，厨卫全明，稀缺南北通,出行方便</h4>
-              <p> 工业园区 二室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
+
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h3.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>厨卫全明，客厅朝南，视野开阔，上下楼方便</h4>
-              <p> 星河西区 三室二厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h4.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>房型正气，带落地窗，稀缺南北通,高区采光好</h4>
-              <p> 工业园区 一室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h2.jpg" alt="">-->
+            <!--<span class="house-list price">4000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>稀缺南北通，厨卫全明，稀缺南北通,出行方便</h4>-->
+              <!--<p> 工业园区 二室一厅 <span>108m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h3.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>厨卫全明，客厅朝南，视野开阔，上下楼方便</h4>-->
+              <!--<p> 星河西区 三室二厅 <span>108m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h4.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>房型正气，带落地窗，稀缺南北通,高区采光好</h4>-->
+              <!--<p> 工业园区 一室一厅 <span>108m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
 
 
-      <div class="row" style="margin: 0 40px">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h5.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>南北通，卧室带阳台，地铁房，黄金楼层</h4>
-              <p> 星河西区 二室一厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h6.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>地铁直达，上下楼方便，简单装修，房本满五年</h4>
-              <p> 工业园区 一室一厅 <span>68m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h7.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>南北通透，客厅带阳台，地铁直达，光线充足</h4>
-              <p> 星河西区 二室一厅 <span>78m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
-            <img src="../../assets/images/h8.jpg" alt="">
-            <span class="house-list price">3000/月</span>
-            <div class="caption">
-              <h4>稀罕南北通，客厅带阳台，交通方便，好楼层</h4>
-              <p> 工业园区 三室二厅 <span>108m<sup>2</sup></span></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!--<div class="row" style="margin: 0 40px">-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h5.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>南北通，卧室带阳台，地铁房，黄金楼层</h4>-->
+              <!--<p> 星河西区 二室一厅 <span>108m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h6.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>地铁直达，上下楼方便，简单装修，房本满五年</h4>-->
+              <!--<p> 工业园区 一室一厅 <span>68m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h7.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>南北通透，客厅带阳台，地铁直达，光线充足</h4>-->
+              <!--<p> 星河西区 二室一厅 <span>78m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
+          <!--<div href="#" class="thumbnail">-->
+            <!--<img src="../../assets/images/h8.jpg" alt="">-->
+            <!--<span class="house-list price">3000/月</span>-->
+            <!--<div class="caption">-->
+              <!--<h4>稀罕南北通，客厅带阳台，交通方便，好楼层</h4>-->
+              <!--<p> 工业园区 三室二厅 <span>108m<sup>2</sup></span></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
 
-    </div>
+
 
 <!--页脚部分-->
     <app-footer></app-footer>
 
 
   </div>
+  <!--返回顶部-->
+
 
 
   <div id="elevator_item">

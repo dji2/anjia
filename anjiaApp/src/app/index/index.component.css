@@ -156,9 +156,18 @@ margin: 10px auto;
 .house-list {
 background-color: #f2f2f3;
 margin: 0px auto;
-
 }
 
+#house-setting{
+margin-top: 10px;
+  width: 290px;
+  height: 330px
+}
+#out-house-style{
+  position: relative;
+   left: 125px;
+
+}
 
 
 
