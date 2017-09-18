@@ -28,6 +28,8 @@ import {GlobalPropertyService} from './services/global-property.service';
 import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { HouseListComponent } from './houses/house-list/house-list.component';
 
 
 
@@ -44,7 +46,9 @@ import { RegisterComponent } from './register/register.component';
     HousesComponent,
     FooterComponent,
     HousesDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchPipe,
+    HouseListComponent
   ],
   imports: [
     BrowserModule,
