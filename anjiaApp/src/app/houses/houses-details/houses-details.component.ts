@@ -23,7 +23,7 @@ export class HousesDetailsComponent implements OnInit {
   ngOnInit() {
     let id=this.route.snapshot.paramMap.get('id');
     let that=this;
-    that.ho.getPositionById(id,function (house) {
+    that.ho.getHouseById(id,function (house) {
 
       console.log(house);
       that.house=house[0];

@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'zujinxiao'
 })
-export class SearchPipe implements PipeTransform {
+export class ZujinxiaoPipe implements PipeTransform {
 
   transform(houses: any, args?: any): any {
     if(args){
       var new_houses=houses.filter(function (house,index) {
-        if(house.areaName.indexOf(args)!=-1 || house.address.indexOf(args)!=-1){
+        if(house.housePrice>args){
           return house;
         }
       });

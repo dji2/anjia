@@ -12,13 +12,13 @@ export class PositionsService {
 
   }
 
-  getAllPositions(callback){
+  getAllHouses(callback){
     this.http.get(this.url).subscribe(function (result) {
       callback(result);
     })
   }
-  getPositionById(houseId,callback){
-    this.getAllPositions(function (houses) {
+  getHouseById(houseId,callback){
+    this.getAllHouses(function (houses) {
       let ho=houses.filter(function (item,index) {
          if(item.houseId==houseId){
            return item;
