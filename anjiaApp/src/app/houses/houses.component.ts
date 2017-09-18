@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
 
@@ -15,6 +15,10 @@ export class HousesComponent implements OnInit {
   text: string = '';
 
   houses: any;
+
+  _stext:string;
+
+  @Input() searchText:string='';
 
   constructor(
     private route: ActivatedRoute,
@@ -37,4 +41,7 @@ export class HousesComponent implements OnInit {
     this.router.navigate(['/detail',id]);
   }
 
+  search(s){
+    this._stext=s;
+  }
 }
