@@ -1,92 +1,93 @@
 
 <div class="mybody row" >
 
-
-
   <div id="mycontainer" >
     <!--导航-->
-    <nav class="navbar " id="myself-nav" >
-      <div class="container-fluid">
-        <div class="navbar-header " >
-          <a class="navbar-brand" href="#">
-            <img src="../assets/images/logo1.png" alt="" style="width: 40px;height: 30px;margin-left: 20px">
-          </a>
-          <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
-                  data-target="#navbar-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar icon-bar-success"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse " id="navbar-collapse" >
-          <ul class="nav navbar-nav navbar-right ">
-            <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
-            <li ><a href="/houses" ><span ></span>租房</a></li>
-            <li><a href="#"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>合租房</a></li>
-            <li><a href="#"><span ></span>小区</a></li>
-            <li><a href="#"><span ></span>经纪人</a></li>
-            <li><a href="/owner"><span ></span>业主</a></li>
-            <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+    <div style="height: 100%">
+      <nav class="navbar " id="myself-nav" >
+        <div class="container-fluid">
+          <div class="navbar-header " >
+            <a class="navbar-brand" href="#">
+              <img src="../assets/images/logo1.png" alt="" style="width: 40px;height: 30px;margin-left: 20px">
+            </a>
+            <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
+                    data-target="#navbar-collapse">
+              <span class="sr-only">切换导航</span>
+              <span class="icon-bar icon-bar-success"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse " id="navbar-collapse" >
+            <ul class="nav navbar-nav navbar-right ">
+              <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
+              <li ><a href="/houses" ><span ></span>租房</a></li>
+              <li><a href="#"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>合租房</a></li>
+              <li><a href="#"><span ></span>小区</a></li>
+              <li><a href="#"><span ></span>经纪人</a></li>
+              <li><a href="/owner"><span ></span>业主</a></li>
+              <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span class="glyphicon glyphicon-user" ></span>登录</a></li>
 
-          </ul>
-        </div>
-      </div>
-
-      <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-        <div class="modal-dialog" role="document" >
-          <div class="modal-content" id="mymodal-content" >
-            <div class="modal-header" style="background-color: rgba(4,118,14,0.64)">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
-            </div>
-            <div class="modal-body" >
-
-              <div >
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist" >
-                  <li role="presentation" class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
-                  <li role="presentation"  ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-
-                  <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
-                  <div role="tabpanel" class="tab-pane active" id="home">
-                    <app-login></app-login>
-                    <!--填写注册信息-->
-
-                  </div>
-
-                  <!--///////////////////////////////////////////下边是注册信息表/////////////////////////-->
-
-                  <!--填写注册信息-->
-                  <div role="tabpanel" class="tab-pane" id="profile">
-                    <app-register></app-register>
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-
+            </ul>
           </div>
         </div>
-      </div>
-    </nav>
-    <!--搜索框-->
 
-    <div class="row " id="mian-serch">
+        <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+          <div class="modal-dialog" role="document" >
+            <div class="modal-content" id="mymodal-content" >
+              <div class="modal-header" style="background-color: rgba(4,118,14,0.64)">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
+              </div>
+              <div class="modal-body" >
 
-      <div class="input-group input-group-lg col-md-12 ">
-        <p class="animated bounceInLeft " id="topanimate" >让你在每个城市都有家的感觉！</p>
-        <input type="text"  class="form-control animated bounceInRight"  placeholder="请输入城市·区域名开始找房" style=" border-top-left-radius: 5px;
+                <div >
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist" >
+                    <li role="presentation" class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
+                    <li role="presentation"  ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+
+                    <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                      <app-login></app-login>
+                      <!--填写注册信息-->
+
+                    </div>
+
+                    <!--///////////////////////////////////////////下边是注册信息表/////////////////////////-->
+
+                    <!--填写注册信息-->
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                      <app-register></app-register>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--搜索框-->
+
+      <div class="row " id="mian-serch">
+
+        <div class="input-group input-group-lg col-md-12 ">
+          <p class="animated bounceInLeft " id="topanimate" >让你在每个城市都有家的感觉！</p>
+          <input type="text"  class="form-control animated bounceInRight"  placeholder="请输入城市·区域名开始找房" style=" border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;">
-        <span class="input-group-btn " id="input-group-btn">
+          <span class="input-group-btn " id="input-group-btn">
                 <button class="btn btn-success animated bounceInRight" (click)="gosearch()" id="zf" type="button" >开始找房</button>
       </span>
+        </div>
       </div>
     </div>
+
 
     <!--小工具-->
     <div class="row gongju" >
@@ -116,10 +117,9 @@
 
     <!--房屋列表-->
     <div class="house-list"  >
-
       <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" style="margin-left: 10px;margin-top: 10px">
-        <h2 >更多好房，为你而选</h2>
-        <span style="margin-left:90%"><a href="/houses">更多在租房>></a></span>
+        <h2 class="col-md-10">更多好房，为你而选</h2>
+        <span class="col-md-2" style="margin-top: 40px"><a href="/houses">更多在租房>></a></span>
       </div>
 
       <div class="row" id="out-house-style" >
@@ -141,81 +141,9 @@
 
 
         </div>
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h2.jpg" alt="">-->
-            <!--<span class="house-list price">4000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>稀缺南北通，厨卫全明，稀缺南北通,出行方便</h4>-->
-              <!--<p> 工业园区 二室一厅 <span>108m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h3.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>厨卫全明，客厅朝南，视野开阔，上下楼方便</h4>-->
-              <!--<p> 星河西区 三室二厅 <span>108m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h4.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>房型正气，带落地窗，稀缺南北通,高区采光好</h4>-->
-              <!--<p> 工业园区 一室一厅 <span>108m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
+
       </div>
 
-
-      <!--<div class="row" style="margin: 0 40px">-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h5.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>南北通，卧室带阳台，地铁房，黄金楼层</h4>-->
-              <!--<p> 星河西区 二室一厅 <span>108m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h6.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>地铁直达，上下楼方便，简单装修，房本满五年</h4>-->
-              <!--<p> 工业园区 一室一厅 <span>68m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h7.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>南北通透，客厅带阳台，地铁直达，光线充足</h4>-->
-              <!--<p> 星河西区 二室一厅 <span>78m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">-->
-          <!--<div href="#" class="thumbnail">-->
-            <!--<img src="../../assets/images/h8.jpg" alt="">-->
-            <!--<span class="house-list price">3000/月</span>-->
-            <!--<div class="caption">-->
-              <!--<h4>稀罕南北通，客厅带阳台，交通方便，好楼层</h4>-->
-              <!--<p> 工业园区 三室二厅 <span>108m<sup>2</sup></span></p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
 
 
 
