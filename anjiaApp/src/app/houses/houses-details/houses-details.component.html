@@ -59,40 +59,54 @@
     </div>
 
 
-    <ul>
-      <li><a href="./search#section1" class="on">周边配套 </a></li>
-      <li><a href="./search#section2" class="on">看房记录 </a></li>
-      <li><a href="./search#section3" class="on">相似房源 </a></li>
+    <!--<ul>-->
+      <!--<li><a href="#section1" [class.on]="tab_index==1" (click)="tab_index=1">周边配套 </a></li>-->
+      <!--<li><a href="#section2" [class.on]="tab_index==2" (click)="tab_index=2">看房记录 </a></li>-->
+      <!--<li><a href="#section3" [class.on]="tab_index==3" (click)="tab_index=3">相似房源 </a></li>-->
 
-    </ul>
-
-
-    <nav class="col-sm-2" id="myScrollspy">
-      <div class="container-fluid">
-        <div class="container-fluid">
-          <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-          </ul>
+    <!--</ul>-->
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <ul>
+          <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
+          <!--<li role="presentation"><a href="#">Profile</a></li>-->
+          <!--<li role="presentation"><a href="#">Messages</a></li>-->
+          <li *ngFor="let item of arr_li;let first=first;let index=index" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
+        </ul>
+        <div [ngSwitch]="tab_index">
+          <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <div style="font-size: 28px;height: 40px">周边配套</div>
+          </div>
+          <div *ngSwitchCase="1" id="section2"
+               style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <div style="font-size: 28px;height: 40px">看房记录</div>
+          </div>
+          <div *ngSwitchCase="2" id="section3"
+               style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <div style="font-size: 28px;height: 40px">相似房源</div>
+          </div>
+          <div *ngSwitchDefault="">默认...</div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <div id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white"
-         class="container-fluid">
-      <div style="font-size: 28px;height: 40px">周边配套</div>
-    </div>
-    <div id="section2"
-         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
-         class="container-fluid">
-      <div style="font-size: 28px;height: 40px">看房记录</div>
-    </div>
-    <div id="section3"
-         style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 20px"
-         class="container-fluid">
-      <div style="font-size: 28px;height: 40px">相似房源</div>
-    </div>
+
+    <!--<nav class="col-sm-2" id="myScrollspy">-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="container-fluid">-->
+          <!--<ul class="nav nav-pills nav-stacked">-->
+            <!--<li class="active"><a href="#section1">Section 1</a></li>-->
+            <!--<li><a href="#section2">Section 2</a></li>-->
+            <!--<li><a href="#section3">Section 3</a></li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</nav>-->
+
+
     <div>
       <h1>Section 4-1</h1>
       <p>Try to scroll this section and look at the navigation list while scrolling!</p>
@@ -106,3 +120,4 @@
   </div>
 
 </div>
+<app-footer></app-footer>

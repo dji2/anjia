@@ -10,6 +10,9 @@ import {PositionsService} from './../../services/positions.service';
 })
 export class HousesDetailsComponent implements OnInit {
 
+  arr_li=['周边配套','看房记录','相似房源'];
+  tab_index=0;
+
   house:any;
   constructor(
 

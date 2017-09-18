@@ -1,14 +1,14 @@
-body {
-  position: relative;
-}
-ul.nav-pills {
-  top: 10px;
-  position: fixed;
-}
-.bibibi div {
-  height: 250px;
-  font-size: 28px;
-}
+/*body {*/
+  /*position: relative;*/
+/*}*/
+/*ul.nav-pills {*/
+  /*top: 10px;*/
+  /*position: fixed;*/
+/*}*/
+/*.bibibi div {*/
+  /*height: 250px;*/
+  /*font-size: 28px;*/
+/*}*/
 
 /*#section41 {color: #fff; background-color: #00bcd4;}*/
 /*#section42 {color: #fff; background-color: #009688;}*/
@@ -152,7 +152,7 @@ ul {
   padding: 0;
   /*position: static;*/
 }
-li a.on {
+.on {
   color: #ffffff;
   background-color: #39ac6a;
 }
@@ -168,7 +168,7 @@ li a {
   position: relative;
   text-decoration: none;
 }
-li a.on:after {
+.on:after {
   position: absolute;
   bottom: -8px;
   color: #39ac6a;
