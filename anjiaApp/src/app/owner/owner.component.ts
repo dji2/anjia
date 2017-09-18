@@ -35,7 +35,7 @@ export class OwnerComponent implements OnInit {
   }
   setCommit():void{
     this.formstatus = !this.formstatus;
-    console.log(this.formstatus)
+    // console.log(this.formstatus)
   }
 }
 

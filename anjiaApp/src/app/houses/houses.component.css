@@ -143,7 +143,7 @@ input{
   margin-right: 20px;
   cursor: pointer;
 }
-.con-box .list-wrap {
+.list-wrap {
   border-top: 1px solid #e0e0e0;
 }
 
@@ -158,8 +158,11 @@ ul, ol, li {
   background: #fff;
   position: relative;
 }
-.lidiv:hover{
-  background-color: #FBFBFB;
+.house-list li:hover{
+  background: #fbfbfb;
+}
+.house-list .pic-panel img:hover {
+  opacity: .8;
 }
 .pic-panel,.info-panel,.renting{
   display: inline-block;
