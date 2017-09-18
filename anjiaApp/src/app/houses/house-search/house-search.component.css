@@ -1,0 +1,11 @@
+.search-button{
+  width: 100px;
+  border: 1px solid #aa4741;
+  border-radius: 2px;
+  background: #c7524b;
+  color: #fff;
+  font-size: 14px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
