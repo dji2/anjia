@@ -69,7 +69,7 @@ houses:any;
 
     let that = this;
 
-    that.house.getAllPositions(function (result) {
+    that.house.getAllHouses(function (result) {
 
       that.new_houses =result.slice(0, 8);
 
@@ -79,7 +79,7 @@ houses:any;
   }
 
 
-  toPositionDetail(id) {
+  toHouseDetail(id) {
     this.router.navigate(['/detail',id]);
   }
 

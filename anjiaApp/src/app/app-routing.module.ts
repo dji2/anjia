@@ -7,7 +7,6 @@ import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
 import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';

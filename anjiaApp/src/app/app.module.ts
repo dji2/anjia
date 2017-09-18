@@ -13,7 +13,14 @@ import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
 import { FooterComponent } from './footer/footer.component';
 //导入路由模块
-
+  import { HouseListComponent } from './houses/house-list/house-list.component';
+import { HouseSearchComponent } from './houses/house-search/house-search.component';
+import { HouseNavComponent } from './houses/house-nav/house-nav.component';
+import { ZujinxiaoPipe } from './pipes/zujinxiao.pipe';
+import { MianjixiaoPipe } from './pipes/mianjixiao.pipe';
+import { QuyuPipe } from './pipes/quyu.pipe';
+import { ZujinPipe } from './pipes/zujin.pipe';
+import { MianjiPipe } from './pipes/mianji.pipe';
 import {AppRoutingModule} from './app-routing.module';
 
 
@@ -25,7 +32,6 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
 //导入服务
 
 import {GlobalPropertyService} from './services/global-property.service';
-import { PositionDetailComponent } from './positons/position-detail/position-detail.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipes/search.pipe';
@@ -40,13 +46,21 @@ import { SearchPipe } from './pipes/search.pipe';
     SearchComponent,
     PageNotFoundComponent,
     LoginComponent,
-    PositionDetailComponent,
     OwnerComponent,
     HousesComponent,
     FooterComponent,
     HousesDetailsComponent,
     RegisterComponent,
     SearchPipe,
+    HouseListComponent,
+    HouseSearchComponent,
+    HouseNavComponent,
+    ZujinxiaoPipe,
+    MianjixiaoPipe,
+    QuyuPipe,
+    ZujinPipe,
+    MianjiPipe,
+
   ],
   imports: [
     BrowserModule,
