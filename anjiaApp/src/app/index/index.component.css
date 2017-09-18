@@ -1,137 +1,181 @@
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
 
 }
-@media screen and (min-width: 640px) and (max-width: 1000px){
 
-  #topanimate{
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+
+  #topanimate {
     display: none;
   }
 
-
-}
-@media screen and (max-width: 640px){
-/*搜索框上边的白字*/
-  #topanimate{
-display: none;
-  }
-
-/*搜索按钮*/
-#input-group-btn{
-
-width: 20px;
-
 }
 
-/*搜索框*/
-  #indexsearch{
-width: 200px;
+@media screen and (max-width: 640px) {
+  /*搜索框上边的白字*/
+  #topanimate {
+    margin: 0 auto;
+    display: none;
   }
+
+  /*搜索按钮*/
+  #input-group-btn {
+
+    width: 22px;
+    margin-top: 1px;
+
+  }
+
+  /*搜索框*/
+  #indexsearch {
+
+
+  }
+
   /*搜索框div*/
-  #mian-serch{
+  #mian-serch {
 
   }
 
 }
 
-.mybody{
-  background: url(../../assets/images/anbg.png)  ;
-  background-size:100% 660px;
-  background-repeat:no-repeat;
-  /*position: fixed;*/
-  position: static;
-  margin-left: 0px;
-  overflow-x:hidden;
+.mybody {
+  background: url(../../assets/images/bannerV2.jpg);
+  background-size: 100% 660px;
+  background-repeat: no-repeat;
+  /*背景视差属性*/
+  background-attachment: fixed;
 }
 
-
-
-.navbar-collapse ul li a{
+.navbar-collapse ul li a {
   color: white;
 }
-.navbar-collapse ul li a:hover{
+
+.navbar-collapse ul li a:hover {
   background-color: rgba(0, 0, 0, 0);
+   color: #cacaca;
 }
-.nav-lvju img{
+
+.nav-lvju img {
   width: 20px;
 }
 
+.login-outmodel a:hover{
+  font-size: 14px;
+}
+.login-outmodel a:hover{
+  cursor: pointer;
+}
 
 
-
-.input-group{
+.input-group {
   margin: 0 auto;
   margin-top: 300px;
   width: 50%;
 }
 
-#mycontainer{
-  background-color: rgba(14, 70, 48, 0.22);
+/*背景图蒙版*/
 
-  height: 660px;
+#mycontainer {
+
+  /*background-color: rgba(42, 118, 61, 0.29);*/
+  height: 720px;
+
 }
-#topanimate{
 
-  font-size: 38px;
+/*快来找月付*/
+#topanimate {
+  font-family:"Times New Roman", Times, serif;
+  font-size: 50px;
   color: rgba(254, 255, 211, 1);
   text-align: center;
   margin-left: 180px;
-  margin-top: -150px;
+  margin-top: -160px;
+  font-weight: 900;
+
 
 }
-#mymodal-content{
+
+#mymodal-content {
 
   width: 500px;
   height: 600px;
   margin-left: 70px;
-  margin-top: 40px;
+  margin-top: 0px;
 
 }
 
 /*主页小工具*/
-.gongju{
+.gongju {
   width: 100%;
-  height: 350px;
-  margin-top: 100px;
+  margin-top: 230px;
+background-color: white;
+}
+
+.gongju div {
+  height: 200px;
+width: 200px;
+  background-color: rgba(255, 255, 255, 0.77);
+  margin-left: 120px;
 
 }
-.gongju img{
+.gongju div:hover{
+  height: 200px;
+  width: 200px;
+  margin-left: 120px;
+
+
+}
+
+.gongju img {
   width: 76px;
   height: 65px;
-  margin: 0 auto 17px auto;
+
+margin: 10px auto;
+
   display: block;
   transition: width 0.1s;
   -webkit-transition: width 0.1s; /* Safari */
 }
-.gongju img:hover{
 
+.gongju img:hover {
   animation-name: pulse;
 }
-.gongju h4{
+
+.gongju h4 {
   margin-top: 40px;
   text-align: center;
   font-size: 22px;
   font-weight: 600;
 }
-.gongju p{
+
+.gongju p {
   text-align: center;
 }
 
 /*房屋列表*/
-.house-list{
-  margin: -120px 50px 70px 50px;
+.house-list {
+background-color: #f2f2f3;
+margin: 0px auto;
+
 }
-.house-list .house-list-title h4{
+
+
+
+
+.house-list .house-list-title h4 {
   margin-left: 2px;
 
 }
-.house-list p,h4{
+
+.house-list p, h4 {
   text-align: center;
 }
-.house-list img{
+
+.house-list img {
   width: 100%;
 }
 
-.house-list .price{
+.house-list .price {
   margin-top: -40px;
   width: 80px;
   height: 20px;
@@ -146,3 +190,96 @@ width: 200px;
   border-bottom-right-radius: 5px;
 }
 
+
+
+/*////返回顶部////////////*/
+
+#elevator_item {
+  width: 60px;
+  height: 100px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  opacity: 1;
+  z-index: 100020;
+  display: none;
+}
+#elevator_item.off {
+  opacity: 0;
+  visibility: hidden
+}
+#elevator {
+  display: block;
+  width: 60px;
+  height: 50px;
+  background: url(../../assets/images/icon_top.png) center center no-repeat;
+  background-color: #444;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-bottom: 10px
+}
+#elevator:hover {
+  background-color: rgba(0,0,0,.7)
+}
+#elevator:active {
+  background-color: rgba(0,0,0,.75)
+}
+#elevator_item .qr {
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  cursor: pointer;
+  background: url(../../assets/images/icon_code.png) center center no-repeat;
+  background-color: #444;
+  background-color: rgba(0,0,0,.6)
+}
+#elevator_item .qr:hover {
+  background-color: rgba(0,0,0,.7)
+}
+#elevator_item .qr:active {
+  background-color: rgba(0,0,0,.75)
+}
+#elevator_item .qr-popup {
+  width: 160px;
+  height: 170px;
+
+  box-shadow: 0 1px 8px rgba(0,0,0,.1);
+  position: absolute;
+  left: -180px;
+  bottom: 0;
+background-color: whitesmoke;
+  border-radius: 2px;
+  display: none;
+  text-align: center
+}
+#elevator_item .qr-popup .code-link {
+  display: block;
+  margin: 10px;
+  color: #777
+}
+/*二维码图片*/
+#elevator_item .qr-popup .code-link img {
+  margin-left: -5px;
+width: 150px;
+  height: 130px;
+}
+
+#elevator_item .qr-popup .code {
+  display: block;
+  margin-bottom: 10px
+}
+#elevator_item .qr-popup .arr {
+  width: 6px;
+  height: 11px;
+  background: url(../../assets/images/code_arrow.png) 0 0 no-repeat;
+  position: absolute;
+  right: -6px;
+  bottom: 14px
+}
