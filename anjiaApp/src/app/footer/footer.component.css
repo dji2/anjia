@@ -4,6 +4,8 @@
   background-color: rgb(34, 34, 34);
   margin: 0 0 0 0 ;
   border-top: 1px solid rgba(128, 128, 128, 0.47);
+  position: relative;
+  bottom: 0;
 }
 .myfooter ul {
   width: 100%;

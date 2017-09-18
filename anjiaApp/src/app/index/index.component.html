@@ -24,7 +24,7 @@
             <li><a href="#"><span ></span>小区</a></li>
             <li><a href="#"><span ></span>经纪人</a></li>
             <li><a href="/owner"><span ></span>业主</a></li>
-            <li  class=" " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+            <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a><span class="glyphicon glyphicon-user" ></span>登录</a></li>
 
           </ul>
         </div>
@@ -72,10 +72,13 @@
       </div>
     </nav>
     <!--搜索框-->
+
     <div class="row " id="mian-serch">
+
       <div class="input-group input-group-lg col-md-12 ">
-        <h1 class="animated bounceInLeft " id="topanimate" >毕业实习没住处，快来找月付！</h1>
-        <input type="text"  class="form-control animated bounceInRight"  id="indexsearch" placeholder="请输入城市·区域名开始找房" >
+        <p class="animated bounceInLeft " id="topanimate" >让你在每个城市都有家的感觉！</p>
+        <input type="text"  class="form-control animated bounceInRight"  placeholder="请输入城市·区域名开始找房" style=" border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;">
         <span class="input-group-btn " id="input-group-btn">
                 <button class="btn btn-success animated bounceInRight" (click)="gosearch()" id="zf" type="button" >开始找房</button>
       </span>
@@ -98,7 +101,7 @@
       <div class="col-md-3 col-sm-6 col-xs-6" >
         <img  class="animated rubberBand"  src="../../assets/images/zufanglogo.png" alt="">
         <h4>找合租房</h4>
-        <p>毕业出来工作，手头没钱不如来合租。认识一俩朋友，也是不错！</p>
+        <p>毕业出来工作，手头没钱不如来合租！</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6"  >
         <img  class="animated rubberBand"  src="../../assets/images/jisuanqilogo.png" alt="">
@@ -109,23 +112,28 @@
     </div>
 
     <!--房屋列表-->
-    <div class="house-list" >
+    <div class="house-list"  >
 
-      <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" style="margin-left: 10px">
+      <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" style="margin-left: 10px;margin-top: 10px">
         <h2 >更多好房，为你而选</h2>
         <span style="margin-left:90%"><a href="/houses">更多在租房>></a></span>
       </div>
       <div class="row"  style="margin: 0 40px">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div href="#" class="thumbnail">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"  >
+          <div href="#" class="thumbnail" id="houses-style">
             <img src="../../assets/images/h1.jpg" alt="">
             <span class="house-list price">3000/月</span>
             <div class="caption">
+              <a href="">
               <h4>南北直通，厨卫全明，出行方便，低区出入方便</h4>
+              </a>
               <p> 星河西区 三室一厅 <span>108m<sup>2</sup></span></p>
+
             </div>
           </div>
         </div>
+
+
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
           <div href="#" class="thumbnail">
             <img src="../../assets/images/h2.jpg" alt="">
@@ -157,6 +165,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="row" style="margin: 0 40px">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
           <div href="#" class="thumbnail">
@@ -202,11 +212,25 @@
 
     </div>
 
+<!--页脚部分-->
     <app-footer></app-footer>
+
+
   </div>
 
 
+  <div id="elevator_item">
+    <a id="elevator" onclick="return false;" title="回到顶部"></a>
+    <a class="qr"></a>
+    <div class="qr-popup">
+      <a class="code-link">
+        <img class="code" src="../../assets/images/wxapp.png"/>
+      </a>
+      <span>扫码关注更多房屋信息</span>
+      <div class="arr"></div>
+    </div>
 
-
+  </div>
 </div>
+
 
