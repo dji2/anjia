@@ -16,6 +16,22 @@ exports.housesDao={
                 client.release();
             })
         })
+    },
+    getArrInfo:function (callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                return
+            }
+            client.query(housesSql.getArrInfo,function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
     }
 }
 
