@@ -6,8 +6,6 @@ import {HttpClient} from '@angular/common/http';
 export class UsersService {
   url:string='http://10.40.4.64:3000/users';
 
-
-
    constructor(
     private http:HttpClient
   ) {
@@ -39,10 +37,10 @@ export class UsersService {
   getCodeByphone(user,callback){
     const that=this;
     // alert(that.url);
+    /////////////////////////'/check'//////////////
     that.http.post(this.url+'/check',user).subscribe(
 
       function (result) {
-
         callback(result);
       },
       function (error) {
