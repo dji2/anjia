@@ -13,8 +13,13 @@ import {PositionsService} from './../../services/positions.service';
 export class HouseListComponent implements OnInit {
 
   houses: any;
+
   @Input() searchText:string='';
-  @Input() zujin:string='';
+  @Input() quyuText:string='';
+  @Input() zujinText:string='';
+  @Input() mianjiText:string='';
+  @Input() zujinxiaoText:string='';
+
   text: string = '';
 
   constructor(
