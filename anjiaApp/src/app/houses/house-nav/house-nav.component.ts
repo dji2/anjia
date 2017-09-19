@@ -11,5 +11,24 @@ export class HouseNavComponent implements OnInit {
 
   ngOnInit() {
   }
+  _quyu:string;
 
+  do(s){
+    this._quyu=s;
+  }
+  _zujin:string;
+
+  do1(s){
+    this._zujin=s;
+  }
+  _mianji:string;
+
+  do2(s){
+    this._mianji=s;
+  }
+  _zujinxiao:string;
+
+  do3(s){
+    this._zujinxiao=s;
+  }
 }

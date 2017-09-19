@@ -53,24 +53,24 @@ dl {
   vertical-align: middle;
   padding-bottom: 1px;
 }
-.txt-box {
-  width: 48px;
-  border: 1px solid #e3e3e3;
-  border-radius: 2px;
-  position: relative;
-  float: left;
-}
-.txt {
-  display: block;
-  border: 0 none;
-  width: 36px;
-  padding: 2px 6px;
-  text-align: left;
-  color: #333;
-  height: 18px;
-  line-height: 18px;
-  font-size: 12px;
-}
-input{
-  outline: none;
-}
+/*.txt-box {*/
+  /*width: 48px;*/
+  /*border: 1px solid #e3e3e3;*/
+  /*border-radius: 2px;*/
+  /*position: relative;*/
+  /*float: left;*/
+/*}*/
+/*.txt {*/
+  /*display: block;*/
+  /*border: 0 none;*/
+  /*width: 36px;*/
+  /*padding: 2px 6px;*/
+  /*text-align: left;*/
+  /*color: #333;*/
+  /*height: 18px;*/
+  /*line-height: 18px;*/
+  /*font-size: 12px;*/
+/*}*/
+/*input{*/
+  /*outline: none;*/
+/*}*/
