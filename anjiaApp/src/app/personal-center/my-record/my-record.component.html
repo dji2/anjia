@@ -1,12 +1,28 @@
-<div class="record">
-  <div class="pic"><img src="../../../assets/personal-center/记录.jpg"/></div>
+<div cldiv="list-wrap">
+  <ul id="house-list" class="house-list">
+    <li *ngFor="let house of houses ">
+      <div class="pic-panel">
+        <a style="cursor: pointer"  (click)="toHouseDetail(house.houseId)"><img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg"/></a>
+      </div>
+      <div class="info-panel">
+        <h2  (click)="toHouseDetail(house.houseId)"><a style="cursor: pointer">{{house.houseName}}</a></h2>
+        <div class="where">
+          <span>{{house.areaName}}&nbsp;&nbsp;</span>
+          <span>{{house.room}}室{{house.livingroom}}厅&nbsp;&nbsp;</span>
+          <span class="ping">{{house.area}}&nbsp;&nbsp;</span>平
+        </div>
+        <div class="other">
+          {{house.address}}
+        </div>
 
-    <div class="info">
-      <span>建屋海德公园</span><span>4室2厅</span><span>143.24平</span><span>朝南北</span>
-      <p style="color: #999999">工业园区 独墅湖高教区 | 中层/18层 | 2016年建</p>
-      <p style="color: #00B7FF">10人关注</p>
-      <p style="color: #1AAD68">187人购买</p>
-    </div>
-
-
+      </div>
+      <div class="renting">
+        <span class="renting-money">{{house.housePrice}}</span>元／月
+        <br>
+        <span class="view-people">4</span>人看过此房
+        <br>
+        <span class="publishtime">发布时间:{{house.publishTime | date: 'shortDate' }}</span>
+      </div>
+    </li>
+  </ul>
 </div>
