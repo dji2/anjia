@@ -35,6 +35,7 @@ import {GlobalPropertyService} from './services/global-property.service';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { LocalStorageService } from './services/local-storage.service';
 
 
 
@@ -71,7 +72,7 @@ import { SearchPipe } from './pipes/search.pipe';
 
 
   ],
-  providers: [GlobalPropertyService],
+  providers: [GlobalPropertyService,LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
