@@ -36,18 +36,20 @@ export class RegisterComponent implements OnInit {
   getCode(registerForm) {
     let that = this;
     that.userSer.getCodeByphone(registerForm.form.value, function (result) {
-      // alert(result);
-      if (result.stageCode = '5') {
+
+      // if (result.stageCode == 5)
+      if (result.stagteCode == 5) {
         that.code_res = ' 该手机号已经注册过 ';
         console.log(that.code_res);
-      } else if (result.stageCode = 'e004') {
+      } else if (result.stagteCode == 'e004') {
         that.code_res = '网络连接失败！';
+
         console.log(that.code_res);
       } else {
         if (result) {
-          that.num = result.stageCode;
-          that.code_res = '';
-          console.log(that.num);
+          // that.num = result.stagteCode;
+          // that.code_res = '';
+          // console.log(that.num);
           that.RemainTime();
         }
       }
@@ -55,7 +57,7 @@ export class RegisterComponent implements OnInit {
   }
 
   toRegister(registerForm) {
-    if (this.num = this.code_val) {
+    alert('执行跳转');
       const that = this;
       that.userSer.register(registerForm.form.value, function (result) {
         if (result.stageCode = '5') {
@@ -64,15 +66,12 @@ export class RegisterComponent implements OnInit {
           sessionStorage.setItem('token', result.token);
           that.router.navigate(['/index']);
           alert('执行跳转');
-          // that.reg_res = '';
+
         } else {
           that.reg_res = '数据库错误！';
         }
       });
-    } else {
-      this.reg_res = '验证码错误!!!';
     }
-  }
 
   private timer;
 

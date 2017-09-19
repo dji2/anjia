@@ -41,7 +41,7 @@
   <!--请输入你的昵称-->
   <div class="form-group form-group-lg">
     <div class="col-sm-12 form-group-lg">
-      <input type="text" class="form-control" #user_name="ngModel" [(ngModel)]="user_name1"  maxlength="8" id=username name=username placeholder="昵称" required>
+      <input type="text" class="form-control" #user_name="ngModel" [(ngModel)]="user_name1"  maxlength="8" id='username' name='userName' placeholder="昵称" required>
     </div>
   </div>
   <div *ngIf="user_name.invalid && (user_name.dirty || user_name.touched)"

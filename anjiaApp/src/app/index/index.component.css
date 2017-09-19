@@ -127,7 +127,7 @@
 .gongju img {
   width: 76px;
   height: 65px;
-margin: 10px auto;
+  margin: 10px auto;
   display: block;
   transition: width 0.1s;
   -webkit-transition: width 0.1s; /* Safari */
@@ -154,7 +154,11 @@ background-color: #f2f2f3;
 margin: 0 auto;
 
 }
+.house-list img{
+  width:250px;
+  height: 166px;
 
+}
 #house-setting{
   margin-top: 10px;
   width: 290px;
