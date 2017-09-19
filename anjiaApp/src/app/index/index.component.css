@@ -106,22 +106,20 @@
 
 /*主页小工具*/
 .gongju {
-  width: 100%;
-  margin-top: 230px;
-background-color: white;
+
+   background-color: white;
 }
 
 .gongju div {
   height: 200px;
-width: 200px;
+
   background-color: rgba(255, 255, 255, 0.77);
-  margin-left: 120px;
 
 }
 .gongju div:hover{
   height: 200px;
-  width: 200px;
-  margin-left: 120px;
+
+
 
 
 }
@@ -129,9 +127,7 @@ width: 200px;
 .gongju img {
   width: 76px;
   height: 65px;
-
 margin: 10px auto;
-
   display: block;
   transition: width 0.1s;
   -webkit-transition: width 0.1s; /* Safari */
@@ -155,11 +151,11 @@ margin: 10px auto;
 /*房屋列表*/
 .house-list {
 background-color: #f2f2f3;
-margin: 0px auto;
+margin: 0 auto;
 }
 
 #house-setting{
-margin-top: 10px;
+  margin-top: 10px;
   width: 290px;
   height: 330px
 }
