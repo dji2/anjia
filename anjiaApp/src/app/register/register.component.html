@@ -96,7 +96,7 @@
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox" required> 我已阅读并同意 <a href="" style="color: #3c763d"> 安家用户使用协议</a>
+          <input type="checkbox" (change)="rgcheckbox()"> 我已阅读并同意 <a href="" style="color: #3c763d"> 安家用户使用协议</a>
         </label>
       </div>
     </div>
@@ -104,7 +104,7 @@
   <!--注册按钮-->
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" (click)="toRegister(registerForm)" [disabled]="registerForm.form.invalid" class="btn btn-success btn-register ">注册</button>
+      <button type="submit" (click)="toRegister(registerForm)" [disabled]="!(checkbox&&registerForm.form.valid)" class="btn btn-success btn-register ">注册</button>
 
       <div *ngIf="code_res"
            class="alert alert-danger">

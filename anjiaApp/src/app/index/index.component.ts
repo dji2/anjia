@@ -18,7 +18,7 @@ declare var $ :any;
 })
 export class IndexComponent implements OnInit {
   new_houses:any;
-
+  username:any='登录';
   text: string = '';
   positions: any;
 houses:any;

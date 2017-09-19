@@ -39,10 +39,10 @@ export class UsersService {
   getCodeByphone(user,callback){
     const that=this;
     // alert(that.url);
+    /////////////////////////'/check'//////////////
     that.http.post(this.url+'/check',user).subscribe(
 
       function (result) {
-
         callback(result);
       },
       function (error) {
