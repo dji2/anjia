@@ -32,6 +32,18 @@ export class UsersService {
       }
     )
   }
+
+  getRecord(user,callback){
+    this.http.post(this.url+'/getRecord',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
   register(user,callback){
     this.http.post(this.url+'/regist',user).subscribe(
       function (result) {
