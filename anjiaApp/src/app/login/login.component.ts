@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from './../services/users.service';
 import {Router} from '@angular/router';
-
+import { LocalStorageService } from './../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +12,16 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   login_res:string;
-
+  userName:any;
   constructor(
     private userSer:UsersService,
-    private router:Router
+    private router:Router,
+    private localStorage:LocalStorageService
   ) { }
 
   ngOnInit() {
+
+
   }
   //单例  单一的实例
   toLogin(loginForm){
@@ -27,8 +30,10 @@ export class LoginComponent implements OnInit {
       // 弹出接收后台数据数值
       //      alert(result.stateCode);
       if(result.stateCode==1){
+        that.localStorage.set('token',result.token);
+        that.localStorage.set('userName',result.userName);
+        alert(result.userName);
 
-      alert('登陆成功');
         that.router.navigate(['/index']);
       }else{
         that.login_res='用户名或密码错误';
