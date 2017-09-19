@@ -32,7 +32,7 @@ exports.userDao={
                         console.log("数据库连接错误");
                         return;
                     }
-                    client.query(userSql.addUser,[user.telephone,user.password,'',81],function (error,result) {
+                    client.query(userSql.addUser,[user.userName,user.telephone,user.password,'',81],function (error,result) {
                         if(error){
                             callback('e004');
                             return;
@@ -100,6 +100,23 @@ exports.userDao={
 
                 callback(result[0][0].result);
                 // console.log(result[0][0].result);
+                client.release();
+            })
+        })
+    },
+    getFocusHouses:function (userId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.getFocusHouses,[userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
                 client.release();
             })
         })

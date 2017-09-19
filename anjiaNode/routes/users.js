@@ -80,6 +80,20 @@ router.post('/login', function (req, res, next) {
     }
 });
 
+router.post('/getFocusHouses', function (req, res, next) {
+    var user = req.body;
+    if(user){
+        console.log("getFocusHouses:id"+user.userId);
+        userdao.getFocusHouses(user.userId,function (result) {
+            console.log("getFocusHouses");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
 
 router.post('/regist', function (req, res, next) {
     console.log("route regist");

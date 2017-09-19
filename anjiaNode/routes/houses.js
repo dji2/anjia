@@ -14,17 +14,37 @@ router.get('/', function(req, res, next) {
   })
 });
 //获取
-router.get('/getArrInfo', function(req, res, next) {
+router.post('/getArrInfo', function(req, res, next) {
+    var house = req.body;
+    if(house){
+        console.log("getArrInfo:houseId"+house.houseId);
+        housesDao.getArrInfo(house.houseId,function (result) {
+            console.log("arrangeInfo");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
 
 
-    housesDao.getArrInfo(function (result) {
-        console.log("arrangeInfo");
-        if(result.length==0){
-            res.json(null);
-        }else{
-            res.json(result);
-        }
-    })
+});
+router.post('/getFocusNum', function(req, res, next) {
+    var house = req.body;
+    if(house){
+        console.log("getFocusNum:houseId"+house.houseId);
+        housesDao.getFocusNum(house.houseId,function (result) {
+            console.log("getFocusNum");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+
+
 });
 
 module.exports = router;

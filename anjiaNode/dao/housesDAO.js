@@ -17,12 +17,30 @@ exports.housesDao={
             })
         })
     },
-    getArrInfo:function (callback) {
+    getArrInfo:function (houseId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
+                console.log("error");
                 return
             }
-            client.query(housesSql.getArrInfo,function (error,result) {
+            client.query(housesSql.getArrInfo,[houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+    getFocusNum:function (houseId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.getFocusNum,[houseId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
