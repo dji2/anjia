@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ZujinPipe implements PipeTransform {
 
   transform(houses: any, args?: any): any {
-    if(args<=8000 && args>1){
+    if(args<=8000 && args>0){
       var new_houses=houses.filter(function (house,index) {
         if(house.housePrice>=args && house.housePrice<=(args+2000)){
           return house;
