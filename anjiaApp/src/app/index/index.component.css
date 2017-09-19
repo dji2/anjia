@@ -39,7 +39,7 @@
 }
 
 .mybody {
-  background: url(../../assets/images/bannerV2.jpg);
+  background: url(http://owhah4u2f.bkt.clouddn.com/images/index/bannerV2.jpg);
   background-size: 100% 660px;
   background-repeat: no-repeat;
   /*背景视差属性*/
@@ -152,6 +152,7 @@ margin: 10px auto;
 .house-list {
 background-color: #f2f2f3;
 margin: 0 auto;
+
 }
 
 #house-setting{
