@@ -4,8 +4,8 @@ import {Router} from '@angular/router';
 // 管道
 
 //导入服务
-
 import {PositionsService} from './../services/positions.service';
+import { LocalStorageService } from './../services/local-storage.service';
 
 declare var $ :any;
 
@@ -14,18 +14,18 @@ declare var $ :any;
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
-  providers: [PositionsService]
+  providers: [PositionsService,LocalStorageService]
 })
 export class IndexComponent implements OnInit {
   new_houses:any;
-  username:any='登录';
+  islogin:number=0;
   text: string = '';
   positions: any;
-houses:any;
+  houses:any;
 
   constructor(private route: ActivatedRoute,
               private router:Router,
-
+              private localStorage:LocalStorageService,
               private house: PositionsService
   ) {
 
@@ -76,6 +76,14 @@ houses:any;
 
 
     })
+
+    if(that.localStorage.get('token')){
+      that.islogin=1;
+    }else {
+      that.islogin=0;
+    }
+
+
   }
 
 

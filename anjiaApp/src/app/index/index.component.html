@@ -26,7 +26,8 @@
               <li><a href="#"><span ></span>小区</a></li>
               <li><a href="#"><span ></span>经纪人</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
-              <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>{{username}}</a></li>
+              <li *ngIf="islogin"><a href="/personal-center"><span ></span>个人中心</a></li>
+              <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
             </ul>
           </div>
         </div>
@@ -126,7 +127,7 @@
 
           <div href="#" class="thumbnail" id="houses-style" >
 
-            <img src="../../assets/images/h1.jpg" alt="">
+            <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg" alt="">
             <span class="house-list price">{{house.housePrice}}/月</span>
             <div class="caption">
               <a href="">
