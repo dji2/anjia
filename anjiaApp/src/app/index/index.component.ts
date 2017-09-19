@@ -19,6 +19,7 @@ declare var $ :any;
 export class IndexComponent implements OnInit {
   new_houses:any;
   islogin:number=0;
+  userName:any;
   text: string = '';
   positions: any;
   houses:any;
@@ -75,10 +76,11 @@ export class IndexComponent implements OnInit {
 
 
 
-    })
+    });
 
     if(that.localStorage.get('token')){
       that.islogin=1;
+      that.userName=that.localStorage.get('userName')
     }else {
       that.islogin=0;
     }

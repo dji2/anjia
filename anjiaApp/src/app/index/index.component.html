@@ -26,8 +26,8 @@
               <li><a href="#"><span ></span>小区</a></li>
               <li><a href="#"><span ></span>经纪人</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
-              <li *ngIf="islogin"><a href="/personal-center"><span ></span>个人中心</a></li>
-              <li  class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
+              <li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>
+              <li  *ngIf="!islogin" class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
             </ul>
           </div>
         </div>
