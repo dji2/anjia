@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MianjiPipe implements PipeTransform {
 
   transform(houses: any, args?: any): any {
-    if(args<=110){
+    if(args<=110 && args>1){
       var new_houses=houses.filter(function (house,index) {
         if(house.area>=args && house.area<=(args+20)){
           return house;

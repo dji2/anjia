@@ -3,7 +3,7 @@
     <dt title="">区域:</dt>
     <dd>
       <div class="option-list">
-        <a  class="nolimit" (click)="do()" >不限</a>
+        <a  class="nolimit" (click)="do('')" [class.on]="''==flag_number">不限</a>
         <a (click)="do('高新')" [class.on]="'高新'==flag_number">高新</a>
         <a (click)="do('姑苏')" [class.on]="'姑苏'==flag_number">姑苏</a>
         <a (click)="do('吴中')" [class.on]="'吴中'==flag_number">吴中</a>
@@ -21,7 +21,7 @@
     <dt title="">租金:</dt>
     <dd>
       <div class="option-list">
-        <a (click)="do1()" class="nolimit">不限</a>
+        <a (click)="do1(0)" class="nolimit" [class.on]="0==flag_number1">不限</a>
         <div class="item-list">
           <a (click)="do1(1)" [class.on]="1==flag_number1">1000-2000元</a>
           <a (click)="do1(2000)" [class.on]="2000==flag_number1">2000-4000元</a>
@@ -45,7 +45,7 @@
     <dt title="">面积:</dt>
     <dd>
       <div class="option-list">
-        <a (click)="do2()" class="nolimit" >不限</a>
+        <a (click)="do2(0)" class="nolimit" [class.on]="0==flag_number2">不限</a>
         <div class="item-list">
           <a (click)="do2(30)" [class.on]="30==flag_number2">50平以下</a>
           <a (click)="do2(50)" [class.on]="50==flag_number2">50-70平</a>
@@ -85,22 +85,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a (click)="do3()" >默认</a></li>
-        <li><a (click)="do3(5)" [class.on]="5==flag_number3">最新</a></li>
-        <li class="dropdown">
+        <!--<li [class.active]="0==flag_number3"><a (click)="do3(0)"  >默认</a></li>-->
+        <li [class.active]="5==flag_number3"><a (click)="do3(5)" >最新</a></li>
+        <li class="dropdown" [class.active]="1==flag_number3" [class.active]="2==flag_number3">
           <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false">租金 <span class="caret"></span></a>
           <ul class="dropdown-menu" >
-            <li><a (click)="do3(1)" [class.on]="1==flag_number3">从低到高</a></li>
-            <li><a (click)="do3(2)" [class.on]="2==flag_number3">从高到低</a></li>
+            <li><a (click)="do3(1)" >从低到高</a></li>
+            <li><a (click)="do3(2)" >从高到低</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown" [class.active]="3==flag_number3" [class.active]="4==flag_number3">
           <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false">面积<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a (click)="do3(3)" [class.on]="3==flag_number3">从小到大</a></li>
-            <li><a (click)="do3(4)" [class.on]="4==flag_number3">从大到小</a></li>
+            <li><a (click)="do3(3)" >从小到大</a></li>
+            <li><a (click)="do3(4)" >从大到小</a></li>
           </ul>
 
         </li>

@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ZujinxiaoPipe implements PipeTransform {
 
   transform(houses: any, args?: any): any {
-    // console.log(houses);
+
+
     if(args==1){
      var new_houses=houses;
       new_houses.sort(function (houseA,houseB) {
@@ -31,15 +32,12 @@ export class ZujinxiaoPipe implements PipeTransform {
         return  houseB.area - houseA.area ;
       })
       return new_houses;
-    }else if(args==5) {
-      var new_houses=houses;
-      new_houses.sort(function (houseA,houseB) {
-        return houseB.publishTime - houseA.publishTime ;
-      })
-      return new_houses;
-
     }else{
-      return houses;
+      var new_houses = houses;
+      new_houses.sort(function(a,b){
+        return Date.parse(b.publishTime) - Date.parse(a.publishTime);//时间正序
+      });
+      return new_houses;
     }
   }
 

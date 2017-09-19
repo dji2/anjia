@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseNavComponent implements OnInit {
 
-  flag_number='quyu';
-  flag_number1='zujin';
-  flag_number2='mianji';
-  flag_number3=6;
+  flag_number='';
+  flag_number1=0;
+  flag_number2=0;
+  flag_number3=5;
   constructor() { }
 
   ngOnInit() {
