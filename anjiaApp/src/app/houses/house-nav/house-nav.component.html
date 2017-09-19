@@ -3,17 +3,17 @@
     <dt title="">区域:</dt>
     <dd>
       <div class="option-list">
-        <a  class="nolimit on" (click)="do('')">不限</a>
-        <a (click)="do('高新')">高新</a>
-        <a (click)="do('姑苏')">姑苏</a>
-        <a (click)="do('吴中')">吴中</a>
-        <a (click)="do('工业园区')">工业园区</a>
-        <a (click)="do('吴江')">吴江</a>
-        <a (click)="do('常熟')">常熟</a>
-        <a (click)="do('太仓')">太仓</a>
-        <a (click)="do('昆山')">昆山</a>
-        <a (click)="do('相城')">相城</a>
-        <a (click)="do('张家港')">张家港</a>
+        <a  class="nolimit" (click)="do()" >不限</a>
+        <a (click)="do('高新')" [class.on]="'高新'==flag_number">高新</a>
+        <a (click)="do('姑苏')" [class.on]="'姑苏'==flag_number">姑苏</a>
+        <a (click)="do('吴中')" [class.on]="'吴中'==flag_number">吴中</a>
+        <a (click)="do('工业园区')" [class.on]="'工业园区'==flag_number">工业园区</a>
+        <a (click)="do('吴江')" [class.on]="'吴江'==flag_number">吴江</a>
+        <a (click)="do('常熟')" [class.on]="'常熟'==flag_number">常熟</a>
+        <a (click)="do('太仓')" [class.on]="'太仓'==flag_number">太仓</a>
+        <a (click)="do('昆山')" [class.on]="'昆山'==flag_number">昆山</a>
+        <a (click)="do('相城')" [class.on]="'相城'==flag_number">相城</a>
+        <a (click)="do('张家港')" [class.on]="'张家港'==flag_number">张家港</a>
       </div>
     </dd>
   </dl>
@@ -21,14 +21,14 @@
     <dt title="">租金:</dt>
     <dd>
       <div class="option-list">
-        <a (click)="do1()" class="nolimit on">不限</a>
+        <a (click)="do1()" class="nolimit">不限</a>
         <div class="item-list">
-          <a (click)="do1(1)">1000-2000元</a>
-          <a (click)="do1(2000)">2000-4000元</a>
-          <a (click)="do1(4000)">4000-6000元</a>
-          <a (click)="do1(6000)">6000-8000元</a>
-          <a (click)="do1(8000)">8000-10000元</a>
-          <a (click)="do1(10000)">10000元以上</a>
+          <a (click)="do1(1)" [class.on]="1==flag_number1">1000-2000元</a>
+          <a (click)="do1(2000)" [class.on]="2000==flag_number1">2000-4000元</a>
+          <a (click)="do1(4000)" [class.on]="4000==flag_number1">4000-6000元</a>
+          <a (click)="do1(6000)" [class.on]="6000==flag_number1">6000-8000元</a>
+          <a (click)="do1(8000)" [class.on]="8000==flag_number1">8000-10000元</a>
+          <a (click)="do1(10000)" [class.on]="10000==flag_number1">10000元以上</a>
         </div>
         <div class="custom">
           <!--<div class="txt-box">-->
@@ -45,14 +45,14 @@
     <dt title="">面积:</dt>
     <dd>
       <div class="option-list">
-        <a (click)="do2()" class="nolimit on">不限</a>
+        <a (click)="do2()" class="nolimit" >不限</a>
         <div class="item-list">
-          <a (click)="do2(30)">50平以下</a>
-          <a (click)="do2(50)">50-70平</a>
-          <a (click)="do2(70)">70-90平</a>
-          <a (click)="do2(90)">90-110平</a>
-          <a (click)="do2(110)">110-130平</a>
-          <a (click)="do2(150)">130平以上</a>
+          <a (click)="do2(30)" [class.on]="30==flag_number2">50平以下</a>
+          <a (click)="do2(50)" [class.on]="50==flag_number2">50-70平</a>
+          <a (click)="do2(70)" [class.on]="70==flag_number2">70-90平</a>
+          <a (click)="do2(90)" [class.on]="90==flag_number2">90-110平</a>
+          <a (click)="do2(110)" [class.on]="110==flag_number2">110-130平</a>
+          <a (click)="do2(150)" [class.on]="150==flag_number2">130平以上</a>
         </div>
         <div class="custom">
           <!--<div class="txt-box">-->
@@ -85,22 +85,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="./houses">默认<span class="sr-only">(current)</span></a></li>
-        <li><a href="./houses">最新</a></li>
+        <li><a (click)="do3()" >默认</a></li>
+        <li><a (click)="do3(5)" [class.on]="5==flag_number3">最新</a></li>
         <li class="dropdown">
-          <a href="/houses" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false">租金 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a (click)="do3('1')">从低到高</a></li>
-            <li><a (click)="do3('2')">从高到低</a></li>
+          <ul class="dropdown-menu" >
+            <li><a (click)="do3(1)" [class.on]="1==flag_number3">从低到高</a></li>
+            <li><a (click)="do3(2)" [class.on]="2==flag_number3">从高到低</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/houses" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false">面积<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a (click)="do3('3')">从小到大</a></li>
-            <li><a (click)="do3('4')">从大到小</a></li>
+            <li><a (click)="do3(3)" [class.on]="3==flag_number3">从小到大</a></li>
+            <li><a (click)="do3(4)" [class.on]="4==flag_number3">从大到小</a></li>
           </ul>
 
         </li>

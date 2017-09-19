@@ -19,6 +19,9 @@ ul, ol, li {
 .house-list .pic-panel img:hover {
   opacity: .8;
 }
+.info-panel h2:hover {
+  opacity: .8;
+}
 .pic-panel,.info-panel,.renting{
   display: inline-block;
   vertical-align: middle;
@@ -65,6 +68,9 @@ img{
 }
 .where,.other{
   margin-top: 25px;
+}
+.ping{
+  font-size: 2em;
 }
 .renting{
   float: right;
