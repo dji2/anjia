@@ -9,6 +9,12 @@ var sms = require('./../utils/sendMessage');
 var checkCode="121212";
 
 
+//产生令牌
+var jwt = require("jwt-simple");
+var moment = require("moment");
+
+var ct = require("../utils/checkToken");
+
 
 router.post('/check', function (req, res, next) {
     var user = req.body;
@@ -56,14 +62,12 @@ router.post('/login', function (req, res, next) {
                         if (result[0].password == util.MD5(user.password)) {
 
                             //产生令牌
-                            var _token = util.createUnique();
-                            console.log(_token);
-                            userdao.createToken(user.telephone, _token, function (result) {
-                                console.log(result);
-                                if (result.affectedRows == 1) {
-                                    res.json({"stateCode": 1, "token": _token});
-                                }
-                            });
+                            var expires = moment().add(7, 'days').valueOf();
+                            var token = jwt.encode({
+                                iss: user.telephone,
+                                exp: expires
+                            }, util.secret);
+                            res.json({"stateCode": 1,token:token,userName:result[0].userName});
 
                         } else {
                             res.json({"stateCode": 2});

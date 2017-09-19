@@ -13,5 +13,18 @@ router.get('/', function(req, res, next) {
       }
   })
 });
+//获取
+router.get('/getArrInfo', function(req, res, next) {
+
+
+    housesDao.getArrInfo(function (result) {
+        console.log("arrangeInfo");
+        if(result.length==0){
+            res.json(null);
+        }else{
+            res.json(result);
+        }
+    })
+});
 
 module.exports = router;
