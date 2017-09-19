@@ -94,7 +94,20 @@ router.post('/getFocusHouses', function (req, res, next) {
         })
     }
 });
-
+router.post('/getRecord', function (req, res, next) {
+    var user = req.body;
+    if(user){
+        console.log("getRecord:id"+user.userId);
+        userdao.getRecord(user.userId,function (result) {
+            console.log("getRecord");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
 router.post('/regist', function (req, res, next) {
     console.log("route regist");
     var user  = req.body;

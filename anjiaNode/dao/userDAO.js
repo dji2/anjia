@@ -120,5 +120,23 @@ exports.userDao={
                 client.release();
             })
         })
+    },
+    getRecord:function (userId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.getRecord,[userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    console.log("getRecord--error");
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
     }
 }
