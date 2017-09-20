@@ -62,12 +62,14 @@
       <label for="address" class="col-sm-2 control-label">房型选择</label>
 
       <div class="col-sm-10">
-        <select  class="sel  btn-success" #selectValue="ngModel" [(ngModel)]="_selectValue" id="selectValue" name="selectValue" required>
+        <select multiple class="form-control" #selectValue="ngModel" [(ngModel)]="_selectValue" id="selectValue" name="houseTypeId" required>
           <option value="1">1室1厅</option>
           <option value="2">2室1厅</option>
           <option value="3">3室1厅</option>
           <option value="4">3室2厅</option>
         </select>
+
+
       </div>
     </div>
     <hr>
