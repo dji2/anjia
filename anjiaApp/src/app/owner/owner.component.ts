@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {PositionsService} from './../services/positions.service';
 import {Router} from '@angular/router';
 
+import { LocalStorageService } from './../services/local-storage.service';
+
 @Component({
   selector: 'app-owner',
   templateUrl: './owner.component.html',
@@ -14,14 +16,21 @@ export class OwnerComponent implements OnInit {
   formstatus:boolean = false;
   constructor(
     private userSer:PositionsService,
-    private router:Router
-  ) { }
+    private router:Router,
+  private localStorage:LocalStorageService
+
+) { }
 
   ngOnInit() {
   }
   toRelease(ownerForm){
+    let owner  = ownerForm.form.value;
+    let userId = this.localStorage.get('userId')
+
+    owner.ownerId = userId;
+    console.log(owner);
     let that=this;
-    that.userSer.addHouse(ownerForm.form.value,function (result) {
+    that.userSer.addHouse(owner,function (result) {
       // 弹出接收后台数据数值
 
       // alert(result.stateCode);
