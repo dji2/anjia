@@ -18,9 +18,9 @@ export class MyRecordComponent implements OnInit {
 
   ngOnInit() {
     let that = this;
-
-
-    that.userSer.getRecord({"userId":2},function (result) {
+    let userId = that.localStorage.get('userId');
+    console.log(userId);
+    that.userSer.getRecord({"userId":userId},function (result) {
       that.houses = result;
 
       console.log(result);
