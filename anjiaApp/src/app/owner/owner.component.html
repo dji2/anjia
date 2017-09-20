@@ -22,39 +22,69 @@
   <form class="form-horizontal" #ownerForm="ngForm">
 
     <div class="form-group">
-      <label for="plotName" class="col-sm-2 control-label">小区名称</label>
+      <label  class="col-sm-2 control-label">小区名称</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" #pla="ngModel" [(ngModel)]="_pla" id="plotName" name="plotName" placeholder="请输入小区名称" required>
+        <input type="text" class="form-control" #areaName="ngModel" [(ngModel)]="_areaName" id="areaName" name="areaName" placeholder="请输入小区名称" required>
       </div>
     </div>
     <hr>
     <div class="form-group">
-      <label for="address" class="col-sm-2 control-label">小区地址</label>
+      <label  class="col-sm-2 control-label">小区地址</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" #add="ngModel" [(ngModel)]="_add" id="address" name="address" placeholder="请输入小区地址" required>
       </div>
     </div>
     <hr>
     <div class="form-group">
-      <label for="buildingNumber" class="col-sm-2 control-label">楼栋号</label>
+      <label  class="col-sm-2 control-label">楼层</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" #bui="ngModel" [(ngModel)]="_bui" id="buildingNumber" name="buildingNumber" placeholder="请输入房屋楼栋号" required>
+        <input type="text" class="form-control" #floor="ngModel" [(ngModel)]="_floor" id="floor" name="floor" placeholder="请输入房屋楼层" required>
       </div>
     </div>
     <hr>
     <div class="form-group">
-      <label for="houseNumber" class="col-sm-2 control-label">室号</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" #hou="ngModel" [(ngModel)]="_hou" id="houseNumber" name="houseNumber" placeholder="请输入室号" required>
-      </div>
-    </div>
-    <hr>
-    <div class="form-group">
-      <label for="rent" class="col-sm-2 control-label">期望租金</label>
+      <label class="col-sm-2 control-label">面积</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control"pattern="^\d{3,6}$" #rent="ngModel" [(ngModel)]="_rent" id="rent" name="rent" placeholder="请输入期望租金(100~100000)" required>
+        <input type="text" class="form-control"  #area="ngModel" [(ngModel)]="_area" id="area" name="area" placeholder="请输入面积" required>
       </div>
-      <label for="rent" class="control-label">元／月</label>
+      <label  class="control-label">平 方</label>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">朝向</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" #hou="ngModel" [(ngModel)]="_hou" id="houseNumber" name="houseNumber" placeholder="请输入朝向" required>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <!-- Single button -->
+      <label for="address" class="col-sm-2 control-label">房型选择</label>
+
+      <div class="col-sm-10">
+        <select  class="sel  btn-success" #selectValue="ngModel" [(ngModel)]="_selectValue" id="selectValue" name="selectValue" required>
+          <option value="1">1室1厅</option>
+          <option value="2">2室1厅</option>
+          <option value="3">3室1厅</option>
+          <option value="4">3室2厅</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label  class="col-sm-2 control-label">期望租金</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" pattern="^\d{3,6}$" #housePrice="ngModel" [(ngModel)]="_housePrice" id="housePrice" name="housePrice" placeholder="请输入期望租金(100~100000)" required>
+      </div>
+      <label  class="control-label">元／月</label>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">房屋简介</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" pattern="[^\x00-\xff]{10,20}$" #houseName="ngModel" [(ngModel)]="_intro" id="houseName" name="houseName" placeholder="请输入房屋简介(中文输入10~20字！)" required></textarea>
+        <!--<input type="text" class="form-control" pattern="^[\u4e00-\u9fa5a-zA-Z]{20,100}$" #intro="ngModel" [(ngModel)]="_intro" id="intro" name="intro" placeholder="请输入房屋简介(最少20字)" required>-->
+      </div>
     </div>
     <hr>
     <div class="form-group">
