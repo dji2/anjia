@@ -14,6 +14,7 @@ export class HousesDetailsComponent implements OnInit {
   tab_index=0;
 
   house:any;
+  users:any;
   constructor(
 
     private route: ActivatedRoute,
@@ -28,6 +29,15 @@ export class HousesDetailsComponent implements OnInit {
       console.log(house);
       that.house=house[0];
     })
+
+    that.ho.getArrInfo({"houseId":id},function (result) {
+
+      console.log(result);
+      that.users=result;
+    })
+
   }
+
+
 
 }

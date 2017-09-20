@@ -177,3 +177,30 @@ li a {
   left: 62px;
   content: '▼';
 }
+.user_icon{
+  height:50px;
+  width:50px;float: left;
+}
+.user_icon img{
+  height:40px;
+  width:40px;
+  border-radius: 20px
+}
+
+.user_comment{
+  list-style: none;
+  clear: both;
+}
+.userName{
+  color: #555;
+  font-size: 20px;
+}
+.commentinfo{
+
+  font-size: 15px;
+
+}
+.adate{
+  float: right;
+  font-size: 12px;
+}

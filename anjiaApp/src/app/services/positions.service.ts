@@ -21,6 +21,16 @@ export class PositionsService {
       }
     )
   }
+  getArrInfo(house,callback){
+    this.http.post(this.url+'/getArrInfo',house).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   getAllHouses(callback){
     this.http.get(this.url).subscribe(function (result) {
       callback(result);
