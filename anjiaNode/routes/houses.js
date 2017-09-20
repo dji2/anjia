@@ -35,9 +35,11 @@ router.post('/getArrInfo', function(req, res, next) {
 //添加房源
 router.post('/addHouse', function(req, res, next) {
     var house = req.body;
+    house.publishTime = new Date();
+    console.log(house.publishTime);
     if(house){
         housesDao.addHouse(house,function (result) {
-            console.log("addhouse   "+house);
+
             if(result.affectedRows==1){
                 res.json({"stateCode":11});
             }else{

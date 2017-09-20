@@ -2,6 +2,7 @@
 <div class="mybody row" >
 
   <div id="mycontainer" >
+
     <!--导航-->
     <div style="height: 100%">
       <nav class="navbar " id="myself-nav" >
@@ -24,7 +25,6 @@
               <li ><a href="/houses" ><span ></span>租房</a></li>
               <li><a href="#"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>合租房</a></li>
               <li><a href="#"><span ></span>小区</a></li>
-              <li><a href="#"><span ></span>经纪人</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
               <li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>
               <li  *ngIf="!islogin" class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
@@ -76,7 +76,6 @@
       <!--搜索框-->
 
       <div class="row " id="mian-serch">
-
         <div class="input-group input-group-lg col-md-12 ">
           <p class="animated bounceInLeft " id="topanimate" >让你在每个城市都有家的感觉！</p>
           <input type="text"  class="form-control animated bounceInRight"  placeholder="请输入城市·区域名开始找房" style=" border-top-left-radius: 5px;

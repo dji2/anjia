@@ -3,15 +3,16 @@
   <nav class="row" *ngIf="!_hiddenNavs">
     <div class="col-md-12 col-lg-12"style="background-color: #3D424D;height: 40px">
       <!--<a [routerLink]="['/index','我是默认值']" routerLinkActive="active" >首页</a>-->
-      <ul>
+      <ul id="nav">
       <li><a routerLink='/index' routerLinkActive="active" >首页</a></li>
       <li><a routerLink="/search" routerLinkActive="active">搜索</a></li>
       <li><a routerLink="/houses" routerLinkActive="active">租房</a></li>
         <li><a routerLink="/owner" routerLinkActive="active">业主</a></li>
-      <li *ngIf="islogin"><a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a><span class="glyphicon glyphicon-user" style="color: white" ></span></li>
         <li  *ngIf="!islogin"  style="margin-left: 780px"><a  routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
       <li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>
       </ul>
+      <div id="person" *ngIf="islogin"><a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a><span class="glyphicon glyphicon-user" style="color: white" ></span></div>
+
     </div>
   </nav>
   <div class="row">

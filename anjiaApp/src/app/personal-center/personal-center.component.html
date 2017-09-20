@@ -1,5 +1,5 @@
 <div class="top">
-  <img class="icon" src="../../assets/personal-center/logowhite.png" height="50" width="182"/>
+  <img class="icon" (click)="toIndex()" src="../../assets/personal-center/lo22.png" height="60" width="120"/>
   <ul class="nav">
     <li class="li01" ><a href="#" style="color: white">租房</a></li>
     <li class="li01"><a href="#" style="color: white">小区</a></li>
@@ -12,13 +12,19 @@
 <div class="mid">
   <div class="left">
     <img class="headIcon" src="../../assets/personal-center/头像.png" height="80" width="80"/>
-    <span class="f01" style="background-color: #39AC6A"><a href="#" style="color: white" (click)="toIndex()">首页</a></span>
-    <ul class="list">
-      <li class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></li>
-      <li class="li02"><a  routerLink="./community" routerLinkActive="active" style="color: #555555">关注的小区</a></li>
-      <li class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></li>
-      <li class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></li>
-    </ul>
+    <!--<span class="f01" style="background-color: #39AC6A"><a href="#" style="color: white" (click)="toIndex()">首页</a></span>-->
+    <!--<table class="list">-->
+      <!--<tr class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></tr>-->
+      <!--<tr class="li02"><a  routerLink="./community" routerLinkActive="active" style="color: #555555">关注的小区</a></tr>-->
+      <!--<tr class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></tr>-->
+      <!--<tr class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></tr>-->
+    <!--</table>-->
+    <div class="list">
+      <div class="li02"><a routerLink="./community" routerLinkActive="active" style="color: #555555">我的房源</a></div>
+      <div class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></div>
+      <div class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></div>
+      <div class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></div>
+    </div>
   </div>
   <div class="right ">
     <div>

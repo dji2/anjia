@@ -7,6 +7,9 @@
   width: 100%;
   overflow-x:hidden;
 }
+#nav{
+  margin-left: 50px;
+}
 li{
   float: left;
   margin-right: 20px;
@@ -15,4 +18,11 @@ li{
 }
 a{
   color: white;
+}
+#person{
+  float: right;
+  margin-right: 150px;
+}
+#person span{
+  margin-left: 20px;
 }
