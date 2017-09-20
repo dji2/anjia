@@ -24,7 +24,7 @@ exports.housesDao={
                 console.log("error");
                 return
             }
-            client.query(housesSql.addHouse,[house.houseId,house.houseName,house.housePrice,house.publishTime,house.houseTypeId,house.ownerId,house.area,house.areaName,house.address,house.floor],function (error,result) {
+            client.query(housesSql.addHouse,[house.houseName,house.housePrice,house.publishTime,house.houseTypeId,house.ownerId,house.area,house.areaName,house.address,house.floor],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
