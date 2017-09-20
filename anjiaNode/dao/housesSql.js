@@ -4,5 +4,6 @@
 exports.sql={
     getAllHouses:'select * from housesinfo',
     getArrInfo:'select * from arrangeinfo  where houseId=?',
-    getFocusNum:'select sum(houseId) from focusinfo where houseId = ?'
+    getFocusNum:'select sum(houseId) from focusinfo where houseId = ?',
+    addHouse:'insert into houses(houseId,houseName,housePrice,publishTime,houseTypeId,ownerId,area,areaName,address,floor)values(?,?,?,?,?,?,?,?,?,?)',
 };

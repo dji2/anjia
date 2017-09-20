@@ -13,6 +13,7 @@ import { LocalStorageService } from './../services/local-storage.service';
 export class LoginComponent implements OnInit {
   login_res:string;
   userName:any;
+  userId:any;
   constructor(
     private userSer:UsersService,
     private router:Router,
@@ -30,10 +31,9 @@ export class LoginComponent implements OnInit {
       // 弹出接收后台数据数值
       //      alert(result.stateCode);
       if(result.stateCode==1){
+        that.localStorage.set('userId',result.userId);
         that.localStorage.set('token',result.token);
         that.localStorage.set('userName',result.userName);
-        alert(result.userName);
-
         that.router.navigate(['/index']);
       }else{
         that.login_res='用户名或密码错误';

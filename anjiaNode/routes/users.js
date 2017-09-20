@@ -53,6 +53,7 @@ router.post('/login', function (req, res, next) {
         console.log(user);
 
             userdao.getPasswordById(user.telephone, function (result) {
+                console.log(result);
                 if (result == 'e004') {
                     res.json({"stateCode": result});
                 } else {
@@ -67,7 +68,7 @@ router.post('/login', function (req, res, next) {
                                 iss: user.telephone,
                                 exp: expires
                             }, util.secret);
-                            res.json({"stateCode": 1,token:token,userName:result[0].userName});
+                            res.json({"stateCode": 1,token:token,userName:result[0].userName,userId:result[0].id});
 
                         } else {
                             res.json({"stateCode": 2});
