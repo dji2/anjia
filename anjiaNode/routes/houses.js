@@ -37,11 +37,11 @@ router.post('/addHouse', function(req, res, next) {
     var house = req.body;
     if(house){
         housesDao.addHouse(house,function (result) {
-            console.log("addhouse");
-            if(result.length==0){
-                res.json(null);
+            console.log("addhouse   "+house);
+            if(result.affectedRows==1){
+                res.json({"stateCode":11});
             }else{
-                res.json(result);
+                res.json({"stateCode":12});
             }
         })
     }
