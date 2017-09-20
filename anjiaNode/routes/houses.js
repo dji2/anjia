@@ -13,7 +13,8 @@ router.get('/', function(req, res, next) {
       }
   })
 });
-//获取
+
+//获取看房记录
 router.post('/getArrInfo', function(req, res, next) {
     var house = req.body;
     if(house){
@@ -30,6 +31,25 @@ router.post('/getArrInfo', function(req, res, next) {
 
 
 });
+
+//添加房源
+router.post('/addHouse', function(req, res, next) {
+    var house = req.body;
+    if(house){
+        housesDao.addHouse(house,function (result) {
+            console.log("addhouse");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+
+
+});
+
+//获取关注人数
 router.post('/getFocusNum', function(req, res, next) {
     var house = req.body;
     if(house){
@@ -43,8 +63,6 @@ router.post('/getFocusNum', function(req, res, next) {
             }
         })
     }
-
-
 });
 
 module.exports = router;
