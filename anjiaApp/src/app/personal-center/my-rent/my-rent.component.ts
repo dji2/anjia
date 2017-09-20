@@ -18,8 +18,9 @@ export class MyRentComponent implements OnInit {
   ngOnInit() {
     let that = this;
     let userId = that.localStorage.get('userId')
+    let token = that.localStorage.get('token');
 
-    that.userSer.getFocusHouses({"userId":userId},function (result) {
+    that.userSer.getFocusHouses({"userId":userId,"token":token},function (result) {
       that.houses = result;
 
       console.log(result);

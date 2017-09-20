@@ -45,7 +45,7 @@ router.get('/login', function (req, res, next) {
 });
 
 
-router.post('/login', function (req, res, next) {
+router.post('/login',function (req, res, next) {
     console.log("route login");
     var user = req.body;
     console.log("checkcode"+checkCode);
@@ -81,7 +81,7 @@ router.post('/login', function (req, res, next) {
     }
 });
 
-router.post('/getFocusHouses', function (req, res, next) {
+router.post('/getFocusHouses',ct.checkToken, function (req, res, next) {
     var user = req.body;
     if(user){
         console.log("getFocusHouses:id"+user.userId);
@@ -95,7 +95,7 @@ router.post('/getFocusHouses', function (req, res, next) {
         })
     }
 });
-router.post('/getRecord', function (req, res, next) {
+router.post('/getRecord',ct.checkToken, function (req, res, next) {
     var user = req.body;
     if(user){
         console.log("getRecord:id"+user.userId);
