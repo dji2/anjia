@@ -1,0 +1,23 @@
+.left{
+ float: left;
+  font-size: 20px;
+  margin-left: 200px;
+  margin-top: 60px;
+  color: black;
+}
+.right{
+  float: left;
+  margin-top: 50px;
+}
+input{
+  width: 248px;
+  height: 39px;
+  margin: 10px;
+}
+button{
+  width: 248px;
+  height: 39px;
+  background-color: #4FAC6A;
+  color: white;
+  margin: 10px;
+}
