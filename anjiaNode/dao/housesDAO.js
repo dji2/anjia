@@ -17,6 +17,25 @@ exports.housesDao={
             })
         })
     },
+    //添加房源
+    addHouse:function (house,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.addHouse,[house.houseId,house.houseName,house.housePrice,house.publishTime,house.houseTypeId,house.ownerId,house.area,house.areaName,house.address,house.floor],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+    //获取看房记录信息
     getArrInfo:function (houseId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
