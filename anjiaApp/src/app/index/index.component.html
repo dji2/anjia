@@ -116,16 +116,18 @@
     </div>
 
     <!--房屋列表-->
-    <div class="house-list"  >
-      <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" style="margin-left: 10px;margin-top: 10px">
+
+   <div class="container">
+     <div class=" house-list"  >
+
+  <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" style="margin-left: 10px;margin-top: 10px">
         <h2 class="col-md-10">更多好房，为你而选</h2>
         <span class="col-md-2" style="margin-top: 40px"><a href="/houses">更多在租房>></a></span>
       </div>
-
       <div class="row" id="out-house-style"  >
 
-        <div class="col-lg-4 col-md-6 col-sm-6 " id="house-setting" *ngFor="let house of new_houses;"    >
-<div class="houses-outbox">
+        <div class="col-lg-3" id="house-setting" *ngFor="let house of new_houses;">
+
           <div href="#" class="thumbnail" id="houses-style"  >
 
             <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg" alt="">
@@ -138,26 +140,20 @@
               <p> {{i}}星河西区 三室一厅 <span>{{house.area}}m<sup>2</sup></span></p>
 
             </div>
-          </div>
-</div>
+
 
 
         </div>
-
+</div>
       </div>
 
+  </div></div>
 
-
-
-<!--页脚部分-->
+    <!--页脚部分-->
     <app-footer></app-footer>
 
 
-  </div>
-  <!--返回顶部-->
-
-
-
+    <!--返回顶部-->
   <div id="elevator_item">
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
