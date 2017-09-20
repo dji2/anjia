@@ -35,8 +35,17 @@ a{
   margin-left: 175px;
   margin-top: 85px;
 }
+.list{
+   width: 150px;
+   margin-top: 200px;
+   /*margin-left: 35px;*/
+ }
 .li02{
-  list-style: none;
+  width:150px;
+  height: 40px;
+  padding-left:30px;
+  line-height: 40px;
+  /*background-color: #39AC6A;*/
 }
 .headIcon{
   position: absolute;
@@ -50,20 +59,11 @@ a{
   margin-top: 170px;
   padding-left:30px;
   line-height: 40px;
+}
 
-}
-.list{
-  margin-top: 230px;
-  margin-left: 35px;
-}
-.li02{
-  width:150px;
-  height: 40px;
-
-}
+/*_____________________________________-*/
 .right{
   width: 827px;
-
   background-color: white;
   border: solid #E9E9E9 1px;
   box-shadow: 0px 0px  4px 3px #E9E9E9;
