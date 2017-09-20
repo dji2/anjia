@@ -150,14 +150,15 @@
 
 /*房屋列表*/
 .house-list {
+  width: 100%;
 background-color: #f2f2f3;
 margin: 0 auto;
+position: absolute;
 
 }
 .house-list img{
   width:250px;
   height: 166px;
-
 }
 #house-setting{
   margin-top: 10px;
@@ -165,9 +166,7 @@ margin: 0 auto;
   height: 330px
 }
 #out-house-style{
-  position: relative;
-   left: 125px;
-
+margin: 0 auto;
 }
 
 
@@ -179,10 +178,6 @@ margin: 0 auto;
 
 .house-list p, h4 {
   text-align: center;
-}
-
-.house-list img {
-  width: 100%;
 }
 
 .house-list .price {

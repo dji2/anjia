@@ -122,22 +122,24 @@
         <span class="col-md-2" style="margin-top: 40px"><a href="/houses">更多在租房>></a></span>
       </div>
 
-      <div class="row" id="out-house-style" >
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 " id="house-setting" *ngFor="let house of new_houses;"    >
+      <div class="row" id="out-house-style"  >
 
-          <div href="#" class="thumbnail" id="houses-style" >
+        <div class="col-lg-4 col-md-6 col-sm-6 " id="house-setting" *ngFor="let house of new_houses;"    >
+<div class="houses-outbox">
+          <div href="#" class="thumbnail" id="houses-style"  >
 
             <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg" alt="">
             <span class="house-list price">{{house.housePrice}}/月</span>
             <div class="caption">
               <a href="">
+
               <h4>{{house.houseName}}</h4>
               </a>
               <p> {{i}}星河西区 三室一厅 <span>{{house.area}}m<sup>2</sup></span></p>
 
             </div>
           </div>
-
+</div>
 
 
         </div>

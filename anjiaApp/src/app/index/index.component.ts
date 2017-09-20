@@ -3,7 +3,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
 // 管道
 
-//导入服务
+
 import {PositionsService} from './../services/positions.service';
 import { LocalStorageService } from './../services/local-storage.service';
 
