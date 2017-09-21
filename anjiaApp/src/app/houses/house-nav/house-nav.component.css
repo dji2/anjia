@@ -29,6 +29,7 @@ dl {
   padding: 0;
   float: left;
   display: block;
+  /*cursor: pointer;*/
 }
 .dl-lst dd a {
   padding: 10px 7px 15px;
@@ -36,6 +37,7 @@ dl {
   line-height: 27px;
   color: #333;
   font-size: 12px;
+  cursor: pointer
 }
 .dl-lst dd .item-list {
   float: left;

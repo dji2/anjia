@@ -16,7 +16,6 @@ export class HousesComponent implements OnInit {
   flag=1;
 
 
-  // @Input() searchText:string='';
 
   constructor(
     // private route: ActivatedRoute,
@@ -26,10 +25,11 @@ export class HousesComponent implements OnInit {
   }
 
   ngOnInit() {
-      this._fenye ='1';
-  }
-  _fenye:string;
 
+  }
+
+  _fenye:any;
+ // _fenye= _fenye2
   do4(s){
     this._fenye=s;
     this.flag=s;

@@ -27,6 +27,7 @@ export class HouseNavComponent implements OnInit {
   do1(s){
     this._zujin=s;
     this.flag_number1=s;
+
   }
   _mianji:string;
 
@@ -35,9 +36,9 @@ export class HouseNavComponent implements OnInit {
     this.flag_number2=s;
   }
   _zujinxiao:string;
-
   do3(s){
     this._zujinxiao=s;
     this.flag_number3=s;
+
   }
 }
