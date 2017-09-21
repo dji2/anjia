@@ -24,6 +24,7 @@ export class IndexComponent implements OnInit {
   positions: any;
   houses:any;
 
+
   constructor(private route: ActivatedRoute,
               private router:Router,
               private localStorage:LocalStorageService,
