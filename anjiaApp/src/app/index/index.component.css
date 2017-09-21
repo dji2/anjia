@@ -154,7 +154,7 @@
 .toutiao{
   width: 100%;
   margin: 0 auto;
-background-color: #f2f2f3;
+background-color: rgba(242, 242, 243, 0.97);
 }
 .toutiao-left{
 height: 400px;
@@ -164,10 +164,10 @@ height: 400px;
 .toutiao-right{
   height: 400px;
 
-
 }
 .toutiao-right img{
   width: 345px;height: 200px;
+
 }
 .lunbo{
 width: 100%;
