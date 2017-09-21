@@ -58,6 +58,21 @@ export class HousesDetailsComponent implements OnInit {
 
   }
 
+  agree(arrangeId){
+    alert(arrangeId);
+    let that = this;
+
+
+    that.ho.agree({"arrangeId":arrangeId},function (result) {
+      alert(result.stateCode);
+      if(result.stateCode == 17){
+        alert("点赞成功");
+      }else{
+        alert("点赞失败");
+      }
+    })
+  }
+
 
 
 }
