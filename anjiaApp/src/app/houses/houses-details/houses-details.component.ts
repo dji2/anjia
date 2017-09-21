@@ -59,7 +59,7 @@ export class HousesDetailsComponent implements OnInit {
   }
 
   agree(arrangeId){
-    alert(arrangeId);
+    // alert(arrangeId);
     let that = this;
 
 
