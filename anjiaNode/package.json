@@ -20,6 +20,7 @@
     "multer": "latest",
     "mysql": "latest",
     "node-uuid": "^1.4.8",
+    "qiniu": "^7.0.8",
     "serve-favicon": "~2.4.2"
   }
 }
