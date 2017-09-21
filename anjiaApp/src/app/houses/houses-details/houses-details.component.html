@@ -76,7 +76,14 @@
           <div *ngSwitchCase="1" id="section2"
                style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
                class="container-fluid">
-            <h2>精彩评论</h2>
+            <h3>我要评论</h3>
+            <div class="user_icon">
+              <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/2.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
+            </div>
+            <textarea placeholder="评论..."></textarea>
+            <br>
+            <button>发表评论</button>
+            <h3>精彩评论</h3>
             <div style="font-size: 28px" >
 
                 <!--<table class="table table-hover table">-->
@@ -90,13 +97,12 @@
                     <div class="user_icon">
                       <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/{{user.userId}}.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
                     </div>
-
-                      <li class="userName">{{user.userName}}</li>
-                      <li class="commentinfo" >{{user.comment}}</li>
-                      <li class="" ><a class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</li>
-
-
-                    <li class="adate">{{user.adate}}</li>
+                      <li class="userName">{{user.userName}}:</li>
+                      <li class="commentinfo">{{user.comment}}</li>
+                    <div >
+                      <div class="adate">时间 {{user.adate| date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                      <div class="thumb"><a class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
+                     </div>
                   </ul>
 
             </div>

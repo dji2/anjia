@@ -17,6 +17,7 @@ export class AppComponent {
   _url:string;
   _hiddenNavs:boolean;
   userName:any;
+  userId:any;
   islogin:number=0;
 
   constructor(
@@ -29,6 +30,7 @@ export class AppComponent {
     let that = this;
     that._url=that.glo.serverUrl;
     that._hiddenNavs=that.glo.hiddenNavs;
+    that.userId=that.localStorage.get('userId');
 
     if(that.localStorage.get('token')){
       that.islogin=1;

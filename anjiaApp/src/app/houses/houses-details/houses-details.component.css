@@ -177,9 +177,28 @@ li a {
   left: 62px;
   content: '▼';
 }
+/*---------------看房记录---------*/
+button{
+  width: 100px;
+  height: 30px;
+ float: right;
+  background-color: #39ac6a;
+  color: white;
+  border: none;
+}
+textarea{
+  width:95%;
+  height: 100px;
+}
+.glyphicon{
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+}
 .user_icon{
   height:50px;
-  width:50px;float: left;
+  width:50px;
+  float: left;
 }
 .user_icon img{
   height:40px;
@@ -189,18 +208,27 @@ li a {
 
 .user_comment{
   list-style: none;
+  height: 70px;
   clear: both;
 }
 .userName{
-  color: #555;
-  font-size: 20px;
+  color: #0C73CD;
+  font-size: 15px;
 }
 .commentinfo{
-
   font-size: 15px;
 
 }
 .adate{
-  float: right;
   font-size: 12px;
+  margin-top: 5px;
+  float: left;
+}
+
+.thumb{
+ font-size: 15px;
+  margin-left: 780px;
+  /*top: -20px;*/
+  float: left;
+
 }

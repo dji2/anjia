@@ -20,6 +20,7 @@ export class HouseListComponent implements OnInit {
   @Input() zujinText:string='';
   @Input() mianjiText:string='';
   @Input() zujinxiaoText:string='';
+  @Input() mianjixiaoText:string='';
 
   text: string = '';
 
@@ -39,7 +40,7 @@ export class HouseListComponent implements OnInit {
       that.new_houses = result;
       // console.log(result);
     })
-  }
 
+  }
 
 }
