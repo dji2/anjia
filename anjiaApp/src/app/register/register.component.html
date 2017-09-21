@@ -104,7 +104,7 @@
   <!--注册按钮-->
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" (click)="toRegister(registerForm)" [disabled]="!(checkbox&&registerForm.form.valid)" class="btn btn-success btn-register ">注册</button>
+      <button type="submit" (click)="toRegister(registerForm)" [disabled]="!(checkbox&&registerForm.form.valid)" class="btn btn-success btn-register " data-dismiss="modal">注册</button>
 
       <div *ngIf="code_res"
            class="alert alert-danger">
