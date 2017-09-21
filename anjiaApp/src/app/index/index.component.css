@@ -46,6 +46,7 @@
   background-attachment: fixed;
 }
 
+
 .navbar-collapse ul li a {
   color: white;
 }
@@ -148,12 +149,48 @@
   text-align: center;
 }
 
+/*头条部分*/
+
+.toutiao{
+  width: 100%;
+  margin: 0 auto;
+background-color: #f2f2f3;
+}
+.toutiao-left{
+height: 400px;
+  box-sizing: border-box;
+
+}
+.toutiao-right{
+  height: 400px;
+
+
+}
+.toutiao-right img{
+  width: 345px;height: 200px;
+}
+.lunbo{
+width: 100%;
+  height: 400px;
+}
+.lunboimg img{
+  width: 790px;
+  height: 400px
+}
+
+
+
+
+
+
+
 /*房屋列表*/
 .house-list {
 
 background-color: #f2f2f3;
 
 }
+
 #house-setting{
   margin-top: 10px;
   width: 290px;
@@ -163,11 +200,24 @@ background-color: #f2f2f3;
   width:250px;
   height: 166px;
 }
+.house-list a {
+  color: black;
+  text-decoration: none;
 
 
+}
+.house-list a:hover {
+text-decoration: none;
+
+
+}
 .house-list .house-list-title h4 {
   margin-left: 2px;
 
+}
+.house-list .house-list-title  a:hover {
+text-decoration: none;
+cursor: pointer;
 }
 .house-list p, h4 {
   text-align: center;
