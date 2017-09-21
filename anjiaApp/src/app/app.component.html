@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" >
   <nav class="row" *ngIf="!_hiddenNavs">
-    <div class="col-md-12 col-lg-12"style="background-color: #3D424D;height: 40px">
+    <div class="col-md-12 col-lg-12"style="background-color: #3D424D;height: 45px">
       <!--<a [routerLink]="['/index','我是默认值']" routerLinkActive="active" >首页</a>-->
       <ul id="nav">
       <li><a routerLink='/index' routerLinkActive="active" >首页</a></li>
@@ -10,8 +10,14 @@
         <li><a routerLink="/owner" routerLinkActive="active">业主</a></li>
         <li  *ngIf="!islogin"  style="margin-left: 780px"><a  routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
       <li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>
+        <div id="person" *ngIf="islogin">
+          <a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a>
+          <div class="user_icon">
+            <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/{{userId}}.jpg?imageView2/1/w/30/h/30/format/jpg/q/30|imageslim" alt="">
+          </div>
+        </div>
       </ul>
-      <div id="person" *ngIf="islogin"><a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a><span class="glyphicon glyphicon-user" style="color: white" ></span></div>
+
 
     </div>
   </nav>

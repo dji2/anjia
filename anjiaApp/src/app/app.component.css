@@ -9,11 +9,12 @@
 }
 #nav{
   margin-left: 50px;
+    /*height: 45px;*/
+  line-height: 45px;
 }
 li{
   float: left;
   margin-right: 20px;
-  margin-top: 10px;
   list-style: none;
 }
 a{
@@ -21,8 +22,22 @@ a{
 }
 #person{
   float: right;
+  height: 45px;
+  line-height: 45px;
   margin-right: 150px;
 }
 #person span{
   margin-left: 20px;
+}
+
+.user_icon{
+  height:30px;
+  width:30px;
+  margin-left: 20px;
+  float: right;
+}
+.user_icon img{
+  height:30px;
+  width:30px;
+  border-radius: 15px
 }
