@@ -1,0 +1,22 @@
+<div class="pic-panel">
+  <a style="cursor: pointer"  (click)="toHouseDetail(house.houseId)"><img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg"/></a>
+</div>
+<div class="info-panel">
+  <h2  (click)="toHouseDetail(house.houseId)"><a style="cursor: pointer">{{house.houseName}}</a></h2>
+  <div class="where">
+    <span>{{house.areaName}}&nbsp;&nbsp;</span>
+    <span>{{house.room}}室{{house.livingroom}}厅&nbsp;&nbsp;</span>
+    <span class="ping">{{house.area}}&nbsp;&nbsp;</span>平
+  </div>
+  <div class="other">
+    {{house.address}}
+  </div>
+
+</div>
+<div class="renting">
+  <span class="renting-money">{{house.housePrice}}</span>元／月
+  <br>
+  <span class="view-people">4</span>人看过此房
+  <br>
+  <span class="publishtime">发布时间:{{house.publishTime | date: 'shortDate' }}</span>
+</div>

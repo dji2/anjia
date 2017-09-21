@@ -40,9 +40,6 @@ export class HouseListComponent implements OnInit {
       // console.log(result);
     })
   }
-  toHouseDetail(id) {
-    this.router.navigate(['/detail',id]);
-  }
 
 
 }
