@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-house-list-item',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./house-list-item.component.css']
 })
 export class HouseListItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() house:any;
+  constructor(
+    private router:Router,
+  ) { }
 
   ngOnInit() {
+  }
+  toHouseDetail(id) {
+    this.router.navigate(['/detail',id]);
   }
 
 }
