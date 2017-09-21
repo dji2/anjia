@@ -1,6 +1,6 @@
 <div cldiv="list-wrap">
   <ul id="house-list" class="house-list">
-    <li *ngFor="let house of houses | search:searchText | quyu:quyuText | zujin:zujinText | mianji:mianjiText | zujinxiao:zujinxiaoText">
+    <li *ngFor="let house of houses | search:searchText | quyu:quyuText | zujin:zujinText | mianji:mianjiText | zujinxiao:zujinxiaoText | mianjixiao:mianjixiaoText">
       <app-house-list-item [house]="house"></app-house-list-item>
       <!--<div class="pic-panel">-->
         <!--<a style="cursor: pointer"  (click)="toHouseDetail(house.houseId)"><img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg"/></a>-->
