@@ -13,7 +13,7 @@ export class HousesComponent implements OnInit {
   // text: string = '';
 
 
-
+  flag=1;
 
 
   // @Input() searchText:string='';
@@ -21,12 +21,20 @@ export class HousesComponent implements OnInit {
   constructor(
     // private route: ActivatedRoute,
 
-  ) { }
-
-  ngOnInit() {
+  ) {
 
   }
 
+  ngOnInit() {
+      this._fenye ='1';
+  }
+  _fenye:string;
+
+  do4(s){
+    this._fenye=s;
+    this.flag=s;
+    // console.log(this._fenye)
+  }
 
 
 }
