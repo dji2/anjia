@@ -13,7 +13,7 @@ import {PositionsService} from './../../services/positions.service';
 export class HouseListComponent implements OnInit {
 
   houses: any;
-  new_houses:any;
+  // new_houses:any;
 
   @Input() searchText:string='';
   @Input() quyuText:string='';
@@ -37,7 +37,7 @@ export class HouseListComponent implements OnInit {
 
     that.house.getAllHouses(function (result) {
       that.houses = result;
-      that.new_houses = result;
+      // that.new_houses = result;
       // console.log(result);
     })
 
