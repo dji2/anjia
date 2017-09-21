@@ -186,7 +186,7 @@ button{
   color: white;
   border: none;
 }
-textarea{
+#comment{
   width:95%;
   height: 100px;
 }

@@ -35,6 +35,7 @@ exports.housesDao={
             })
         })
     },
+
     //获取看房记录信息
     getArrInfo:function (houseId,callback) {
         pool.getConnection(function (error,client) {
@@ -53,6 +54,25 @@ exports.housesDao={
             })
         })
     },
+    //添加看房记录信息
+    addArrInfo:function (arrInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.addArrInfo,[arrInfo.userId,arrInfo.houseId,arrInfo.adate,arrInfo.comment],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
     getFocusNum:function (houseId,callback) {
         pool.getConnection(function (error,client) {
             if(error){

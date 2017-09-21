@@ -31,6 +31,24 @@ router.post('/getArrInfo', function(req, res, next) {
 
 
 });
+//添加看房信息
+router.post('/addArrInfo', function(req, res, next) {
+    var arrInfo = req.body;
+    arrInfo.adate = new Date();
+    console.log(arrInfo);
+    if(arrInfo){
+        console.log(arrInfo);
+        housesDao.addArrInfo(arrInfo,function (result) {
+            console.log("addArrInfo");
+            if(result.affectedRows==1){
+                res.json({"stateCode":15});
+            }else{
+                res.json({"stateCode":16});            }
+        })
+    }
+
+
+});
 
 //添加房源
 router.post('/addHouse', function(req, res, next) {

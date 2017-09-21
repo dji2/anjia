@@ -21,8 +21,20 @@ export class PositionsService {
       }
     )
   }
+  //查询看房信息
   getArrInfo(house,callback){
     this.http.post(this.url+'/getArrInfo',house).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  //添加看房信息
+  addArrInfo(arrInfo,callback){
+    this.http.post(this.url+'/addArrInfo',arrInfo).subscribe(
       function (result) {
         callback(result);
       },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {PositionsService} from './../../services/positions.service';
+import { LocalStorageService } from './../../services/local-storage.service';
 
 @Component({
   selector: 'app-houses-details',
@@ -12,28 +13,47 @@ export class HousesDetailsComponent implements OnInit {
 
   arr_li=['周边配套','看房记录','相似房源'];
   tab_index=0;
-
+  houseId:any;
   house:any;
   users:any;
+  comment:any;
   constructor(
 
     private route: ActivatedRoute,
-    private ho: PositionsService
+    private ho: PositionsService,
+    private localStorage:LocalStorageService
+
   ) { }
 
   ngOnInit() {
-    let id=this.route.snapshot.paramMap.get('id');
+    this.houseId=this.route.snapshot.paramMap.get('id');
     let that=this;
-    that.ho.getHouseById(id,function (house) {
+    that.ho.getHouseById(this.houseId,function (house) {
 
       console.log(house);
       that.house=house[0];
     })
 
-    that.ho.getArrInfo({"houseId":id},function (result) {
+    that.ho.getArrInfo({"houseId":this.houseId},function (result) {
 
       console.log(result);
       that.users=result;
+    })
+
+  }
+
+
+  addArr(comment){
+    alert(comment);
+    let that = this;
+
+
+    that.ho.addArrInfo({"comment":comment.value,"userId":that.localStorage.get('userId'),"houseId":that.houseId},function (result) {
+      if(result.stateCode == 15){
+        alert("评论成功");
+      }else{
+        alert("评论失败");
+      }
     })
 
   }
