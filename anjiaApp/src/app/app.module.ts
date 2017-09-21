@@ -36,6 +36,7 @@ import { HousesDetailsComponent } from './houses/houses-details/houses-details.c
 import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { LocalStorageService } from './services/local-storage.service';
+import { HouseListItemComponent } from './houses/house-list/house-list-item/house-list-item.component';
 
 
 
@@ -61,6 +62,7 @@ import { LocalStorageService } from './services/local-storage.service';
     QuyuPipe,
     ZujinPipe,
     MianjiPipe,
+    HouseListItemComponent,
 
   ],
   imports: [

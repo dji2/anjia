@@ -16,72 +16,70 @@ ul, ol, li {
 .house-list li:hover{
   background: #fbfbfb;
 }
-.house-list .pic-panel img:hover {
-  opacity: .8;
-}
-.info-panel h2:hover {
-  opacity: .8;
-}
-.pic-panel,.info-panel,.renting{
-  display: inline-block;
-  vertical-align: middle;
-}
-.pic-panel{
-  /*display: inline-block;*/
-  /*vertical-align: middle;*/
-  font-size: 0;
-  position: relative;
-  width: 173px;
-  height: 130px;
-}
-a {
-  text-decoration: none;
-  outline: none;
-}
 
-.house-list .pic-panel img {
-  width: 173px;
-  height: 130px;
-}
-img{
-  border: 0;
-  vertical-align: top;
-}
-.info-panel{
+
+/*.pic-panel img:hover {*/
+  /*opacity: .8;*/
+/*}*/
+/*.info-panel h2:hover {*/
+  /*opacity: .8;*/
+/*}*/
+/*.pic-panel,.info-panel,.renting{*/
   /*display: inline-block;*/
   /*vertical-align: middle;*/
-  padding-left: 18px;
+/*}*/
+/*.pic-panel{*/
+
   /*font-size: 0;*/
-  position: relative;
-  height: 130px;
-  /*width: 75%;*/
-}
+  /*position: relative;*/
+  /*width: 173px;*/
+  /*height: 130px;*/
+/*}*/
+/*a {*/
+  /*text-decoration: none;*/
+  /*outline: none;*/
+/*}*/
 
-.info-panel h2{
-  margin-top: -5px;
-}
-.info-panel h2 a{
-  color: #009de8;
-  font-size: 20px;
-  font-weight: 700;
+/*.pic-panel img {*/
+  /*width: 173px;*/
+  /*height: 130px;*/
+/*}*/
+/*img{*/
+  /*border: 0;*/
+  /*vertical-align: top;*/
+/*}*/
+/*.info-panel{*/
 
-}
-.where,.other{
-  margin-top: 25px;
-}
-.ping{
-  font-size: 2em;
-}
-.renting{
-  float: right;
-}
-.renting span{
-  font-size: 2em;
-}
-.renting .renting-money{
-  color: #E4393C;
-}
-.renting .publishtime{
-  font-size: 1em;
-  color: #b1b1b1;
-}
+  /*padding-left: 18px;*/
+  /*position: relative;*/
+  /*height: 130px;*/
+/*}*/
+
+/*.info-panel h2{*/
+  /*margin-top: -5px;*/
+/*}*/
+/*.info-panel h2 a{*/
+  /*color: #009de8;*/
+  /*font-size: 20px;*/
+  /*font-weight: 700;*/
+
+/*}*/
+/*.where,.other{*/
+  /*margin-top: 25px;*/
+/*}*/
+/*.ping{*/
+  /*font-size: 2em;*/
+/*}*/
+/*.renting{*/
+  /*float: right;*/
+/*}*/
+/*.renting span{*/
+  /*font-size: 2em;*/
+/*}*/
+/*.renting .renting-money{*/
+  /*color: #E4393C;*/
+/*}*/
+/*.renting .publishtime{*/
+  /*font-size: 1em;*/
+  /*color: #b1b1b1;*/
+/*}*/
