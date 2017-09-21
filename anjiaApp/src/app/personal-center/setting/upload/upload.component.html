@@ -1,7 +1,9 @@
 <div class="upload">
-  <form method="post" action="http://up.qiniu.com/" enctype="multipart/form-data">
-    <input type="hidden" name="token" value="Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9"> <input type="file" name="file">
-    <input name="key" type="hidden" value="images/user-icon/{{userId}}.jpg">
+  <form class="form-horizontal" method="post" action="http://up.qiniu.com/" enctype="multipart/form-data">
+    <input type="hidden" name="token" value="Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9"> 使用该凭证测试上传文件
+    <input class="form-control" type="file" name="file">
+    <input name="key" type="hidden" value="images/user-icon/14.jpg">
+    {{userId}}
     <input type="submit" value="上传">
   </form>
 </div>

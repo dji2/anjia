@@ -15,7 +15,7 @@ export class UploadComponent implements OnInit {
 
   ngOnInit() {
     this.userId = this.localStorage.get('userId');
-    console.log(this.userId)
+    console.log("userid"+this.userId)
   }
 
 }
