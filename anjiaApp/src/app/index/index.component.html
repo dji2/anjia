@@ -9,7 +9,7 @@
         <div class="container-fluid">
           <div class="navbar-header " >
             <a class="navbar-brand" href="#">
-              <img src="../assets/images/lo1.png" alt="" style="width: 110px;height: 100px;margin-left: 20px;margin-top: -35px">
+              <img src="../../assets/images/anjialogo.png" alt="" >
             </a>
             <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
                     data-target="#navbar-collapse">
@@ -31,11 +31,11 @@
             </ul>
           </div>
         </div>
-
+        <!--这货是个模态框-->
         <div class="modal fade  bs-example-modal-lg "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
           <div class="modal-dialog" role="document" >
             <div class="modal-content" id="mymodal-content"  >
-              <div class="modal-header" style="background-color: rgba(19,118,36,0.64)">
+              <div class="modal-header" >
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="exampleModalLabel">登录/ 注册</h4>
               </div>
@@ -43,15 +43,15 @@
 
                 <div >
                   <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist" >
-                    <li role="presentation" class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
-                    <li role="presentation"  ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                  <ul class="nav nav-tabs" id="login-tabs" role="tablist" >
+                    <li role="presentation" class="active" id="login-tabs-left"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" >登录</a></li>
+                    <li role="presentation" id="login-tabs-right"  ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">
 
                     <!--///////////////////////////////////////////下边是登录信息表/////////////////////////-->
-                    <div role="tabpanel" class="tab-pane active" id="home">
+                    <div role="tabpanel" class="tab-pane active" id="home" style="height: 420px">
                       <app-login></app-login>
                       <!--填写注册信息-->
 
@@ -60,7 +60,7 @@
                     <!--///////////////////////////////////////////下边是注册信息表/////////////////////////-->
 
                     <!--填写注册信息-->
-                    <div role="tabpanel" class="tab-pane" id="profile">
+                    <div role="tabpanel" class="tab-pane" id="profile" style="height: 460px">
                       <app-register></app-register>
                     </div>
 
@@ -89,7 +89,7 @@
 
 
     <!--小工具-->
-    <div class="row gongju" >
+    <div class="row gongju">
 
       <div class="col-md-3 col-sm-6 col-xs-6" >
         <img class="animated rubberBand" src="../../assets/images/ditulogo.png" alt="">
@@ -155,7 +155,7 @@
 
 
         <div class="item">
-          <img src="../../assets/images/lunbo3.jpg" alt="...">
+          <img src="../../assets/images/lunbo5.png" alt="...">
           <div class="carousel-caption">
             图片的标题
           </div>
@@ -176,16 +176,16 @@
 
 
   </div>
-
+<!--右边的两个图片块-->
   <div class="col-md-4 toutiao-right" >
 
     <div class="row ">
       <div class="col-md-12 ">
-        <img src="../../assets/images/toutiao2.jpg" alt="">
+        <img src="../../assets/images/zf01.png" alt="">
       </div>
 
       <div class="col-md-12">
-        <img src="../../assets/images/toutiao-zufang.jpg" alt="">
+        <img src="../../assets/images/toutiao2.jpg" alt="">
       </div>
     </div>
 

@@ -59,6 +59,14 @@
 .nav-lvju img {
   width: 20px;
 }
+.navbar-header img{
+  position: absolute;
+top: 5px;
+  left: 40px;
+  width: 80px;
+  height: 35px;
+
+}
 
 .login-outmodel a:hover{
   font-size: 14px;
@@ -66,7 +74,58 @@
 .login-outmodel a:hover{
   cursor: pointer;
 }
+/*模态框的头部*/
 
+.modal-header{
+opacity: 0.5;
+  background: url("../../assets/images/loginbg1.jpg");
+background-position: bottom;
+
+}
+.modal-title{
+color: black;
+  font-weight: 900;
+  text-align: center;
+
+}
+
+#exampleModal{
+/*background: url("../../assets/images/loginbg (2).jpg");*/
+  background: url("../../assets/images/loginbg (2).jpg") no-repeat ;
+  background-size: 100% 100%;
+  background-position: bottom;
+  /*filter: blur(2px);*/
+}
+
+.modal-body{
+background: url("../../assets/images/loginbg1.jpg");
+background-color: rgba(255, 255, 255, 0.39);
+
+}
+
+#login-tabs{
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+}
+#login-tabs-left{
+  width: 50%;
+  box-sizing: border-box;
+}
+#login-tabs-left a{
+
+}
+
+#login-tabs-right{
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/*<!--填写注册信息-->*/
+.profile{
+
+}
 
 .input-group {
   margin: 0 auto;
@@ -108,7 +167,9 @@
 /*主页小工具*/
 .gongju {
 
-   background-color: white;
+/*background: url("../../assets/images/loginbg.jpg") no-repeat;*/
+  /*background-size: 100% 100%;*/
+   background-color: rgba(255, 255, 255, 0.64);
 }
 
 .gongju div {
