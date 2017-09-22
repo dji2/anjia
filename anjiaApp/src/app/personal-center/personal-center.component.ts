@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { LocalStorageService } from './../services/local-storage.service';
 
 
 import {GlobalPropertyService} from './../services/global-property.service';
@@ -11,14 +12,19 @@ import {GlobalPropertyService} from './../services/global-property.service';
   providers:[]
 })
 export class PersonalCenterComponent implements OnInit {
+  userId:any;
   _val:string='';
   constructor(
     private router:Router,
-    private glo:GlobalPropertyService
+    private glo:GlobalPropertyService,
+    private localStorage:LocalStorageService
   ) { }
 
   ngOnInit() {
     this.glo.hiddenNavs=true;
+    let that = this;
+    that.userId = that.localStorage.get('userId');
+
   }
 
   toIndex(){
