@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component,  OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {PositionsService} from './../../services/positions.service';
 import { LocalStorageService } from './../../services/local-storage.service';
@@ -34,7 +34,7 @@ export class HousesDetailsComponent implements OnInit {
       that.house=house[0];
     })
 
-    that.ho.getArrInfo({"houseId":this.houseId},function (result) {
+    that.ho.getArrInfo({"houseId":that.houseId},function (result) {
 
       console.log(result);
       that.users=result;
@@ -46,18 +46,31 @@ export class HousesDetailsComponent implements OnInit {
   addArr(comment){
     alert(comment);
     let that = this;
+    that.comment = comment.value;
 
-
-    that.ho.addArrInfo({"comment":comment.value,"userId":that.localStorage.get('userId'),"houseId":that.houseId},function (result) {
+    that.ho.addArrInfo({"comment":that.comment,"userId":that.localStorage.get('userId'),"houseId":that.houseId},function (result) {
       if(result.stateCode == 15){
         alert("评论成功");
+        that.ho.getArrInfo({"houseId":that.houseId},function (result) {
+
+          console.log(result);
+          that.users=result;
+        })
       }else{
         alert("评论失败");
       }
-    })
+    });
+
+
 
   }
-
+  // ngDoCheck(){
+  //   this.ho.getArrInfo({"houseId":this.houseId},function (result) {
+  //
+  //     console.log(result);
+  //     this.users=result;
+  //   })
+  // }
   agree(arrangeId){
     // alert(arrangeId);
     let that = this;
@@ -67,10 +80,20 @@ export class HousesDetailsComponent implements OnInit {
       alert(result.stateCode);
       if(result.stateCode == 17){
         alert("点赞成功");
+        that.ho.getArrInfo({"houseId":that.houseId},function (result) {
+
+          console.log(result);
+          that.users=result;
+        })
       }else{
         alert("点赞失败");
       }
-    })
+    });
+
+
+
+
+
   }
 
 
