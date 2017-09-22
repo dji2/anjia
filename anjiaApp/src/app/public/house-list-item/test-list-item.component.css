@@ -1,0 +1,85 @@
+.list-wrap {
+  border-top: 1px solid #e0e0e0;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.house-list li {
+  padding: 26px 26px;
+  border-bottom: 1px dotted #e1e1e1;
+  background: #fff;
+  position: relative;
+}
+.house-list li:hover{
+  background: #fbfbfb;
+}
+
+
+.pic-panel img:hover {
+  opacity: .8;
+}
+.info-panel h2:hover {
+  opacity: .8;
+}
+.pic-panel,.info-panel,.renting{
+  display: inline-block;
+  vertical-align: middle;
+}
+.pic-panel{
+
+  font-size: 0;
+  position: relative;
+  width: 173px;
+  height: 130px;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.pic-panel img {
+  width: 173px;
+  height: 130px;
+}
+img{
+  border: 0;
+  vertical-align: top;
+}
+.info-panel{
+
+  padding-left: 18px;
+  position: relative;
+  height: 130px;
+}
+
+.info-panel h2{
+  margin-top: -5px;
+}
+.info-panel h2 a{
+  color: #009de8;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+.where,.other{
+  margin-top: 25px;
+}
+.ping{
+  font-size: 2em;
+}
+.renting{
+  float: right;
+}
+.renting span{
+  font-size: 2em;
+}
+.renting .renting-money{
+  color: #E4393C;
+}
+.renting .publishtime{
+  font-size: 1em;
+  color: #b1b1b1;
+}
