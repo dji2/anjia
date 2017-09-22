@@ -15,7 +15,7 @@ var moment = require("moment");
 
 var ct = require("../utils/checkToken");
 
-
+//发送验证码
 router.post('/check', function (req, res, next) {
     var user = req.body;
     console.log(user);
@@ -44,7 +44,7 @@ router.get('/login', function (req, res, next) {
     res.json({"stateCode": 3});
 });
 
-
+//登录
 router.post('/login',function (req, res, next) {
     console.log("route login");
     var user = req.body;
@@ -81,6 +81,8 @@ router.post('/login',function (req, res, next) {
     }
 });
 
+
+//获取关注房源
 router.post('/getFocusHouses',ct.checkToken, function (req, res, next) {
     var user = req.body;
     if(user){
@@ -95,6 +97,8 @@ router.post('/getFocusHouses',ct.checkToken, function (req, res, next) {
         })
     }
 });
+
+// 获取看房记录
 router.post('/getRecord',ct.checkToken, function (req, res, next) {
     var user = req.body;
     if(user){
@@ -109,6 +113,8 @@ router.post('/getRecord',ct.checkToken, function (req, res, next) {
         })
     }
 });
+
+// 注册
 router.post('/regist', function (req, res, next) {
     console.log("route regist");
     var user  = req.body;
@@ -137,6 +143,8 @@ router.post('/regist', function (req, res, next) {
 
     }
 });
+
+// 更新头像
 router.post('/upload', function (request, response, next) {
     var form = new formidable.IncomingForm();   //创建上传表单
     form.encoding = 'utf-8';
