@@ -57,7 +57,6 @@ export class RegisterComponent implements OnInit {
   }
 
   toRegister(registerForm) {
-    alert('执行跳转');
       const that = this;
       that.userSer.register(registerForm.form.value, function (result) {
         if (result.stageCode = '5') {

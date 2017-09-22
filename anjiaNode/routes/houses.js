@@ -85,4 +85,21 @@ router.post('/getFocusNum', function(req, res, next) {
     }
 });
 
+//点赞
+router.post('/agree', function(req, res, next) {
+    var arrangeInfo = req.body;
+    console.log(arrangeInfo);
+    if(arrangeInfo){
+        console.log("agree");
+        housesDao.agree(arrangeInfo.arrangeId,function (result) {
+            console.log("agree");
+            if(result.affectedRows==1){
+                res.json({"stateCode":17});
+            }else{
+                res.json({"stateCode":18});
+            }
+        })
+    }
+});
+
 module.exports = router;

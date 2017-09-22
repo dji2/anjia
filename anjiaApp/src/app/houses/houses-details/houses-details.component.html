@@ -101,7 +101,7 @@
                       <li class="commentinfo">{{user.comment}}</li>
                     <div >
                       <div class="adate">时间 {{user.adate| date:'yyyy-MM-dd HH:mm:ss'}}</div>
-                      <div class="thumb"><a class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
+                      <div class="thumb"><a (click)="agree(user.arrangeId)" class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
                      </div>
                   </ul>
 
@@ -131,17 +131,16 @@
     <!--</nav>-->
 
 
-    <div>
-      <h1>Section 4-1</h1>
-      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-    </div>
-    <div id="section42">
-      <h1>Section 4-2</h1>
-      <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-    </div>
+    <!--<div>-->
+      <!--<h1>Section 4-1</h1>-->
+      <!--<p>Try to scroll this section and look at the navigation list while scrolling!</p>-->
+    <!--</div>-->
+    <!--<div id="section42">-->
+      <!--<h1>Section 4-2</h1>-->
+      <!--<p>Try to scroll this section and look at the navigation list while scrolling!</p>-->
+    <!--</div>-->
 
 
   </div>
 
 </div>
-<app-footer></app-footer>

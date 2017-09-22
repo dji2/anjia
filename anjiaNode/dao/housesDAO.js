@@ -89,6 +89,24 @@ exports.housesDao={
                 client.release();
             })
         })
+    },
+    //点赞
+    agree:function (arrangeId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.agree,[arrangeId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
     }
 }
 

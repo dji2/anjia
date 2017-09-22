@@ -24,7 +24,7 @@
               <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
               <li ><a href="/houses" ><span ></span>租房</a></li>
               <li><a href="#"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>合租房</a></li>
-              <li><a href="#"><span ></span>小区</a></li>
+              <li><a href="/page-not-found"><span ></span>小区</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
               <li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>
               <li  *ngIf="!islogin" class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
@@ -197,42 +197,7 @@
 
 
     <!--房屋列表-->
-<div style="background-color: #f2f2f3">
-   <div class="container" >
-     <div class=" house-list"  >
-
-  <div class="row house-list-title col-md-12 col-lg-12 col-sm-12" >
-        <h2 class="col-md-10">更多好房，为你而选</h2>
-        <span class="col-md-2" style="margin-top: 40px"><a href="/houses">更多在租房>></a></span>
-      </div>
-      <div class="row" id="out-house-style"  >
-
-        <div class="col-lg-3" id="house-setting" *ngFor="let house of new_houses;">
-
-          <a href="">
-            <div href="#" class="thumbnail" id="houses-style"  >
-
-              <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg" alt="">
-              <span class="house-list price">{{house.housePrice}}/月</span>
-              <div class="caption">
-                <a href="">
-
-                  <h4>{{house.houseName}}</h4>
-                </a>
-                <p> {{i}}星河西区 三室一厅 <span>{{house.area}}m<sup>2</sup></span></p>
-
-              </div>
-
-
-
-            </div>
-          </a>
-</div>
-      </div>
-
-  </div></div>
-</div>
-
+   <app-list-item></app-list-item>
     <!--页脚部分-->
     <app-footer></app-footer>
 
@@ -241,7 +206,7 @@
   <div id="elevator_item">
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
-    <div class="qr-popup">
+    <div class="qr-popup" style="background-color: rgba(0,0,0,0.63)">
       <a class="code-link">
         <img class="code" src="../../assets/images/wxapp.png"/>
       </a>

@@ -185,57 +185,7 @@ width: 100%;
 
 
 /*房屋列表*/
-.house-list {
 
-background-color: #f2f2f3;
-
-}
-
-#house-setting{
-  margin-top: 10px;
-  width: 290px;
-  height: 330px
-}
-.house-list img{
-  width:250px;
-  height: 166px;
-}
-.house-list a {
-  color: black;
-  text-decoration: none;
-
-
-}
-.house-list a:hover {
-text-decoration: none;
-
-
-}
-.house-list .house-list-title h4 {
-  margin-left: 2px;
-
-}
-.house-list .house-list-title  a:hover {
-text-decoration: none;
-cursor: pointer;
-}
-.house-list p, h4 {
-  text-align: center;
-}
-.house-list .price {
-  margin-top: -40px;
-  width: 80px;
-  height: 20px;
-  background-color: rgba(100, 177, 145, 0.82);
-  position: absolute;
-  margin-left: 1px;
-  font-size: 18px;
-  text-align: center;
-  line-height: 20px;
-  color: white;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
 
 
 
@@ -251,7 +201,7 @@ cursor: pointer;
   -moz-transition: opacity .4s ease-in-out;
   -o-transition: opacity .4s ease-in-out;
   opacity: 1;
-  z-index: 100020;
+  z-index: 5;
   display: none;
 }
 #elevator_item.off {
@@ -309,7 +259,7 @@ background-color: whitesmoke;
 #elevator_item .qr-popup .code-link {
   display: block;
   margin: 10px;
-  color: #777
+  color: #000000
 }
 /*二维码图片*/
 #elevator_item .qr-popup .code-link img {
