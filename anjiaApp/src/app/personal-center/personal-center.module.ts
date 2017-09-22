@@ -15,6 +15,7 @@ import { UploadComponent } from './setting/upload/upload.component';
 import { NicknameComponent } from './setting/nickname/nickname.component';
 import { PasswordComponent } from './setting/password/password.component';
 
+import {PublicModule} from '../public/public.module';
 
 
 
@@ -33,6 +34,8 @@ import { PasswordComponent } from './setting/password/password.component';
   imports: [
     BrowserModule,
     FormsModule,
+      PublicModule,
+
     PersonalCenterRoutingModule
   ],
   providers: [],
