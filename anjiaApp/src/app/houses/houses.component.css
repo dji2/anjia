@@ -5,11 +5,11 @@
 .zufang {
   background-color: #1AAD68;
   color: white;
-  width: 57px;
-  height: 26px;
+  /*width: 57px;*/
+  /*height: 50px;*/
   line-height: 25px;
-  font-size: 14px;
-  padding: 0 14px;
+  font-size: 16px;
+  padding: 5px 15px;
   margin: 3px 0 0 12px;
   border-radius: 2px
 }
