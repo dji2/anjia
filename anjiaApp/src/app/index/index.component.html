@@ -24,7 +24,7 @@
               <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
               <li ><a href="/houses" ><span ></span>租房</a></li>
               <li><a href="#"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>合租房</a></li>
-              <li><a href="#"><span ></span>小区</a></li>
+              <li><a href="/page-not-found"><span ></span>小区</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
               <li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>
               <li  *ngIf="!islogin" class="login-outmodel" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><a ><span class="glyphicon glyphicon-user" ></span>登录</a></li>
@@ -206,7 +206,7 @@
   <div id="elevator_item">
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
-    <div class="qr-popup">
+    <div class="qr-popup" style="background-color: rgba(0,0,0,0.63)">
       <a class="code-link">
         <img class="code" src="../../assets/images/wxapp.png"/>
       </a>

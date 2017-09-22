@@ -201,7 +201,7 @@ width: 100%;
   -moz-transition: opacity .4s ease-in-out;
   -o-transition: opacity .4s ease-in-out;
   opacity: 1;
-  z-index: 100020;
+  z-index: 5;
   display: none;
 }
 #elevator_item.off {
@@ -259,7 +259,7 @@ background-color: whitesmoke;
 #elevator_item .qr-popup .code-link {
   display: block;
   margin: 10px;
-  color: #777
+  color: #000000
 }
 /*二维码图片*/
 #elevator_item .qr-popup .code-link img {
