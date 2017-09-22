@@ -1,6 +1,6 @@
 <div cldiv="list-wrap">
   <ul id="house-list" class="house-list">
-    <li *ngFor="let house of houses | search:searchText | quyu:quyuText | zujin:zujinText | mianji:mianjiText | zujinxiao:zujinxiaoText | mianjixiao:mianjixiaoText">
+    <li *ngFor="let house of houses | paginate: { itemsPerPage: 10, currentPage: p } | search:searchText | quyu:quyuText | zujin:zujinText | mianji:mianjiText | zujinxiao:zujinxiaoText ">
       <app-house-list-item [house]="house"></app-house-list-item>
       <!--<div class="pic-panel">-->
         <!--<a style="cursor: pointer"  (click)="toHouseDetail(house.houseId)"><img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/{{house.houseId}}.jpg"/></a>-->
@@ -27,4 +27,7 @@
 
     </li>
   </ul>
+  <div class="col-lg-offset-4 col-md-offset-4">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>
