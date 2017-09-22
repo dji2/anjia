@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,AfterContentInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
 // 管道
@@ -16,7 +16,7 @@ declare var $ :any;
   styleUrls: ['./index.component.css'],
   providers: [PositionsService,LocalStorageService]
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit,AfterContentInit {
   new_houses:any;
   islogin:number=0;
   userName:any;
@@ -115,17 +115,20 @@ export class IndexComponent implements OnInit {
 
     });
 
+
+
+
+  }
+
+  ngAfterContentInit(){
+    let that = this;
     if(that.localStorage.get('token')){
       that.islogin=1;
       that.userName=that.localStorage.get('userName')
     }else {
       that.islogin=0;
     }
-
-
   }
-
-
 
 
 
