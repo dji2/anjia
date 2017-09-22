@@ -39,7 +39,7 @@ import { LocalStorageService } from './services/local-storage.service';
 import { HouseListItemComponent } from './houses/house-list/house-list-item/house-list-item.component';
 import { ListItemComponent } from './index/list-item/list-item.component';
 
-
+import {Ng2PaginationModule} from "ng2-pagination";
 
 
 @NgModule({
@@ -71,6 +71,7 @@ import { ListItemComponent } from './index/list-item/list-item.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    Ng2PaginationModule,
     PersonalCenterModule,  //这里一定要放在根路由上面
     AppRoutingModule
 
