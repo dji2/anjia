@@ -44,4 +44,8 @@ export class AppComponent {
     this._url=this.glo.serverUrl;
     this._hiddenNavs=this.glo.hiddenNavs;
   }
+  out(){
+    this.localStorage.remove('token')
+    this.userName=this.localStorage.remove('userName');
+  }
 }

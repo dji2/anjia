@@ -3,6 +3,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Router} from '@angular/router';
 // 管道
 
+import {GlobalPropertyService} from './../services/global-property.service';
 
 import {PositionsService} from './../services/positions.service';
 import { LocalStorageService } from './../services/local-storage.service';
@@ -28,12 +29,15 @@ export class IndexComponent implements OnInit,AfterContentInit {
   constructor(private route: ActivatedRoute,
               private router:Router,
               private localStorage:LocalStorageService,
-              private house: PositionsService
+              private house: PositionsService,
+              private  glo:GlobalPropertyService,
   ) {
 
   }
 
   ngOnInit() {
+    let that = this;
+    that.glo.hiddenNavs=true;
 
     $(function(){
       var oFocus=$('#focus'),
@@ -105,7 +109,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
     });
 
-    let that = this;
+
 
     that.house.getAllHouses(function (result) {
 
