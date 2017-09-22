@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from './../services/users.service';
 import {Router} from '@angular/router';
 import { LocalStorageService } from './../services/local-storage.service';
+import {GlobalPropertyService} from './../services/global-property.service';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +15,17 @@ export class LoginComponent implements OnInit {
   login_res:string;
   userName:any;
   userId:any;
+  _hiddenNavs:any;
   constructor(
     private userSer:UsersService,
     private router:Router,
-    private localStorage:LocalStorageService
+    private localStorage:LocalStorageService,
+    private  glo:GlobalPropertyService,
   ) { }
 
   ngOnInit() {
 
-
+    this.glo.hiddenNavs=true;
   }
   //单例  单一的实例
   toLogin(loginForm){
@@ -35,7 +38,10 @@ export class LoginComponent implements OnInit {
         that.localStorage.set('token',result.token);
         that.localStorage.set('userName',result.userName);
         that.router.navigate(['/index']);
+
+
       }else{
+        alert('用户名或密码错误');
         that.login_res='用户名或密码错误';
       }
     })
