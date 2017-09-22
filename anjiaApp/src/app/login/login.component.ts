@@ -15,17 +15,16 @@ export class LoginComponent implements OnInit {
   login_res:string;
   userName:any;
   userId:any;
-  _hiddenNavs:any;
   constructor(
+    private  glo:GlobalPropertyService,
     private userSer:UsersService,
     private router:Router,
-    private localStorage:LocalStorageService,
-    private  glo:GlobalPropertyService,
+    private localStorage:LocalStorageService
+
   ) { }
 
   ngOnInit() {
-
-    this.glo.hiddenNavs=true;
+    this.glo.hiddenNavs = true;
   }
   //单例  单一的实例
   toLogin(loginForm){
@@ -37,6 +36,7 @@ export class LoginComponent implements OnInit {
         that.localStorage.set('userId',result.userId);
         that.localStorage.set('token',result.token);
         that.localStorage.set('userName',result.userName);
+
         that.router.navigate(['/index']);
 
 
