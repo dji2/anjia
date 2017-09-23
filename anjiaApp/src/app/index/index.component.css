@@ -40,6 +40,7 @@
 
 .mybody {
   background: url(http://owhah4u2f.bkt.clouddn.com/images/index/bannerV2.jpg);
+  background-position: top;
   background-size: 100% 660px;
   background-repeat: no-repeat;
   /*背景视差属性*/
@@ -167,6 +168,7 @@ background-color: rgba(255, 255, 255, 0.39);
 /*主页小工具*/
 .gongju {
 
+  top:30px;
 /*background: url("../../assets/images/loginbg.jpg") no-repeat;*/
   /*background-size: 100% 100%;*/
    background-color: rgba(255, 255, 255, 0.64);
@@ -174,22 +176,17 @@ background-color: rgba(255, 255, 255, 0.39);
 
 .gongju div {
   height: 200px;
-
-  background-color: rgba(255, 255, 255, 0.77);
+  background-color: rgba(255, 255, 255, 0.87);
 
 }
 .gongju div:hover{
   height: 200px;
-
-
-
-
 }
 
 .gongju img {
   width: 76px;
   height: 65px;
-  margin: 10px auto;
+  margin: 20px auto;
   display: block;
   transition: width 0.1s;
   -webkit-transition: width 0.1s; /* Safari */
@@ -239,14 +236,16 @@ width: 100%;
   height: 400px
 }
 
-
-
-
-
-
-
 /*房屋列表*/
+/*红色房子背景视差*/
+.middlebg{
+  width: 100%;
+  height: 660px;
+  z-index: -4;
+  background:url("../../assets/images/redhouse.jpg");
+  background-attachment: fixed;
 
+}
 
 
 

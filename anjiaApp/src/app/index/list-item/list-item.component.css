@@ -1,7 +1,7 @@
 .house-list {
 
   background-color: #f2f2f3;
-
+z-index: 300;
 }
 
 #house-setting{
