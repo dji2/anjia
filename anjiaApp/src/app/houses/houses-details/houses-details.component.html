@@ -1,57 +1,23 @@
-<div class="search col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
-  <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5"><span class="zufang">租房</span></div>
-  <div class="col-md-7 col-lg-7 col-sm-7 col-xs-7">
-    <app-house-search></app-house-search>
-  </div>
-</div>
+<!--<div class="search col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">-->
+  <!--<div class="col-md-5 col-lg-5 col-sm-5 col-xs-5"><span class="zufang">租房</span></div>-->
+  <!--<div class="col-md-7 col-lg-7 col-sm-7 col-xs-7">-->
+    <!--<app-house-search></app-house-search>-->
+  <!--</div>-->
+<!--</div>-->
 
-<div class="bg col-md-12 col-lg-12">
-  <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
-    <div class="introduce"> 链家网苏州站 > 苏州租房 > 姑苏租房 > 平江新城租房 > 仲雅苑北区小区租房 > 当前房源</div>
+    <!--<div class="introduce"> 链家网苏州站 > 苏州租房 > 姑苏租房 > 平江新城租房 > 仲雅苑北区小区租房 > 当前房源</div>-->
 
-    <div style="height: 130px;text-align: center;background-color: #FCFCFC;border: 1px solid #ebebeb">
-      <h2 style="white-space: nowrap;margin-top: 40px">{{house.houseName}}</h2>
-    </div>
-    <div class="details">
+    <!--<div style="height: 130px;text-align: center;background-color: #FCFCFC;border: 1px solid #ebebeb">-->
+      <!--<h2 style="white-space: nowrap;margin-top: 40px">{{house.houseName}}</h2>-->
+    <!--</div>-->
+
+
+
       <div class="lunbo">
         <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/8.jpg" width="100%" height="100%" alt="">
       </div>
-      <div class="detail">
-        <div class="houseInfo">
-          <div class="prices"><span>{{house.housePrice}}</span>元/月</div>
-          <div class="room"><span>{{house.room}}</span>室<span>{{house.livingroom}}</span>厅</div>
-          <div class="area"><span>{{house.area}}</span>平</div>
-        </div>
-        <table class="aroundInfo">
-          <tr>
-            <td class="title" nowrap>楼层：</td>
-            <td width="50%">中区/11层</td>
-            <td class="title" nowrap>朝向：</td>
-            <td width="50%">{{house.aspect}}</td>
-          </tr>
-          <tr>
-            <td class="title" nowrap>区域：</td>
-            <td width="50%">{{house.areaName.slice(0,2)}}</td>
-          </tr>
-          <tr>
-            <td class="title" nowrap>小区：</td>
-            <td colspan="3">{{house.areaName.slice(2)}}</td>
-          </tr>
-          <tr>
-            <td class="title" nowrap>地址：</td>
-            <td colspan="3">{{house.address}}</td>
-          </tr>
-        </table>
-        <div class="owner">
-          <span>张三</span>
-          <br>
-          <span style="color: red">18861886666</span>
-        </div>
-        <div class="startTime">
-          上传时间：<span>{{house.publishTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
-        </div>
-      </div>
-    </div>
+
+<div class="bg col-md-12 col-lg-12">
 
 
     <!--<ul>-->
@@ -60,7 +26,8 @@
       <!--<li><a href="#section3" [class.on]="tab_index==3" (click)="tab_index=3">相似房源 </a></li>-->
 
     <!--</ul>-->
-    <div class="row">
+  <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
+  <div class="row">
       <div class="col-lg-12 col-md-12">
         <ul>
           <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
@@ -118,28 +85,154 @@
     </div>
 
 
-    <!--<nav class="col-sm-2" id="myScrollspy">-->
-      <!--<div class="container-fluid">-->
-        <!--<div class="container-fluid">-->
-          <!--<ul class="nav nav-pills nav-stacked">-->
-            <!--<li class="active"><a href="#section1">Section 1</a></li>-->
-            <!--<li><a href="#section2">Section 2</a></li>-->
-            <!--<li><a href="#section3">Section 3</a></li>-->
-          <!--</ul>-->
+    <div class="details">
+      <div class="detail">
+
+        <div style="height: 80px;text-align: center">
+          <h2 style="white-space: nowrap;margin-top: 10px">{{house.houseName}}</h2>
+        </div>
+
+        <div class="houseInfo">
+          <div class="prices"><span>{{house.housePrice}}</span>元/月</div>
+          <div class="room"><span>{{house.room}}</span>室<span>{{house.livingroom}}</span>厅</div>
+          <div class="area"><span>{{house.area}}</span>平</div>
+        </div>
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>房屋信息</h3></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>楼层：</td>
+            <td width="50%">中区/11层</td>
+            <td class="title" nowrap>朝向：</td>
+            <td width="50%">{{house.aspect}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>区域：</td>
+            <td width="50%">{{house.areaName.slice(0,2)}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>小区：</td>
+            <td colspan="3">{{house.areaName.slice(2)}}</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>地址：</td>
+            <td colspan="3">{{house.address}}</td>
+          </tr>
+        </table>
+
+
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>房屋简介</h3></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>可住：</td>
+            <td width="50%">4</td>
+            <td class="title" nowrap>房间类型：</td>
+            <td width="50%">整套房子/公寓</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>卫生间：</td>
+            <td width="50%">1</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>卧室：</td>
+            <td colspan="3">2</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap>床铺：</td>
+            <td colspan="3">3</td>
+          </tr>
+        </table>
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>房间安排</h3></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap><i class="fa fa-bath fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">1个卫生间</td>
+            <td class="title" nowrap><i class="fa fa-bed fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">2个卧室</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap></td>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap><i class="fa fa-television fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">1个客厅</td>
+            <td class="title" nowrap><i class="fa fa-cutlery fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">1个厨房</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap></td>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>便利设施</h3></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap><i class="fa fa-users fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">欢迎家庭/儿童入住</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap></td>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <td class="title" nowrap><i class="fa fa-internet-explorer fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">网络</td>
+            <td class="title" nowrap><i class="fa fa-shower fa-4x" aria-hidden="true"></i>：</td>
+            <td width="50%" style="font-size: large;color: #888;">热水供应</td>
+          </tr>
+          <tr>
+            <td class="title" nowrap></td>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>房屋守则</h3></td>
+          </tr>
+          <tr>
+            <td  colspan="4" class="title" nowrap>禁止吸烟</td>
+          </tr>
+          <tr>
+            <td  colspan="4" class="title" nowrap>不适合携带宠物入住</td>
+          </tr>
+          <tr>
+            <td  colspan="4" class="title" nowrap>不允许举办派对和活动</td>
+          </tr>
+        </table>
+
+        <table class="aroundInfo">
+          <tr>
+            <td colspan="4"><h3>安全设施</h3></td>
+          </tr>
+          <tr>
+            <td  colspan="4" class="title" nowrap>烟雾报警器</td>
+          </tr>
+        </table>
+
+        <!--<div class="owner">-->
+          <!--<span>张三</span>-->
+          <!--<br>-->
+          <!--<span style="color: red">18861886666</span>-->
         <!--</div>-->
-      <!--</div>-->
-    <!--</nav>-->
+        <div class="startTime">
+          上传时间：<span>{{house.publishTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+        </div>
+      </div>
 
-
-    <!--<div>-->
-      <!--<h1>Section 4-1</h1>-->
-      <!--<p>Try to scroll this section and look at the navigation list while scrolling!</p>-->
-    <!--</div>-->
-    <!--<div id="section42">-->
-      <!--<h1>Section 4-2</h1>-->
-      <!--<p>Try to scroll this section and look at the navigation list while scrolling!</p>-->
-    <!--</div>-->
-
+    </div>
 
   </div>
 
