@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsersService} from './../services/users.service';
 import {Router} from '@angular/router';
 import {GlobalPropertyService} from './../services/global-property.service';
-
+import { LocalStorageService } from './../services/local-storage.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -20,10 +20,13 @@ export class RegisterComponent implements OnInit {
   code_res: any;
   reg_res: any;
   num: any;
-
+  userName:any;
+  userId:any;
   constructor(private userSer: UsersService,
               private router: Router,
-              private glo: GlobalPropertyService) {
+              private glo: GlobalPropertyService,
+              private localStorage:LocalStorageService
+  ) {
   }
 
   ngOnInit() {
@@ -34,16 +37,17 @@ export class RegisterComponent implements OnInit {
   }
 
   getCode(registerForm) {
+
     let that = this;
     that.userSer.getCodeByphone(registerForm.form.value, function (result) {
-
+      console.log(result);
       // if (result.stageCode == 5)
-      if (result.stagteCode == 5) {
+      if (result.stateCode == 5) {
         that.code_res = ' 该手机号已经注册过 ';
         console.log(that.code_res);
-      } else if (result.stagteCode == 'e004') {
-        that.code_res = '网络连接失败！';
+      } else if (result.stateCode == 'e004') {
 
+        that.router.navigate(['/page-not-found']);
         console.log(that.code_res);
       } else {
         if (result) {
@@ -57,20 +61,26 @@ export class RegisterComponent implements OnInit {
   }
 
   toRegister(registerForm) {
-      const that = this;
-      that.userSer.register(registerForm.form.value, function (result) {
-        if (result.stageCode = '5') {
-          that.reg_res = '用户名已存在！';
-        } else if (result.stageCode = '6') {
-          sessionStorage.setItem('token', result.token);
-          that.router.navigate(['/index']);
-          alert('执行跳转');
+    // alert('执行跳转');
+    const that = this;
+    that.userSer.register(registerForm.form.value, function (result) {
+      console.log(result);
+      if (result.stateCode == 5) {
+        that.reg_res = '用户名已存在！';
+      } else if (result.stateCode == 6) {
+        that.localStorage.set('userId',result.userId);
+        that.localStorage.set('token',result.token);
+        that.localStorage.set('userName',result.userName);
+        that.router.navigate(['/index']);
+        // location.href("http://localhost:4200");
 
-        } else {
-          that.reg_res = '数据库错误！';
-        }
-      });
-    }
+        alert('执行跳转');
+
+      } else {
+        that.reg_res = '数据库错误！';
+      }
+    });
+  }
 
   private timer;
 
@@ -86,8 +96,8 @@ export class RegisterComponent implements OnInit {
     }, 1000);
   }
 
-  rgcheckbox(): void {
-    this.checkbox = !this.checkbox;
-  }
+  // rgcheckbox(): void {
+  //   this.checkbox = !this.checkbox;
+  // }
 
 }

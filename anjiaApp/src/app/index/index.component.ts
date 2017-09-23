@@ -119,16 +119,16 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
     });
 
-  }
-
-  ngAfterContentInit(){
-    let that = this;
     if(that.localStorage.get('token')){
       that.islogin=1;
       that.userName=that.localStorage.get('userName')
     }else {
       that.islogin=0;
     }
+  }
+
+  ngAfterContentInit(){
+
   }
 
 

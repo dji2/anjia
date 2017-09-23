@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         that.localStorage.set('userId',result.userId);
         that.localStorage.set('token',result.token);
         that.localStorage.set('userName',result.userName);
-
+// 跳转到首页
         that.router.navigate(['/index']);
 
 
