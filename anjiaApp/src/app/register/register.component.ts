@@ -96,8 +96,8 @@ export class RegisterComponent implements OnInit {
     }, 1000);
   }
 
-  rgcheckbox(): void {
-    this.checkbox = !this.checkbox;
-  }
+  // rgcheckbox(): void {
+  //   this.checkbox = !this.checkbox;
+  // }
 
 }

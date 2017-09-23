@@ -5,8 +5,8 @@
     <!--手机号-->
     <div class="group">
       <label for="register-telephone" class="label">Username</label>
-      <input  type="text" class="input"  pattern="^1[34578]\d{9}$" maxlength="11" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="telephone" placeholder="请输入手机号" required>
-      <button class=" button" (click)="getCode(registerForm)"   id="yzm-register" >{{code_mes}}</button>
+      <input  type="text" class="input"  pattern="^1[34578]\d{9}$" maxlength="11" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="telephone"  placeholder="请输入手机号" required>
+      <button class=" button" (click)="getCode(registerForm)" [disabled]="rgtel.invalid"  id="yzm-register" >{{code_mes}}</button>
     </div>
     <div *ngIf="rgtel.invalid && (rgtel.dirty || rgtel.touched)"
         >
@@ -75,8 +75,8 @@
     </div>
 <!--提交按钮-->
     <div class="group">
-      <input type="button" class="button" value="Sign Up" (click)="toRegister(registerForm)">
-      <!--[disabled]="!(checkbox&&registerForm.form.valid)"-->
+      <input type="button" class="button" value="Sign Up" (click)="toRegister(registerForm)" [disabled]="!(registerForm.form.valid)">
+
     </div>
     <!--输入完毕判断弹出信息-->
     <div class="hr">
