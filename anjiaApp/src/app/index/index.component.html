@@ -27,12 +27,11 @@
               <li><a href="/page-not-found"><span ></span>小区</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
               <li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>
-              <li  *ngIf="!islogin" ><a href="/login"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
-              <li  *ngIf="!islogin"><a href="/register">注册</a></li>
+              <li  *ngIf="!islogin" ><a href="/login"><span class="glyphicon glyphicon-user" ></span>登录/注册</a></li>
             </ul>
           </div>
         </div>
-        <!--这货是个模态框-->
+
 
       </nav>
       <!--搜索框-->

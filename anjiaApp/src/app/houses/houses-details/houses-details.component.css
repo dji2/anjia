@@ -50,28 +50,31 @@
   clear: both;
 }
 .bg{
-  background-color: #F1F1F1;
+  /*background-color: #F1F1F1;*/
   box-sizing: border-box;
   border-top: solid 1px gainsboro;
 }
-/*轮播---------------*/
+.lunbo{
+  height: 550px;
+  /*float: left;*/
+  width: 100%;
+  background-color: gainsboro;
+}
+/*xiamian---------------*/
 .details{
-  height: 500px;
+  /*height: 500px;*/
   padding: 36px;
   border: 1px solid #ebebeb;
   background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(13,3,9,0.2);
 }
-.lunbo{
-  height: 420px;
-  float: left;
-  width: 48%;
-  background-color: gainsboro;
-}
-/*右边------------------*/
+
+/*zuo边------------------*/
 .detail{
-  height: 420px;
-  float: right;
-  width: 48%;
+  /*height: 420px;*/
+  /*float: right;*/
+  width: 60%;
   /*background-color: yellow;*/
 }
 .houseInfo{
@@ -83,9 +86,9 @@
   background-color: #fcfcfc;
 }
 .aroundInfo {
-  padding: 15px 0;
+  padding: 22px 0;
   border-bottom: 1px solid #eee;
-  font-size: 14px;
+  font-size: 15px;
 }
 table{
   display: table;
@@ -107,18 +110,18 @@ table{
 }
 .prices{
   display: table-cell;
-  width: 175px;
+  width: 200px;
   color: #e4393c;
 }
 .room {
   display: table-cell;
-  width: 125px;
+  width: 200px;
   border-left: 1px solid #e4e3e3;
   border-right: 1px solid #e4e3e3;
 }
 .area {
   display: table-cell;
-  width: 135px;
+  width: 200px;
 }
 .houseInfo span{
   font-size: 28px;
@@ -135,7 +138,7 @@ tr {
 }
 .title {
   color: #888;
-  text-align: right;
+  /*text-align: right;*/
 }
 /*周边配套------------*/
 li {
