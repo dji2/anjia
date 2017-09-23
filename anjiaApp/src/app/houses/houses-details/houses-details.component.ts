@@ -76,7 +76,7 @@ export class HousesDetailsComponent implements OnInit {
     let that = this;
 
 
-    that.ho.agree({"arrangeId":arrangeId},function (result) {
+    that.ho.agree({"arrangeId":arrangeId,"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
       alert(result.stateCode);
       if(result.stateCode == 17){
         alert("点赞成功");
