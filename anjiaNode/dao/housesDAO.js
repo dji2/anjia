@@ -90,14 +90,14 @@ exports.housesDao={
             })
         })
     },
-    //点赞
-    agree:function (arrangeId,callback) {
+    //检查是否点过赞
+    checkAgree:function (arrangeInfo,callback) {
         pool.getConnection(function (error,client) {
             if(error){
                 console.log("error");
-                return
+                return;
             }
-            client.query(housesSql.agree,[arrangeId],function (error,result) {
+            client.query(housesSql.checkAgree,[arrangeInfo.userId,arrangeInfo.houseId,arrangeInfo.arrangeId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
@@ -107,7 +107,37 @@ exports.housesDao={
                 client.release();
             })
         })
+    },
+    //点赞
+    agree:function (arrangeInfo,callback) {
+        this.checkAgree(arrangeInfo,function (result) {
+            if(result.length==0){
+                pool.getConnection(function (error,client) {
+                    if(error){
+                        console.log("数据库连接错误");
+                        return;
+                    }
+                    client.query(housesSql.agree,[arrangeInfo.arrangeId],function (error,result) {
+                        if(error){
+                            callback('e004');
+                            return;
+                        }
+                        console.log("点赞成功"+result.affectedRows);
+                        console.log(result);
+                        callback(result);
+
+                        client.release();
+                    })
+                })
+            }else {
+                callback('19');
+            }
+
+
+        })
+
     }
+
 }
 
 
