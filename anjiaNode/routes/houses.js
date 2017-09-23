@@ -91,7 +91,7 @@ router.post('/agree', function(req, res, next) {
     console.log(arrangeInfo);
     if(arrangeInfo){
         console.log("agree");
-        housesDao.agree(arrangeInfo.arrangeId,function (result) {
+        housesDao.agree(arrangeInfo,function (result) {
             console.log("agree");
             if(result.affectedRows==1){
                 res.json({"stateCode":17});

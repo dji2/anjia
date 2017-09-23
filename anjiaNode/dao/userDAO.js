@@ -38,7 +38,8 @@ exports.userDao={
                             return;
                         }
                         console.log("影响的行数"+result.affectedRows);
-                        callback(result.affectedRows);
+                        console.log(result);
+                        callback(result);
 
                         client.release();
                     })
