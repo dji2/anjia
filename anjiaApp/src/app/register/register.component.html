@@ -2,35 +2,85 @@
 <div class="login-form">
 <form class="form-horizontal"  #registerForm="ngForm">
   <div class="sign-up-htm">
+    <!--手机号-->
     <div class="group">
       <label for="register-telephone" class="label">Username</label>
-      <input  type="text" class="input"  pattern="\^1[34578]\d{9}$\" maxlength="11" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="telephone" placeholder="请输入手机号" required>
-      <button class=" button" (click)="getCode(registerForm)"  [disabled]="rgtel.invalid" id="yzm-register" >{{code_mes}}</button>
+      <input  type="text" class="input"  pattern="^1[34578]\d{9}$" maxlength="11" #rgtel="ngModel" [(ngModel)]="rgtelephone"  id="register-telephone" name="telephone" placeholder="请输入手机号" required>
+      <button class=" button" (click)="getCode(registerForm)"   id="yzm-register" >{{code_mes}}</button>
     </div>
+    <div *ngIf="rgtel.invalid && (rgtel.dirty || rgtel.touched)"
+        >
+      <div *ngIf="rgtel.errors.required">
+        <span class="glyphicon glyphicon-triangle-right"></span>号码不能为空
+      </div>
+      <div *ngIf="rgtel.errors.pattern">
+        <span class="glyphicon glyphicon-triangle-right"></span>号码格式不正确
+      </div>
+
+    </div>
+    <!--验证码-->
     <div class="group">
-      <label for="telyzm" class="label">验证码</label>
+      <!--<label for="telyzm" class="label">验证码</label>-->
       <input type="text" class="input" value="验证码:" id="telyzm" #yzm="ngModel" minlength="6" maxlength="6" pattern="^[0-9]{6}$"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
     </div>
+    <div *ngIf="yzm.invalid && (yzm.dirty || yzm.touched)"
+        >
+
+      <div *ngIf="yzm.errors.required">
+        <span class="glyphicon glyphicon-triangle-right"></span>请输入您手机上的六位验证码
+      </div>
+
+      <div *ngIf="yzm.errors.pattern">
+        <span class="glyphicon glyphicon-triangle-right"></span>验证码格式不正确
+      </div>
+    </div>
+    <!--昵称-->
     <div class="group">
-      <label for="username" class="label">昵称</label>
+      <!--<label for="username" class="label">昵称</label>-->
       <input  type="text" class="input"  #user_name="ngModel" [(ngModel)]="user_name1"  maxlength="8" id='username' name='userName' placeholder="昵称" required>
     </div>
-    <div class="group">
-      <label for="register-password" class="label">Password</label>
-      <input type="password" class="input" data-type="password"  #myrgpsw="ngModel"  [(ngModel)]="rgpsw1" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,20}$" id="register-password" name="password" placeholder="请输入密码"  required>
+    <div *ngIf="user_name.invalid && (user_name.dirty || user_name.touched)"
+         >
+      <div *ngIf="user_name.errors.required">
+        <span class="glyphicon glyphicon-triangle-right"></span>昵称不能为空
+      </div>
+      <div *ngIf="user_name.errors.maxlength">
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
     </div>
-
+    <!--密码-->
     <div class="group">
-      <label for="password_confirm" class="label">Repeat Password</label>
+      <!--<label for="register-password" class="label">Password</label>-->
+      <input type="password" class="input" data-type="password"  #myrgpsw="ngModel"  [(ngModel)]="rgpsw1" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,12}$" id="register-password" name="password" placeholder="请输入密码"  required>
+    </div>
+    <div *ngIf="myrgpsw.invalid && (myrgpsw.dirty || myrgpsw.touched)"
+        >
+      <div *ngIf="myrgpsw.errors.required">
+        <span class="glyphicon glyphicon-triangle-right"></span>密码不能为空
+      </div>
+      <div *ngIf="myrgpsw.errors.minlength&&myrgpsw.errors.maxlength">
+        <span class="glyphicon glyphicon-triangle-right"></span> 密码大于六位且小于12位
+      </div>
+      <div *ngIf="myrgpsw.errors.pattern">
+        <span class="glyphicon glyphicon-triangle-right"></span> 密码由8-20位数字和字母组成
+      </div>
+    </div>
+<!--确定密码-->
+    <div class="group">
+      <!--<label for="password_confirm" class="label">Repeat Password</label>-->
       <input  type="password" class="input"  #pswconfirm="ngModel"  [(ngModel)]="pswconfirm1" name="password_confirm" id="password_confirm" placeholder="请再次确认密码" required data-type="password">
     </div>
-  
-    <div class="group">
-      <input type="button" class="button" value="Sign Up" (click)="toRegister(registerForm)" [disabled]="!(checkbox&&registerForm.form.valid)" >
+    <div *ngIf=" pswconfirm.value != myrgpsw.value">
+      <span class="glyphicon glyphicon-triangle-right"></span>两次密码不一致
     </div>
+<!--提交按钮-->
+    <div class="group">
+      <input type="button" class="button" value="Sign Up" (click)="toRegister(registerForm)">
+      <!--[disabled]="!(checkbox&&registerForm.form.valid)"-->
+    </div>
+    <!--输入完毕判断弹出信息-->
     <div class="hr">
-      <div *ngIf="code_res"
-           class="alert alert-danger">
+      <div *ngIf="code_res">
         {{code_res}}
       </div>
 
