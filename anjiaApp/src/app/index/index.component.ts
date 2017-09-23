@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
               private router:Router,
               private localStorage:LocalStorageService,
               private house: PositionsService,
-              private  glo:GlobalPropertyService,
+              private glo:GlobalPropertyService,
   ) {
 
   }

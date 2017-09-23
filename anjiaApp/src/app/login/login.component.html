@@ -1,138 +1,54 @@
 
 
 
+<div class="login-box">
 
-<div style="height: auto;width: 100%">
-  <div class="jq22-container" style="padding-top:10px;z-index: 199" >
-    <div class="login-wrap">
+    <div class="login-wrap" style="top: -10px">
       <div class="login-html">
-        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登录</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">注册</label>
+
         <div class="login-form">
           <div class="sign-in-htm">
+            <!--这边就是登录！！-->
+            <form class="form-horizontal" #loginForm="ngForm" style="margin-top: 10px;" >
             <div class="group">
-              <label for="user" class="label">Username</label>
-              <input id="auser" type="text" class="input">
+              <label for="telephone" class="label">Username</label>
+              <input  type="text" class="input" #tel="ngModel" pattern="^1[34578]\d{9}$"  maxlength="11" [(ngModel)]="_telephone" id="telephone" name="telephone"  placeholder="请输入您的手机号" required >
             </div>
             <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id="apass" type="password" class="input" data-type="password">
+              <label for="password" class="label">Password</label>
+              <input  type="password" class="input" data-type="password" #pass="ngModel" minlength="6"  [(ngModel)]="_password" id="password" name="password" placeholder="请输入您的密码" required>
             </div>
             <div class="group">
               <input id="check" type="checkbox" class="check" checked>
               <label for="check"><span class="icon"></span> Keep me Signed in</label>
             </div>
             <div class="group">
-              <input type="submit" class="button" value="Sign In">
+              <input type="submit" class="button" value="Sign In" (click)="toLogin(loginForm)" [disabled]="loginForm.form.invalid" >
             </div>
             <div class="hr"></div>
             <div class="foot-lnk">
               <a href="#forgot">Forgot Password?</a>
             </div>
+
+      </form>
           </div>
-          <div class="sign-up-htm">
-            <div class="group">
-              <label for="user" class="label">Username</label>
-              <input id="user" type="text" class="input">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id="bpass" type="password" class="input" data-type="password">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Repeat Password</label>
-              <input id="abpass" type="password" class="input" data-type="password">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Email Address</label>
-              <input id="pass" type="text" class="input">
-            </div>
-            <div class="group">
-              <input type="submit" class="button" value="Sign Up">
-            </div>
-            <div class="hr">
 
-            </div>
 
+
+
+
+            <div class="sign-up-htm">
+              <!--这边就是注册啦！！-->
+              <app-register></app-register>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
+
   </div>
-<div class="slideshow" style="z-index: -1">
-  <!--<div class="slideshow-image" style="background-image: url('../../assets/images/1.jpg')"></div>-->
-  <!--<div class="slideshow-image" style="background-image: url('../../assets/images/.jpg')"></div>-->
-  <!--<div class="slideshow-image" style="background-image: url('../../assets/images/loginbg (2).jpg')"></div>-->
-  <div class="slideshow-image" style="background-image: url('../../assets/images/loginbg (2).jpg')"></div>
-  <div class="slideshow-image" style="background-image: url('../../assets/images/4.jpg')"></div>
-  <div class="slideshow-image" style="background-image: url('../../assets/images/4.jpg')"></div>
-</div>
 
-
-  <!--//////////////////////////////////////////////////////////////////////////////-->
-  <!--<form class="form-horizontal " #loginForm="ngForm" style="z-index: 1999" >-->
-    <!--<div class="anjialogo">-->
-      <!--<img src="../../assets/images/green2.png" alt="">-->
-    <!--</div>-->
-    <!--&lt;!&ndash;这是手机号输入框&ndash;&gt;-->
-    <!--<div class="form-group form-group-lg ">-->
-
-      <!--<div class="col-sm-12">-->
-
-        <!--<input type="text" class="form-control " #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="telephone" name="telephone" placeholder="请输入您的手机号" required>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;这是错误验证信息&ndash;&gt;-->
-    <!--<div *ngIf="tel.invalid && (pass.dirty || pass.touched)"-->
-         <!--class="alert alert-danger">-->
-      <!--<div *ngIf="tel.errors.required">-->
-        <!--<span class="glyphicon glyphicon-triangle-right"></span>号码不能为空-->
-      <!--</div>-->
-      <!--<div *ngIf="tel.errors.pattern">-->
-        <!--<span class="glyphicon glyphicon-triangle-right"></span>号码格式不正确-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;这是密码框&ndash;&gt;-->
-    <!--<div class="form-group form-group-lg" >-->
-      <!--<div class="col-sm-12">-->
-        <!--<input type="password" class="form-control" #pass="ngModel" minlength="6"  [(ngModel)]="_password" id="password" name="password" placeholder="请输入您的密码" required>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;这是错误验证信息&ndash;&gt;-->
-    <!--<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"-->
-         <!--class="alert alert-danger">-->
-      <!--<div *ngIf="pass.errors.required">-->
-        <!--<span class="glyphicon glyphicon-triangle-right"></span>密码不能为空-->
-      <!--</div>-->
-      <!--<div *ngIf="pass.errors.minlength">-->
-        <!--<span class="glyphicon glyphicon-triangle-right"></span> 密码大于六位-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;是否记住密码&ndash;&gt;-->
-    <!--<div class="form-group form-group-lg" >-->
-      <!--<div class="col-sm-offset-2 col-sm-10">-->
-        <!--<div class="checkbox">-->
-          <!--<label>-->
-            <!--<input type="checkbox"> 是否记住密码？-->
-          <!--</label>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;这是登录按钮&ndash;&gt;-->
-    <!--<div class="form-group form-group-lg" >-->
-      <!--<div class="col-sm-offset-2 col-sm-10">-->
-
-        <!--<button type="submit"  (click)="toLogin(loginForm)" [disabled]="loginForm.form.invalid"  class="btn btn-success btn-login" data-dismiss="modal" >登录</button>-->
-
-        <!--&lt;!&ndash;登录后进行验证后的错误信息&ndash;&gt;-->
-        <!--<div *ngIf="login_res"-->
-             <!--class="alert alert-danger">-->
-          <!--{{login_res}}-->
-        <!--</div>-->
-
-      <!--</div>-->
-    <!--</div>-->
-  <!--</form>-->
 
 </div>
 
