@@ -10,5 +10,5 @@ exports.sql={
     checkAgree:'select * from arrange where userId = ? and houseId =? and arrangeId=?',
     agree:"update arrange set agreeNum=agreeNum+1,agreePerson=CONCAT(agreePerson,'\,',?) where arrangeId = ? and not FIND_IN_SET(?,agreePerson)",
     focus:"insert into focus(userId,houseId) SELECT ?, ? FROM DUAL WHERE not exists (select id from focus where userId = ? and houseId = ?)",
-    unFocus:"delete from focus where  userId = ? and houseId = ?"
+    unFocus:"delete from focus where  userId = ? and houseId = ?",
 };
