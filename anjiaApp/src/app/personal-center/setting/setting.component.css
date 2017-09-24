@@ -5,17 +5,23 @@
 /*}*/
 ul{
   height: 40px;
-  width: 780px;
+  width: 870px;
   /*margin-left: 10px;*/
-  background-color: #F5F5F5;
+  /*background-color: #F5F5F5;*/
   font-size: 17px;
 }
 li{
-  margin-left: 20px;
-  margin-top: 10px;
-  border: none;
-  background-color: #F5F5F5;
+  height: 30px;
+  width: 160px;
+  border: 1px white solid;
+  /*margin-left: 20px;*/
+  /*margin-top: 10px;*/
+  background-color: #00b86b;
+  border-radius: 5px ;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 20px;
 }
 li:hover{
-  background-color: #b9b9b9;
+  background-color: #1abc9c;
 }
