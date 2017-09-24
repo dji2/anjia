@@ -102,4 +102,37 @@ router.post('/agree', function(req, res, next) {
     }
 });
 
+
+//关注
+router.post('/focus', function(req, res, next) {
+    var focusInfo = req.body;
+    console.log(focusInfo);
+    if(focusInfo){
+        console.log("focus");
+        housesDao.focus(focusInfo,function (result) {
+            if(result.affectedRows==1){
+                res.json({"stateCode":21});
+            }else{
+                res.json({"stateCode":22});
+            }
+        })
+    }
+});
+
+
+//取消关注
+router.post('/unFocus', function(req, res, next) {
+    var focusInfo = req.body;
+    console.log(focusInfo);
+    if(focusInfo){
+        console.log("unfocus");
+        housesDao.unFocus(focusInfo,function (result) {
+            if(result.affectedRows==1){
+                res.json({"stateCode":23});
+            }else{
+                res.json({"stateCode":24});
+            }
+        })
+    }
+});
 module.exports = router;

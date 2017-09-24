@@ -108,6 +108,8 @@ exports.housesDao={
             })
         })
     },
+
+
     //点赞
     agree:function (arrangeInfo,callback) {
         this.checkAgree(arrangeInfo,function (result) {
@@ -117,12 +119,11 @@ exports.housesDao={
                         console.log("数据库连接错误");
                         return;
                     }
-                    client.query(housesSql.agree,[arrangeInfo.arrangeId],function (error,result) {
+                    client.query(housesSql.agree,[arrangeInfo.userId,arrangeInfo.arrangeId,arrangeInfo.userId],function (error,result) {
                         if(error){
                             callback('e004');
                             return;
                         }
-                        console.log("点赞成功"+result.affectedRows);
                         console.log(result);
                         callback(result);
 
@@ -136,8 +137,48 @@ exports.housesDao={
 
         })
 
-    }
+    },
 
+
+    //关注房源
+    focus:function (focusInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.focus,[focusInfo.userId,focusInfo.houseId,focusInfo.userId,focusInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+
+    },
+
+    //取消关注房源
+    unFocus:function (focusInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.unFocus,[focusInfo.userId,focusInfo.houseId,focusInfo.userId,focusInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+
+    }
 }
 
 
