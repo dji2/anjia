@@ -126,7 +126,21 @@ router.post('/getRecord',ct.checkToken, function (req, res, next) {
         })
     }
 });
-
+// 删除看房记录
+router.post('/delRecord',ct.checkToken, function (req, res, next) {
+    var arrInfo = req.body;
+    if(arrInfo){
+        console.log("delRecord:id");
+        userdao.delRecord(arrInfo.userId,arrInfo.houseId,function (result) {
+            console.log("delRecord");
+            if(result.affectedRows >0){
+                res.json({"stateCode": 25});
+            }else{
+                res.json({"stateCode": 26});
+            }
+        })
+    }
+});
 // 注册
 router.post('/regist', function (req, res, next) {
     console.log("route regist");

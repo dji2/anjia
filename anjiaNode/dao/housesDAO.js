@@ -72,7 +72,7 @@ exports.housesDao={
             })
         })
     },
-
+    //获取关注人数
     getFocusNum:function (houseId,callback) {
         pool.getConnection(function (error,client) {
             if(error){

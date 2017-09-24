@@ -53,6 +53,7 @@ exports.userDao={
 
 
     },
+
     createToken:function (telephone,token,callback) {
         pool.getConnection(function (error,client) {
             if(error){
@@ -105,6 +106,7 @@ exports.userDao={
             })
         })
     },
+    //获取关注的房屋
     getFocusHouses:function (userId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
@@ -122,6 +124,7 @@ exports.userDao={
             })
         })
     },
+    //获取看房记录
     getRecord:function (userId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
@@ -140,6 +143,7 @@ exports.userDao={
             })
         })
     },
+    //获取我的房源
     getMyHouses:function (userId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
@@ -157,5 +161,23 @@ exports.userDao={
                 client.release();
             })
         })
-    }
+    },
+    //删除看房记录信息
+    delRecord:function (arrInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.delRecord,[arrInfo.userId,arrInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
 }

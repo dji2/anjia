@@ -9,6 +9,7 @@ exports.sql={
     addUserIcon:'call addUserIcon(?,?,@res)',
     getFocusHouses:'select * from focusinfo where userId = ?',
     getRecord:'select * from arrangeinfo where userId = ?',
-    getMyHouses:"select * from housesinfo  where ownerId = ?"
+    getMyHouses:"select * from housesinfo  where ownerId = ?",
+    delRecord:"delete from arrange where  userId = ? and houseId = ?"
 
 };
