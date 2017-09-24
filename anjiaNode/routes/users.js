@@ -95,7 +95,22 @@ router.post('/getFocusHouses',ct.checkToken, function (req, res, next) {
         })
     }
 });
-
+//获取我的房源
+router.post('/getMyHouses',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    console.log(user);
+    if(user){
+        console.log("getMyHouses:id"+user.userId);
+        userdao.getMyHouses(user.userId,function (result) {
+            console.log("getMyHouses");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
 // 获取看房记录
 router.post('/getRecord',ct.checkToken, function (req, res, next) {
     var user = req.body;

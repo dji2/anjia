@@ -139,5 +139,23 @@ exports.userDao={
                 client.release();
             })
         })
+    },
+    getMyHouses:function (userId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.getMyHouses,[userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    console.log("getmyhouse--error");
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
     }
 }

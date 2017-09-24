@@ -8,14 +8,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./test-list-item.component.css']
 })
 export class TestListItemComponent implements OnInit {
-  @Input() content:any;
+  @Input() house:any;
+  @Input() type:any;
   constructor(
     private router:Router,
   ) { }
 
   ngOnInit() {
-    alert("sdsdsds");
   }
-
+  toHouseDetail(id) {
+    this.router.navigate(['/detail',id]);
+  }
 
 }
