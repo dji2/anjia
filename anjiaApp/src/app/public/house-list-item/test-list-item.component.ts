@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class TestListItemComponent implements OnInit {
   @Input() house:any;
+  @Input() type:any;
   constructor(
     private router:Router,
   ) { }
