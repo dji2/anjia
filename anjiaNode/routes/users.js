@@ -131,9 +131,9 @@ router.post('/delRecord',ct.checkToken, function (req, res, next) {
     var arrInfo = req.body;
     if(arrInfo){
         console.log("delRecord:id");
-        userdao.delRecord(arrInfo.userId,arrInfo.houseId,function (result) {
+        userdao.delRecord(arrInfo,function (result) {
             console.log("delRecord");
-            if(result.affectedRows >0){
+            if(result.affectedRows > 0){
                 res.json({"stateCode": 25});
             }else{
                 res.json({"stateCode": 26});
