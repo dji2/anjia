@@ -55,10 +55,13 @@
   border-top: solid 1px gainsboro;
 }
 .lunbo{
-  height: 550px;
-  /*float: left;*/
-  width: 100%;
-  background-color: gainsboro;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  height: 550px !important;
+}
+.lunbo img{
+  overflow: hidden;
 }
 /*xiamian---------------*/
 .details{
