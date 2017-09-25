@@ -16,88 +16,31 @@
         <div [ngSwitch]="tab_index">
 
           <div *ngSwitchCase="0" id="section1">
-              <div class="row">
-                <div class="col-md-12 media-left-big">
+            <div class="row">
+              <div class="col-md-12 media-left-big" >
 
+                <div class="media" *ngFor="let getNew of getNews| paginate: { itemsPerPage: 6, currentPage: p }">
 
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h2 class="media-heading">公寓单价买商铺，跟着绿地发掘“金山”</h2>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                    </div>
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
                   </div>
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h2 class="media-heading">Media heading</h2>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  <div class="media-body">
+                    <h3 class="media-heading"><a href="">{{getNew.newsName}}</a></h3>
+                    {{getNew.newsContent1}}
 
-                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h2 class="media-heading">Media heading</h2>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h2 class="media-heading">Media heading</h2>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h2 class="media-heading">Media heading</h2>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                    </div>
+                    <h5 class="text-bottom ">作者：{{getNew.newsWriter}} | <span>{{getNew.publishTime}}</span></h5>
                   </div>
                 </div>
+                <pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>
 
               </div>
+            </div>
           </div>
 
-
-
-
-
-
-          <div *ngSwitchCase="1" id="section2"
-
-              >
+ <!--安家帮助-->
+          <div *ngSwitchCase="1" id="section2">
             <div class="row">
               <div class="col-md-12 media-left-big">
 
@@ -172,6 +115,7 @@
             </div>
 
           </div>
+          <!--经验分享-->
           <div *ngSwitchCase="2" id="section3"
               >
             <div class="row">
@@ -247,79 +191,30 @@
 
             </div>
           </div>
-          <div *ngSwitchDefault="">
+
+
+          <div *ngSwitchDefault="" >
 
             <div class="row">
-              <div class="col-md-12 media-left-big">
+              <div class="col-md-12 media-left-big" >
 
+                <div class="media" *ngFor="let getNew of getNews| paginate: { itemsPerPage: 6, currentPage: p }">
 
-                <div class="media">
                   <div class="media-left">
                     <a href="#">
                       <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
                     </a>
                   </div>
                   <div class="media-body">
-                    <h2 class="media-heading">公寓单价买商铺，跟着绿地发掘“金山”</h2>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    <h3 class="media-heading"><a href="">{{getNew.newsName}}</a></h3>
+                    {{getNew.newsContent1}}
 
-                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    <h5 class="text-bottom ">作者：{{getNew.newsWriter}} | <span>{{getNew.publishTime}}</span></h5>
                   </div>
                 </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading">Media heading</h2>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>
 
-                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading">Media heading</h2>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading">Media heading</h2>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading">Media heading</h2>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
-                  </div>
-                </div>
               </div>
-
             </div>
 
           </div>

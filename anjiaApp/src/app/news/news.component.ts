@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import {PositionsService} from '../services/positions.service';
 declare var $:any;
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  styleUrls: ['./news.component.css'],
+  providers: [PositionsService]
 })
 export class NewsComponent implements OnInit {
+
+  getNews:any;
+
   arr_li=['热点新闻','安家帮住','经验分享'];
-  constructor() { }
+  constructor(
+    private house: PositionsService
+  ) {
+  }
 
   ngOnInit() {
+    let that = this;
+    that.house.getNews(function (result) {
+      console.log(result)
+      that.getNews = result;
+
+
+    });
     $(document).ready(function(){
       $("#zf").click(function(){
         $("#topanimate").hide(1000);
@@ -43,6 +58,11 @@ export class NewsComponent implements OnInit {
 
 
     });
+
+
+
   }
 
 }
+
+

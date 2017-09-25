@@ -11,7 +11,7 @@
 .media-left-big div{
 
   /*border-bottom: 1px solid gray;*/
-  background-color: rgba(128, 128, 128, 0.54);
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 .media{
@@ -154,4 +154,11 @@ li a {
   line-height: 1;
   left: 62px;
   content: '▼';
+}
+.media-heading a{
+  color: rgba(34, 34, 34, 0.91);
+  text-decoration: none;
+}
+.media-heading a:hover{
+color: black;
 }
