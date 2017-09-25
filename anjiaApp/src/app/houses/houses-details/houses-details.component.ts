@@ -19,7 +19,7 @@ export class HousesDetailsComponent implements OnInit {
   comment:any;
   islogin:number=0;
   islogin1:number=0;
-
+  userId:any;
   constructor(
 
     private route: ActivatedRoute,
@@ -56,7 +56,7 @@ export class HousesDetailsComponent implements OnInit {
       console.log(result);
       that.users=result;
     })
-
+    that.userId=that.localStorage.get('userId');
     if(that.localStorage.get('token')){
       that.islogin=1;
       that.islogin1=0;
