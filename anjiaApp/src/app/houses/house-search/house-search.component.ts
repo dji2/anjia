@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {GlobalPropertyService} from './../../services/global-property.service';
 
 @Component({
   selector: 'app-house-search',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private glo:GlobalPropertyService,
+
+  ) { }
 
   _stext:string;
 
   ngOnInit() {
+    this.glo.hiddenNavs=false;
+
+    this._stext=this.route.snapshot.paramMap.get('searchText');
+
+    alert(this._stext);
+    this.search(this._stext);
   }
   search(s){
     this._stext=s;

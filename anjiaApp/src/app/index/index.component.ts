@@ -133,7 +133,10 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
 
-
+  search(searchText){
+    alert(searchText);
+    this.router.navigate(['/houses',searchText]);
+  }
 
 
 

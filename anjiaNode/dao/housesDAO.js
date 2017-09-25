@@ -35,7 +35,24 @@ exports.housesDao={
             })
         })
     },
+    //修改房源信息（仅限方圆名称）
+    editHouse:function (house,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.editHouse,[house.houseName,house.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
 
+                callback(result);
+                client.release();
+            })
+        })
+    },
     //获取看房记录信息
     getArrInfo:function (houseId,callback) {
         pool.getConnection(function (error,client) {
@@ -54,6 +71,28 @@ exports.housesDao={
             })
         })
     },
+
+
+    //获取所有头条
+    getNews:function (callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.getNews,function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+
     //添加看房记录信息
     addArrInfo:function (arrInfo,callback) {
         pool.getConnection(function (error,client) {
