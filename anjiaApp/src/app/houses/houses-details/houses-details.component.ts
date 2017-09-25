@@ -17,6 +17,9 @@ export class HousesDetailsComponent implements OnInit {
   house:any;
   users:any;
   comment:any;
+  islogin:number=0;
+  islogin1:number=0;
+
   constructor(
 
     private route: ActivatedRoute,
@@ -53,6 +56,16 @@ export class HousesDetailsComponent implements OnInit {
       console.log(result);
       that.users=result;
     })
+
+    if(that.localStorage.get('token')){
+      that.islogin=1;
+      that.islogin1=0;
+      // that.userName=that.localStorage.get('userName');
+    }else {
+      // $('#denglu').html('房主信息必须登录后才能查看')
+      that.islogin=0;
+      that.islogin1=1;
+    }
 
   }
 
@@ -110,33 +123,32 @@ export class HousesDetailsComponent implements OnInit {
   shou:number=0;
 
   collect(){
-    if(this.shou==0){
+    let that = this;
+    if(that.shou==0){
       $('#shou').html('已收藏')
-      this.shou=1;
-    }else if(this.shou==1){
+      that.shou=1;
+      that.ho.focus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+        alert(result.stateCode);
+        if(result.stateCode == 21){
+          alert("收藏成功");
+
+        }else{
+          alert("收藏失败");
+        }
+      });
+    }else if(that.shou==1){
       $('#shou').html('收藏成功')
-      this.shou=0;
+      that.shou=0;
+      that.ho.unFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+        alert(result.stateCode);
+        if(result.stateCode == 23){
+          alert("取消收藏");
+        }else{
+          alert("取消失败");
+        }
+      });
     }
-
-
-    // let that = this;
-    //
-    //
-    // that.ho.agree({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-    //   alert(result.stateCode);
-    //   if(result.stateCode == 18){
-    //     alert("收藏成功");
-    //     that.ho.getArrInfo({"houseId":that.houseId},function (result) {
-    //
-    //       console.log(result);
-    //       that.users=result;
-    //     })
-    //   }else{
-    //     alert("点赞失败");
-    //   }
-    // });
   }
-
 
 
 }
