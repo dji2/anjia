@@ -8,6 +8,7 @@
       <li><a routerLink="/search" routerLinkActive="active">搜索</a></li>
       <li><a routerLink="/houses" routerLinkActive="active">租房</a></li>
         <li><a routerLink="/owner" routerLinkActive="active">业主</a></li>
+        <li><a routerLink="/news" routerLinkActive="active">头条</a></li>
         <li  *ngIf="!islogin"  style="margin-left: 780px"><a  routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>登录/注册</a></li>
       <!--<li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>-->
         <div id="person" *ngIf="islogin">
