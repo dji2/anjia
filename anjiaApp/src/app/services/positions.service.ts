@@ -79,6 +79,18 @@ export class PositionsService {
       }
     )
   }
+
+  getFocusNum(houseid,callback){
+    this.http.post(this.url+'/getFocusNum',houseid).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
   getAllHouses(callback){
     this.http.get(this.url).subscribe(function (result) {
       callback(result);
