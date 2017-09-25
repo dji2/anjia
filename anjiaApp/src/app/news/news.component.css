@@ -1,0 +1,33 @@
+.media-left img{
+  width: 200px;
+  height: 150px;
+
+}
+
+.media-left {
+
+
+
+}
+
+.media-left-big div{
+
+  /*border-bottom: 1px solid gray;*/
+  background-color: grey;
+}
+
+.news-right-samll {
+
+background-color: gray;
+
+}
+.news-right-samll img {
+
+width: 100px;
+  height: 75px;
+
+}
+.news-right{
+
+  background-color: wheat;
+}
