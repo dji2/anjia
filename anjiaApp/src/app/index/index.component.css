@@ -239,7 +239,7 @@ width: 100%;
 /*红色房子背景视差*/
 .middlebg{
   width: 100%;
-  height: 660px;
+
   z-index: -4;
   background:url("../../assets/images/bigbg2.png");
   background-size: 100%;
