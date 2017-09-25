@@ -5,152 +5,346 @@
 
 
   <div class="container">
-<div class="row">
-  <div class="col-md-9 media-left-big">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <ul>
 
-    <div class="media" style="border-top: none" >
-      <div class="media-left" >
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          <li *ngFor="let item of arr_li ;let first=first;let index=index
+" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
+        </ul>
+
+        <div [ngSwitch]="tab_index">
+
+          <div *ngSwitchCase="0" id="section1">
+              <div class="row">
+                <div class="col-md-12 media-left-big">
+
+
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading">公寓单价买商铺，跟着绿地发掘“金山”</h2>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading">Media heading</h2>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading">Media heading</h2>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading">Media heading</h2>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading">Media heading</h2>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                      <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+
+
+
+
+
+
+          <div *ngSwitchCase="1" id="section2"
+
+              >
+            <div class="row">
+              <div class="col-md-12 media-left-big">
+
+
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div *ngSwitchCase="2" id="section3"
+              >
+            <div class="row">
+              <div class="col-md-12 media-left-big">
+
+
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">经验分享</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div *ngSwitchDefault="">
+
+            <div class="row">
+              <div class="col-md-12 media-left-big">
+
+
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">公寓单价买商铺，跟着绿地发掘“金山”</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h2 class="media-heading">Media heading</h2>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <h5 class="text-bottom ">作者：人民日报 | <span>2小时前</span></h5>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
       </div>
     </div>
 
 
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-          <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
-
-
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        <h5>作者：人民日报 | <span>2小时前</span></h5>
-      </div>
-    </div>
 
 
   </div>
-
-
-  <div class="col-md-3 news-right">
-    <div class="thumbnail">
-      <img src="../../assets/images/h1.jpg" alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque</p>
-
-      </div>
+  <div id="elevator_item">
+    <a id="elevator" onclick="return false;" title="回到顶部"></a>
+    <a class="qr"></a>
+    <div class="qr-popup" style="background-color: rgba(0,0,0,0.63)">
+      <a class="code-link">
+        <img class="code" src="../../assets/images/wxapp.png"/>
+      </a>
+      <span>扫码关注更多房屋信息</span>
+      <div class="arr"></div>
     </div>
-    <div class="thumbnail">
-      <img src="../../assets/images/h1.jpg" alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque</p>
-
-      </div>
-    </div>
-
-   <div class="news-right-samll">
-     <div class="media">
-       <div class="media-left">
-         <a href="#">
-           <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-         </a>
-       </div>
-       <div class="media-body">
-         <h4 class="media-heading">Media heading</h4>
-         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
-       </div>
-     </div>
-     <div class="media">
-       <div class="media-left">
-         <a href="#">
-           <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
-         </a>
-       </div>
-       <div class="media-body">
-         <h4 class="media-heading">Media heading</h4>
-         nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-       </div>
-     </div>
-   </div>
 
   </div>
-
 </div>
-  </div>
-</div>
+<app-footer></app-footer>
