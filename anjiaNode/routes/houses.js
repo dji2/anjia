@@ -135,4 +135,21 @@ router.post('/unFocus', function(req, res, next) {
         })
     }
 });
+
+
+//删除房源
+router.post('/delHouse', function(req, res, next) {
+    var houseInfo = req.body;
+    console.log(houseInfo);
+    if(houseInfo){
+        console.log("delHouse");
+        housesDao.delHouse(houseInfo,function (result) {
+            if(result.affectedRows==1){
+                res.json({"stateCode":27});
+            }else{
+                res.json({"stateCode":28});
+            }
+        })
+    }
+});
 module.exports = router;

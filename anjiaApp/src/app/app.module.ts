@@ -41,6 +41,7 @@ import { ListItemComponent } from './index/list-item/list-item.component';
 
 import {Ng2PaginationModule} from "ng2-pagination";
 import { NewsComponent } from './news/news.component';
+import { NewsItemComponent } from './news/news-item/news-item.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { NewsComponent } from './news/news.component';
     HouseListItemComponent,
     ListItemComponent,
     NewsComponent,
+    NewsItemComponent,
 
   ],
   imports: [
