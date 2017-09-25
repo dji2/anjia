@@ -2,7 +2,7 @@ import {Component,  OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {PositionsService} from './../../services/positions.service';
 import { LocalStorageService } from './../../services/local-storage.service';
-
+declare var $:any;
 @Component({
   selector: 'app-houses-details',
   templateUrl: './houses-details.component.html',
@@ -26,7 +26,21 @@ export class HousesDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.houseId=this.route.snapshot.paramMap.get('id');
+
+
+    $(window).scroll(function() {
+      var scrolltop = $(this).scrollTop();
+      if (scrolltop >= 1125) {
+        $("#yezhuright").addClass("yezhuright-after");
+      } else {
+        $("#yezhuright").removeClass("yezhuright-after");
+      }
+    })
+
+
+
+
+      this.houseId=this.route.snapshot.paramMap.get('id');
     let that=this;
     that.ho.getHouseById(this.houseId,function (house) {
 
