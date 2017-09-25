@@ -27,62 +27,6 @@
 
     <!--</ul>-->
   <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
-  <div class="row">
-      <div class="col-lg-12 col-md-12">
-        <ul>
-          <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
-          <!--<li role="presentation"><a href="#">Profile</a></li>-->
-          <!--<li role="presentation"><a href="#">Messages</a></li>-->
-          <li *ngFor="let item of arr_li;let first=first;let index=index" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
-        </ul>
-        <div [ngSwitch]="tab_index">
-          <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
-               class="container-fluid">
-            <div style="font-size: 28px;height: 40px">周边配套</div>
-          </div>
-          <div *ngSwitchCase="1" id="section2"
-               style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
-               class="container-fluid">
-            <h3>我要评论</h3>
-            <div class="user_icon">
-              <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/2.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
-            </div>
-            <textarea id="comment" #comment placeholder="评论..."></textarea>
-            <br>
-            <button (click)="addArr(comment)">发表评论</button>
-            <h3>精彩评论</h3>
-            <div style="font-size: 28px" >
-
-                <!--<table class="table table-hover table">-->
-                    <!--<tr>-->
-                      <!--<td style="color: #00B7FF;font-size: 20px">Desong:</td>-->
-                      <!--<td style="font-size: 15px">房东人超级好，长得还帅！！！！！！</td>-->
-                      <!--<td style="font-size: 10px;text-align: end">2017-09-17 15:33:29</td>-->
-                    <!--</tr>-->
-                <!--</table>-->
-                  <ul class="user_comment" *ngFor="let user of users" style="border: none;width: 100%;">
-                    <div class="user_icon">
-                      <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/{{user.userId}}.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
-                    </div>
-                      <li class="userName">{{user.userName}}:</li>
-                      <li class="commentinfo">{{user.comment}}</li>
-                    <div >
-                      <div class="adate">时间 {{user.adate| date:'yyyy-MM-dd HH:mm:ss'}}</div>
-                      <div class="thumb"><a (click)="agree(user.arrangeId)" class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
-                     </div>
-                  </ul>
-
-            </div>
-          </div>
-          <div *ngSwitchCase="2" id="section3"
-               style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
-               class="container-fluid">
-            <div style="font-size: 28px;height: 40px">相似房源</div>
-          </div>
-          <div *ngSwitchDefault="">默认...</div>
-        </div>
-      </div>
-  </div>
 
 
     <div class="details col-lg-12 col-md-12">
@@ -202,13 +146,13 @@
             <td colspan="4"><h3>房屋守则</h3></td>
           </tr>
           <tr>
-            <td colspan="4" class="title" nowrap>禁止吸烟</td>
+            <td colspan="4" class="title" nowrap>禁止吸烟 / No smoking</td>
           </tr>
           <tr>
-            <td colspan="4" class="title" nowrap>不适合携带宠物入住</td>
+            <td colspan="4" class="title" nowrap>不适合携带宠物入住 / It is not suitable to carry the pet to move in</td>
           </tr>
           <tr>
-            <td colspan="4" class="title" nowrap>不允许举办派对和活动</td>
+            <td colspan="4" class="title" nowrap>不允许举办派对和活动 / Does not allow to conduct sends to with the activity</td>
           </tr>
         </table>
 
@@ -217,7 +161,7 @@
             <td colspan="4"><h3>安全设施</h3></td>
           </tr>
           <tr>
-            <td colspan="4" class="title" nowrap>烟雾报警器</td>
+            <td colspan="4" class="title" nowrap>烟雾报警器 / Smoke eye</td>
           </tr>
         </table>
 
@@ -233,13 +177,71 @@
       <div class="yezhuright col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1" id="yezhuright">
         <h2>张三</h2>
         <h2>18862886666</h2>
-        <button style="margin-top: 30px;" type="button" class="btn btn-success shoucang">收藏此房</button>
+        <button style="margin-top: 30px;" type="button" class="btn btn-success shoucang" (click)="collect()">收藏此房</button>
         <div style="margin-top: 120px;border-top: 1px solid #DCE0E0">
           <div>这个房源是很多人的心仪之所。</div>
           <div>过去一周浏览量超过500次。</div>
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <ul>
+          <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
+          <!--<li role="presentation"><a href="#">Profile</a></li>-->
+          <!--<li role="presentation"><a href="#">Messages</a></li>-->
+          <li *ngFor="let item of arr_li;let first=first;let index=index" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
+        </ul>
+        <div [ngSwitch]="tab_index">
+          <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <div style="font-size: 28px;height: 40px">周边配套</div>
+          </div>
+          <div *ngSwitchCase="1" id="section2"
+               style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <h3>我要评论</h3>
+            <div class="user_icon">
+              <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/2.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
+            </div>
+            <textarea id="comment" #comment placeholder="评论..."></textarea>
+            <br>
+            <button (click)="addArr(comment)">发表评论</button>
+            <h3>精彩评论</h3>
+            <div style="font-size: 28px" >
+
+              <!--<table class="table table-hover table">-->
+              <!--<tr>-->
+              <!--<td style="color: #00B7FF;font-size: 20px">Desong:</td>-->
+              <!--<td style="font-size: 15px">房东人超级好，长得还帅！！！！！！</td>-->
+              <!--<td style="font-size: 10px;text-align: end">2017-09-17 15:33:29</td>-->
+              <!--</tr>-->
+              <!--</table>-->
+              <ul class="user_comment" *ngFor="let user of users" style="border: none;width: 100%;">
+                <div class="user_icon">
+                  <img  src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/{{user.userId}}.jpg?imageView2/1/w/40/h/40/format/jpg/q/40|imageslim" alt="">
+                </div>
+                <li class="userName">{{user.userName}}:</li>
+                <li class="commentinfo">{{user.comment}}</li>
+                <div >
+                  <div class="adate">时间 {{user.adate| date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                  <div class="thumb"><a (click)="agree(user.arrangeId)" class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
+                </div>
+              </ul>
+
+            </div>
+          </div>
+          <div *ngSwitchCase="2" id="section3"
+               style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               class="container-fluid">
+            <div style="font-size: 28px;height: 40px">相似房源</div>
+          </div>
+          <div *ngSwitchDefault="">默认...</div>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 

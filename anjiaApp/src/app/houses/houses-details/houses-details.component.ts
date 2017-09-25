@@ -30,7 +30,7 @@ export class HousesDetailsComponent implements OnInit {
 
     $(window).scroll(function() {
       var scrolltop = $(this).scrollTop();
-      if (scrolltop >= 1125) {
+      if (scrolltop >= 650 && scrolltop <= 2300) {
         $("#yezhuright").addClass("yezhuright-after");
       } else {
         $("#yezhuright").removeClass("yezhuright-after");
@@ -40,7 +40,7 @@ export class HousesDetailsComponent implements OnInit {
 
 
 
-      this.houseId=this.route.snapshot.paramMap.get('id');
+    this.houseId=this.route.snapshot.paramMap.get('id');
     let that=this;
     that.ho.getHouseById(this.houseId,function (house) {
 
@@ -104,9 +104,9 @@ export class HousesDetailsComponent implements OnInit {
       }
     });
 
+  }
 
-
-
+  collect(){
 
   }
 
