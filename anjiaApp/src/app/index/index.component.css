@@ -77,26 +77,6 @@ top: 5px;
 }
 /*模态框的头部*/
 
-.modal-header{
-opacity: 0.5;
-  background: url("../../assets/images/loginbg1.jpg");
-background-position: bottom;
-
-}
-.modal-title{
-color: black;
-  font-weight: 900;
-  text-align: center;
-
-}
-
-#exampleModal{
-/*background: url("../../assets/images/loginbg (2).jpg");*/
-  background: url("../../assets/images/loginbg (2).jpg") no-repeat ;
-  background-size: 100% 100%;
-  background-position: bottom;
-  /*filter: blur(2px);*/
-}
 
 .modal-body{
 background: url("../../assets/images/loginbg1.jpg");
@@ -259,7 +239,7 @@ width: 100%;
 /*红色房子背景视差*/
 .middlebg{
   width: 100%;
-  height: 660px;
+
   z-index: -4;
   background:url("../../assets/images/bigbg2.png");
   background-size: 100%;
