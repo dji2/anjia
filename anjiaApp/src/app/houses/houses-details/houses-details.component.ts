@@ -106,8 +106,35 @@ export class HousesDetailsComponent implements OnInit {
 
   }
 
-  collect(){
 
+  shou:number=0;
+
+  collect(){
+    if(this.shou==0){
+      $('#shou').html('已收藏')
+      this.shou=1;
+    }else if(this.shou==1){
+      $('#shou').html('收藏成功')
+      this.shou=0;
+    }
+
+
+    // let that = this;
+    //
+    //
+    // that.ho.agree({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+    //   alert(result.stateCode);
+    //   if(result.stateCode == 18){
+    //     alert("收藏成功");
+    //     that.ho.getArrInfo({"houseId":that.houseId},function (result) {
+    //
+    //       console.log(result);
+    //       that.users=result;
+    //     })
+    //   }else{
+    //     alert("点赞失败");
+    //   }
+    // });
   }
 
 
