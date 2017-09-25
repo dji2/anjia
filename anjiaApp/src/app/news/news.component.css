@@ -17,12 +17,14 @@
 .media{
 border-radius: 5px;
 }
-.text-bottom{
-position: relative;
- top: 50px;
-
-
+.text-bottom {
+  position: relative;
+  top: 50px;
 }
+.media-heading{
+  margin-top: 10px;
+}
+
 /*/////////////////////////////////////////////////////////////*/
 #elevator_item {
   width: 60px;
