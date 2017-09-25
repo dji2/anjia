@@ -14,7 +14,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 export class HouseListItemComponent implements OnInit {
   @Input() house:any;
   focusnum:any;
-  houseId:any;
+  // houseId:any;
   constructor(
     private route: ActivatedRoute,
     private router:Router,
@@ -23,12 +23,12 @@ export class HouseListItemComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.houseId=this.route.snapshot.paramMap.get('id');
+    // this.houseId=this.route.snapshot.paramMap.get('id');
     let that = this;
     // let val=that.route.snapshot.paramMap.get('val');
     // that.text=val;
 
-    that.focus.getFocusNum({"houseId":that.houseId},function (result) {
+    that.focus.getFocusNum({"houseId":that.house.houseId},function (result) {
       // console.log(result[0].focusNum);
       that.focusnum=result[0].focusNum;
       // if(result.stateCode == 21){
