@@ -1,3 +1,39 @@
+
+/*//////////////////////////////////////////////////*/
+
+
+@media screen and (min-width: 1000px) {
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+
+  #top-left-img{
+    display: none;
+  }
+  .toutiao-left{
+    height: 400px;
+    border-right: none;
+    box-sizing: border-box;
+
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+
+  .toutiao-left{
+    height: 400px;
+    box-sizing: border-box;
+
+  }
+
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+
 .toutiao{
   width: 100%;
   height: 540px;
