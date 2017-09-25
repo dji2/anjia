@@ -12,4 +12,6 @@ exports.sql={
     focus:"insert into focus(userId,houseId) SELECT ?, ? FROM DUAL WHERE not exists (select id from focus where userId = ? and houseId = ?)",
     unFocus:"delete from focus where  userId = ? and houseId = ?",
     delHouse:"delete from houses where  houseId = ?",
+    getNews:"select * from news ",
+    editHouse:"update houses set houseName = ? where houseId = ?"
 };

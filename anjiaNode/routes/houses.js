@@ -31,6 +31,26 @@ router.post('/getArrInfo', function(req, res, next) {
 
 
 });
+
+
+//获取头条
+router.get('/getNews', function(req, res, next) {
+
+        console.log("getNews:houseId");
+        housesDao.getNews(function (result) {
+            console.log("getNews");
+            if(result.length==0){
+                res.json({"stateCode":30});
+            }else{
+                res.json(result);
+            }
+        })
+
+
+
+});
+
+
 //添加看房信息
 router.post('/addArrInfo', function(req, res, next) {
     var arrInfo = req.body;
@@ -69,6 +89,22 @@ router.post('/addHouse', function(req, res, next) {
 
 });
 
+//修改房源信息
+router.post('/editHouse', function(req, res, next) {
+    var house = req.body;
+    if(house){
+        housesDao.editHouse(house,function (result) {
+
+            if(result.affectedRows==1){
+                res.json({"stateCode":31});
+            }else{
+                res.json({"stateCode":32});
+            }
+        })
+    }
+
+
+});
 //获取关注人数
 router.post('/getFocusNum', function(req, res, next) {
     var house = req.body;
