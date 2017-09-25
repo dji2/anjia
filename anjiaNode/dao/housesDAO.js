@@ -178,6 +178,27 @@ exports.housesDao={
             })
         })
 
+    },
+
+
+    //删除房源
+    delHouse:function (houseInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.delHouse,[houseInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+
     }
 }
 
