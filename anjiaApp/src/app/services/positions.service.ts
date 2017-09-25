@@ -44,6 +44,31 @@ export class PositionsService {
     )
   }
 
+//关注
+  focus(focusInfo,callback){
+    this.http.post(this.url+'/focus',focusInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
+  //取消关注
+
+  unFocus(focusInfo,callback){
+    this.http.post(this.url+'/unFocus',focusInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
   agree(arrange,callback){
     this.http.post(this.url+'/agree',arrange).subscribe(
       function (result) {
@@ -59,6 +84,14 @@ export class PositionsService {
       callback(result);
     })
   }
+  //获取头条信息
+  getNews(callback){
+    this.http.get(this.url+'/getNews').subscribe(function (result) {
+      callback(result);
+    })
+  }
+
+
   getHouseById(houseId,callback){
     this.getAllHouses(function (houses) {
       let ho=houses.filter(function (item,index) {
