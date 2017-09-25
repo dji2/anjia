@@ -20,6 +20,7 @@ const routes: Routes = [
     path: 'index',
     component: IndexComponent
   },
+
   {
     path: 'search',
     component: SearchComponent
@@ -28,6 +29,11 @@ const routes: Routes = [
     path: 'houses',
     component: HousesComponent
   },
+  {
+    path: 'houses/:searchText',
+    component: HousesComponent
+  },
+
   {
     path: 'login',
     component: LoginComponent

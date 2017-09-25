@@ -4,7 +4,7 @@
 exports.sql={
     getAllHouses:'select * from housesinfo',
     getArrInfo:'select * from arrangeinfo  where houseId=?',
-    getFocusNum:'select sum(houseId) from focusinfo where houseId = ?',
+    getFocusNum:'select count(houseId)  focusNum from focusinfo where houseId = ?',
     addHouse:'insert into houses(houseName,housePrice,publishTime,houseTypeId,ownerId,area,areaName,address,floor)values(?,?,?,?,?,?,?,?,?)',
     addArrInfo:"insert into arrange(userId,houseId,adate,comment) values(?,?,?,?)",
     checkAgree:'select * from arrange where userId = ? and houseId =? and arrangeId=?',

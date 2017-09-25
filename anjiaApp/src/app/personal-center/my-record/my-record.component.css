@@ -85,3 +85,21 @@ img{
   font-size: 1em;
   color: #b1b1b1;
 }
+.del{
+  height: 159px;
+  width: 80px;
+  background-color: #E4393C;
+  font-size: 20px;
+  color: white;
+  float: right;
+  text-align: center;
+  line-height: 159px;
+  display: none;
+  clear: both;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.house-list li:hover div{
+  display: block;
+}

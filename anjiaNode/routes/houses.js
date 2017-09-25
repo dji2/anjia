@@ -109,11 +109,11 @@ router.post('/editHouse', function(req, res, next) {
 router.post('/getFocusNum', function(req, res, next) {
     var house = req.body;
     if(house){
-        console.log("getFocusNum:houseId"+house.houseId);
+        console.log("getFocusNum:houseId");
         housesDao.getFocusNum(house.houseId,function (result) {
             console.log("getFocusNum");
             if(result.length==0){
-                res.json(null);
+                res.json({"stateCode":14});
             }else{
                 res.json(result);
             }
