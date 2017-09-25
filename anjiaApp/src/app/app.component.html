@@ -14,7 +14,7 @@
         <div id="person" *ngIf="islogin">
           <a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a>
           <div class="user_icon">
-            <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg?imageView2/1/w/30/h/30/format/jpg/q/30|imageslim" alt="">
+            <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" alt="">
           </div>
           <a routerLink='/index' routerLinkActive="active" (click)="out()">退出</a>
         </div>

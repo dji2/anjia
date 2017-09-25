@@ -243,7 +243,7 @@
         <h2 *ngIf="islogin1" style="color: red">房主信息必须登录后才能查看</h2>
         <div style="margin-top: 10px" *ngIf="islogin" id="denglu">
           <div style="float: left">
-            <img style="margin-top: 10px;height: 80px;width: 80px" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{house.ownerId}}.jpg?imageView2/1/w/30/h/30/format/jpg/q/100|imageslim" alt="">
+            <img style="margin-top: 10px;height: 80px;width: 80px" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{house.ownerId}}.jpg" alt="">
           </div>
           <div style="float: left;height: 80px;margin-top: 10px;">
             <span style="color: #4F5253;font-size: 30px">{{house.ownerName}}</span>
@@ -279,7 +279,7 @@
                class="container-fluid">
             <h3>我要评论</h3>
             <div class="user_icon">
-              <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/2.jpg?imageView2/1/w/40/h/40/format/jpg/q/100|imageslim" alt="">
+              <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" alt="">
             </div>
             <textarea id="comment" #comment placeholder="评论..."></textarea>
             <br>
@@ -296,12 +296,12 @@
               <!--</table>-->
               <ul class="user_comment" *ngFor="let user of users" style="border: none;width: 100%;">
                 <div class="user_icon">
-                  <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{user.userId}}.jpg?imageView2/1/w/40/h/40/format/jpg/q/100|imageslim" alt="">
+                  <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{user.userId}}.jpg" alt="">
                 </div>
                 <li class="userName">{{user.userName}}:</li>
                 <li class="commentinfo">{{user.comment}}</li>
                 <div >
-                  <div class="adate">时间 {{user.adate| date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                  <div class="adate">时间 {{user.publishTime| date:'yyyy-MM-dd HH:mm:ss'}}</div>
                   <div class="thumb"><a (click)="agree(user.arrangeId)" class="glyphicon glyphicon-thumbs-up"></a>{{user.agreeNum}}</div>
                 </div>
               </ul>
