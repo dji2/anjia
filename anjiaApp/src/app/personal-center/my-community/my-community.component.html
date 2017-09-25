@@ -1,19 +1,7 @@
-<div class="community">
-  <div class="pic"><img src="../../../assets/personal-center/小区.jpg" /></div>
-  <div class="info">
-    <div style="float: left">
-      <h4 style="color: #00B7FF">翰林缘</h4>
-      <p>[工业园区  独墅湖高教区]</p>
-      <p>出售 53 </p>
-    </div>
-    <div style="float: left;margin: 40px">
-      <p style="font-size: 20px">挂牌均价</p>
-      <div >
-        <span style="color: #E4393C;font-size: 30px"><strong>2299</strong></span>
-        <span style="color:  #E4393C;font-size: 20px">元/平</span>
-      </div>
-    </div>
-
-  </div>
-
+<div cldiv="list-wrap">
+  <ul id="house-list" class="house-list">
+    <li *ngFor="let house of houses ">
+      <app-test-list-item [house]="house" [type]="'my-community'"></app-test-list-item>
+    </li>
+  </ul>
 </div>

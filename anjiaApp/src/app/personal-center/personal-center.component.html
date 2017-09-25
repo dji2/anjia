@@ -1,19 +1,18 @@
 <div class="top">
-  <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png" height="50" width="100"/>
+  <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png" height="80" width="160"/>
   <ul class="nav">
-    <li class="li01" ><a href="#" style="color: white">
-<!--<app-test-list-item [content]="'ewweww'"></app-test-list-item>-->
-    </a></li>
+    <!--<li class="li01" >-->
+      <!--<a href="#" style="color: white"><app-test-list-item [content]="'ewweww'"></app-test-list-item></a></li>-->
     <li class="li01"><a href="#" style="color: white">头条</a></li>
     <li class="li01"><a href="#" style="color: white">发布房源</a></li>
-    <li class="li01"><a href="#" style="color: white">业主</a>
-    </li>
+    <li class="li01"><a href="#" style="color: white">业主</a></li>
   </ul>
 </div>
 
 <div class="mid">
-  <div class="left">
-    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/3.jpg?imageView2/1/w/90/h/90/format/jpg/q/90|imageslim" style="border-radius: 45px;" height="80" width="80"/>
+  <div class="mid01">
+    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user-icon/3.jpg?imageView2/1/w/90/h/90/format/jpg/q/90|imageslim" style="border-radius: 45px;" height="100" width="100"/>
+    <h1 style="margin-top: 20px">My Name is Bianlong</h1>
     <!--<span class="f01" style="background-color: #39AC6A"><a href="#" style="color: white" (click)="toIndex()">首页</a></span>-->
     <!--<table class="list">-->
       <!--<tr class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></tr>-->
@@ -21,15 +20,17 @@
       <!--<tr class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></tr>-->
       <!--<tr class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></tr>-->
     <!--</table>-->
-    <div class="list">
-      <div class="li02"><a routerLink="./community" routerLinkActive="active" style="color: #555555">我的房源</a></div>
-      <div class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></div>
-      <div class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></div>
-      <div class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></div>
-    </div>
+
   </div>
-  <div class="right ">
-    <div>
+
+  <div class="mid02">
+    <div class="list">
+      <div class="li02"><a routerLink="./community" routerLinkActive="active" style="color: #555555;text-decoration:none">我的房源</a></div>
+      <div class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555;text-decoration:none">关注的租房</a></div>
+      <div class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555;text-decoration:none">看房记录</a></div>
+      <div class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555;text-decoration:none">编辑资料</a></div>
+    </div>
+    <div class="show">
       <router-outlet>
 
 

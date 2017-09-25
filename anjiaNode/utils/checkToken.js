@@ -14,7 +14,7 @@ exports.checkToken=function (req,res,next) {
             res.json({stateCode:2});
         }
     }catch (e){
-        console.log('HERE');
+        console.log('HERE'+e.message);
         res.json({stateCode:2});
     }
 

@@ -44,6 +44,19 @@ export class UsersService {
     )
   }
 
+
+  getMyHouses(user,callback){
+    this.http.post(this.url+'/getMyHouses',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
+
   register(user,callback){
     this.http.post(this.url+'/regist',user).subscribe(
       function (result) {

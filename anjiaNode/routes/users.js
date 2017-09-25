@@ -76,8 +76,6 @@ router.post('/login',function (req, res, next) {
                     }
                 }
             })
-
-
     }
 });
 
@@ -97,7 +95,22 @@ router.post('/getFocusHouses',ct.checkToken, function (req, res, next) {
         })
     }
 });
-
+//获取我的房源
+router.post('/getMyHouses',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    console.log(user);
+    if(user){
+        console.log("getMyHouses:id"+user.userId);
+        userdao.getMyHouses(user.userId,function (result) {
+            console.log("getMyHouses");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
 // 获取看房记录
 router.post('/getRecord',ct.checkToken, function (req, res, next) {
     var user = req.body;
@@ -113,7 +126,21 @@ router.post('/getRecord',ct.checkToken, function (req, res, next) {
         })
     }
 });
-
+// 删除看房记录
+router.post('/delRecord',ct.checkToken, function (req, res, next) {
+    var arrInfo = req.body;
+    if(arrInfo){
+        console.log("delRecord:id");
+        userdao.delRecord(arrInfo,function (result) {
+            console.log("delRecord");
+            if(result.affectedRows > 0){
+                res.json({"stateCode": 25});
+            }else{
+                res.json({"stateCode": 26});
+            }
+        })
+    }
+});
 // 注册
 router.post('/regist', function (req, res, next) {
     console.log("route regist");
@@ -125,10 +152,17 @@ router.post('/regist', function (req, res, next) {
             user.password=util.MD5(user.password);
             console.log(user);
             userdao.addUser(user,function (result) {
-                console.log("注册返回值"+result);
-                if(result == 1){
+
+                if(result.affectedRows == 1){
+                    //产生令牌
+                    var expires = moment().add(7, 'days').valueOf();
+                    var token = jwt.encode({
+                        iss: user.telephone,
+                        exp: expires
+                    }, util.secret);
+                    res.json({"stateCode": 6,"token":token,"userId":result.insertId,"userName":user.userName});
+
                     console.log("注册成功");
-                    res.json({"stateCode": 6});
                 }else if(result == 5){
                     res.json({"stateCode": 5});
                     console.log("用户已存在");

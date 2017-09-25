@@ -1,7 +1,7 @@
 /**
  * Created by lzhan on 2017/9/3.
  */
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
@@ -11,7 +11,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { HousesComponent } from './houses/houses.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 import { RegisterComponent } from './register/register.component';
-
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
 
@@ -39,6 +39,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'news',
+    component: NewsComponent
   },
   {
     path: 'detail/:id',

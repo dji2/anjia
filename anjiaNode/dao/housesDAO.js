@@ -72,7 +72,7 @@ exports.housesDao={
             })
         })
     },
-
+    //获取关注人数
     getFocusNum:function (houseId,callback) {
         pool.getConnection(function (error,client) {
             if(error){
@@ -90,14 +90,14 @@ exports.housesDao={
             })
         })
     },
-    //点赞
-    agree:function (arrangeId,callback) {
+    //检查是否点过赞
+    checkAgree:function (arrangeInfo,callback) {
         pool.getConnection(function (error,client) {
             if(error){
                 console.log("error");
-                return
+                return;
             }
-            client.query(housesSql.agree,[arrangeId],function (error,result) {
+            client.query(housesSql.checkAgree,[arrangeInfo.userId,arrangeInfo.houseId,arrangeInfo.arrangeId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
@@ -107,6 +107,77 @@ exports.housesDao={
                 client.release();
             })
         })
+    },
+
+
+    //点赞
+    agree:function (arrangeInfo,callback) {
+        this.checkAgree(arrangeInfo,function (result) {
+            if(result.length==0){
+                pool.getConnection(function (error,client) {
+                    if(error){
+                        console.log("数据库连接错误");
+                        return;
+                    }
+                    client.query(housesSql.agree,[arrangeInfo.userId,arrangeInfo.arrangeId,arrangeInfo.userId],function (error,result) {
+                        if(error){
+                            callback('e004');
+                            return;
+                        }
+                        console.log(result);
+                        callback(result);
+
+                        client.release();
+                    })
+                })
+            }else {
+                callback('19');
+            }
+
+
+        })
+
+    },
+
+
+    //关注房源
+    focus:function (focusInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.focus,[focusInfo.userId,focusInfo.houseId,focusInfo.userId,focusInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+
+    },
+
+    //取消关注房源
+    unFocus:function (focusInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.unFocus,[focusInfo.userId,focusInfo.houseId,focusInfo.userId,focusInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+
     }
 }
 
