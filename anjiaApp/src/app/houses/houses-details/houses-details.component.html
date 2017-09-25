@@ -13,7 +13,7 @@
 
 
 
-      <div class="lunbo" style="background-image: url(http://owhah4u2f.bkt.clouddn.com/images/houses/1/1.jpg)">
+      <div class="lunbo" style="background-image: url(http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg)">
         <!--<img src="http://owhah4u2f.bkt.clouddn.com/images/houses/1/1.jpg" width="100%" height="100%" alt="">-->
       </div>
 
@@ -48,7 +48,7 @@
           </tr>
           <tr>
             <td class="title" nowrap>楼层：</td>
-            <td width="50%">中区/11层</td>
+            <td width="50%">{{house.floor}}层</td>
             <td class="title" nowrap>朝向：</td>
             <td width="50%">{{house.aspect}}</td>
           </tr>
@@ -72,22 +72,22 @@
             <td colspan="4"><h3>房屋简介</h3></td>
           </tr>
           <tr>
-            <td class="title" nowrap>可住：</td>
-            <td width="50%">4</td>
+            <td class="title" nowrap>客厅：</td>
+            <td width="50%">{{house.livingroom}}</td>
             <td class="title" nowrap>房间类型：</td>
             <td width="50%">整套房子/公寓</td>
           </tr>
           <tr>
             <td class="title" nowrap>卫生间：</td>
-            <td width="50%">1</td>
+            <td width="50%">{{house.bathroom}}</td>
           </tr>
           <tr>
             <td class="title" nowrap>卧室：</td>
-            <td colspan="3">2</td>
+            <td colspan="3">{{house.room}}</td>
           </tr>
           <tr>
-            <td class="title" nowrap>床铺：</td>
-            <td colspan="3">3</td>
+            <td class="title" nowrap>厨房：</td>
+            <td colspan="3">{{house.kitchen}}</td>
           </tr>
         </table>
 
@@ -99,7 +99,7 @@
             <td class="title" nowrap><i class="fa fa-bath fa-4x" aria-hidden="true"></i>：</td>
             <td width="50%" style="font-size: large;color: #888;">1个卫生间</td>
             <td class="title" nowrap><i class="fa fa-bed fa-4x" aria-hidden="true"></i>：</td>
-            <td width="50%" style="font-size: large;color: #888;">2个卧室</td>
+            <td width="50%" style="font-size: large;color: #888;">{{house.room}}个卧室</td>
           </tr>
           <tr>
             <td class="title" nowrap></td>
@@ -186,7 +186,7 @@
         </div>
 
         <h2 style="color: #4F5253">{{house.telphone}}</h2>
-        <button style="margin-top: 10px;" type="button" class="btn btn-success shoucang" (click)="collect()">收藏此房</button>
+        <button style="margin-top: 10px;" type="button" class="btn btn-success shoucang" (click)="collect()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="shou">收藏此房</span></button>
         <div style="margin-top: 80px;border-top: 1px solid #DCE0E0">
           <div>这个房源是很多人的心仪之所。</div>
           <div>过去一周浏览量超过500次。</div>
@@ -242,9 +242,10 @@
             </div>
           </div>
           <div *ngSwitchCase="2" id="section3"
-               style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+               style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
                class="container-fluid">
-            <div style="font-size: 28px;height: 40px">相似房源</div>
+            <!--<div style="font-size: 28px;height: 40px">相似房源</div>-->
+            <app-list-item></app-list-item>
           </div>
           <div *ngSwitchDefault="">默认...</div>
         </div>
