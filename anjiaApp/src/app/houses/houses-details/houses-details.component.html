@@ -17,7 +17,7 @@
         <img src="http://owhah4u2f.bkt.clouddn.com/images/houseLogo/8.jpg" width="100%" height="100%" alt="">
       </div>
 
-<div class="bg col-md-12 col-lg-12">
+<div class="bg col-md-12 col-lg-12" style="margin-bottom: 20px">
 
 
     <!--<ul>-->
@@ -82,14 +82,14 @@
           <div *ngSwitchDefault="">默认...</div>
         </div>
       </div>
-    </div>
+  </div>
 
 
-    <div class="details">
-      <div class="detail">
+    <div class="details col-lg-12 col-md-12">
+      <div class="detail col-lg-8 col-md-8">
 
         <div style="height: 80px;text-align: center">
-          <h2 style="white-space: nowrap;margin-top: 10px">{{house.houseName}}</h2>
+          <h2 style="margin-top: 10px">{{house.houseName}}</h2>
         </div>
 
         <div class="houseInfo">
@@ -121,7 +121,6 @@
             <td colspan="3">{{house.address}}</td>
           </tr>
         </table>
-
 
 
         <table class="aroundInfo">
@@ -203,13 +202,13 @@
             <td colspan="4"><h3>房屋守则</h3></td>
           </tr>
           <tr>
-            <td  colspan="4" class="title" nowrap>禁止吸烟</td>
+            <td colspan="4" class="title" nowrap>禁止吸烟</td>
           </tr>
           <tr>
-            <td  colspan="4" class="title" nowrap>不适合携带宠物入住</td>
+            <td colspan="4" class="title" nowrap>不适合携带宠物入住</td>
           </tr>
           <tr>
-            <td  colspan="4" class="title" nowrap>不允许举办派对和活动</td>
+            <td colspan="4" class="title" nowrap>不允许举办派对和活动</td>
           </tr>
         </table>
 
@@ -218,22 +217,31 @@
             <td colspan="4"><h3>安全设施</h3></td>
           </tr>
           <tr>
-            <td  colspan="4" class="title" nowrap>烟雾报警器</td>
+            <td colspan="4" class="title" nowrap>烟雾报警器</td>
           </tr>
         </table>
 
         <!--<div class="owner">-->
-          <!--<span>张三</span>-->
-          <!--<br>-->
-          <!--<span style="color: red">18861886666</span>-->
+        <!--<span>张三</span>-->
+        <!--<br>-->
+        <!--<span style="color: red">18861886666</span>-->
         <!--</div>-->
         <div class="startTime">
           上传时间：<span>{{house.publishTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
         </div>
       </div>
-
+      <div class="yezhuright col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1">
+        <h2>张三</h2>
+        <h2>18862886666</h2>
+        <button style="margin-top: 30px;" type="button" class="btn btn-success shoucang">收藏此房</button>
+        <div style="margin-top: 120px;border-top: 1px solid #DCE0E0">
+          <div>这个房源是很多人的心仪之所。</div>
+          <div>过去一周浏览量超过500次。</div>
+        </div>
+      </div>
     </div>
 
   </div>
 
 </div>
+<app-footer></app-footer>
