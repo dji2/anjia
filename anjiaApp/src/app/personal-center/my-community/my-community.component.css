@@ -12,6 +12,7 @@ ul, ol, li {
   border-bottom: 1px dotted #e1e1e1;
   background: #fff;
   position: relative;
+  /*float: left;*/
 }
 .house-list li:hover{
   background: #fbfbfb;
@@ -84,4 +85,38 @@ img{
 .renting .publishtime{
   font-size: 1em;
   color: #b1b1b1;
+}
+.del01{
+  height: 159px;
+  width: 80px;
+  background-color: #E4393C;
+  font-size: 20px;
+  color: white;
+  float: right;
+  text-align: center;
+  line-height: 159px;
+  display: none;
+  clear: both;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.del02{
+  height: 159px;
+  width: 80px;
+  background-color: #E4393C;
+  font-size: 20px;
+  color: white;
+  float: right;
+  text-align: center;
+  line-height: 159px;
+  display: none;
+  clear: both;
+  position: absolute;
+  right: 80px;
+  top: 0px;
+  border-right: 2px white solid;
+}
+.house-list li:hover div{
+  display: block;
 }
