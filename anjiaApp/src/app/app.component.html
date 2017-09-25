@@ -1,15 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" >
   <nav class="row" *ngIf="!_hiddenNavs">
-    <div class="col-md-12 col-lg-12"style="background-color: #3D424D;height: 45px">
+    <div class="col-md-12 col-lg-12" style="background-color: #3D424D;height: 45px">
       <!--<a [routerLink]="['/index','我是默认值']" routerLinkActive="active" >首页</a>-->
       <ul id="nav">
       <li><a routerLink='/index' routerLinkActive="active" >首页</a></li>
       <li><a routerLink="/search" routerLinkActive="active">搜索</a></li>
       <li><a routerLink="/houses" routerLinkActive="active">租房</a></li>
         <li><a routerLink="/owner" routerLinkActive="active">业主</a></li>
-        <li  *ngIf="!islogin"  style="margin-left: 780px"><a  routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>登录</a></li>
-      <li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>
+        <li  *ngIf="!islogin"  style="margin-left: 780px"><a  routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>登录/注册</a></li>
+      <!--<li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>-->
         <div id="person" *ngIf="islogin">
           <a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a>
           <div class="user_icon">
