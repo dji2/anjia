@@ -272,7 +272,10 @@
         <div [ngSwitch]="tab_index">
           <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
                class="container-fluid">
-            <div style="font-size: 28px;height: 40px">周边配套</div>
+
+
+            地图
+
           </div>
           <div *ngSwitchCase="1" id="section2"
                style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
@@ -325,4 +328,7 @@
   </div>
 
 </div>
+
+<div id="container" style="width:500px;height:300px;border: 1px solid red"></div>
+<div id="panel"></div>
 <app-footer></app-footer>
