@@ -352,7 +352,10 @@ width: 150px;
 
 .myjisuanqi{
   margin-top: 10px;
+
 }
+
+
 #jisuanqi{
   display: block;
   width: 60px;
@@ -368,23 +371,10 @@ width: 150px;
 
 }
 #jisuanqi:hover {
+
   background-color: rgba(0,0,0,.7)
 }
-#jsqapp{
 
-  width: 360px;
-  height: 460px;
-  box-shadow: 0 1px 8px rgba(0,0,0,.1);
-  position: absolute;
-  top: -310px;
-  left: -380px;
-  bottom: 0;
-
-  border-radius: 5px;
-  text-align: center;
-
-
-}
 
 
 .jisuanqimain{
@@ -397,6 +387,15 @@ width: 150px;
   left: -380px;
 }
 
+.jisuanqimain:hover{
+  display: block;
+  width: 360px;
+  height: 460px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.1);
+  position: absolute;
+  top: -310px;
+  left: -380px;
+}
 
 /*//////////////////////////////////////////计算器样式///////////////////////////////////*/
 
