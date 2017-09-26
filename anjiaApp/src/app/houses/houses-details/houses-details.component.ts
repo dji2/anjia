@@ -2,6 +2,8 @@ import {Component,  OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {PositionsService} from './../../services/positions.service';
 import { LocalStorageService } from './../../services/local-storage.service';
+import {GlobalPropertyService} from './../../services/global-property.service';
+
 declare var $:any;
 declare var AMap:any;
 
@@ -28,11 +30,13 @@ export class HousesDetailsComponent implements OnInit {
 
     private route: ActivatedRoute,
     private ho: PositionsService,
-    private localStorage:LocalStorageService
+    private localStorage:LocalStorageService,
+  private  glo:GlobalPropertyService,
 
   ) { }
 
   ngOnInit() {
+  this.glo.hiddenNavs = false;
 
     var map = new AMap.Map('container', {
       resizeEnable: true,
