@@ -40,14 +40,14 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
 
-      var cal = "";
-      var result = 0;
+      let cal = "";
+    let result = 0;
 
       $("button").click(function(){
 
-        var text = $(this).attr("value");
+        let text = $(this).attr("value");
 
-        var regNum = /[0-9]/g;
+        let regNum = /[0-9]/g;
 
         if(regNum.test(text) || text === "+" || text === "-" || text === "*" || text === "/" || text === "."){
           cal += text;
