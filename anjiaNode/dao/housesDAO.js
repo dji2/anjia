@@ -229,10 +229,11 @@ exports.housesDao={
             }
             client.query(housesSql.delHouse,[houseInfo.houseId],function (error,result) {
                 if(error){
+                    console.log(error.message)
                     callback('e004');
                     return;
                 }
-
+                console.log(result)
                 callback(result);
                 client.release();
             })

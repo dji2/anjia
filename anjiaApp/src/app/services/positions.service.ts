@@ -32,6 +32,19 @@ export class PositionsService {
       }
     )
   }
+
+  //修改看房信息
+  editHouse(house,callback){
+    this.http.post(this.url+'/editHouse',house).subscribe(
+      function (result) {
+        console.log(result)
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   //添加看房信息
   addArrInfo(arrInfo,callback){
     this.http.post(this.url+'/addArrInfo',arrInfo).subscribe(
@@ -69,6 +82,18 @@ export class PositionsService {
     )
   }
 
+  //删除我的房源
+  delHouse(houseInfo,callback){
+    this.http.post(this.url+'/delHouse',houseInfo).subscribe(
+      function (result) {
+        console.log("服务"+result[0])
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   agree(arrange,callback){
     this.http.post(this.url+'/agree',arrange).subscribe(
       function (result) {

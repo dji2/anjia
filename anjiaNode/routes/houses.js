@@ -92,6 +92,7 @@ router.post('/addHouse', function(req, res, next) {
 //修改房源信息
 router.post('/editHouse', function(req, res, next) {
     var house = req.body;
+    console.log(house);
     if(house){
         housesDao.editHouse(house,function (result) {
 

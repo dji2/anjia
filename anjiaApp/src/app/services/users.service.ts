@@ -44,7 +44,18 @@ export class UsersService {
     )
   }
 
-
+//删除信息
+  delRecord(arrInfo,callback){
+    this.http.post(this.url+'/delRecord',arrInfo).subscribe(
+      function (result) {
+        console.log(result)
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   getMyHouses(user,callback){
     this.http.post(this.url+'/getMyHouses',user).subscribe(
       function (result) {
