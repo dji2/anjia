@@ -48,7 +48,6 @@ router.get('/login', function (req, res, next) {
 router.post('/login',function (req, res, next) {
     console.log("route login");
     var user = req.body;
-    console.log("checkcode"+checkCode);
     if (user) {
         console.log(user);
 
@@ -111,6 +110,43 @@ router.post('/getMyHouses',ct.checkToken, function (req, res, next) {
         })
     }
 });
+
+//修改个人信息
+router.post('/editUser',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    console.log(user);
+    if(user){
+        console.log("editUser:id"+user.userId);
+        userdao.editUser(user,function (result) {
+            console.log("editUser");
+            if(result.affectedRows > 0){
+                res.json({"stateCode":35});
+            }else{
+                res.json({"stateCode":36});
+            }
+        })
+    }
+});
+
+//修改密码
+router.post('/editPass',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    console.log(user.newPass);
+    user.password = util.MD5(user.password);
+    user.newPass = util.MD5(user.newPass);
+    if(user){
+        console.log("editPass:id"+user.userId);
+        userdao.editPass(user,function (result) {
+            console.log("editPass");
+            if(result.affectedRows > 0){
+                res.json({"stateCode":37});
+            }else{
+                res.json({"stateCode":38});
+            }
+        })
+    }
+});
+
 // 获取看房记录
 router.post('/getRecord',ct.checkToken, function (req, res, next) {
     var user = req.body;
