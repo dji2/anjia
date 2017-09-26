@@ -12,7 +12,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12"  id="housesimg" *ngFor="let house of hot_houses;">
 
           <div class="thumbnail" style="width: 330px;height: 330px">
-            <a class="lightbox" href="../../assets/images/park.jpg">
+            <a  class="lightbox" (click)="hotHouseDetail(house.houseId)" >
               <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg?imageView2/1/w/242/h/180/format/jpg/interlace/1/q/75|imageslim" alt="Park">
             </a>
             <div class="caption" style="background-color: rgba(255,255,255,0.8)">
