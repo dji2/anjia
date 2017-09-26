@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PositionsService} from '../services/positions.service';
+import {Router} from '@angular/router';
+
 declare var $:any;
 @Component({
   selector: 'app-hot-houses',
@@ -11,7 +13,9 @@ export class HotHousesComponent implements OnInit {
   hot_houses:any;
 
 
-  constructor(    private house: PositionsService) { }
+  constructor(       private router:Router,
+                     private house: PositionsService
+  ) { }
 
   ngOnInit() {
     let that = this;
@@ -22,6 +26,11 @@ export class HotHousesComponent implements OnInit {
 
     });
 
+  }
+
+
+  hotHouseDetail(id) {
+    this.router.navigate(['/detail',id]);
   }
 
 }
