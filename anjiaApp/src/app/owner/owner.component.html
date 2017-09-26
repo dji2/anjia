@@ -1,17 +1,10 @@
-<!--<div class="col-md-12 col-lg-12"></div>-->
 
 <div class="yz-banner">
   <div class="nav clearfix">
     <img style="margin-left: 100px" src="../../assets/images/green2.png" height="52" width="133"/>
     <div class="housetype-tag">业主</div>
   </div>
-
-
   <h2 class="banner-title tc">安家，200万业主信赖的选择</h2>
-  <!--<div id="carousel">-->
-
-    <!--<carousel-txt :carousel-list="carouselList"></carousel-txt>-->
-  <!--</div>-->
 
 </div>
 
@@ -19,26 +12,44 @@
 
 
 
-
-
-
-
   <div class="span_bottem"><span>我要出租</span></div>
   <ul>
     <li><a style="cursor: pointer" [class.go]="tab_index==0" (click)="tab_index=0" >第一步</a></li>
-    <li style="float: right"><a style="cursor: pointer" [class.go]="tab_index==1" (click)="tab_index=1" >第二步</a></li>
+    <li style="margin-left: 24%"><a style="cursor: pointer" [class.go]="tab_index==1" (click)="tab_index=1" >第二步</a></li>
+    <li style="float: right"><a style="cursor: pointer" [class.go]="tab_index==2" (click)="tab_index=2" >第三步</a></li>
   </ul>
   <div [ngSwitch]="tab_index">
     <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
          class="container-fluid">
 
-
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
+          <span class="sr-only">0% Complete</span>
+        </div>
+      </div>
       上传图片
-
+      <form class="form-horizontal" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="file" (change)="checkCard($event.target.files)" placeholder="Upload file">
+      </form>
     </div>
-    <div *ngSwitchCase="1" id="section2"
+    <div *ngSwitchCase="1" id="section2" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+         class="container-fluid">
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+          <span class="sr-only">50% Complete</span>
+        </div>
+      </div>
+身份证
+    </div>
+    <div *ngSwitchCase="2" id="section3"
          style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
          class="container-fluid">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+          <span class="sr-only">100% Complete</span>
+        </div>
+      </div>
 
       <form class="form-horizontal" #ownerForm="ngForm">
 
