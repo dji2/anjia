@@ -19,7 +19,7 @@ export class ListItemComponent implements OnInit {
     let that = this;
     that.house.getAllHouses(function (result) {
 
-      that.new_houses =result.slice(0, 8);
+      that.new_houses =result.slice(0, 9);
 
 
     });

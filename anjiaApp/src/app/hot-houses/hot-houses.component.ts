@@ -17,7 +17,7 @@ export class HotHousesComponent implements OnInit {
     let that = this;
     that.house.getAllHouses(function (result) {
 
-      that.hot_houses =result.slice(5, 13);
+      that.hot_houses =result.slice(5, 11);
 
 
     });
