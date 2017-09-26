@@ -1,35 +1,34 @@
-<div class="jeeok-container" style="background-color: rgba(0,0,0,0.63)">
-  <div class="container gallery-container">
 
-    <h1 style="color: white">热门房源</h1>
+<div class="container gallery-container">
 
-    <p class="page-description text-left">好房源那么多，我们为你精选，安家网会越来越懂你</p>
+  <h1 style="color: white">热门房源</h1>
 
-    <div class="tz-gallery">
+  <p class="page-description text-left">好房源那么多，我们为你精选，安家网会越来越懂你</p>
 
-      <div class="row">
+  <div class="tz-gallery">
 
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12"  id="housesimg" *ngFor="let house of hot_houses;">
+    <div class="row">
 
-          <div class="thumbnail" style="width: 330px;height: 330px">
-            <a class="lightbox" href="../../assets/images/park.jpg">
-              <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg?imageView2/1/w/242/h/180/format/jpg/interlace/1/q/75|imageslim" alt="Park">
-            </a>
-            <div class="caption" style="background-color: rgba(255,255,255,0.8)">
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12"  id="housesimg" *ngFor="let house of hot_houses;">
 
-              <p style="color: black;font-size: 18px">{{house.areaName}}</p>
+        <div class="thumbnail" style="width: 330px;height: 330px">
+          <a  class="lightbox" (click)="hotHouseDetail(house.houseId)" >
+            <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg?imageView2/1/w/242/h/180/format/jpg/interlace/1/q/75|imageslim" alt="Park">
+          </a>
+          <div class="caption" style="background-color: rgba(255,255,255,0.8)">
 
-              <p style="color: black;font-size: 14px">{{ house.address}}</p>
-            </div>
+            <p style="color: black;font-size: 18px">{{house.areaName}}</p>
+
+            <p style="color: black;font-size: 14px">{{ house.address}}</p>
           </div>
-
-          <div class="topmove"></div>
         </div>
 
-
+        <div class="topmove"></div>
       </div>
+
 
     </div>
 
   </div>
+
 </div>

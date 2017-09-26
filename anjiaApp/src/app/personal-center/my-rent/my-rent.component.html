@@ -2,8 +2,7 @@
   <ul id="house-list" class="house-list">
     <li *ngFor="let house of houses ">
       <app-test-list-item [house]="house"></app-test-list-item>
-      <div class="care" (click)="unFocus(house.houseId)"><strong>取消关注</strong></div>
-
+      <div class="care" (click)="unFocus(house.houseId)"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" height="30" width="30"></div>
     </li>
   </ul>
 </div>

@@ -2,6 +2,8 @@ import {Component,  OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {PositionsService} from './../../services/positions.service';
 import { LocalStorageService } from './../../services/local-storage.service';
+import {GlobalPropertyService} from './../../services/global-property.service';
+
 declare var $:any;
 declare var AMap:any;
 
@@ -28,16 +30,18 @@ export class HousesDetailsComponent implements OnInit {
 
     private route: ActivatedRoute,
     private ho: PositionsService,
-    private localStorage:LocalStorageService
+    private localStorage:LocalStorageService,
+  private  glo:GlobalPropertyService,
 
   ) { }
 
   ngOnInit() {
+  this.glo.hiddenNavs = false;
 
     var map = new AMap.Map('container', {
       resizeEnable: true,
       zoom: 12,
-      center: [118.756376, 32.052573]
+      center: [120.74357, 31.274963]
     });
 //地图内容
     map.setFeatures(['bg', 'building', 'road', 'point']);
@@ -50,11 +54,11 @@ export class HousesDetailsComponent implements OnInit {
       });
 //覆盖物
     var marker = new AMap.Marker({
-      position: [118.756376, 32.052573]
+      position: [120.74357, 31.27496]
     });
     marker.setMap(map);
     var circle = new AMap.Circle({
-      center: [118.756376, 32.052573],
+      center: [120.74357, 31.27496],
       radius: 100,
       fillOpacity: 0.2,
       strokeWeight: 1
@@ -62,7 +66,7 @@ export class HousesDetailsComponent implements OnInit {
     circle.setMap(map);
 //自定义窗体
     var infowindow;
-    var infoWindowContent = '<div class="infowindow-content"><h3>欢迎下载本地图插件</h3><p>基于高德地图API</p><span style="color:red;font-size:12px;">(此处文字可修改)</span></div>';
+    var infoWindowContent = '<div class="infowindow-content mapstyle" style="border-radius: 5px" ><h3>为您精准定位，找房更直观</h3><span style="color:red;font-size:12px;" class="mapspan"><img style=""; src="../../../assets/images/green2.png" alt=""></span></div>';
     map.plugin('AMap.AdvancedInfoWindow', function () {
       infowindow = new AMap.AdvancedInfoWindow({
         panel: 'panel',
@@ -71,7 +75,7 @@ export class HousesDetailsComponent implements OnInit {
         asDestination: true,
         content: infoWindowContent
       });
-      infowindow.open(map, [118.756376, 32.052573]);
+      infowindow.open(map, [120.74357, 31.27496]);
     });
 
 
