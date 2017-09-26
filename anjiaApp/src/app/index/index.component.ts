@@ -119,14 +119,6 @@ export class IndexComponent implements OnInit,AfterContentInit {
       });
 
 
-
-
-
-
-
-
-
-
     let that = this;
     that.glo.hiddenNavs=true;
 
