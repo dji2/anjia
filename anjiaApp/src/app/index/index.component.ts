@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
   text: string = '';
   positions: any;
   houses:any;
-
+  parse:any;
 
   constructor(private route: ActivatedRoute,
               private router:Router,
@@ -40,65 +40,30 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
 
-      var $td=$("td");
+      var cal = "";
+      var result = 0;
 
-      $td.each(function(){
-        $(this).click(function(){
-          var Text=$("#input").text().trim();
-          $("#input").append($(this).text());
-          switch ($(this).text()){
-            case "清除":
-              $("#input").text("");
-              break;
-            case "D":
-              $("#input").text(Text.substr(0,Text.length-1));
-              break;
-            case "=":
-            function  compute(content){
-              var index=content.lastIndexOf("(");
-              if(index>-1){
-                var nextIndex=content.indexOf(")",index);
-                if(nextIndex>-1){
+      $("button").click(function(){
 
-                  var result=compute(content.substring(index+1,nextIndex));
-                  return    compute(content.substring(0,index)+(""+result)+content.substring(nextIndex+1))
-                }
+        var text = $(this).attr("value");
 
-              }
-              index=content.indexOf("+");
-              if(index>-1){
-                return compute(content.substring(0,index))+compute(content.substring(index+1));
-              }
-              index=content.lastIndexOf("-");
-              if(index>-1){
-                return compute(content.substring(0,index))-compute(content.substring(index+1));
-              }
+        var regNum = /[0-9]/g;
 
-              index=content.indexOf("*");
-              if(index>-1){
-                return compute(content.substring(0,index))*compute(content.substring(index+1));
-              }
-              index=content.lastIndexOf("/");
-              if(index>-1){
-                return compute(content.substring(0,index))/compute(content.substring(index+1));
-              }
-              if(content==""){
-                return 0;
-              }else{
-                return Number(content);
-              }
-            }
-              $("#input").text(compute(Text));
-          }
-        })
+        if(regNum.test(text) || text === "+" || text === "-" || text === "*" || text === "/" || text === "."){
+          cal += text;
+          $("input").val(cal);
+        }
+        else if(text === "clear"){
+          $("input").val("");
+          cal = "";
+        }
+        else if(text === "="){
+          result = eval(cal);
+          cal = "";
+          $("input").val(result);
+        }
 
       });
-
-
-
-
-
-
 
 
 

@@ -378,60 +378,60 @@ width: 150px;
 
 
 .jisuanqimain{
-  display: none;
+display: none;
   width: 360px;
   height: 460px;
   box-shadow: 0 1px 8px rgba(0,0,0,.1);
   position: absolute;
-  top: -310px;
-  left: -380px;
+  top: -210px;
+  left: -340px;
 }
 
-.jisuanqimain:hover{
-  display: block;
-  width: 360px;
-  height: 460px;
-  box-shadow: 0 1px 8px rgba(0,0,0,.1);
-  position: absolute;
-  top: -310px;
-  left: -380px;
-}
+/*.jisuanqimain:hover{*/
+  /*width: 360px;*/
+  /*height: 460px;*/
+  /*box-shadow: 0 1px 8px rgba(0,0,0,.1);*/
+  /*position: absolute;*/
+  /*top: -210px;*/
+  /*left: -340px;*/
+/*}*/
 
 /*//////////////////////////////////////////计算器样式///////////////////////////////////*/
 
-
-
- table {
-   border-collapse: collapse;
- }
-#input{
-  display: inline-block;
-  text-align:center;
-  font-size: 30px;
-  height: 100px;
-  width: 360px;
-  line-height: 100px;
-  background-color: rgb(169, 169, 169);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  box-sizing: border-box;
+.jisuanqicontainer {
+  background: rgba(0, 0, 0, 0.78);
+  width: 285px;
+  height: 350px;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 10px;
 }
-table td{
-  text-align: center;
-  width: 90px;
-  height: 70px;
-  line-height: 70px;
-  background-color: lightgrey;
-  border:1px solid darkgrey;
-  box-sizing: border-box;
+.jisuanqicontainer input {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  border: none;
+  font-size: 32px;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+.btns {
+  width: 100%;
+}
+.jisuanqicontainer button {
+  width: 50px;
+  height: 40px;
+  border: none;
+  float: left;
   font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #000000;
 }
-table td:active{
-  text-align: center;
-  width: 90px;
-  height: 70px;
-  line-height: 70px;
-  background-color: rgba(0, 0, 0, 0.43);
-
-  box-sizing: border-box;
+.normal {
+  margin: 8px;
+}
+ .clear {
+  margin: 5px auto;
+  width: 100%;
 }
