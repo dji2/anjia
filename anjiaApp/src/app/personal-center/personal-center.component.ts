@@ -13,6 +13,7 @@ import {GlobalPropertyService} from './../services/global-property.service';
 })
 export class PersonalCenterComponent implements OnInit {
   userId:any;
+  userName:any;
   _val:string='';
   constructor(
     private router:Router,
@@ -24,6 +25,7 @@ export class PersonalCenterComponent implements OnInit {
     this.glo.hiddenNavs=true;
     let that = this;
     that.userId = that.localStorage.get('userId');
+    that.userName = that.localStorage.get('userName');
 
   }
 
