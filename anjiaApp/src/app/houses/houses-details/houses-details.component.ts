@@ -23,6 +23,7 @@ export class HousesDetailsComponent implements OnInit {
   islogin:number=0;
   islogin1:number=0;
   userId:any;
+  shou:number=0;
   constructor(
 
     private route: ActivatedRoute,
@@ -107,6 +108,16 @@ export class HousesDetailsComponent implements OnInit {
       that.islogin=0;
       that.islogin1=1;
     }
+    that.ho.isFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+      alert(result.stateCode);
+      if(result.stateCode == 33){
+        that.shou=1;
+        $('#shou').html('已收藏')
+      }else{
+        that.shou=0;
+        $('#shou').html('收藏此房')
+      }
+    })
 
   }
 
@@ -161,7 +172,7 @@ export class HousesDetailsComponent implements OnInit {
   }
 
 
-  shou:number=0;
+
 
   collect(){
     let that = this;
@@ -178,7 +189,7 @@ export class HousesDetailsComponent implements OnInit {
         }
       });
     }else if(that.shou==1){
-      $('#shou').html('收藏成功')
+      $('#shou').html('收藏此房')
       that.shou=0;
       that.ho.unFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
         alert(result.stateCode);

@@ -16,12 +16,13 @@ li{
   border: 1px white solid;
   /*margin-left: 20px;*/
   /*margin-top: 10px;*/
-  background-color: #00b86b;
+  background-color: #ebebeb;
   border-radius: 5px ;
   text-align: center;
   line-height: 30px;
   margin-right: 20px;
+  left: 20%;
 }
-li:hover{
-  background-color: #1abc9c;
+.nav li.on{
+  background-color: #00b86b;
 }
