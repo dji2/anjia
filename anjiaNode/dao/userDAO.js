@@ -125,14 +125,14 @@ exports.userDao={
         })
     },
 
-    //修改用户名
-    editName:function (userInfo,callback) {
+    //修改用户信息
+    editUser:function (userInfo,callback) {
         pool.getConnection(function (error,client) {
             if(error){
                 console.log("error");
                 return
             }
-            client.query(userSql.editName,[userInfo.userName,userInfo.userId],function (error,result) {
+            client.query(userSql.editUser,[userInfo.userName,userInfo.telephone,userInfo.email,userInfo.personInfo,userInfo.userId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
@@ -144,6 +144,25 @@ exports.userDao={
         })
     },
 
+
+    //修改密码
+    editPass:function (userInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.editPass,[userInfo.newPass,userInfo.userId,userInfo.password],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
 
     //获取看房记录
     getRecord:function (userId,callback) {
