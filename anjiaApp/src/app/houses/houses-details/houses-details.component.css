@@ -1,9 +1,38 @@
+
+
+
+/*////////////////地图样式//////////////////////*/
+
+
+.mapspan img{
+  width: 250px;
+  height: 100px;
+}
 #container{
 
-margin-top: 70px;
-  margin-left: 100px;
+top: 10px;
+left: 10px;
+  margin-right: 50px;
+  width:820px;
+  height:480px;
+
+
 }
 
+.panel{}
+
+.mapstyle{
+  background: url("../../../assets/images/loginbg1.jpg");
+  background-color: #c7524b;
+}
+.infowindow-content{
+  padding:12px 8px;
+  color:#fff;
+  background:#ccc;
+  background: url("../../../assets/images/bannerV2.jpg");
+  border-radius: 10px;
+}
+/*//////////////////////////////////////////*/
 .search{
   height: 60px;
   padding-top: 13px;
