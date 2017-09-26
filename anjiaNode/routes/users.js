@@ -129,7 +129,7 @@ router.post('/editUser',ct.checkToken, function (req, res, next) {
 });
 
 //修改密码
-router.post('/editPass',ct.checkToken, function (req, res, next) {
+router.post('/editPass',ct.checkToken, function (req, res, next)    {
     var user = req.body;
     console.log(user.newPass);
     user.password = util.MD5(user.password);
