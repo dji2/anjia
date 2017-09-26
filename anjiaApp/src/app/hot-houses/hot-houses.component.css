@@ -11,9 +11,35 @@
   height: 230px;
 }
 
+/*.topmove{*/
+
+  /*position: relative;*/
+  /*width: 370px;*/
+  /*height: 230px;*/
+   /*top: -260px;*/
+  /*background-color: rgba(199, 82, 75, 0.65);*/
+   /*opacity: 0.1;*/
+/*}*/
+
+/*.topmove:hover{*/
+  /*background-color: rgba(199, 82, 75, 0.65);*/
+  /*width: 370px;*/
+  /*height: 230px;*/
+ /*opacity: 1;*/
+/*}*/
 
 
+#housesimg img:hover{
 
+}
+
+.thumbnail img:hover{
+
+}
+
+/*#housesimg :hover{*/
+/*background-color: rgba(0, 0, 0, 0.85);*/
+/*}*/
 
 
 
@@ -320,65 +346,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 
 /*背景图蒙版*/
 
-#mycontainer {
 
-  /*background-color: rgba(42, 118, 61, 0.29);*/
-  height: 720px;
-
-}
-
-/*快来找月付*/
-#topanimate {
-  font-family:"Times New Roman", Times, serif;
-  font-size: 50px;
-  color: rgba(254, 255, 211, 1);
-  text-align: center;
-  margin-left: 180px;
-  margin-top: -160px;
-  font-weight: 900;
-
-
-}
-
-
-/*房屋列表*/
-.house-list {
-
-  background-color: #f2f2f3;
-
-}
-#house-setting{
-  margin-top: 10px;
-  width: 290px;
-  height: 330px
-}
-.house-list img{
-  width:250px;
-  height: 166px;
-}
-
-
-.house-list .house-list-title h4 {
-  margin-left: 2px;
-
-}
-.house-list p, h4 {
-  text-align: center;
-}
-.house-list .price {
-  margin-top: -40px;
-  width: 80px;
-  height: 20px;
-  background-color: rgba(100, 177, 145, 0.82);
-  position: absolute;
-  margin-left: 1px;
-  font-size: 18px;
-  text-align: center;
-  line-height: 20px;
-  color: white;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
 
 
 .gallery-container h1 {
@@ -393,7 +361,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
   text-align: center;
   margin: 30px auto;
   font-size: 18px;
-  color: #85878c;
+  color: #ffffff;
 }
 
 .tz-gallery {

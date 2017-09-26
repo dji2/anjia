@@ -1,13 +1,4 @@
 
-html, body {
-  height: 100vh;
-}
-
-body {
-  background: #2c3e50;
-  font-family: 'Rye', cursive;
-}
-
 .zombie__cheeks::before, .zombie__cheeks::after {
   content: '';
   border-radius: 50% 0 0 50%;
