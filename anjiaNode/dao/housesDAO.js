@@ -93,14 +93,52 @@ exports.housesDao={
     },
 
 
-    //添加看房记录信息
+    //用户评论完成整个看房流程
     addArrInfo:function (arrInfo,callback) {
         pool.getConnection(function (error,client) {
             if(error){
                 console.log("error");
                 return
             }
-            client.query(housesSql.addArrInfo,[arrInfo.userId,arrInfo.houseId,arrInfo.adate,arrInfo.comment],function (error,result) {
+            client.query(housesSql.addArrInfo,[arrInfo.adate,arrInfo.comment,arrInfo.userId,arrInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+    //用户提出看房申请
+    askWatch:function (arrInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.askWatch,[arrInfo.userId,arrInfo.houseId,arrInfo.userId,arrInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+    //业主同意看房申请
+    agreeWatch:function (arrInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.agreeWatch,[arrInfo.arrangeId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;
