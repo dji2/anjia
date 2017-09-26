@@ -14,6 +14,8 @@ export class OwnerComponent implements OnInit {
 
   owner_res:string;
   formstatus:boolean = false;
+  tab_index=0;
+
   constructor(
     private userSer:PositionsService,
     private router:Router,

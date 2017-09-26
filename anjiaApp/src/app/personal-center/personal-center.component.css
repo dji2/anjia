@@ -65,7 +65,10 @@
   /*padding-left:30px;*/
   /*line-height: 40px;*/
 /*}*/
-
+.mid01 span{
+  font-size:14px;
+  color: #acacac;
+}
 /*__________________显示页___________________-*/
 .mid02{
   width: 100%;
