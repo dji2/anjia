@@ -198,7 +198,25 @@ exports.housesDao={
         })
 
     },
+    //判断当前用户是否关注该房源
+    isFocus:function (focusInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.isFocus,[focusInfo.userId,focusInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+                console.log(result)
+                callback(result);
+                client.release();
+            })
+        })
 
+    },
     //取消关注房源
     unFocus:function (focusInfo,callback) {
         pool.getConnection(function (error,client) {

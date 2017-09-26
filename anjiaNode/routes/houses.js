@@ -156,6 +156,22 @@ router.post('/focus', function(req, res, next) {
     }
 });
 
+//判断当前用户是否关注该房源
+router.post('/isFocus', function(req, res, next) {
+    var focusInfo = req.body;
+    console.log(focusInfo);
+    if(focusInfo){
+        console.log("focus");
+        housesDao.isFocus(focusInfo,function (result) {
+            console.log(result)
+            if(result[0].num>0){
+                res.json({"stateCode":33});
+            }else{
+                res.json({"stateCode":34});
+            }
+        })
+    }
+});
 
 //取消关注
 router.post('/unFocus', function(req, res, next) {

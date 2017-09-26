@@ -124,6 +124,27 @@ exports.userDao={
             })
         })
     },
+
+    //修改用户名
+    editName:function (userInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.editName,[userInfo.userName,userInfo.userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+
     //获取看房记录
     getRecord:function (userId,callback) {
         pool.getConnection(function (error,client) {

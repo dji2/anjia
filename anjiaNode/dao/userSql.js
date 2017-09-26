@@ -10,6 +10,7 @@ exports.sql={
     getFocusHouses:'select * from focusinfo where userId = ?',
     getRecord:'select * from arrangeinfo where userId = ?',
     getMyHouses:"select * from housesinfo  where ownerId = ?",
-    delRecord:"delete from arrange where  userId = ? and houseId = ?"
+    delRecord:"delete from arrange where  userId = ? and houseId = ?",
+    editName:"update user set userName = ? where id = ?"
 
 };
