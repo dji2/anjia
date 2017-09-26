@@ -13,8 +13,10 @@
 @media screen and (max-width: 640px) {
   /*搜索框上边的白字*/
   #topanimate {
+
     margin: 0 auto;
     display: none;
+
   }
 
   /*搜索按钮*/
