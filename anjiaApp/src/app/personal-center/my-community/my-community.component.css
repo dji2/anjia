@@ -87,14 +87,10 @@ img{
   color: #b1b1b1;
 }
 .del01{
-  height: 159px;
-  width: 80px;
-  background-color: #E4393C;
-  font-size: 20px;
-  color: white;
+  height: 30px;
+  width: 30px;
   float: right;
   text-align: center;
-  line-height: 159px;
   display: none;
   clear: both;
   position: absolute;
@@ -102,18 +98,14 @@ img{
   top: 0px;
 }
 .del02{
-  height: 159px;
-  width: 80px;
-  background-color: #E4393C;
-  font-size: 20px;
-  color: white;
+  height: 30px;
+  width: 30px;
   float: right;
   text-align: center;
-  line-height: 159px;
   display: none;
   clear: both;
   position: absolute;
-  right: 80px;
+  right: 40px;
   top: 0px;
   border-right: 2px white solid;
 }

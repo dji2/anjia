@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from './../../../services/local-storage.service';
 import {HttpClient} from '@angular/common/http';
-
+declare  var $:any;
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent implements OnInit {
+  img_url:string='../../../../assets/images/h1.jpg';
   userId:any;
   constructor(
     private localStorage:LocalStorageService,
@@ -37,5 +38,19 @@ export class UploadComponent implements OnInit {
         )
     }
   }
-
+  change(e){
+    var file=e.target.files[0];
+    this.preview(file);
+  }
+  preview(file){
+    var img=new Image();
+    img.src=URL.createObjectURL(file);
+    var url=img.src;
+    var $img=$(img);
+    img.onload=function(){
+      URL.revokeObjectURL(url);
+      $img.addClass('fitcss');
+      $('#preview').empty().append($img);
+    }
+  }
 }
