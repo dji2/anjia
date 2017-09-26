@@ -127,8 +127,9 @@ router.post('/getRecord',ct.checkToken, function (req, res, next) {
     }
 });
 // 删除看房记录
-router.post('/delRecord',ct.checkToken, function (req, res, next) {
+router.post('/delRecord',function (req, res, next) {
     var arrInfo = req.body;
+    console.log(arrInfo)
     if(arrInfo){
         console.log("delRecord:id");
         userdao.delRecord(arrInfo,function (result) {

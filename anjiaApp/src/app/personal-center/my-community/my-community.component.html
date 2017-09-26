@@ -2,8 +2,9 @@
   <ul id="house-list" class="house-list">
     <li *ngFor="let house of houses ">
       <app-test-list-item [house]="house"></app-test-list-item>
-      <div class="del01"><strong>编辑</strong></div>
-      <div class="del02"><strong>删除</strong></div>
+      <input type="text" #houseName>
+      <div class="del01" (click)="editHouse(house.houseId,houseName.value)"><strong>编辑</strong></div>
+      <div class="del02" (click)="delHouse(house.houseId)"><strong>删除</strong></div>
     </li>
   </ul>
 </div>

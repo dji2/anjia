@@ -240,7 +240,7 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <span style="font-size: 40px">{{house.area}}</span>平
         </div>
-        <h2 *ngIf="islogin1" style="color: red">房主信息必须登录后才能查看</h2>
+        <h2 *ngIf="islogin1" style="color: red;margin-top: 20px">房主信息必须登录后才能查看</h2>
         <div style="margin-top: 10px" *ngIf="islogin" id="denglu">
           <div style="float: left">
             <img style="margin-top: 10px;height: 80px;width: 80px" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{house.ownerId}}.jpg" alt="">
@@ -254,7 +254,7 @@
 
 
         <button style="margin-top: 30px;outline: none" type="button" class="btn btn-success shoucang" (click)="collect()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="shou">收藏此房</span></button>
-        <div style="margin-top: 200px;border-top: 1px solid #DCE0E0">
+        <div style="margin-top: 170px;border-top: 1px solid #DCE0E0">
           <div>这个房源是很多人的心仪之所。</div>
           <div>过去一周浏览量超过500次。</div>
         </div>
