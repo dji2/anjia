@@ -40,51 +40,6 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
 
-      let cal = "";
-    let result = 0;
-
-      $("button").click(function(){
-
-        let text = $(this).attr("value");
-
-        let regNum = /[0-9]/g;
-
-        if(regNum.test(text) || text === "+" || text === "-" || text === "*" || text === "/" || text === "."){
-          cal += text;
-          $("input").val(cal);
-        }
-        else if(text === "clear"){
-          $("input").val("");
-          cal = "";
-        }
-        else if(text === "="){
-          result = eval(cal);
-          cal = "";
-          $("input").val(result);
-        }
-
-      });
-
-
-
-
-
-    // let map = newAMap.Map('container');
-    // map.plugin('AMap.Geolocation',()=>{
-    //   let geolocation = newAMap.Geolocation({
-    //     enableHighAccuracy:true,
-    //     timeout:10000,
-    //     maximumAge:0,
-    //     convert:true,
-    //     showButton:true,
-    //     buttonPosition:'LB',
-    //     buttonOffset:newAMap.Pixel(10,20)
-    //   });
-    //   map.addControl(location);
-    // });
-
-
-
 
 
 
@@ -133,6 +88,38 @@ export class IndexComponent implements OnInit,AfterContentInit {
     })
 
     $(document).ready(function(){
+
+
+
+      let cal = "";
+      let result = 0;
+
+      $("button").click(function(){
+
+        let text = $(this).attr("value");
+
+        let regNum = /[0-9]/g;
+
+        if(regNum.test(text) || text === "+" || text === "-" || text === "*" || text === "/" || text === "."){
+          cal += text;
+          $("input").val(cal);
+        }
+        else if(text === "clear"){
+          $("input").val("");
+          cal = "";
+        }
+        else if(text === "="){
+          result = eval(cal);
+          cal = "";
+          $("input").val(result);
+        }
+
+      });
+
+
+
+
+
       $("#zf").click(function(){
         $("#topanimate").hide(1000);
       });
