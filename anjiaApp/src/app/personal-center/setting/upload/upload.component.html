@@ -1,9 +1,59 @@
-<div class="upload">
-  <form class="form-horizontal" method="post" action="http://up.qiniu.com/" enctype="multipart/form-data">
-    <input type="hidden" name="token" value="Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9"> 使用该凭证测试上传文件
-    <input class="form-control" type="file" name="file" (change)="onFileChanged($event.target.files)" placeholder="Upload file">
-    <input name="key" type="hidden" value="images/user-icon/14.jpg">
-    {{userId}}
-    <input type="submit" value="上传">
-  </form>
+<!--<div class="upload">-->
+  <!--<form class="form-horizontal file" method="post" action="http://up.qiniu.com/" enctype="multipart/form-data">-->
+<!--上传-->
+    <!--<input type="hidden" name="token" value="Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9">-->
+    <!--<input class="form-control" type="file" name="file" (change)="onFileChanged($event.target.files)" placeholder="Upload file">-->
+    <!--<input name="key" type="hidden" value="images/user-icon/14.jpg">-->
+    <!--&lt;!&ndash;{{userId}}&ndash;&gt;-->
+    <!--<input class="div1" type="submit" value="上传">-->
+  <!--</form>-->
+<!--</div>-->
+
+
+
+<div id="container">
+
+  <div style="width: 100%;height: 200px;" >
+    <div style="width:1004px;height: 100px; margin:0 auto">
+      <img src="../../../assets/images/act1001_fangke.jpg"/>
+    </div>
+    <div id="publish_top">
+      <h2>在发布房间前，您还需要完善如下信息</h2>
+    </div>
+  </div>
+
+  <div id="main_contain">
+    <div id="publish_item">
+      <h3 class="item_title">您需要填写真实姓名</h3>
+      <div class="item_inner">
+        <p>填写身份信息有助于房客对您产生信任感，更好的让您接到订单</p>
+      </div>
+      <form action="">
+        <div class="input_wrap">
+          <span class="input_title">真实姓名：</span>
+          <input id="realName" class="input_mod" name="realName" type="text" placeholder="请输入您的姓名" value="">
+        </div>
+        <div class="input_wrap">
+          <span class="input_title">身份证号：</span>
+          <input id="cardNo" class="input_mod" name="cardNo" type="text"  placeholder="请输入您的身份证号" value="">
+        </div>
+      </form>
+    </div>
+
+    <div id="publish_second">
+      <h3 class="item_title">您需要上传头像</h3>
+      <div class="item_inner">
+        <p>填写身份信息有助于房客对您产生信任感，更好的让您接到订单</p>
+      </div>
+      <input type="file" (change)="change($event)" class="form_control" id="upload_file" name="user_icon">
+      <div id="preview">
+          <!--<img src="../../../../assets/images/h1.jpg"/>-->
+        <h1>+&nbsp;&nbsp;添加照片</h1>
+      </div>
+    </div>
+    <a  class="publish_next" routerLink='/perfect-information02' routerLinkActive="active">保存并继续</a>
+    <div id="foot" style="background-color: pink;width: 100%;height: 100px;">
+
+    </div>
+  </div>
 </div>

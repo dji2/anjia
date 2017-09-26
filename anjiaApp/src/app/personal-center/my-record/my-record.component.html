@@ -2,7 +2,7 @@
   <ul id="house-list" class="house-list">
     <li *ngFor="let house of houses ">
       <app-test-list-item [house]="house"></app-test-list-item>
-      <div class="del" (click)="delRecord(house.houseId)"><strong>删除</strong></div>
+      <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
     </li>
   </ul>
 </div>
