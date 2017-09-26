@@ -9,7 +9,7 @@ import {PositionsService} from './../services/positions.service';
 import { LocalStorageService } from './../services/local-storage.service';
 
 declare var $ :any;
-declare var AMap:any;
+
 
 
 @Component({
@@ -53,63 +53,63 @@ export class IndexComponent implements OnInit,AfterContentInit {
     // });
 
 
-    $(function(){
-
-      var $td=$("td");
-
-      $td.each(function(){
-        $(this).click(function(){
-          var Text=$("#input").text().trim();
-          $("#input").append($(this).text());
-          switch ($(this).text()){
-            case "清除":
-              $("#input").text("");
-              break;
-            case "D":
-              $("#input").text(Text.substr(0,Text.length-1));
-              break;
-            case "=":
-            function  compute(content){
-              var index=content.lastIndexOf("(");
-              if(index>-1){
-                var nextIndex=content.indexOf(")",index);
-                if(nextIndex>-1){
-
-                  var result=compute(content.substring(index+1,nextIndex));
-                  return    compute(content.substring(0,index)+(""+result)+content.substring(nextIndex+1));
-                }
-
-              }
-              index=content.indexOf("+");
-              if(index>-1){
-                return compute(content.substring(0,index))+compute(content.substring(index+1));
-              }
-              index=content.lastIndexOf("-");
-              if(index>-1){
-                return compute(content.substring(0,index))-compute(content.substring(index+1));
-              }
-              //如果返回的content为空,则返回0
-              index=content.indexOf("*");
-              if(index>-1){
-                return compute(content.substring(0,index))*compute(content.substring(index+1));
-              }
-              index=content.lastIndexOf("/");
-              if(index>-1){
-                return compute(content.substring(0,index))/compute(content.substring(index+1));
-              }
-              if(content==""){
-                return 0;
-              }else{
-
-                return Number(content);
-              }
-            }
-              $("#input").text(compute(Text));
-          }
-        })
-
-      });
-    });
+    // $(function(){
+    //
+    //   var $td=$("td");
+    //
+    //   $td.each(function(){
+    //     $(this).click(function(){
+    //       var Text=$("#input").text().trim();
+    //       $("#input").append($(this).text());
+    //       switch ($(this).text()){
+    //         case "清除":
+    //           $("#input").text("");
+    //           break;
+    //         case "D":
+    //           $("#input").text(Text.substr(0,Text.length-1));
+    //           break;
+    //         case "=":
+    //         function  compute(content){
+    //           var index=content.lastIndexOf("(");
+    //           if(index>-1){
+    //             var nextIndex=content.indexOf(")",index);
+    //             if(nextIndex>-1){
+    //
+    //               var result=compute(content.substring(index+1,nextIndex));
+    //               return    compute(content.substring(0,index)+(""+result)+content.substring(nextIndex+1));
+    //             }
+    //
+    //           }
+    //           index=content.indexOf("+");
+    //           if(index>-1){
+    //             return compute(content.substring(0,index))+compute(content.substring(index+1));
+    //           }
+    //           index=content.lastIndexOf("-");
+    //           if(index>-1){
+    //             return compute(content.substring(0,index))-compute(content.substring(index+1));
+    //           }
+    //           //如果返回的content为空,则返回0
+    //           index=content.indexOf("*");
+    //           if(index>-1){
+    //             return compute(content.substring(0,index))*compute(content.substring(index+1));
+    //           }
+    //           index=content.lastIndexOf("/");
+    //           if(index>-1){
+    //             return compute(content.substring(0,index))/compute(content.substring(index+1));
+    //           }
+    //           if(content==""){
+    //             return 0;
+    //           }else{
+    //
+    //             return Number(content);
+    //           }
+    //         }
+    //           $("#input").text(compute(Text));
+    //       }
+    //     })
+    //
+    //   });
+    // });
 
 
 
