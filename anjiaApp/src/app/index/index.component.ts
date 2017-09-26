@@ -224,6 +224,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
 
+
   ngAfterContentInit(){
 
   }
