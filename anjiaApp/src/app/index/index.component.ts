@@ -94,7 +94,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
       let cal = "";
       let result = 0;
 
-      $("button").click(function(){
+      $(".normal").click(function(){
 
         let text = $(this).attr("value");
 
@@ -102,16 +102,16 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
         if(regNum.test(text) || text === "+" || text === "-" || text === "*" || text === "/" || text === "."){
           cal += text;
-          $("input").val(cal);
+          $("#jsq").val(cal);
         }
         else if(text === "clear"){
-          $("input").val("");
+          $("#jsq").val("");
           cal = "";
         }
         else if(text === "="){
           result = eval(cal);
           cal = "";
-          $("input").val(result);
+          $("#jsq").val(result);
         }
 
       });
@@ -152,7 +152,6 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
     });
-
 
 
     that.house.getAllHouses(function (result) {
