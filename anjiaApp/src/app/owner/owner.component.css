@@ -102,3 +102,32 @@ input,button{
   width: 200px;
   outline: none;
 }
+/*switch---------------*/
+ul{
+  margin-top: 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(13,3,9,0.2);
+  border-radius: 2px;
+  padding: 0;
+}
+li{
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+li a{
+  display: inline-block;
+  width: 138px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+}
+.go{
+  color: #ffffff;
+  background-color: #39ac6a;
+}
+
