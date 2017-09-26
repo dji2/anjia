@@ -246,14 +246,21 @@ width: 100%;
   background-attachment: fixed;
 
 }
+.bottom-bg{
+  width: 100%;
 
+  z-index: -5;
+  background:url("../../assets/images/redhouse3.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+}
 
 
 /*////返回顶部////////////*/
 
 #elevator_item {
   width: 60px;
-  height: 100px;
+  height: 160px;
   position: fixed;
   right: 15px;
   bottom: 15px;
@@ -303,19 +310,19 @@ width: 100%;
 #elevator_item .qr:active {
   background-color: rgba(0,0,0,.75)
 }
-#elevator_item .qr-popup {
-  width: 160px;
-  height: 170px;
+/*#elevator_item .qr-popup {*/
+  /*width: 160px;*/
+  /*height: 170px;*/
 
-  box-shadow: 0 1px 8px rgba(0,0,0,.1);
-  position: absolute;
-  left: -180px;
-  bottom: 0;
-background-color: whitesmoke;
-  border-radius: 2px;
-  display: none;
-  text-align: center
-}
+  /*box-shadow: 0 1px 8px rgba(0,0,0,.1);*/
+  /*position: absolute;*/
+  /*left: -180px;*/
+  /*bottom: 0;*/
+/*background-color: whitesmoke;*/
+  /*border-radius: 2px;*/
+  /*display: none;*/
+  /*text-align: center*/
+/*}*/
 #elevator_item .qr-popup .code-link {
   display: block;
   margin: 10px;
@@ -341,3 +348,90 @@ width: 150px;
   bottom: 14px
 }
 
+/*jisuanqi计算器*/
+
+.myjisuanqi{
+  margin-top: 10px;
+}
+#jisuanqi{
+  display: block;
+  width: 60px;
+  height: 50px;
+  background: url(../../assets/images/jsq1.svg) center center no-repeat;
+  background-color: #444;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+#jisuanqi:hover {
+  background-color: rgba(0,0,0,.7)
+}
+#jsqapp{
+
+  width: 360px;
+  height: 460px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.1);
+  position: absolute;
+  top: -310px;
+  left: -380px;
+  bottom: 0;
+
+  border-radius: 5px;
+  text-align: center;
+
+
+}
+
+
+.jisuanqimain{
+  display: none;
+  width: 360px;
+  height: 460px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.1);
+  position: absolute;
+  top: -310px;
+  left: -380px;
+}
+
+/*//////////////////////////////////////////计算器样式///////////////////////////////////*/
+
+
+
+ table {
+   border-collapse: collapse;
+ }
+#input{
+  display: inline-block;
+  text-align:center;
+  font-size: 30px;
+  height: 100px;
+  width: 360px;
+  line-height: 100px;
+  background-color: rgb(169, 169, 169);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+}
+table td{
+  text-align: center;
+  width: 90px;
+  height: 70px;
+  line-height: 70px;
+  background-color: lightgrey;
+  border:1px solid darkgrey;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+table td:active{
+  text-align: center;
+  width: 90px;
+  height: 70px;
+  line-height: 70px;
+  background-color: rgba(0, 0, 0, 0.43);
+
+  box-sizing: border-box;
+}

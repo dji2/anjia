@@ -84,7 +84,13 @@
 <app-hot-houses></app-hot-houses>
     </div>
     <!--房屋列表-->
-   <app-list-item></app-list-item>
+    <div class="bottom-bg">
+      <app-list-item></app-list-item>
+    </div>
+
+
+<!--高度地图-->
+
 
 
     <!--页脚部分-->
@@ -96,14 +102,56 @@
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
     <div class="qr-popup" style="background-color: rgba(0,0,0,0.63)">
-      <a class="code-link">
-        <img class="code" src="../../assets/images/wxapp.png"/>
-      </a>
-      <span>扫码关注更多房屋信息</span>
-      <div class="arr"></div>
-    </div>
 
+
+    <div class="myjisuanqi">
+      <a id="jisuanqi"> </a>
+      <div id="jsqapp">
+
+
+      </div>
+    </div>
+    <div class="jisuanqimain">
+            <span id="input">
+ </span>
+      <table>
+        <tbody>
+        <tr>
+          <td>清除</td>
+          <td>D</td>
+          <td>.</td>
+          <td>*</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>+</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>/</td>
+        </tr>
+        <tr>
+          <td>(</td>
+          <td>0</td>
+          <td>)</td>
+          <td>=</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+</div>
+
 </div>
 
 </div>

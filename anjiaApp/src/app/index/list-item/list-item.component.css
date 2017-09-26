@@ -2,20 +2,19 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-
 .gallery-container h1 {
   text-align: center;
   margin-top: 70px;
   font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
-  color: #58595a;
+  color: #ffffff;
 }
 
 .gallery-container p.page-description {
   text-align: center;
   margin: 30px auto;
   font-size: 18px;
-  color: #85878c;
+  color: #ffffff;
 }
 
 .tz-gallery {
