@@ -56,7 +56,17 @@ export class PositionsService {
       }
     )
   }
-
+//是否关注
+  isFocus(focusInfo,callback){
+    this.http.post(this.url+'/isFocus',focusInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 //关注
   focus(focusInfo,callback){
     this.http.post(this.url+'/focus',focusInfo).subscribe(
