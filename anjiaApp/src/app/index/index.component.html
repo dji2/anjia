@@ -91,8 +91,6 @@
 
 <!--高度地图-->
 
-
-
     <!--页脚部分-->
     <app-footer></app-footer>
 
@@ -101,57 +99,45 @@
   <div id="elevator_item">
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
-    <div class="qr-popup" style="background-color: rgba(0,0,0,0.63)">
 
-
-
-    <div class="myjisuanqi">
+    <div class="myjisuanqi" >
       <a id="jisuanqi"> </a>
       <div id="jsqapp">
-
-
       </div>
     </div>
     <div class="jisuanqimain">
-            <span id="input">
- </span>
-      <table>
-        <tbody>
-        <tr>
-          <td>清除</td>
-          <td>D</td>
-          <td>.</td>
-          <td>*</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>+</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>/</td>
-        </tr>
-        <tr>
-          <td>(</td>
-          <td>0</td>
-          <td>)</td>
-          <td>=</td>
-        </tr>
-        </tbody>
-      </table>
+
+      <div class="jisuanqicontainer">
+        <input type="text">
+        <div class="btns">
+          <button type="button" class="btn normal" value="7">7</button>
+          <button type="button" class="btn normal" value="8">8</button>
+          <button type="button" class="btn normal" value="9">9</button>
+          <button type="button" class="btn normal" value="+">+</button>
+          <button type="button" class="btn normal" value="4">4</button>
+          <button type="button" class="btn normal" value="5">5</button>
+          <button type="button" class="btn normal" value="6">6</button>
+          <button type="button" class="btn normal" value="-">-</button>
+          <button type="button" class="btn normal" value="1">1</button>
+          <button type="button" class="btn normal" value="2">2</button>
+          <button type="button" class="btn normal" value="3">3</button>
+          <button type="button" class="btn normal" value="*">*</button>
+          <button type="button" class="btn normal" value=".">.</button>
+          <button type="button" class="btn normal" value="0">0</button>
+          <button type="button" class="btn normal" value="=" style="color: #00ae66">=</button>
+          <button type="button" class="btn normal" value="/">/</button>
+
+          <button type="button" class="clear" value="clear" style="width: 100%">清除</button>
+        </div>
+      </div>
+
+
     </div>
+
+
+
+
   </div>
-</div>
 
 </div>
 
