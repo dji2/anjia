@@ -1,6 +1,6 @@
 <div cldiv="list-wrap">
   <ul id="house-list" class="house-list">
-    <li *ngFor="let house of houses ">
+    <li *ngFor="let house of houses | status: 1">
       <app-test-list-item [house]="house"></app-test-list-item>
       <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
     </li>
