@@ -17,6 +17,7 @@ import { PasswordComponent } from './setting/password/password.component';
 
 import {PublicModule} from '../public/public.module';
 import { StatusPipe } from './../pipes/status.pipe';
+import { OwnerRecordComponent } from './owner-record/owner-record.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { StatusPipe } from './../pipes/status.pipe';
     NicknameComponent,
     PasswordComponent,
     StatusPipe,
+    OwnerRecordComponent,
   ],
   imports: [
     BrowserModule,
