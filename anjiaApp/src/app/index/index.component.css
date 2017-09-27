@@ -440,11 +440,33 @@ display: none;
 }
 /*///////////////////////////////下拉框////////////////////////////*/
 
+#downlist{
+  width: 90px;
+  height: 55px;
+  position: relative;
+  top:-3px;
+
+  display: inline-block;
+
+}
+
+
+
+.user_icon{
+  height:30px;
+  width:30px;
+}
+.user_icon img{
+  height:30px;
+  width:30px;
+  border-radius: 15px
+}
+
+
+
+
+
 #navbar-right{
-
-  position: absolute;
-  right: 0;
-
 }
 .mydemo {
   color: #fff;

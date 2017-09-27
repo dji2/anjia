@@ -1,23 +1,38 @@
-.active{
+li:hover{
   text-decoration: none;
-  background: #222222;
+
+
+  box-sizing: border-box;
+}
+li a:hover{
+  text-decoration: none;
 
 }
+
+a:hover{
+  text-decoration: none;
+}
+
 .container{
   width: 100%;
   overflow-x:hidden;
+
 }
 #nav{
-  margin-left: 50px;
-    /*height: 45px;*/
-  line-height: 45px;
+margin:  0 auto;
+  line-height: 48px;
+  height: 48px;
+  background-color: brown;
 }
 li{
   float: left;
   margin-right: 20px;
   list-style: none;
+  width: 50px;
+  box-sizing: border-box;
 }
 a{
+  font-size: 15px;
   color: white;
 }
 #person{
@@ -41,3 +56,7 @@ a{
   width:30px;
   border-radius: 15px
 }
+/*////////////////////////////////////////////*/
+
+
+

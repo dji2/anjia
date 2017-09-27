@@ -5,7 +5,9 @@
 
 
 /*///////////////////////////////////////*/
-
+a:hover{
+  cursor: pointer;
+}
 .lightbox img{
   width: 370px;
   height: 230px;
