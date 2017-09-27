@@ -12,6 +12,8 @@ import {GlobalPropertyService} from './../services/global-property.service';
   providers:[]
 })
 export class PersonalCenterComponent implements OnInit {
+  bianhua1=0;
+  bianhua2=1;
   userId:any;
   userName:any;
   tabs= [ '我的看房记录' , '业主', '关注','设置'];
@@ -40,5 +42,15 @@ export class PersonalCenterComponent implements OnInit {
   ngOnDestroy(){
     console.log('personal-ngOnDestroy----------');
     this.glo.hiddenNavs=false;
+  }
+
+  bian(){
+    this.bianhua1=1;
+    this.bianhua2=0;
+  }
+
+  hua(){
+    this.bianhua1=0;
+    this.bianhua2=1;
   }
 }
