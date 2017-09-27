@@ -14,7 +14,7 @@ import {GlobalPropertyService} from './../services/global-property.service';
 export class PersonalCenterComponent implements OnInit {
   userId:any;
   userName:any;
-  tabs= [ '我的看房记录' , '我的关注房源', '我的房源','设置'];
+  tabs= [ '我的看房记录' , '业主', '关注','设置'];
   tab_index= 0 ;
   arr_li = ['first tab', ' second tab ', ' third tab',' third tab'];
   _val:string='';
