@@ -34,33 +34,20 @@ export class MyRecordComponent implements OnInit {
     let userId = that.localStorage.get('userId');
     let token = that.localStorage.get('token');
     that.userSer.delRecord({"houseId":houseId,"userId":userId},function (result) {
-      console.log(result);
-    })
-
-    that.userSer.getRecord({"userId":userId,"token":token},function (result) {
-      that.houses = result;
-
-      console.log(result);
-    })
-  }
-
-    //业主同意看房
-  agreeWatch(arrangeId){
-    let that = this;
-    let userId = that.localStorage.get('userId');
-    let token = that.localStorage.get('token');
-    that.ho.agreeWatch({"arrangeId":arrangeId},function (result) {
-      if(result.stateCode == 41){
+      if(result.stateCode == 25){
         that.userSer.getRecord({"userId":userId,"token":token},function (result) {
           that.houses = result;
 
           console.log(result);
         })
       }else{
-        alert("同意看房失败")
+        console.log("删除看房信息失败");
       }
+
     })
 
 
   }
+
+
 }

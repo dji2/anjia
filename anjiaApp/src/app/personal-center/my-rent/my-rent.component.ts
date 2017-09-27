@@ -36,15 +36,19 @@ export class MyRentComponent implements OnInit {
     let token = that.localStorage.get('token');
 
     that.ho.unFocus({"userId":that.localStorage.get('userId'),"houseId":houseId},function (result) {
+      if(result.stateCode == 23){
+        that.userSer.getFocusHouses({"userId":userId,"token":token},function (result) {
+          that.houses = result;
 
-      console.log(result);
+          console.log(result);
+        })
+      }else{
+        console.log("取消关注房源失败")
+      }
+      ;
     })
 
-    that.userSer.getFocusHouses({"userId":userId,"token":token},function (result) {
-      that.houses = result;
 
-      console.log(result);
-    })
   }
 
 }
