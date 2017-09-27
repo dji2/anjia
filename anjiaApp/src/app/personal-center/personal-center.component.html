@@ -20,31 +20,60 @@
 '" style="border-radius: 50px;" height="100" width="100"/>
     <h1 style="margin-top: 20px">{{userName || '你还没有登录呦'}}</h1>
     <br>
-    <span style="font-size: 18px">小伙子不错不错！祝你学业有成，幸福美满，早生贵子，儿孙满堂</span>
-    <br>
-    <div class="middet">
-      <img src="http://owhah4u2f.bkt.clouddn.com/email.png
+
+
+    <div *ngIf="bianhua2">
+      <form>
+        <input style="width: 30%;height: 40px" type="text" placeholder="小伙子不错不错！祝你学业有成，幸福美满，早生贵子，儿孙满堂">
+        <br>
+        <div class="middet">
+          <img src="http://owhah4u2f.bkt.clouddn.com/email.png
 
 " width="20" height="20">
-      <span>eerwdfvvfg@163.com</span>
-      <br>
-      <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
+          <input  type="text" placeholder="eerwdfvvfg@163.com">
+          <br>
+          <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
 
 " width="20" height="20">
-      <span>131344343434</span>
+          <input  type="text" placeholder="18851882888">
+          <br>
+          <button (click)="bian()" style="height: 30px;width: 60%;background-color: #00AE66;color: white;border-radius: 5px;border: none;margin-top: 5px">保存</button>
+        </div>
+
+      </form>
+      <!--<span style="font-size: 18px">小伙子不错不错！祝你学业有成，幸福美满，早生贵子，儿孙满堂</span>-->
+    </div>
+
+    <div *ngIf="bianhua1">
+      <span style="font-size: 18px">小伙子不错不错！祝你学业有成，幸福美满，早生贵子，儿孙满堂</span>
       <br>
-      <img src="http://owhah4u2f.bkt.clouddn.com/edit.png
+      <div class="middet">
+        <img src="http://owhah4u2f.bkt.clouddn.com/email.png
+
+" width="20" height="20">
+        <span>eerwdfvvfg@163.com</span>
+        <br>
+        <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
+
+" width="20" height="20">
+        <span>131344343434</span>
+        <br>
+        <img src="http://owhah4u2f.bkt.clouddn.com/edit.png
 
 " height="20" width="20">
-      <span>编辑资料</span>
+        <span (click)="hua()">编辑资料</span>
+      </div>
     </div>
+
+
+
   </div>
   <div class="mid02">
-    <ul class="list">
-      <li role="presentation"  [class.on]="tab_index==index" (click)="tab_index=index"  *ngFor="let item of tabs;let first=first;let index=index"><span href="#">{{item}}</span></li>
+    <ul class="nav tit">
+      <li  [class.on]="tab_index==index" (click)="tab_index=index"  *ngFor="let item of tabs;let first=first;let index=index "><span href="#">{{item}}</span></li>
     </ul>
 
-    <div [ngSwitch]="tab_index" class="content-css show">
+    <div [ngSwitch]="tab_index" class="show">
       <div *ngSwitchCase="0"><a ><app-my-record></app-my-record></a></div>
       <div *ngSwitchCase="1"><a ><app-my-community></app-my-community></a></div>
       <div *ngSwitchCase="2"><a ><app-my-rent></app-my-rent></a></div>

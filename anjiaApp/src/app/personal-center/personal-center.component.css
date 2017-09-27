@@ -15,7 +15,7 @@
 .nav{
   margin-top: 50px;
   margin-left: 800px;
-  background-color: #00b86b;
+  /*background-color: #00b86b;*/
 
 }
 .li01{
@@ -84,14 +84,14 @@
   margin-top: 556px;
 }
 
-.list{
+.tit{
   font-size: 20px;
   width:800px;
   margin: 0 auto;
   list-style: none;
 }
 
-.list li{
+.tit li{
   width:200px;
   height: 40px;
   text-align: center;
@@ -101,7 +101,7 @@
   border-radius: 5px ;
 
 }
-.list li:hover{
+.tit li.on {
   background-color: #00b86b;
   color: white;
   cursor: pointer;

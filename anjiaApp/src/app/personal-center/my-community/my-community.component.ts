@@ -11,6 +11,7 @@ import {PositionsService} from './../../services/positions.service';
 })
 export class MyCommunityComponent implements OnInit {
   houses:any;
+  arrHouses:any;
 
   constructor(
     private userSer:UsersService,
@@ -29,6 +30,10 @@ export class MyCommunityComponent implements OnInit {
       that.houses = result;
 
       console.log(result);
+    });
+    that.userSer.getMyRecord({"userId":userId,"token":token},function (result) {
+      that.arrHouses = result;
+      console.log(result);
     })
   }
 
@@ -37,13 +42,18 @@ export class MyCommunityComponent implements OnInit {
     let userId = that.localStorage.get('userId');
     let token = that.localStorage.get('token');
     that.ho.delHouse({"houseId":houseId},function (result) {
-      console.log(result);
+      if(result.stateCode == 27){
+        that.userSer.getMyHouses({"userId":userId,"token":token},function (result) {
+          that.houses = result;
+          console.log(result);
+        })
+      }else{
+        console.log("删除房源失败");
+      }
+
     })
 
-    that.userSer.getMyHouses({"userId":userId,"token":token},function (result) {
-      that.houses = result;
-      console.log(result);
-    })
+
   }
 
   editHouse(houseId,houseName){
@@ -51,13 +61,36 @@ export class MyCommunityComponent implements OnInit {
     let userId = that.localStorage.get('userId');
     let token = that.localStorage.get('token');
     that.ho.editHouse({"houseId":houseId,"houseName":houseName},function (result) {
-      console.log(result);
+      if(result.stateCode == 31){
+        that.userSer.getMyHouses({"userId":userId,"token":token},function (result) {
+          that.houses = result;
+          console.log(result);
+        })
+      }else{
+        console.log("修改房源信息失败");
+      }
+
     })
 
-    that.userSer.getMyHouses({"userId":userId,"token":token},function (result) {
-      that.houses = result;
-      console.log(result);
-    })
+
   }
+//业主同意看房
+  agreeWatch(arrangeId){
+    let that = this;
+    let userId = that.localStorage.get('userId');
+    let token = that.localStorage.get('token');
+    that.ho.agreeWatch({"arrangeId":arrangeId},function (result) {
+      if(result.stateCode == 41){
+        that.userSer.getRecord({"userId":userId,"token":token},function (result) {
+          that.arrHouses = result;
 
+          console.log(result);
+        })
+      }else{
+        alert("同意看房失败")
+      }
+    })
+
+
+  }
 }

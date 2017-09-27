@@ -36,7 +36,6 @@ import { StatusPipe } from './../pipes/status.pipe';
     BrowserModule,
     FormsModule,
       PublicModule,
-
     PersonalCenterRoutingModule
   ],
   providers: [],
