@@ -56,6 +56,26 @@ export class MyCommunityComponent implements OnInit {
 
   }
 
+  //按照arangeId删除
+  delRecordByarrId(arrangeId){
+    let that = this;
+    let userId = that.localStorage.get('userId');
+    let token = that.localStorage.get('token');
+    that.userSer.delRecordByarrId({"arrangeId":arrangeId},function (result) {
+      if(result.stateCode == 45){
+        that.userSer.getMyRecord({"userId":userId,"token":token},function (result) {
+          that.arrHouses = result;
+
+          console.log(result);
+        })
+      }else{
+        console.log("删除看房信息失败");
+      }
+
+    })
+
+
+  }
   editHouse(houseId,houseName){
     let that = this;
     let userId = that.localStorage.get('userId');

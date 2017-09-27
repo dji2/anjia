@@ -109,6 +109,17 @@ img{
   top: 0px;
   border-right: 2px white solid;
 }
+.del{
+  height: 30px;
+  width: 30px;
+  float: right;
+  text-align: center;
+  display: none;
+  clear: both;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
 .house-list li:hover div{
   display: block;
   cursor: pointer;
