@@ -48,7 +48,7 @@ export class UploadComponent implements OnInit {
     var img=new Image();
     img.src=URL.createObjectURL(file);
     var url=img.src;
-    var $img=$(img);
+    var $img=$(img).css({'width':'100%','heigth':'100%','object-fit':'cover'});
     img.onload=function(){
       URL.revokeObjectURL(url);
       $img.addClass('fitcss');
