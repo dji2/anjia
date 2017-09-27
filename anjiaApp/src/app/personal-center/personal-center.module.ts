@@ -16,7 +16,7 @@ import { NicknameComponent } from './setting/nickname/nickname.component';
 import { PasswordComponent } from './setting/password/password.component';
 
 import {PublicModule} from '../public/public.module';
-
+import { StatusPipe } from './../pipes/status.pipe';
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import {PublicModule} from '../public/public.module';
     MyRentComponent,
     UploadComponent,
     NicknameComponent,
-    PasswordComponent
+    PasswordComponent,
+    StatusPipe,
   ],
   imports: [
     BrowserModule,
