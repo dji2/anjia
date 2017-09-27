@@ -68,6 +68,17 @@ export class PositionsService {
       }
     )
   }
+  //是否看房申请
+  isAsk(arrInfo,callback){
+    this.http.post(this.url+'/isAsk',arrInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 //是否关注
   isFocus(focusInfo,callback){
     this.http.post(this.url+'/isFocus',focusInfo).subscribe(

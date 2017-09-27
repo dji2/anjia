@@ -16,7 +16,7 @@ declare var AMap:any;
 })
 export class HousesDetailsComponent implements OnInit {
 
-  arr_li=['周边配套','看房记录','相似房源'];
+  arr_li=['看房记录','相似房源'];
   tab_index=0;
   houseId:any;
   house:any;
@@ -26,6 +26,7 @@ export class HousesDetailsComponent implements OnInit {
   islogin1:number=0;
   userId:any;
   shou:number=0;
+  kan:number=0;
   constructor(
 
     private route: ActivatedRoute,
@@ -83,7 +84,7 @@ export class HousesDetailsComponent implements OnInit {
 
     $(window).scroll(function() {
       var scrolltop = $(this).scrollTop();
-      if (scrolltop >= 650 && scrolltop <= 2300) {
+      if (scrolltop >= 650 && scrolltop <= 2100) {
         $("#yezhuright").addClass("yezhuright-after");
       } else {
         $("#yezhuright").removeClass("yezhuright-after");
@@ -113,7 +114,7 @@ export class HousesDetailsComponent implements OnInit {
       that.islogin1=1;
     }
     that.ho.isFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-      alert(result.stateCode);
+      // alert(result.stateCode);
       if(result.stateCode == 33){
         that.shou=1;
         $('#shou').html('已收藏')
@@ -121,7 +122,17 @@ export class HousesDetailsComponent implements OnInit {
         that.shou=0;
         $('#shou').html('收藏此房')
       }
-    })
+    });
+    that.ho.isAsk({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+      // alert(result.stateCode);
+      if(result.stateCode == 43){
+        $('#kan').html('预约看房中');
+        that.kan=1
+      }else{
+         that.kan=0;
+        $('#kan').html('我要看房')
+      }
+    });
 
   }
 
@@ -184,7 +195,7 @@ export class HousesDetailsComponent implements OnInit {
       $('#shou').html('已收藏')
       that.shou=1;
       that.ho.focus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-        alert(result.stateCode);
+        // alert(result.stateCode);
         if(result.stateCode == 21){
           alert("收藏成功");
 
@@ -196,7 +207,7 @@ export class HousesDetailsComponent implements OnInit {
       $('#shou').html('收藏此房')
       that.shou=0;
       that.ho.unFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-        alert(result.stateCode);
+        // alert(result.stateCode);
         if(result.stateCode == 23){
           alert("取消收藏");
         }else{
@@ -206,5 +217,23 @@ export class HousesDetailsComponent implements OnInit {
     }
   }
 
+  kanfang(){
+    let that = this;
+    if(that.kan==0){
+      $('#kan').html('预约看房中')
+      that.kan=1;
+      that.ho.askWatch({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
+        alert(result.stateCode);
+        if(result.stateCode == 39){
+          alert("预约成功");
+
+        }else{
+          alert("预约失败");
+        }
+      });
+    }else if(that.kan==1){
+      $('#kan').html('预约看房中')
+    }
+  }
 
 }
