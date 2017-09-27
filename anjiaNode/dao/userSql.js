@@ -8,7 +8,7 @@ exports.sql={
     getUserIcon:'select user_icon.icon from user inner join user_icon ON user.id=user_icon.user_id where user.telephone=? order by upload_date desc ',
     addUserIcon:'call addUserIcon(?,?,@res)',
     getFocusHouses:'select * from focusinfo where userId = ?',
-    getRecord:'select * from arrangeinfo where userId = ?',
+    getRecord:'select * from arrangeinfo where userId = ? order by status',
     getMyHouses:"select * from housesinfo  where ownerId = ?",
     delRecord:"delete from arrange where  userId = ? and houseId = ?",
     editUser:"update user set userName = ?,telephone = ?,email = ?,personInfo = ? where id = ?",
