@@ -50,13 +50,17 @@ export class MyRecordComponent implements OnInit {
     let userId = that.localStorage.get('userId');
     let token = that.localStorage.get('token');
     that.ho.agreeWatch({"arrangeId":arrangeId},function (result) {
-      console.log(result);
+      if(result.stateCode == 41){
+        that.userSer.getRecord({"userId":userId,"token":token},function (result) {
+          that.houses = result;
+
+          console.log(result);
+        })
+      }else{
+        alert("同意看房失败")
+      }
     })
 
-    that.userSer.getRecord({"userId":userId,"token":token},function (result) {
-      that.houses = result;
 
-      console.log(result);
-    })
   }
 }

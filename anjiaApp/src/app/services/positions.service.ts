@@ -45,6 +45,18 @@ export class PositionsService {
       }
     )
   }
+  //业主同意看房
+  agreeWatch(arrange,callback){
+    this.http.post(this.url+'/agreeWatch',arrange).subscribe(
+      function (result) {
+        console.log(result)
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   //添加看房信息
   addArrInfo(arrInfo,callback){
     this.http.post(this.url+'/addArrInfo',arrInfo).subscribe(
