@@ -7,10 +7,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12">
-        <ul>
-
-          <li *ngFor="let item of arr_li ;let first=first;let index=index
-" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
+        <ul class="newstab">
+          <li  *ngFor="let item of arr_li ;let first=first;let index=index" ><a style="cursor: pointer" [class.on]="tab_index==index" (click)="tab_index=index" >{{item}}</a></li>
         </ul>
 
         <div [ngSwitch]="tab_index">
@@ -193,7 +191,7 @@
 
                   <div class="media-left">
                     <a href="#">
-                      <img class="media-object" src="../../assets/images/sky.jpg" alt="...">
+                      <img class="media-object" src="http://owhah4u2f.bkt.clouddn.com/images/news/redian{{getNew.id}}.jpg" alt="...">
                     </a>
                   </div>
                   <div class="media-body">
