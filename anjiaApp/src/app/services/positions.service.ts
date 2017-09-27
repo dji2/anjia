@@ -56,6 +56,18 @@ export class PositionsService {
       }
     )
   }
+
+  //提出看房申请
+  askWatch(arrInfo,callback){
+    this.http.post(this.url+'/askWatch',arrInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 //是否关注
   isFocus(focusInfo,callback){
     this.http.post(this.url+'/isFocus',focusInfo).subscribe(

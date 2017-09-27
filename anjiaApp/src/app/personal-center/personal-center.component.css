@@ -49,7 +49,7 @@
   margin-top: 191px;
   text-align: center;
 }
-  /*background-color: #39AC6A;*/
+/*background-color: #39AC6A;*/
 .headIcon{
   /*position: absolute;*/
   /*display: block;*/
@@ -58,16 +58,23 @@
   margin-top: 35px;
 }
 /*.f01{*/
-  /*width: 150px;*/
-  /*height: 40px;*/
-  /*position: absolute;*/
-  /*margin-top: 170px;*/
-  /*padding-left:30px;*/
-  /*line-height: 40px;*/
+/*width: 150px;*/
+/*height: 40px;*/
+/*position: absolute;*/
+/*margin-top: 170px;*/
+/*padding-left:30px;*/
+/*line-height: 40px;*/
 /*}*/
-.mid01 span{
+.middet{
+  margin-top: 6px;
+  width: 200px;
+  height: 100px;
+  margin-left: 43%;
+}
+.middet span{
   font-size:14px;
   color: #acacac;
+  line-height: 33px;
 }
 /*__________________显示页___________________-*/
 .mid02{
@@ -79,8 +86,8 @@
 }
 
 .list{
-/*width: 150px;*/
-/*margin-top: 200px;*/
+  /*width: 150px;*/
+  /*margin-top: 200px;*/
   font-size: 20px;
   width:800px;
   margin: 0 auto;

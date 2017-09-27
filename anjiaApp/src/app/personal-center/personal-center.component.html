@@ -1,38 +1,43 @@
 <div class="top">
-  <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png" height="80" width="160"/>
+  <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png
+
+" height="80" width="160"/>
   <ul class="nav">
     <!--<li class="li01" >-->
-      <!--<a href="#" style="color: white"><app-test-list-item [content]="'ewweww'"></app-test-list-item></a></li>-->
-    <li class="li01"><a href="#" style="color: white">头条</a></li>
-    <li class="li01"><a href="#" style="color: white">发布房源</a></li>
-    <li class="li01"><a href="#" style="color: white">业主</a></li>
+    <!--<a href="#" style="color: white"><app-test-list-item [content]="'ewweww'"></app-test-list-item></a></li>-->
+    <li class="li01"><a href="/houses" style="color: white">租房</a></li>
+    <li class="li01"><a href="/owner" style="color: white">业主</a></li>
+    <li class="li01"><a href="/news" style="color: white">头条</a></li>
   </ul>
 </div>
-
 <div class="mid">
   <div class="mid01">
 
-    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'" style="border-radius: 50px;" height="100" width="100"/>
+    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg
+
+" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png
+
+'" style="border-radius: 50px;" height="100" width="100"/>
     <h1 style="margin-top: 20px">{{userName || '你还没有登录呦'}}</h1>
     <br>
     <span style="font-size: 18px">小伙子不错不错！祝你学业有成，幸福美满，早生贵子，儿孙满堂</span>
     <br>
-    <img src="http://owhah4u2f.bkt.clouddn.com/phone.png" width="20" height="20">
-    <span>131344343434</span>
-    <br>
-    <img src="http://owhah4u2f.bkt.clouddn.com/email.png" width="20" height="20">
-    <span>eerwdfvvfg@163.com</span>
-    <br>
-    <img src="http://owhah4u2f.bkt.clouddn.com/edit.png" height="20" width="20">
-    <span>编辑资料</span>
-    <!--<span class="f01" style="background-color: #39AC6A"><a href="#" style="color: white" (click)="toIndex()">首页</a></span>-->
-    <!--<table class="list">-->
-      <!--<tr class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555">关注的租房</a></tr>-->
-      <!--<tr class="li02"><a  routerLink="./community" routerLinkActive="active" style="color: #555555">关注的小区</a></tr>-->
-      <!--<tr class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555">看房记录</a></tr>-->
-      <!--<tr class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555">编辑资料</a></tr>-->
-    <!--</table>-->
+    <div class="middet">
+      <img src="http://owhah4u2f.bkt.clouddn.com/email.png
 
+" width="20" height="20">
+      <span>eerwdfvvfg@163.com</span>
+      <br>
+      <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
+
+" width="20" height="20">
+      <span>131344343434</span>
+      <br>
+      <img src="http://owhah4u2f.bkt.clouddn.com/edit.png
+
+" height="20" width="20">
+      <span>编辑资料</span>
+    </div>
   </div>
 
   <div class="mid02">
