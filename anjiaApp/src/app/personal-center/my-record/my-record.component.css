@@ -57,6 +57,18 @@ img{
   /*width: 75%;*/
 }
 
+.del02{
+  height: 30px;
+  width: 30px;
+  float: right;
+  text-align: center;
+  display: none;
+  clear: both;
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  border-right: 2px white solid;
+}
 .info-panel h2{
   margin-top: -5px;
 }
