@@ -163,6 +163,23 @@ router.post('/getRecord',ct.checkToken, function (req, res, next) {
         })
     }
 });
+
+// 获取看房记录（业主）
+router.post('/getMyRecord',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    if(user){
+        console.log("getMyRecord:id"+user.userId);
+        userdao.getMyRecord(user.userId,function (result) {
+            console.log("getMyRecord");
+            if(result.length==0){
+                res.json(null);
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
+
 // 删除看房记录
 router.post('/delRecord',function (req, res, next) {
     var arrInfo = req.body;

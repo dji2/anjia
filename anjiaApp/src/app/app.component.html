@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" >
-  <nav class="row" *ngIf="!_hiddenNavs">
-    <div class="col-md-12 col-lg-12" style="background-color: #3D424D;height: 45px">
+  <nav class="row" *ngIf="!_hiddenNavs" style="background-color: #00b86b">
+    <div class="col-md-12 col-lg-12" id="commentnav">
       <!--<a [routerLink]="['/index','我是默认值']" routerLinkActive="active" >首页</a>-->
       <ul id="nav">
       <li><a routerLink='/index' routerLinkActive="active" >首页</a></li>
@@ -19,8 +19,6 @@
           <a routerLink='/index' routerLinkActive="active" (click)="out()">退出</a>
         </div>
       </ul>
-
-
     </div>
   </nav>
   <div class="row">

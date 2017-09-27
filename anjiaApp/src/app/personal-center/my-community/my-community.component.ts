@@ -81,7 +81,7 @@ export class MyCommunityComponent implements OnInit {
     let token = that.localStorage.get('token');
     that.ho.agreeWatch({"arrangeId":arrangeId},function (result) {
       if(result.stateCode == 41){
-        that.userSer.getRecord({"userId":userId,"token":token},function (result) {
+        that.userSer.getMyRecord({"userId":userId,"token":token},function (result) {
           that.arrHouses = result;
 
           console.log(result);

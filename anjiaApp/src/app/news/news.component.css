@@ -6,12 +6,16 @@
 .media-left {
 
 }
-
-
+a{
+color: white;
+}
+.newstab{
+background-color: #3f9b90;
+}
 .media-left-big div{
 
   /*border-bottom: 1px solid gray;*/
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: rgba(128, 128, 128, 0.06);
 }
 
 .media{

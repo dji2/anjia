@@ -26,7 +26,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
   positions: any;
   houses:any;
   parse:any;
-
+  userId:any;
   constructor(private route: ActivatedRoute,
               private router:Router,
               private localStorage:LocalStorageService,
@@ -49,6 +49,9 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
 
     let that = this;
+
+
+    that.userId=that.localStorage.get('userId');
     that.glo.hiddenNavs=true;
 
     $(function(){
@@ -170,20 +173,6 @@ export class IndexComponent implements OnInit,AfterContentInit {
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ngAfterContentInit(){
 
   }
@@ -200,6 +189,12 @@ export class IndexComponent implements OnInit,AfterContentInit {
 
   toHouseDetail(id) {
     this.router.navigate(['/detail',id]);
+  }
+
+  out(){
+    this.localStorage.remove('token')
+    this.localStorage.remove('userId')
+    this.userName=this.localStorage.remove('userName');
   }
 
 }

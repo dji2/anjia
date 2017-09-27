@@ -255,6 +255,26 @@ exports.housesDao={
         })
 
     },
+
+    //判断当前用户是否已经预约看房
+    isAsk:function (arrangeInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return;
+            }
+            client.query(housesSql.isAsk,[arrangeInfo.userId,arrangeInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+                console.log(result)
+                callback(result);
+                client.release();
+            })
+        })
+
+    },
     //取消关注房源
     unFocus:function (focusInfo,callback) {
         pool.getConnection(function (error,client) {

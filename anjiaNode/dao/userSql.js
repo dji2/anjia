@@ -9,6 +9,7 @@ exports.sql={
     addUserIcon:'call addUserIcon(?,?,@res)',
     getFocusHouses:'select * from focusinfo where userId = ?',
     getRecord:'select * from arrangeinfo where userId = ? order by status',
+    getMyRecord:'select * from arrangeinfo where ownerId = ? order by status',
     getMyHouses:"select * from housesinfo  where ownerId = ?",
     delRecord:"delete from arrange where  userId = ? and houseId = ?",
     editUser:"update user set userName = ?,telephone = ?,email = ?,personInfo = ? where id = ?",
