@@ -23,6 +23,7 @@ export class UploadComponent implements OnInit {
   onFileChanged(fileList: FileList) {
     if (fileList.length > 0) {
       let file: File = fileList[0];
+      this.preview(file);
       let formData: FormData = new FormData();
       formData.append('file', file, file.name);
       formData.append('key', 'images/user/'+this.userId+'.jpg');
@@ -38,10 +39,11 @@ export class UploadComponent implements OnInit {
         )
     }
   }
-  change(e){
-    var file=e.target.files[0];
-    this.preview(file);
-  }
+  // checkCard(e){
+  //   var file=e[0];
+  //   this.preview(file);
+  // }
+  //
   preview(file){
     var img=new Image();
     img.src=URL.createObjectURL(file);
@@ -52,5 +54,8 @@ export class UploadComponent implements OnInit {
       $img.addClass('fitcss');
       $('#preview').empty().append($img);
     }
-  }
+
+
+
+ }
 }
