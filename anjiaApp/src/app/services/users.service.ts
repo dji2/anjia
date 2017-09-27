@@ -110,8 +110,17 @@ export class UsersService {
 
   }
 
-  editUser(){
 
+
+  editUser(user,callback){
+    this.http.post(this.url+'/getUserInfo',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
   }
 
 }
