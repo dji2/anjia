@@ -144,7 +144,24 @@ exports.userDao={
         })
     },
 
+//获取用户信息
+    getUserInfo:function (userInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.getUserInfo,[userInfo.userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
 
+                callback(result);
+                client.release();
+            })
+        })
+    },
     //修改密码
     editPass:function (userInfo,callback) {
         pool.getConnection(function (error,client) {
@@ -183,6 +200,29 @@ exports.userDao={
             })
         })
     },
+
+
+    //获取看房记录(业主)
+    getMyRecord:function (userId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.getMyRecord,[userId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    console.log("getRecord--error");
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+
     //获取我的房源
     getMyHouses:function (userId,callback) {
         pool.getConnection(function (error,client) {
@@ -210,6 +250,25 @@ exports.userDao={
                 return
             }
             client.query(userSql.delRecord,[arrInfo.userId,arrInfo.houseId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+    //删除看房记录信息(业主)
+    delRecordByarrId:function (arrInfo,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(userSql.delRecordByarrId,[arrInfo.arrangeId],function (error,result) {
                 if(error){
                     callback('e004');
                     return;

@@ -20,7 +20,7 @@ export class StatusPipe implements PipeTransform {
         }
       });
       return new_houses;
-    }else if(args == 2){
+    }else {
       var new_houses=houses.filter(function (house,index) {
         if(house.status==2){
           return house;
