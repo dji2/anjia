@@ -80,36 +80,35 @@
 .mid02{
   width: 100%;
   height: 760px;
-  /*background-color: hotpink;*/
   position: absolute;
   margin-top: 556px;
 }
 
 .list{
-  /*width: 150px;*/
-  /*margin-top: 200px;*/
   font-size: 20px;
   width:800px;
   margin: 0 auto;
+  list-style: none;
 }
 
-.li02{
+.list li{
   width:200px;
   height: 40px;
-  /*padding-left:40px;*/
   text-align: center;
   line-height: 40px;
   float: left;
   border:1px solid white;
-  /*border-radius: 5px ;*/
+  border-radius: 5px ;
 
 }
-.li02:hover{
-  border-bottom: solid 4px #00b86b;
+.list li:hover{
+  background-color: #00b86b;
+  color: white;
+  cursor: pointer;
 }
+
 .show{
-  width: 993px;
-  height: 600px;
-  margin: 0 auto;
-  margin-top: 100px;
+  width: 80%;
+  height: 680px;
+  margin-left:10%;
 }
