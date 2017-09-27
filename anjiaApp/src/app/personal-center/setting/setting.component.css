@@ -14,8 +14,7 @@ li{
   height: 30px;
   width: 160px;
   border: 1px white solid;
-  /*margin-left: 20px;*/
-  /*margin-top: 10px;*/
+  color: #8D8D8D;
   background-color: #ebebeb;
   border-radius: 5px ;
   text-align: center;
@@ -25,4 +24,5 @@ li{
 }
 .nav li.on{
   background-color: #00b86b;
+  color: white;
 }
