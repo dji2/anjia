@@ -7,12 +7,14 @@
     </li>
   </ul>
   <ul class="house-list">
+    业主已同意
     <li *ngFor="let house of houses | status: 1">
       <app-test-list-item [house]="house"></app-test-list-item>
       <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
     </li>
   </ul>
   <ul  class="house-list">
+    已完成的看房
     <li *ngFor="let house of houses | status: 2">
       <app-test-list-item [house]="house"></app-test-list-item>
       <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
