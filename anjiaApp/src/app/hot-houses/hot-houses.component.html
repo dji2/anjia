@@ -1,5 +1,5 @@
 
-<div class="container gallery-container">
+<div class="container gallery-container" style="position: relative">
 
   <h1 style="color: white">热门房源</h1>
 
@@ -15,16 +15,13 @@
 
 
           <a  class="lightbox" (click)="hotHouseDetail(house.houseId)" >
+            <!--<span id="housemoney" style="background-color: crimson">{{house.housePrice}}</span>-->
             <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg?imageView2/1/w/242/h/180/format/jpg/interlace/1/q/75|imageslim" alt="Park">
           </a>
           <div class="caption" style="background-color: rgba(255,255,255,0.8)">
             <!---->
-            <!--<span  style="background-color: crimson">{{house.housePrice}}</span>-->
             <p style="color: black;font-size: 18px">{{house.areaName}}</p>
-
             <p style="color: black;font-size: 14px">{{ house.address}}</p>
-
-
           </div>
         </div>
 

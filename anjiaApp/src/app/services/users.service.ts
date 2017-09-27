@@ -127,7 +127,7 @@ export class UsersService {
 
 
 
-  editUser(user,callback){
+  getUserInfo(user,callback){
     this.http.post(this.url+'/getUserInfo',user).subscribe(
       function (result) {
         callback(result);
@@ -137,5 +137,17 @@ export class UsersService {
       }
     )
   }
+
+  editUser(user,callback){
+    this.http.post(this.url+'/editUser',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+
 
 }
