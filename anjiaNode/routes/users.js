@@ -62,7 +62,8 @@ router.post('/login',function (req, res, next) {
                         if (result[0].password == util.MD5(user.password)) {
 
                             //产生令牌
-                            var expires = moment().add(7, 'days').valueOf();
+                            var expires = moment().add(100, 'days').valueOf();
+                            console.log(expires);
                             var token = jwt.encode({
                                 iss: user.telephone,
                                 exp: expires
