@@ -1,18 +1,5 @@
 <h2 style="color: #b9b9b9"><strong>我的账户信息</strong></h2>
-<!--&lt;!&ndash; 导航区 &ndash;&gt;-->
-<!--<ul class="nav nav-tabs" role="tablist" >-->
-    <!--<li (click)="choose1($event)" role="presentation" value="upload"> <a>上传头像</a></li>-->
-    <!--<li (click)="choose2($event)" role="presentation" value="nickname"><a>修改昵称</a></li>-->
-    <!--<li (click)="choose3($event)" role="presentation" value="password"><a>修改密码</a></li>-->
-<!--</ul>-->
-<!--&lt;!&ndash;&lt;!&ndash; 面板区 &ndash;&gt;&ndash;&gt;-->
-<!--<div class="tab-content">-->
-   <!--<div [ngSwitch]="choose(event)">-->
-     <!--<span *ngSwitchCase="'upload'">上传头像</span>-->
-     <!--<span *ngSwitchCase="'nickname'">修改昵称</span>-->
-     <!--<span *ngSwitchDefault>修改密码</span>-->
-   <!--</div>-->
-<!--</div>-->
+
 <div class="container" [ngSwitch]="switch_expression">
   <div class="col-md-12 col-lg-12 ">
     <ul class="nav nav-tabs">
