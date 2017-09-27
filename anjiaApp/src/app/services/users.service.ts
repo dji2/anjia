@@ -43,6 +43,17 @@ export class UsersService {
       }
     )
   }
+//获取看房信息（用户）
+  getMyRecord(user,callback){
+    this.http.post(this.url+'/getMyRecord',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 
 //删除信息
   delRecord(arrInfo,callback){
