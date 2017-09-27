@@ -27,6 +27,7 @@ export class AppComponent {
 
   ngOnInit(){
 
+
     let that = this;
     that._url=that.glo.serverUrl;
     that._hiddenNavs=that.glo.hiddenNavs;
