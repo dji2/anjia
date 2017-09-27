@@ -95,11 +95,11 @@ export class MyCommunityComponent implements OnInit {
 
   }
 //业主同意看房
-  agreeWatch(arrangeId){
+  agreeWatch(arrangeId,userName,telephone,ownerName,ownerTelephone){
     let that = this;
     let userId = that.localStorage.get('userId');
     let token = that.localStorage.get('token');
-    that.ho.agreeWatch({"arrangeId":arrangeId},function (result) {
+    that.ho.agreeWatch({"arrangeId":arrangeId,"userName":userName,"telephone":telephone,"ownerName":ownerName,"ownerTelephone":ownerTelephone},function (result) {
       if(result.stateCode == 41){
         that.userSer.getMyRecord({"userId":userId,"token":token},function (result) {
           that.arrHouses = result;
