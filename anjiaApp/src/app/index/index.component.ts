@@ -39,18 +39,12 @@ export class IndexComponent implements OnInit,AfterContentInit {
   ngOnInit() {
 
 
-
-
-
-
       $(".myjisuanqi").click(function(){
         $(".jisuanqimain").toggle();
       });
 
 
     let that = this;
-
-
     that.userId=that.localStorage.get('userId');
     that.glo.hiddenNavs=true;
 

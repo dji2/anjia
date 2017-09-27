@@ -11,8 +11,16 @@ a:hover{
 .lightbox img{
   width: 370px;
   height: 230px;
+  border-radius: 4px 4px 0 0;
+
 }
 
+.lightbox img:hover{
+  width: 370px;
+  height: 230px;
+  border-radius: 4px 4px 0 0;
+
+}
 /*.topmove{*/
 
   /*position: relative;*/
