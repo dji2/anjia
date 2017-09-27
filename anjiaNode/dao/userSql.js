@@ -12,6 +12,8 @@ exports.sql={
     getMyRecord:'select * from arrangeinfo where ownerId = ? order by status',
     getMyHouses:"select * from housesinfo  where ownerId = ?",
     delRecord:"delete from arrange where  userId = ? and houseId = ?",
+    delRecordByarrId:"delete from arrange where  arrangeId = ?",
+    getUserInfo:"select * from user where id = ?",
     editUser:"update user set userName = ?,telephone = ?,email = ?,personInfo = ? where id = ?",
     editPass:"update user set password = ? where id = ? and password = ?",
     getMyask:"select * from arrangeinfo where userId  = ? and status = 1",

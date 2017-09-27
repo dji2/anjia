@@ -128,7 +128,21 @@ router.post('/editUser',ct.checkToken, function (req, res, next) {
         })
     }
 });
-
+//获取个人信息
+router.post('/getUserInfo',ct.checkToken, function (req, res, next) {
+    var user = req.body;
+    console.log(user);
+    if(user){
+        console.log("getUserInfo:id"+user.userId);
+        userdao.getUserInfo(user,function (result) {
+            if(result.length == 0){
+                res.json({"stateCode":48});
+            }else{
+                res.json(result);
+            }
+        })
+    }
+});
 //修改密码
 router.post('/editPass',ct.checkToken, function (req, res, next)    {
     var user = req.body;
@@ -192,6 +206,22 @@ router.post('/delRecord',function (req, res, next) {
                 res.json({"stateCode": 25});
             }else{
                 res.json({"stateCode": 26});
+            }
+        })
+    }
+});
+
+// 删除看房记录(业主)
+router.post('/delRecordByarrId',function (req, res, next) {
+    var arrInfo = req.body;
+    console.log(arrInfo)
+    if(arrInfo){
+        userdao.delRecordByarrId(arrInfo,function (result) {
+            console.log(result);
+            if(result.affectedRows > 0){
+                res.json({"stateCode": 45});
+            }else{
+                res.json({"stateCode": 46});
             }
         })
     }

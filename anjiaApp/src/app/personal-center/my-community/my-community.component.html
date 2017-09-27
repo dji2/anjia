@@ -62,7 +62,7 @@
 
                       <li *ngFor="let house of arrHouses | status: 0">
                         <app-test-list-item [house]="house"></app-test-list-item>
-                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
+                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecordByarrId(house.arrangeId)" height="30" width="30"></div>
                         <div class="del02"><img src="http://owhah4u2f.bkt.clouddn.com/images/agree.png" (click)="agreeWatch(house.arrangeId)" height="30" width="30"></div>
 
                       </li>
@@ -84,7 +84,7 @@
 
                       <li *ngFor="let house of arrHouses | status: 1">
                         <app-test-list-item [house]="house"></app-test-list-item>
-                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/images/delet.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
+                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/images/delet.png" (click)="delRecordByarrId(house.arrangeId)" height="30" width="30"></div>
                       </li>
                     </ul>
                   </div>
@@ -104,7 +104,7 @@
 
                       <li *ngFor="let house of arrHouses | status: 2">
                         <app-test-list-item [house]="house"></app-test-list-item>
-                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecord(house.houseId)" height="30" width="30"></div>
+                        <div class="del"><img src="http://owhah4u2f.bkt.clouddn.com/delete.png" (click)="delRecordByarrId(house.arrangeId)" height="30" width="30"></div>
                       </li>
                     </ul>
                   </div>
