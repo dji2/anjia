@@ -26,7 +26,6 @@ export class MyRecordComponent implements OnInit {
     console.log(userId);
     that.userSer.getRecord({"userId":userId,"token":token},function (result) {
       that.houses = result;
-
       console.log(result);
     })
   }
