@@ -45,6 +45,18 @@ export class PositionsService {
       }
     )
   }
+  //业主同意看房
+  agreeWatch(arrange,callback){
+    this.http.post(this.url+'/agreeWatch',arrange).subscribe(
+      function (result) {
+        console.log(result)
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   //添加看房信息
   addArrInfo(arrInfo,callback){
     this.http.post(this.url+'/addArrInfo',arrInfo).subscribe(
@@ -60,6 +72,17 @@ export class PositionsService {
   //提出看房申请
   askWatch(arrInfo,callback){
     this.http.post(this.url+'/askWatch',arrInfo).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  //是否看房申请
+  isAsk(arrInfo,callback){
+    this.http.post(this.url+'/isAsk',arrInfo).subscribe(
       function (result) {
         callback(result);
       },

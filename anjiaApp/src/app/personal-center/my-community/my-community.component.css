@@ -111,4 +111,5 @@ img{
 }
 .house-list li:hover div{
   display: block;
+  cursor: pointer;
 }
