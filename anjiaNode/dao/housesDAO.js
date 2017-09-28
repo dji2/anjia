@@ -91,7 +91,24 @@ exports.housesDao={
             })
         })
     },
-
+    //通过arrangeId获取看房记录
+    getArrInfoByArrId:function (arrangeId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.getArrInfoByArrId,[arrangeId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+                console.log(result[0]);
+                callback(result[0]);
+                client.release();
+            })
+        })
+    },
 
     //用户评论完成整个看房流程
     addArrInfo:function (arrInfo,callback) {

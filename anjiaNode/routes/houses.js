@@ -80,21 +80,27 @@ router.post('/askWatch', function(req, res, next) {
         housesDao.askWatch(arrInfo,function (result) {
             console.log("addArrInfo");
             if(result.affectedRows==1){
-                var obj = {
-                    PhoneNumbers: '18362202673',
-                    TemplateCode: 'SMS_100860003',//模板编号
-                    TemplateParam: '{"name":"jidesong","userName":"desong","telphone":"15503878257"}',//变量名
-                };
-                obj.PhoneNumbers = arrInfo.telephone;
-                var o = JSON.parse(obj.TemplateParam);
-                o.name = arrInfo.userName;
-                o.userName = arrInfo.ownerName;
-                o.telephone  = arrInfo.ownerTelephone;
-                console.log(o);
-                obj.TemplateParam = JSON.stringify(o);
-                sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
-                    console.log(data);
-                });
+                console.log(result.insertId);
+                housesDao.getArrInfoByArrId(result.insertId,function (re) {
+                    console.log("获取信息"+re);
+
+                    // var obj = {
+                    //     PhoneNumbers: '18362202673',
+                    //     TemplateCode: 'SMS_100860003',//模板编号
+                    //     TemplateParam: '{"name":"jidesong","userName":"desong","telphone":"15503878257"}',//变量名
+                    // };
+                    // obj.PhoneNumbers = re.ownerTelephone;
+                    // var o = JSON.parse(obj.TemplateParam);
+                    // o.name = re.ownerName;
+                    // o.userName = re.userName;
+                    // o.telephone  = re.telephone;
+                    // console.log(o);
+                    // obj.TemplateParam = JSON.stringify(o);
+                    // sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
+                    //     console.log(data);
+                    // });
+                })
+
                 res.json({"stateCode":39});
             }else{
                 res.json({"stateCode":40});
@@ -113,21 +119,21 @@ router.post('/agreeWatch', function(req, res, next) {
         housesDao.agreeWatch(arrInfo,function (result) {
             console.log("agreeWatch");
             if(result.affectedRows==1){
-                var obj = {
-                    PhoneNumbers: '18362202673',
-                    TemplateCode: 'SMS_100820005',//模板编号
-                    TemplateParam: '{"name":"jidesong","userName":"desong","telphone":"15503878257"}',//变量名
-                };
-                obj.PhoneNumbers = arrInfo.telephone;
-                var o = JSON.parse(obj.TemplateParam);
-                o.name = arrInfo.userName;
-                o.userName = arrInfo.ownerName;
-                o.telephone  = arrInfo.ownerTelephone;
-                console.log(o);
-                obj.TemplateParam = JSON.stringify(o);
-                sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
-                    console.log(data);
-                });
+                // var obj = {
+                //     PhoneNumbers: '18362202673',
+                //     TemplateCode: 'SMS_100820005',//模板编号
+                //     TemplateParam: '{"name":"jidesong","userName":"desong","telphone":"15503878257"}',//变量名
+                // };
+                // obj.PhoneNumbers = arrInfo.telephone;
+                // var o = JSON.parse(obj.TemplateParam);
+                // o.name = arrInfo.userName;
+                // o.userName = arrInfo.ownerName;
+                // o.telephone  = arrInfo.ownerTelephone;
+                // console.log(o);
+                // obj.TemplateParam = JSON.stringify(o);
+                // sms.sendMessage(obj.PhoneNumbers,obj.TemplateCode,obj.TemplateParam,function(data){
+                //     console.log(data);
+                // });
                 res.json({"stateCode":41});
             }else{
                 res.json({"stateCode":42});
