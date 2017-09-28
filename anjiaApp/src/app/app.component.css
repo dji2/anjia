@@ -1,15 +1,33 @@
-li:hover{
-  text-decoration: none;
+li{
+  float: left;
 
-
+  list-style: none;
+  width: 70px;
   box-sizing: border-box;
+  text-align: center;
 }
+
+li:hover{
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: black;
+}
+
 li a:hover{
   text-decoration: none;
+  display: inline-block;
+}
+a{
 
+  font-size: 15px;
+  color: white;
+  display: block;
 }
 
 a:hover{
+  color: white;
+  display: block;
   text-decoration: none;
 }
 
@@ -19,22 +37,11 @@ a:hover{
 
 }
 #nav{
-margin:  0 auto;
+   margin:  0 auto;
   line-height: 48px;
   height: 48px;
+}
 
-}
-li{
-  float: left;
-  margin-right: 20px;
-  list-style: none;
-  width: 50px;
-  box-sizing: border-box;
-}
-a{
-  font-size: 15px;
-  color: white;
-}
 #person{
   float: right;
   height: 45px;
@@ -58,5 +65,23 @@ a{
 }
 /*////////////////////////////////////////////*/
 
+#lgrg{
+  width: 135px;
+  position: absolute;
+  right: 10px;
 
+}
+
+/*#lgrg img{*/
+/*background: url("../assets/images/lgrg1.svg");*/
+/*}*/
+/*#lgrg img:hover{*/
+  /*background: url("../assets/images/lgrg3.svg");*/
+/*}*/
+.fa-user-circle{
+
+}
+.fa-user-circle:hover{
+color: #222222;
+}
 

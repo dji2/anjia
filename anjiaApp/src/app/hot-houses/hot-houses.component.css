@@ -7,7 +7,6 @@ top: 0;
   width: 100px;
   height: 50px;
   line-height: 50px;
-
 }
 
 
@@ -26,24 +25,26 @@ a:hover{
   width: 370px;
   height: 230px;
   border-radius: 4px 4px 0 0;
+}
+
+.topmove{
+
+  width: 260px;
+  height: 230px;
+  margin-top: -300px;
+  background-color: rgb(46, 38, 199);
+  display: block;
 
 }
-/*.topmove{*/
 
-  /*position: relative;*/
-  /*width: 370px;*/
-  /*height: 230px;*/
-   /*top: -260px;*/
-  /*background-color: rgba(199, 82, 75, 0.65);*/
-   /*opacity: 0.1;*/
-/*}*/
+.topmove:hover{
+  background-color: rgb(77, 63, 199);
+  width: 260px;
+  height: 230px;
+  margin-top: -300px;
+  opacity: 1;
 
-/*.topmove:hover{*/
-  /*background-color: rgba(199, 82, 75, 0.65);*/
-  /*width: 370px;*/
-  /*height: 230px;*/
- /*opacity: 1;*/
-/*}*/
+}
 
 
 #housesimg img:hover{
