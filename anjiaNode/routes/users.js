@@ -22,7 +22,7 @@ router.post('/check', function (req, res, next) {
     checkCode  =parseInt(Math.random()*1000000) ;
     var obj = {
         PhoneNumbers: '18362202673',
-        TemplateCode: 'SMS_95065005',//模板编号
+        TemplateCode: 'SMS_95040006',//模板编号
         TemplateParam: '{"number":"1314520"}',//变量名
     };
     obj.PhoneNumbers = user.telephone;

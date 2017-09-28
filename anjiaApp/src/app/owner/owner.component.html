@@ -187,13 +187,16 @@
       </div>
       上传图片
 
-      <form class=" form-horizontal" enctype="multipart/form-data">
-        <input class="form-control" type="file" name="user_icon"  id="upload_file"   (change)="onFileChanged($event.target.files)" placeholder="Upload file">
+      <form id="upimg" class=" form-horizontal" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="user_icon"  id="upload_file" (change)="onFileChanged($event.target.files)"   placeholder="Upload file">
 
-        <div id="preview">
+        <div id="preview" >
+          <!--<img src="http://owhah4u2f.bkt.clouddn.com/addpic.png" style="width: 100%; heigth: 100%;object-fit: cover" alt="">-->
           <!--<h1>+&nbsp;&nbsp;添加照片</h1>-->
         </div>
-        <input class="div1" type="submit" value="上传头像">
+        <div id="success" *ngIf="status == 1" class="info"><i class="fa fa-check-circle" aria-hidden="true" style="color: #00ae66"></i>上传成功</div>
+        <div id="error" *ngIf="status == 2" class="info"><i class="fa fa-exclamation-circle" aria-hidden="true" style="color: red"></i>服务器限制，已超出上传数量限制</div>
+        <input class="div1" type="submit" value="选择图片直接上传">
       </form>
 
 
