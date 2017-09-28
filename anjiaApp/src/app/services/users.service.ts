@@ -149,6 +149,7 @@ export class UsersService {
     )
   }
   editPass(user,callback){
+    console.log(user)
     this.http.post(this.url+'/editPass',user).subscribe(
       function (result) {
         callback(result);
