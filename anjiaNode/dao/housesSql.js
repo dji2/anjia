@@ -17,6 +17,7 @@ exports.sql={
     isFocus:"select count(*) num from focus where userId = ? and houseId = ?",
     isAsk:"select count(*) num from arrange where userId = ? and houseId = ?",
     askWatch:"insert into arrange(userId,houseId) SELECT ?, ? FROM DUAL WHERE not exists (select * from arrange where userId = ? and houseId = ?) ",
+    getArrInfoByArrId:"select * from arrangeinfo where arrangeId = ?",
     agreeWatch:"update arrange set status = 1 where arrangeId = ?",
 
 };
