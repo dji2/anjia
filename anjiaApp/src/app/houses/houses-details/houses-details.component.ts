@@ -183,7 +183,7 @@ export class HousesDetailsComponent implements OnInit {
         console.log("点赞失败");
       }
     });
-
+    $(".fa-thumbs-o-up").attr("class", "fa fa-thumbs-up");
   }
 
 
