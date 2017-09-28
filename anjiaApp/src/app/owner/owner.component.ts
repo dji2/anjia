@@ -16,7 +16,7 @@ export class OwnerComponent implements OnInit {
   owner_res:string;
   formstatus:boolean = false;
   tab_index=0;
-
+  shenfen:any;
   constructor(
     private userSer:PositionsService,
     private router:Router,
@@ -39,7 +39,7 @@ export class OwnerComponent implements OnInit {
 
       // alert(result.stateCode);
       if(result.stateCode==11){
-        that.router.navigate(['/index']);
+        that.tab_index=1;
       }else {
 
         that.owner_res='提交失败，请稍后再试';
@@ -52,6 +52,7 @@ export class OwnerComponent implements OnInit {
   }
 
   checkCard(fileList: FileList) {
+    let that=this;
     if (fileList.length > 0) {
       let file: File = fileList[0];
       let formData: FormData = new FormData();
@@ -62,10 +63,12 @@ export class OwnerComponent implements OnInit {
         "Accept": "application/json"
       });
       // let options = new RequestOptions({ headers });
-      this.http.post("https://api-cn.faceplusplus.com/cardpp/v1/ocridcard", formData)
+      that.http.post("https://api-cn.faceplusplus.com/cardpp/v1/ocridcard", formData)
         .subscribe(
           function (result) {
-            console.log(result);
+            // console.log(result);
+            that.shenfen=result;
+            // console.log(that.shenfen)
           },
           function (error) {
             console.log(error.message);

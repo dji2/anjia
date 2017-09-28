@@ -60,15 +60,22 @@ export class PersonalCenterComponent implements OnInit {
 
 
   bian(userForm){
-    let user  = userForm.form.value;
     let that=this;
-    that.ed.editUser({"token":that.localStorage.get('token'),"userId":that.localStorage.get('userId'),user},function (result) {
+    let user  = userForm.form.value;
+    user.token = that.localStorage.get('token')
+    user.userId=that.localStorage.get('userId')
+    that.ed.editUser(user,function (result) {
       // 弹出接收后台数据数值
 
       // alert(result.stateCode);
       if(result.stateCode==35){
         // alert(result.stateCode)
-        that.router.navigate(['/personal-center']);
+        // alert('成功')
+        that.ed.getUserInfo({"token":that.localStorage.get('token'),"userId":that.localStorage.get('userId')},function (result) {
+          // console.log(result);
+          that.user = result[0];
+
+        })
       }else {
         // alert(result)
         alert('提交失败，请稍后再试');
@@ -76,6 +83,7 @@ export class PersonalCenterComponent implements OnInit {
     });
     this.bianhua1=1;
     this.bianhua2=0;
+
   }
 
   hua(){
