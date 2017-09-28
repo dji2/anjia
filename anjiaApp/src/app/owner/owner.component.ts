@@ -19,7 +19,7 @@ export class OwnerComponent implements OnInit {
   formstatus:boolean = false;
   tab_index:number=0;
   shenfen:any;
-
+  status:number = 0;
   constructor(
     private userSer:PositionsService,
     private router:Router,
@@ -29,6 +29,7 @@ export class OwnerComponent implements OnInit {
 ) { }
 
   ngOnInit() {
+    this.preview("http://owhah4u2f.bkt.clouddn.com/addpic.png");
   }
   toRelease(ownerForm){
     let owner  = ownerForm.form.value;
@@ -105,6 +106,8 @@ export class OwnerComponent implements OnInit {
             function (result) {
               // console.log(result);
               that.imgIndex++;
+              that.status = 1;
+              // $('#preview').empty();
               // console.log(that.shenfen)
             },
             function (error) {
@@ -113,7 +116,7 @@ export class OwnerComponent implements OnInit {
           )
       }
     }else{
-      alert("系统限制，目前只允许您上传七张图片")
+      this.status = 2;
     }
 
   }

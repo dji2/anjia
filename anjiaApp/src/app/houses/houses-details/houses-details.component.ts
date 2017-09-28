@@ -197,10 +197,10 @@ export class HousesDetailsComponent implements OnInit {
       that.ho.focus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
         // alert(result.stateCode);
         if(result.stateCode == 21){
-          alert("收藏成功");
+          console.log("收藏成功");
 
         }else{
-          alert("收藏失败");
+          console.log("收藏失败");
         }
       });
     }else if(that.shou==1){
@@ -209,9 +209,9 @@ export class HousesDetailsComponent implements OnInit {
       that.ho.unFocus({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
         // alert(result.stateCode);
         if(result.stateCode == 23){
-          alert("取消收藏");
+          console.log("取消收藏");
         }else{
-          alert("取消失败");
+          console.log("取消失败");
         }
       });
     }
@@ -225,10 +225,10 @@ export class HousesDetailsComponent implements OnInit {
       that.ho.askWatch({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
         alert(result.stateCode);
         if(result.stateCode == 39){
-          alert("预约成功");
+          console.log("预约成功");
 
         }else{
-          alert("预约失败");
+          console.log("预约失败");
         }
       });
     }else if(that.kan==1){
