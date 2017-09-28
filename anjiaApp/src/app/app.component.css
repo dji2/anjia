@@ -70,7 +70,7 @@ background-color: rgba(255, 255, 255, 0);
   line-height:30px;
   position: absolute;
   top: 10px;
-  right: 60px;
+  right: 70px;
 }
 .user_icon img{
   height:30px;
@@ -146,17 +146,19 @@ color: #222222;
 .quick_menu{
   width: 60px;
   height: 50px;
-z-index: 1000;
+  z-index: 1000;
+  position: absolute;
+  right: 80px;
 }
 .quick_menu > li {
-
   width: 70px;
-  height: 30px;
+  height: 50px;
+
   font-size: 14px;
   font-weight: 100;
   display: inline-block;
   position: relative;
-  top: 0;
+  top: 3px;
   right: 50px;
   margin-right: 10px;
   -webkit-perspective: 1000px;
@@ -164,12 +166,12 @@ z-index: 1000;
   -ms-perspective: 1000px;
   perspective: 1000px;
   list-style: none;
+  color: white;
 }
 
 .quick_menu > li:hover {
   display: inline-block;
   position: relative;
-
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   -ms-perspective: 1000px;
@@ -180,11 +182,9 @@ z-index: 1000;
 
 .quick_menu a,
 .quick_menu a:hover{
-
-  color: #f5d95d;
+  color: white;
   font-weight: bold;
   text-decoration: none;
-
 }
 .quick_menu > li:hover .user_fun_sub {
   opacity:1;
@@ -217,6 +217,7 @@ right: 20px;
   -moz-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
+  top: 51px;
 }
 
 
