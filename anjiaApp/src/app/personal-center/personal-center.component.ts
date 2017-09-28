@@ -70,12 +70,14 @@ export class PersonalCenterComponent implements OnInit {
       // alert(result.stateCode);
       if(result.stateCode==35){
         // alert(result.stateCode)
-        // alert('成功')
         that.ed.getUserInfo({"token":that.localStorage.get('token'),"userId":that.localStorage.get('userId')},function (result) {
           // console.log(result);
           that.user = result[0];
-
+          that.localStorage.set('userName',that.user.userName);
         })
+
+
+
       }else {
         // alert(result)
         alert('提交失败，请稍后再试');

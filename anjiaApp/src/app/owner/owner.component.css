@@ -131,3 +131,23 @@ li a{
   background-color: #39ac6a;
 }
 
+
+#preview{
+  width: 200px;
+  height: 190px;
+  margin-left: 30%;
+  margin-top: 50px;
+  border: 1px solid lightgrey;
+  position: relative;
+  top: -200px;
+  overflow: hidden;
+  /*background-color: #9c9fa1;*/
+}
+#preview img{
+  margin: 50px 60px;
+  height: 1000%;
+  width: 100%;
+  object-fit: cover;
+}
+
+

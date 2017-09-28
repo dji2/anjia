@@ -152,7 +152,7 @@ router.post('/addHouse', function(req, res, next) {
         housesDao.addHouse(house,function (result) {
 
             if(result.affectedRows==1){
-                res.json({"stateCode":11});
+                res.json({"stateCode":11,"houseId":result.insertId});
             }else{
                 res.json({"stateCode":12});
             }

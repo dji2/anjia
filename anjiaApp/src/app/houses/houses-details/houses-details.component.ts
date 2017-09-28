@@ -144,14 +144,14 @@ export class HousesDetailsComponent implements OnInit {
 
     that.ho.addArrInfo({"comment":that.comment,"userId":that.localStorage.get('userId'),"houseId":that.houseId},function (result) {
       if(result.stateCode == 15){
-        alert("评论成功");
+        console.log("评论成功");
         that.ho.getArrInfo({"houseId":that.houseId},function (result) {
 
           console.log(result);
           that.users=result;
         })
       }else{
-        alert("评论失败");
+        console.log("评论失败");
       }
     });
 
@@ -171,16 +171,16 @@ export class HousesDetailsComponent implements OnInit {
 
 
     that.ho.agree({"arrangeId":arrangeId,"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-      alert(result.stateCode);
+      console.log(result.stateCode);
       if(result.stateCode == 17){
-        alert("点赞成功");
+        console.log("点赞成功");
         that.ho.getArrInfo({"houseId":that.houseId},function (result) {
 
           console.log(result);
           that.users=result;
         })
       }else{
-        alert("点赞失败");
+        console.log("点赞失败");
       }
     });
 

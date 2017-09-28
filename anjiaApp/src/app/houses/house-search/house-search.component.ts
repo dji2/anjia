@@ -22,7 +22,7 @@ export class HouseSearchComponent implements OnInit {
 
     this._stext=this.route.snapshot.paramMap.get('searchText');
 
-    alert(this._stext);
+    console.log(this._stext);
     this.search(this._stext);
   }
   search(s){
