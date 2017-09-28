@@ -115,7 +115,7 @@ export class UsersService {
         callback(result);
       },
       function (error) {
-        alert(error.message);
+        console.log(error.message);
       }
     )
   }
@@ -148,6 +148,15 @@ export class UsersService {
       }
     )
   }
-
+  editPass(user,callback){
+    this.http.post(this.url+'/editPass',user).subscribe(
+      function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 
 }
