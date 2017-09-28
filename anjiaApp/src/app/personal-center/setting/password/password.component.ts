@@ -28,9 +28,15 @@ export class PasswordComponent implements OnInit {
       user.token = that.localStorage.get('token')
       user.userId=that.localStorage.get('userId')
       that.ed.editPass(user,function (result) {
-        this.router.navigate(['/index']);
+        // console.log(result)
+        if(result.statusCode==37){
+          this.router.navigate(['/index']);
+        }else{
+          alert('失败')
+        }
 
-        console.log(result)
+
+        // console.log(result)
       })
 
 
