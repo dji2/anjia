@@ -13,13 +13,33 @@
           <a  routerLink="/login" routerLinkActive="active">
           <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>&nbsp;登录/注册</a></li>
       <!--<li *ngIf="!islogin"><a  routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user" ></span>注册</a></li>-->
-        <div id="person" *ngIf="islogin">
-          <a  routerLink="/personal-center" routerLinkActive="active">{{userName}}</a>
-          <div class="user_icon">
-            <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" alt="">
-          </div>
-          <a routerLink='/index' routerLinkActive="active" (click)="out()">退出</a>
-        </div>
+        <!--<li>  <a routerLink='/index' routerLinkActive="active" (click)="out()">退出</a></li>-->
+
+        <li *ngIf="islogin" class="user_fun quick_menu">
+          <a id="downlist">
+            <ul class="quick_menu">
+              <li class="user_fun" style="height: 52px">
+                <a href="/personal-center" title="PandaThemes" style="display: inline-block">
+                         <span class="user_icon">
+                       <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" alt="">
+                     </span>
+                  {{userName}}
+                </a>
+                <ul class="user_fun_sub">
+                  <li><a href="/personal-center">个人中心</a></li>
+                  <li><a href="/owner">发布房屋</a></li>
+                  <li><a href="/personal-center">我的消息</a></li>
+                  <li><a href="/personal-center">资料修改</a></li>
+                  <li><a href="/personal-center">密码重置</a></li>
+
+                  <li><a routerLink='/index' routerLinkActive="active" (click)="out()">退出登录</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </a>
+        </li>
+
       </ul>
     </div>
   </nav>
