@@ -1,11 +1,12 @@
 .myfooter{
   width: 100%;
   height: auto;
-  background-color: rgb(34, 34, 34);
   box-sizing: border-box;
   overflow-y:hidden;
   margin-left: 0px;
-
+  background: url("../../assets/images/footer-bg.jpg");
+  background-size: 100% ;
+  background-position: bottom;
 }
 .myfooter ul {
   margin-top: 30px;

@@ -27,7 +27,8 @@
               <li><a href="/page-not-found"><span ></span>小区</a></li>
               <li><a href="/owner"><span ></span>业主</a></li>
               <!--<li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>-->
-              <li  *ngIf="!islogin" ><a href="/login"><span class="glyphicon glyphicon-user" ></span>登录/注册</a></li>
+              <li  *ngIf="!islogin" ><a href="/login">   <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>&nbsp;登录/注册</a></li>
+
               <li *ngIf="islogin" class="user_fun quick_menu">
                 <a id="downlist">
                   <ul class="quick_menu">
