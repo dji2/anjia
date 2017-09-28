@@ -283,6 +283,9 @@ button{
   /*overflow: hidden;*/
 /*}*/
 .hot-houses{
-margin-left: -65px;
-  margin-right: -65px;
+  position: relative;
+margin-left: -40px;
+  left: 0;
+  right: 0;
+
 }
