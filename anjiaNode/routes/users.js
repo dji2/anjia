@@ -146,14 +146,14 @@ router.post('/getUserInfo',ct.checkToken, function (req, res, next) {
 //修改密码
 router.post('/editPass',ct.checkToken, function (req, res, next)    {
     var user = req.body;
-    console.log(user.newPass);
+    console.log(user);
     user.password = util.MD5(user.password);
     user.newPass = util.MD5(user.newPass);
     if(user){
         console.log("editPass:id"+user.userId);
         userdao.editPass(user,function (result) {
-            console.log("editPass");
-            if(result.affectedRows > 0){
+            console.log(result);
+            if(result.affectedRows == 1){
                 res.json({"stateCode":37});
             }else{
                 res.json({"stateCode":38});
