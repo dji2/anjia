@@ -137,7 +137,7 @@ exports.userDao={
                     callback('e004');
                     return;
                 }
-
+                console.log(result);
                 callback(result);
                 client.release();
             })
