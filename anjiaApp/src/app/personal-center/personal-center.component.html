@@ -1,26 +1,26 @@
 
 
 
-<div class="top">
-  <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png
+<!--<div class="top">-->
+  <!--<img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png-->
+<!--" height="80" width="160"/>-->
+  <!--<ul class="nav">-->
+    <!--&lt;!&ndash;<li class="li01" >&ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="#" style="color: white"><app-test-list-item [content]="'ewweww'"></app-test-list-item></a></li>&ndash;&gt;-->
+    <!--<li class="li01"><a href="/houses" style="color: white">租房</a></li>-->
+    <!--<li class="li01"><a href="/owner" style="color: white">业主</a></li>-->
+    <!--<li class="li01"><a href="/news" style="color: white">头条</a></li>-->
+  <!--</ul>-->
+<!--</div>-->
+<div id="container" >
+  <a href="/index">
+    <img src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png" alt="" style="width: 120px;height: 60px">
+  </a>
+<div class="mid" id="mid" >
 
-" height="80" width="160"/>
-  <ul class="nav">
-    <!--<li class="li01" >-->
-    <!--<a href="#" style="color: white"><app-test-list-item [content]="'ewweww'"></app-test-list-item></a></li>-->
-    <li class="li01"><a href="/houses" style="color: white">租房</a></li>
-    <li class="li01"><a href="/owner" style="color: white">业主</a></li>
-    <li class="li01"><a href="/news" style="color: white">头条</a></li>
-  </ul>
-</div>
-<div class="mid" id="mid">
-  <div class="mid01">
-
+  <div class="mid01" style="color: white;position: absolute;top: -150px">
     <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'" style="border-radius: 50px;" height="100" width="100"/>
-
-
     <div *ngIf="bianhua2">
-
       <form #userForm="ngForm">
         <input #userName="ngModel" [(ngModel)]="user.userName" id="userName" name="userName" style="width: 10%;height: 40px" type="text" placeholder="{{user.userName}}">
         <br>
@@ -50,19 +50,13 @@
       <span style="font-size: 18px">{{user.personInfo}}</span>
       <br>
       <div class="middet">
-        <img src="http://owhah4u2f.bkt.clouddn.com/email.png
-
-" width="20" height="20">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
         <span>{{user.email}}</span>
         <br>
-        <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
-
-" width="20" height="20">
+        <i class="fa fa-phone-square" aria-hidden="true"></i>
         <span>{{user.telephone}}</span>
         <br>
-        <img src="http://owhah4u2f.bkt.clouddn.com/edit.png
-
-" height="20" width="20">
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
         <span (click)="hua()">编辑资料</span>
       </div>
     </div>
@@ -71,7 +65,7 @@
 
   </div>
   <div class="mid02">
-    <ul class="nav tit">
+    <ul class="nav tit" >
       <li  [class.on]="tab_index==index" (click)="tab_index=index"  *ngFor="let item of tabs;let first=first;let index=index "><span href="#">{{item}}</span></li>
     </ul>
 
@@ -82,6 +76,9 @@
       <div *ngSwitchCase="3"><a ><app-setting></app-setting></a></div>
     </div>
   </div>
+
+</div>
+
 </div>
 
 
