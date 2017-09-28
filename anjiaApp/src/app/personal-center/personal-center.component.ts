@@ -44,7 +44,6 @@ export class PersonalCenterComponent implements OnInit {
 
     })
 
-
   }
 
   toIndex(){

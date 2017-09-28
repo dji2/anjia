@@ -76,6 +76,7 @@ img{
 }
 .renting{
   float: right;
+  margin-top: 30px;
 }
 .renting span{
   font-size: 2em;

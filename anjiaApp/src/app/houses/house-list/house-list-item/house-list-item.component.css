@@ -35,6 +35,11 @@ ul, ol, li {
   width: 173px;
   height: 130px;
 }
+
+.pic-panel img{
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.2);
+}
 a {
   text-decoration: none;
   outline: none;
