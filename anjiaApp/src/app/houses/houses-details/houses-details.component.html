@@ -235,31 +235,41 @@
         </div>
       </div>
       <div class="yezhuright col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1" id="yezhuright">
-        <div style="height: 50px"  style="margin: 0 auto">
-          <span style="font-size: 40px">{{house.housePrice}}</span>元/月
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <span style="font-size: 40px">{{house.area}}</span>平
-        </div>
+        <!--<div style="height: 50px"  style="margin: 0 auto">-->
+          <!--<span style="font-size: 40px">{{house.housePrice}}</span>元/月-->
+          <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+          <!--<span style="font-size: 40px">{{house.area}}</span>平-->
+        <!--</div>-->
         <h2 *ngIf="islogin1" style="color: red;margin-top: 20px">房主信息必须登录后才能查看</h2>
         <div style="margin-top: 10px" *ngIf="islogin" id="denglu">
+          <div style="text-align: center">
           <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{house.ownerId}}.jpg"
                onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'"
-               style="border-radius: 50px;" height="100" width="100"/>
+               style="border-radius: 50px;" height="100" width="100"/><br><br>
+            <span style="color: #4F5253;font-size: 18px">房东：{{house.ownerName}}</span><br>
+            <span style="color: #969d9e;font-size: 15px">个人简介：{{house.personInfo}}</span>
+          </div>
+
             <!--<img style="margin-top: 10px;height: 80px;width: 80px" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{house.ownerId}}.jpg" alt="">-->
           <div style="height: 80px;margin-top: 10px;">
-            <span style="color: #4F5253;font-size: 30px">{{house.ownerName}}</span>
+            <div>
+            <img src="http://owhah4u2f.bkt.clouddn.com/images/tel.png" width="25" height="25">
+            <span style="color: #969d9e;font-size: 18px">{{house.telphone}}</span>
             <br>
-            <span style="color: #4F5253;font-size: 30px">{{house.telphone}}</span>
+            </div>
+            <div style="margin-top: 8px">
+            <img src="http://owhah4u2f.bkt.clouddn.com/images/test.png" width="25" height="25">
+            <span style="color: #969d9e;font-size: 18px">已验证身份信息</span></div>
           </div>
         </div>
 
+        <button style="margin-top: 15px;outline: none" type="button" class="btn btn-success shoucang" (click)="collect()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="shou">收藏此房</span></button>
+        <button style="margin-top: 15px;outline: none" type="button" class="btn btn-success shoucang" (click)="kanfang()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="kan">我要看房</span></button>
 
-        <button style="margin-top: 30px;outline: none" type="button" class="btn btn-success shoucang" (click)="collect()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="shou">收藏此房</span></button>
-        <button style="margin-top: 30px;outline: none" type="button" class="btn btn-success shoucang" (click)="kanfang()"><i class="fa fa-heart-o" aria-hidden="true"></i><span id="kan">我要看房</span></button>
-
-        <div style="margin-top: 170px;border-top: 1px solid #DCE0E0">
-          <div>这个房源是很多人的心仪之所。</div>
-          <div>过去一周浏览量超过500次。</div>
+        <div style="margin-top: 130px;border-top: 1px solid #DCE0E0;color: #969d9e">
+          <div style="margin-left: 30px;margin-top: 10px;font-size: 18px;float: left"><img src="http://owhah4u2f.bkt.clouddn.com/images/youpin.png" width="25" height="25">优品</div>
+          <!--<div style="margin-left: 30px;margin-top: 10px;font-size: 18px;float: left"><img src="http://owhah4u2f.bkt.clouddn.com/images/yanzhen.png" width="25" height="25">验真</div>-->
+          <div style="margin-left: 30px;margin-top: 10px;font-size: 18px;float: left"><img src="http://owhah4u2f.bkt.clouddn.com/images/shipai.png" width="25" height="25">实拍</div>
         </div>
       </div>
     </div>
