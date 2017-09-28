@@ -461,7 +461,6 @@ display: none;
   height: 50px;
   position: relative;
   top:-3px;
-
   display: inline-block;
 
 }
@@ -477,9 +476,6 @@ display: none;
   width:30px;
   border-radius: 15px
 }
-
-
-
 
 
 #navbar-right{
@@ -555,6 +551,7 @@ font-weight: 100;
   text-align: left;
   line-height: 30px;
   width: 125px;
+  top: 30px;
   padding: 5px 0;
   border-radius: 5px;
   background-color: rgba(0, 16, 19, 0.71);
