@@ -19,6 +19,7 @@ export class OwnerComponent implements OnInit {
   formstatus:boolean = false;
   tab_index:number=0;
   shenfen:any;
+
   constructor(
     private userSer:PositionsService,
     private router:Router,
@@ -60,7 +61,10 @@ export class OwnerComponent implements OnInit {
   checkCard(fileList: FileList) {
     let that=this;
     if (fileList.length > 0) {
+
+
       let file: File = fileList[0];
+      that.sfzpreview(file);
       let formData: FormData = new FormData();
       formData.append('image_file', file, file.name);
       formData.append('api_key', 'dOd42wxHQ7RF-PhISyM-kRdeMZr1HsaR');
@@ -113,6 +117,7 @@ export class OwnerComponent implements OnInit {
     }
 
   }
+
   // checkCard(e){
   //   var file=e[0];
   //   this.preview(file);
@@ -129,6 +134,18 @@ export class OwnerComponent implements OnInit {
       $('#preview').empty().append($img);
     }
   }
+  sfzpreview(file) {
+    var img = new Image();
+    img.src = URL.createObjectURL(file);
+    var url = img.src;
+    var $img = $(img).css({'width': '100%', 'heigth': '100%', 'object-fit': 'cover'});
+    img.onload = function () {
+      URL.revokeObjectURL(url);
+      $img.addClass('fitcss');
+      $('#sfzpreview').empty().append($img);
+    }
+  }
+
 
   wancheng() {
     this.router.navigate(['/houses']);
