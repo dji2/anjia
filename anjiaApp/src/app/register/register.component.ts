@@ -64,7 +64,7 @@ export class RegisterComponent implements OnInit {
     // alert('执行跳转');
     const that = this;
     that.userSer.register(registerForm.form.value, function (result) {
-      console.log(result);
+
       if (result.stateCode == 5) {
         that.reg_res = '用户名已存在！';
       } else if (result.stateCode == 6) {
@@ -74,7 +74,6 @@ export class RegisterComponent implements OnInit {
         that.router.navigate(['/index']);
         // location.href("http://localhost:4200");
 
-        alert('执行跳转');
 
       } else {
         that.reg_res = '数据库错误！';
