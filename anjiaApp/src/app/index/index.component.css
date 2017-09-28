@@ -492,9 +492,7 @@ display: none;
   margin-top: -25px;
 
 }
-.quick_menu{
 
-}
 .quick_menu > li {
 
   width: 70px;
@@ -511,6 +509,7 @@ font-weight: 100;
   -ms-perspective: 1000px;
   perspective: 1000px;
   list-style: none;
+  color: white;
 }
 
 .quick_menu > li:hover {
