@@ -85,30 +85,35 @@ export class OwnerComponent implements OnInit {
 
 
   onFileChanged(fileList: FileList) {
-    if (fileList.length > 0) {
-      let that = this;
-      let file: File = fileList[0];
-      that.preview(file);
-      let formData: FormData = new FormData();
-      formData.append('file', file, file.name);
-      formData.append('key', 'images/houses/'+that.houseId+'/'+that.imgIndex+'.jpg');
-      formData.append('token', 'Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9');
-      let headers = new Headers({
-        "Accept": "application/json"
-      });
-      // let options = new RequestOptions({ headers });
-      this.http.post("http://up.qiniu.com/", formData)
-        .subscribe(
-          function (result) {
-            // console.log(result);
-            that.imgIndex++;
-            // console.log(that.shenfen)
-          },
-          function (error) {
-            console.log(error.message);
-          }
-        )
+    if(this.imgIndex<6){
+      if (fileList.length > 0) {
+        let that = this;
+        let file: File = fileList[0];
+        that.preview(file);
+        let formData: FormData = new FormData();
+        formData.append('file', file, file.name);
+        formData.append('key', 'images/houses/'+that.houseId+'/'+that.imgIndex+'.jpg');
+        formData.append('token', 'Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9');
+        let headers = new Headers({
+          "Accept": "application/json"
+        });
+        // let options = new RequestOptions({ headers });
+        this.http.post("http://up.qiniu.com/", formData)
+          .subscribe(
+            function (result) {
+              // console.log(result);
+              that.imgIndex++;
+              // console.log(that.shenfen)
+            },
+            function (error) {
+              console.log(error.message);
+            }
+          )
+      }
+    }else{
+      alert("系统限制，目前只允许您上传七张图片")
     }
+
   }
   // checkCard(e){
   //   var file=e[0];
