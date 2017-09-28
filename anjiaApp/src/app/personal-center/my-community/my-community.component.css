@@ -109,18 +109,6 @@ img{
   top: 0px;
   border-right: 2px white solid;
 }
-.del03{
-  height: 30px;
-  width: 30px;
-  float: right;
-  text-align: center;
-  display: none;
-  clear: both;
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  border-right: 2px white solid;
-}
 .del{
   height: 30px;
   width: 30px;
@@ -161,8 +149,6 @@ a:hover,a:focus{
 #accordion .panel-title{
   padding: 0;
 }
-
-
 #accordion .panel-title a{
   display: block;
   font-size: 16px;

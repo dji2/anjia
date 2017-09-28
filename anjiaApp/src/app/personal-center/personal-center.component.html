@@ -1,3 +1,6 @@
+
+
+
 <div class="top">
   <img class="icon" (click)="toIndex()" src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png
 
@@ -10,16 +13,12 @@
     <li class="li01"><a href="/news" style="color: white">头条</a></li>
   </ul>
 </div>
-<div class="mid">
+<div class="mid" id="mid">
   <div class="mid01">
 
-    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg
+    <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'" style="border-radius: 50px;" height="100" width="100"/>
 
-" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png
-
-'" style="border-radius: 50px;" height="100" width="100"/>
-
-
+{{userId}}
     <div *ngIf="bianhua2">
 
       <form #userForm="ngForm">
@@ -83,23 +82,6 @@
       <div *ngSwitchCase="3"><a ><app-setting></app-setting></a></div>
     </div>
   </div>
-
-  <!--<div class="mid02">-->
-    <!--<div class="list">-->
-      <!--<div class="li02"><a routerLink="./community" routerLinkActive="active" style="color: #555555;text-decoration:none">我的房源</a></div>-->
-      <!--<div class="li02"><a routerLink="./rent" routerLinkActive="active" style="color: #555555;text-decoration:none">关注的租房</a></div>-->
-      <!--<div class="li02"><a routerLink="./record" routerLinkActive="active" style="color: #555555;text-decoration:none">看房记录</a></div>-->
-      <!--<div class="li02"><a  routerLink="./setting" routerLinkActive="active" style="color: #555555;text-decoration:none">编辑资料</a></div>-->
-    <!--</div>-->
-    <!--<div class="show">-->
-      <!--<router-outlet>-->
-
-
-      <!--</router-outlet>-->
-    <!--</div>-->
-
-  <!--</div>-->
-
-
 </div>
+
 

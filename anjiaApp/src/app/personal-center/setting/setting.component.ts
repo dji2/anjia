@@ -17,9 +17,9 @@ import { Component, OnInit } from '@angular/core';
 
   export class SettingComponent {
   // title = 'la';
-  tabs= [ '上传头像' , '修改昵称', '修改密码'];
+  tabs= [ '上传头像' ,  '修改密码'];
   tab_index= 0 ;
-  arr_li = ['first tab', ' second tab ', ' third tab'];
+  arr_li = ['first tab', ' third tab'];
   // flag = true;
   // num = 100 ;
 
