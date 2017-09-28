@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 
 import { LocalStorageService } from './../services/local-storage.service';
 import {HttpClient} from '@angular/common/http';
+declare  var $:any;
 
 @Component({
   selector: 'app-owner',
@@ -12,7 +13,8 @@ import {HttpClient} from '@angular/common/http';
   providers:[PositionsService],
 })
 export class OwnerComponent implements OnInit {
-
+  houseId:number = 1;
+  imgIndex:number = 1;
   owner_res:string;
   formstatus:boolean = false;
   tab_index=0;
@@ -39,6 +41,7 @@ export class OwnerComponent implements OnInit {
 
       // alert(result.stateCode);
       if(result.stateCode==11){
+        that.houseId = result.houseId;
         that.tab_index=1;
       }else {
 
@@ -50,6 +53,9 @@ export class OwnerComponent implements OnInit {
     this.formstatus = !this.formstatus;
     // console.log(this.formstatus)
   }
+
+
+
 
   checkCard(fileList: FileList) {
     let that=this;
@@ -76,6 +82,53 @@ export class OwnerComponent implements OnInit {
         )
     }
   }
+
+
+  onFileChanged(fileList: FileList) {
+    if (fileList.length > 0) {
+      let that = this;
+      let file: File = fileList[0];
+      that.preview(file);
+      let formData: FormData = new FormData();
+      formData.append('file', file, file.name);
+      formData.append('key', 'images/houses/'+that.houseId+'/'+that.imgIndex+'.jpg');
+      formData.append('token', 'Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9');
+      let headers = new Headers({
+        "Accept": "application/json"
+      });
+      // let options = new RequestOptions({ headers });
+      this.http.post("http://up.qiniu.com/", formData)
+        .subscribe(
+          function (result) {
+            // console.log(result);
+            that.imgIndex++;
+            // console.log(that.shenfen)
+          },
+          function (error) {
+            console.log(error.message);
+          }
+        )
+    }
+  }
+  // checkCard(e){
+  //   var file=e[0];
+  //   this.preview(file);
+  // }
+  //
+  preview(file) {
+    var img = new Image();
+    img.src = URL.createObjectURL(file);
+    var url = img.src;
+    var $img = $(img).css({'width': '100%', 'heigth': '100%', 'object-fit': 'cover'});
+    img.onload = function () {
+      URL.revokeObjectURL(url);
+      $img.addClass('fitcss');
+      $('#preview').empty().append($img);
+    }
+
+
+  }
+
 
 }
 
