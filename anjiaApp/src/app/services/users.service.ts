@@ -115,7 +115,7 @@ export class UsersService {
         callback(result);
       },
       function (error) {
-        alert(error.message);
+        console.log(error.message);
       }
     )
   }

@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
 
 
       }else{
-        alert('用户名或密码错误');
+        console.log('用户名或密码错误');
         that.login_res='用户名或密码错误';
       }
     })
