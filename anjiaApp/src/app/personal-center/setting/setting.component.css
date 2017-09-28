@@ -11,18 +11,22 @@ ul{
   font-size: 17px;
 }
 li{
-  height: 30px;
-  width: 160px;
+  height: 37px;
+  width: 130px;
   border: 1px white solid;
-  color: #8D8D8D;
-  background-color: #ebebeb;
-  border-radius: 5px ;
+  color: rgba(0, 0, 0, 0.89);
   text-align: center;
-  line-height: 30px;
+  line-height: 37px;
   margin-right: 20px;
   left: 20%;
+
 }
+
+
 .nav li.on{
-  background-color: #00b86b;
-  color: white;
+  transition: width 1s;
+  color: #000000;
+  border-bottom: 3px solid #1a8b51;
+
+
 }

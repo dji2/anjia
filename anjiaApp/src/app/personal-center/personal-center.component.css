@@ -4,7 +4,7 @@
 .top{
   width: 100%;
   height:191px;
-  background-color: #00b86b;
+
   float: left;
 }
 .icon{
@@ -25,7 +25,7 @@
 }
 .li01 a{
   font-size: 20px;
-  background-color: #00b86b;
+
 }
 .li01 a:hover{
   color: #00B7FF;
@@ -35,19 +35,21 @@
 .mid{
   top: 400px;
   width: 100%;
-  background-color: #F5F5F5;
+
+
 }
 /*---------选项卡-------------------*/
 .mid01{
   width: 100%;
   height: 366px;
-  background-color: #F2F2F2;
+
   /*border: solid #E9E9E9 1px;*/
   /*box-shadow: 0px 0px  4px 3px #E9E9E9;*/
   position: absolute;
   /*margin-left: 175px;*/
   margin-top: 191px;
   text-align: center;
+
 }
 /*background-color: #39AC6A;*/
 .headIcon{
@@ -70,10 +72,13 @@
   width: 200px;
   height: 100px;
   margin-left: 43%;
+  color: whitesmoke;
 }
+
+
 .middet span{
   font-size:14px;
-  color: #acacac;
+  color: whitesmoke;
   line-height: 33px;
 }
 /*__________________显示页___________________-*/
@@ -82,6 +87,7 @@
   height: 760px;
   position: absolute;
   margin-top: 556px;
+
 }
 
 .tit{
@@ -89,6 +95,8 @@
   width:800px;
   margin: 0 auto;
   list-style: none;
+  background-color: rgba(78, 104, 163, 0.73);
+  border-radius: 5px ;
 }
 
 .tit li{
@@ -97,13 +105,13 @@
   text-align: center;
   line-height: 40px;
   float: left;
-  border:1px solid white;
-  border-radius: 5px ;
+  border-radius: 3px ;
+  color: white;
 
 }
 .tit li.on {
-  background-color: #00b86b;
-  color: white;
+background-color: rgba(0, 0, 0, 0.13);
+  color: rgba(255, 255, 255, 0.82);
   cursor: pointer;
 }
 
@@ -111,4 +119,12 @@
   width: 80%;
   height: 680px;
   margin-left:10%;
+  margin-top: 55px;
+}
+#container{
+  width: 100%;
+  background: url("../../assets/images/citylight.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
 }
