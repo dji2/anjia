@@ -189,6 +189,7 @@ export class IndexComponent implements OnInit,AfterContentInit {
     this.localStorage.remove('token')
     this.localStorage.remove('userId')
     this.userName=this.localStorage.remove('userName');
+    this.router.navigate(['/login']);
   }
 
 }
