@@ -165,7 +165,7 @@ export class HousesDetailsComponent implements OnInit {
   //     this.users=result;
   //   })
   // }
-  agree(arrangeId){
+  agree(arrangeId,index){
     // alert(arrangeId);
     let that = this;
 
@@ -183,7 +183,7 @@ export class HousesDetailsComponent implements OnInit {
         console.log("点赞失败");
       }
     });
-    $(".fa-thumbs-o-up").attr("class", "fa fa-thumbs-up");
+    // $(".user_comment").children('.fa-thumbs-o-up').eq(index).attr("class", "fa fa-thumbs-up");
   }
 
 

@@ -322,7 +322,7 @@
             <h3>精彩评论</h3>
             <div style="font-size: 28px" >
 
-              <ul class="user_comment" *ngFor="let user of users" style="border: none;width: 100%;">
+              <ul class="user_comment" *ngFor="let user of users;let index = index" style="border: none;width: 100%;">
                 <div class="user_icon">
                   <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{user.userId}}.jpg" alt="">
                 </div>
@@ -330,7 +330,7 @@
                 <li class="commentinfo">{{user.comment}}</li>
                 <div >
                   <div class="adate">时间 {{user.publishTime| date:'yyyy-MM-dd HH:mm:ss'}}</div>
-                  <div class="thumb"><a (click)="agree(user.arrangeId)" class="fa fa-thumbs-o-up"></a>{{user.agreeNum}}</div>
+                  <div class="thumb"><a (click)="agree(user.arrangeId,index)" class="fa fa-thumbs-o-up"></a>{{user.agreeNum}}</div>
                 </div>
               </ul>
 
