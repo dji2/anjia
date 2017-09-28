@@ -17,7 +17,7 @@ export class OwnerComponent implements OnInit {
   imgIndex:number = 1;
   owner_res:string;
   formstatus:boolean = false;
-  tab_index=0;
+  tab_index:number=0;
   shenfen:any;
   constructor(
     private userSer:PositionsService,
@@ -72,9 +72,7 @@ export class OwnerComponent implements OnInit {
       that.http.post("https://api-cn.faceplusplus.com/cardpp/v1/ocridcard", formData)
         .subscribe(
           function (result) {
-            // console.log(result);
             that.shenfen=result;
-            // console.log(that.shenfen)
           },
           function (error) {
             console.log(error.message);
@@ -130,10 +128,10 @@ export class OwnerComponent implements OnInit {
       $img.addClass('fitcss');
       $('#preview').empty().append($img);
     }
-
-
   }
 
-
+  wancheng() {
+    this.router.navigate(['/houses']);
+  }
 }
 
