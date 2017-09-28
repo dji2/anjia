@@ -23,20 +23,20 @@
     <div *ngIf="bianhua2">
 
       <form #userForm="ngForm">
-        <input #userName="ngModel" [(ngModel)]="_userName" id="userName" name="userName" style="width: 10%;height: 40px" type="text" placeholder="{{user.userName}}">
+        <input #userName="ngModel" [(ngModel)]="user.userName" id="userName" name="userName" style="width: 10%;height: 40px" type="text" placeholder="{{user.userName}}">
         <br>
-        <input #personInfo="ngModel" [(ngModel)]="_personInfo" id="personInfo" name="personInfo" style="width: 30%;height: 40px" type="text" placeholder="{{user.personInfo}}">
+        <input #personInfo="ngModel" [(ngModel)]="user.personInfo" id="personInfo" name="personInfo" style="width: 30%;height: 40px" type="text" placeholder="{{user.personInfo}}">
         <br>
         <div class="middet">
           <img src="http://owhah4u2f.bkt.clouddn.com/email.png
 
 " width="20" height="20">
-          <input #email="ngModel" [(ngModel)]="_email" id="email" name="email"  type="text" placeholder="{{user.email}}">
+          <input #email="ngModel" [(ngModel)]="user.email" id="email" name="email"  type="text" placeholder="{{user.email}}">
           <br>
           <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
 
 " width="20" height="20">
-          <input #telephone="ngModel" [(ngModel)]="_telephone" id="telephone" name="telephone"  type="text" placeholder="{{user.telephone}}">
+          <input #telephone="ngModel" [(ngModel)]="user.telephone" id="telephone" name="telephone"  type="text" placeholder="{{user.telephone}}">
           <br>
           <button (click)="bian(userForm)" style="height: 30px;width: 60%;background-color: #00AE66;color: white;border-radius: 5px;border: none;margin-top: 5px">保存</button>
         </div>
@@ -46,7 +46,7 @@
     </div>
 
     <div *ngIf="bianhua1">
-      <h1 style="margin-top: 20px">{{userName || '你还没有登录呦'}}</h1>
+      <h1 style="margin-top: 20px">{{user.userName || '你还没有登录呦'}}</h1>
       <br>
       <span style="font-size: 18px">{{user.personInfo}}</span>
       <br>

@@ -19,7 +19,7 @@
     <li style="float: right"><a style="cursor: pointer" [class.go]="tab_index==2" (click)="tab_index=2" >第三步</a></li>
   </ul>
   <div [ngSwitch]="tab_index">
-    <div *ngSwitchCase="0" id="section1" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+    <div *ngSwitchCase="0" id="section1" style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
          class="container-fluid">
 
       <div class="progress">
@@ -27,29 +27,7 @@
           <span class="sr-only">0% Complete</span>
         </div>
       </div>
-      上传图片
-      <form class="form-horizontal" enctype="multipart/form-data">
-        <input class="form-control" type="file" name="file" (change)="checkCard($event.target.files)" placeholder="Upload file">
-      </form>
-    </div>
-    <div *ngSwitchCase="1" id="section2" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
-         class="container-fluid">
 
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-          <span class="sr-only">50% Complete</span>
-        </div>
-      </div>
-身份证
-    </div>
-    <div *ngSwitchCase="2" id="section3"
-         style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
-         class="container-fluid">
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-          <span class="sr-only">100% Complete</span>
-        </div>
-      </div>
 
       <form class="form-horizontal" #ownerForm="ngForm">
 
@@ -165,10 +143,52 @@
           </div>
         </div>
         <div class="form-group" >
-          <button type="button" (click)="toRelease(ownerForm)" [disabled]="!(formstatus && ownerForm.form.valid )" class="btn btn-success">确认发布</button>
+          <button type="button" (click)="toRelease(ownerForm)" [disabled]="!(formstatus && ownerForm.form.valid )" class="btn btn-success">下一步</button>
         </div>
 
       </form>
+
+    </div>
+    <div *ngSwitchCase="1" id="section2" style="height: 390px;box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+         class="container-fluid">
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+          <span class="sr-only">50% Complete</span>
+        </div>
+      </div>
+身份证
+      <form class="form-horizontal" method="post" action="http://up.qiniu.com/" enctype="multipart/form-data">
+        <input type="hidden" name="token" value="Ulg_mgLt7ByWKL4h2_fF1Gt80YShyr3a89lHaUnM:5T42rjQDg-qxCDncqf4XnTzt0K8=:eyJzY29wZSI6ImFuamlhIiwiZGVhZGxpbmUiOjE1MTQ2MDQ0NTk3ODh9"> 使用该凭证测试上传文件
+        <input class="form-control" type="file" name="file" (change)="checkCard($event.target.files)" placeholder="Upload file">
+        <input name="key" type="hidden" value="images/user-icon/14.jpg">
+        {{userId}}
+      </form>
+      <div>
+        <h3>姓名：{{shenfen.cards[0].name}}</h3>
+        <h3>性别：{{shenfen.cards[0].gender}}</h3>
+        <h3>身份证：{{shenfen.cards[0].id_card_number}}</h3>
+        <h3>出生日期：{{shenfen.cards[0].birthday}}</h3>
+        <h3>民族：{{shenfen.cards[0].race}}</h3>
+        <h3>地址：{{shenfen.cards[0].address}}</h3>
+      </div>
+      <button type="button" (click)="tab_index=2" class="btn btn-success">下一步</button>
+    </div>
+    <div *ngSwitchCase="2" id="section3"
+         style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
+         class="container-fluid">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+          <span class="sr-only">100% Complete</span>
+        </div>
+      </div>
+      上传图片
+      <form class="form-horizontal" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="file" (change)="checkCard($event.target.files)" placeholder="Upload file">
+      </form>
+
+
+
     </div>
     <div *ngSwitchDefault="">默认...</div>
   </div>
