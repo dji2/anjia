@@ -138,7 +138,7 @@ export class HousesDetailsComponent implements OnInit {
 
 
   addArr(comment){
-    alert(comment);
+    // alert(comment);
     let that = this;
     that.comment = comment.value;
 
@@ -223,7 +223,7 @@ export class HousesDetailsComponent implements OnInit {
       $('#kan').html('预约看房中')
       that.kan=1;
       that.ho.askWatch({"houseId":that.houseId,"userId":that.localStorage.get('userId')},function (result) {
-        alert(result.stateCode);
+        // alert(result.stateCode);
         if(result.stateCode == 39){
           console.log("预约成功");
 
