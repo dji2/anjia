@@ -101,19 +101,19 @@ export class OwnerComponent implements OnInit {
           "Accept": "application/json"
         });
         // let options = new RequestOptions({ headers });
-        this.http.post("http://up.qiniu.com/", formData)
-          .subscribe(
-            function (result) {
-              // console.log(result);
-              that.imgIndex++;
-              that.status = 1;
-              // $('#preview').empty();
-              // console.log(that.shenfen)
-            },
-            function (error) {
-              console.log(error.message);
-            }
-          )
+        // this.http.post("http://up.qiniu.com/", formData)
+        //   .subscribe(
+        //     function (result) {
+        //       // console.log(result);
+        //       that.imgIndex++;
+        //       that.status = 1;
+        //       // $('#preview').empty();
+        //       // console.log(that.shenfen)
+        //     },
+        //     function (error) {
+        //       console.log(error.message);
+        //     }
+        //   )
       }
     }else{
       this.status = 2;
@@ -130,11 +130,13 @@ export class OwnerComponent implements OnInit {
     var img = new Image();
     img.src = URL.createObjectURL(file);
     var url = img.src;
-    var $img = $(img).css({'width': '100%', 'heigth': '100%', 'object-fit': 'cover'});
+    var $img = $(img).css({'max-width': '200px', 'max-heigth': '200px', 'object-fit': 'cover'});
     img.onload = function () {
       URL.revokeObjectURL(url);
       $img.addClass('fitcss');
-      $('#preview').empty().append($img);
+      var $li1 = $("<li></li>").css({'margin-right': '10px','margin-top': '10px', 'margin-bottom': '10px','float': 'left', 'border-radius': '10px'});
+      $li1.append($img);
+      $('#preview').append($li1);
     }
   }
   sfzpreview(file) {
