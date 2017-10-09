@@ -34,9 +34,7 @@
   }
 
   /*搜索框div*/
-  #mian-serch {
 
-  }
 
 }
 
@@ -64,7 +62,7 @@
 }
 .navbar-header img{
   position: absolute;
-top: 5px;
+  top: 5px;
   left: 40px;
   width: 80px;
   height: 35px;
@@ -128,12 +126,12 @@ background-color: rgba(255, 255, 255, 0.39);
 /*快来找月付*/
 #topanimate {
   font-family:"Times New Roman", Times, serif;
-  font-size: 50px;
+  font-size: 60px;
   color: rgba(254, 255, 211, 1);
   text-align: center;
-  margin-left: 180px;
-  margin-top: -160px;
   font-weight: 900;
+  position: relative;
+  top: 170px;
 }
 
 

@@ -12,7 +12,7 @@ import { HousesComponent } from './houses/houses.component';
 import { HousesDetailsComponent } from './houses/houses-details/houses-details.component';
 import { RegisterComponent } from './register/register.component';
 import { NewsComponent } from './news/news.component';
-
+import {NewsDetailComponent} from './news-detail/news-detail.component';
 const routes: Routes = [
 
 
@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsComponent
+  },
+  {
+    path: 'news-detail',
+    component: NewsDetailComponent
   },
   {
     path: 'detail/:id',

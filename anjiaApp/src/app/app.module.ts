@@ -43,6 +43,7 @@ import {Ng2PaginationModule} from "ng2-pagination";
 import { NewsComponent } from './news/news.component';
 import { NewsItemComponent } from './news/news-item/news-item.component';
 import { HotHousesComponent } from './hot-houses/hot-houses.component';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 // import { StatusPipe } from './pipes/status.pipe';
 
 
@@ -72,6 +73,7 @@ import { HotHousesComponent } from './hot-houses/hot-houses.component';
     NewsComponent,
     NewsItemComponent,
     HotHousesComponent,
+    NewsDetailComponent,
     // StatusPipe,
 
   ],
