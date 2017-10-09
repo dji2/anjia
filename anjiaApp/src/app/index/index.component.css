@@ -39,12 +39,14 @@
 }
 
 .mybody {
+
   background: url(http://owhah4u2f.bkt.clouddn.com/images/index/bannerV2.jpg);
   background-position: top;
   background-size: 100% 660px;
   background-repeat: no-repeat;
   /*背景视差属性*/
   background-attachment: fixed;
+
 }
 
 
@@ -461,8 +463,8 @@ display: none;
 #downlist-box{
   position: absolute;
   right: -50px;
-  height: 50px;
-  line-height: 50px;
+
+
 }
 #navbar-right{
 
