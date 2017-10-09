@@ -21,18 +21,15 @@
     <!--验证码-->
     <div class="group">
       <!--<label for="telyzm" class="label">验证码</label>-->
-      <input type="text" class="input" value="验证码:" id="telyzm" #yzm="ngModel" minlength="6" maxlength="6" pattern="^[0-9]{6}$"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
+      <input type="text" class="input" value="验证码:" id="telyzm" #yzm="ngModel" minlength="5"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
     </div>
     <div *ngIf="yzm.invalid && (yzm.dirty || yzm.touched)"
         >
 
       <div *ngIf="yzm.errors.required">
-        <span class="glyphicon glyphicon-triangle-right"></span>请输入您手机上的六位验证码
+        <span class="glyphicon glyphicon-triangle-right"></span>请输入您手机上的验证码
       </div>
 
-      <div *ngIf="yzm.errors.pattern">
-        <span class="glyphicon glyphicon-triangle-right"></span>验证码格式不正确
-      </div>
     </div>
     <!--昵称-->
     <div class="group">

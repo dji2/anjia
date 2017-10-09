@@ -12,6 +12,18 @@
   margin-left: 180px;
   margin-top: 40px;
 }
+#userName{
+  color:black;
+}
+#telephone{
+  color:black;
+}
+#email{
+  color: black;
+}
+#personInfo{
+  color: black;
+}
 .nav{
   margin-top: 50px;
   margin-left: 800px;
@@ -95,6 +107,7 @@
   width:800px;
   margin: 0 auto;
   list-style: none;
+  margin-top: 100px;
   background-color: rgba(78, 104, 163, 0.73);
   border-radius: 5px ;
 }
