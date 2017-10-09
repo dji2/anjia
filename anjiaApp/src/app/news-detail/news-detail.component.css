@@ -1,0 +1,60 @@
+.news-bg{
+  background: url("../../assets/images/shanghai.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  z-index: 1;
+/*margin-top: -20px;*/
+}
+.news-title{
+  height: 300px;
+  width: 100%;
+  color: #ffffff;
+}
+.text-nav{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.news-logo img{
+  width: 100px;
+  height: 50px;
+}
+
+.news-container{
+  width: 100%;
+  height:100%;
+  background-color: white;
+}
+.text-timer{
+  text-align: center;
+}
+.news-wenzhang{
+  background-color: rgba(232, 232, 232, 0.32);
+
+}
+.news-wenzhang p{
+  text-indent: 50px;
+}
+.news-right{
+  min-height: 200px;
+  /*box-shadow: 1px 2px 1px 1px grey;*/
+  border: 1px solid rgba(128, 128, 128, 0.32);
+  box-sizing: border-box;
+  position: relative;
+}
+.news-right p{
+  padding: 5px;
+}
+.news-right p a{
+text-decoration: none;
+}
+.xg-time{
+  background-color: rgba(34, 34, 34, 0.46);
+  color: white;
+  text-align: right;
+  position: relative;
+  right: 0;
+  display: inline-block;
+}
