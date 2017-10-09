@@ -14,19 +14,19 @@
 <!--</div>-->
 <div id="container" >
   <a href="/index">
-    <img src="http://owhah4u2f.bkt.clouddn.com/images/logo/1.png" alt="" style="width: 120px;height: 60px">
+    <img src="http://owhah4u2f.bkt.clouddn.com/images/logo/2.png" alt="" style="width: 120px;height: 60px">
   </a>
 <div class="mid" id="mid" >
 
   <div class="mid01" style="color: white;position: absolute;top: -150px">
     <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'" style="border-radius: 50px;" height="100" width="100"/>
-    <div *ngIf="bianhua2">
+    <div *ngIf="bianhua2" style="width: 490px;margin-left: 33%;background-color: white;color:#7b7b7b;padding-top: 10px;border-radius: 5px">
       <form #userForm="ngForm">
-        <input #userName="ngModel" [(ngModel)]="user.userName" id="userName" name="userName" style="width: 10%;height: 40px" type="text" placeholder="{{user.userName}}">
+        昵称    <input #userName="ngModel" [(ngModel)]="user.userName" id="userName" name="userName" style="width: 20%;height: 30px;margin-bottom: 5px" type="text" placeholder="{{user.userName}}">
         <br>
-        <input #personInfo="ngModel" [(ngModel)]="user.personInfo" id="personInfo" name="personInfo" style="width: 30%;height: 40px" type="text" placeholder="{{user.personInfo}}">
+        个性签名    <input #personInfo="ngModel" [(ngModel)]="user.personInfo" id="personInfo" name="personInfo" style="width: 60%;height: 30px" type="text" placeholder="{{user.personInfo}}">
         <br>
-        <div class="middet">
+        <div class="middet" style="margin-left: 30%">
           <img src="http://owhah4u2f.bkt.clouddn.com/email.png
 
 " width="20" height="20">
@@ -45,19 +45,19 @@
     </div>
 
     <div *ngIf="bianhua1">
-      <h1 style="margin-top: 20px">{{user.userName || '你还没有登录呦'}}</h1>
+      <h1 style="margin-top: 20px;cursor:default">{{user.userName || '你还没有登录呦'}}</h1>
       <br>
-      <span style="font-size: 18px">{{user.personInfo}}</span>
+      <span style="font-size: 18px;cursor:default">{{user.personInfo}}</span>
       <br>
       <div class="middet">
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span>{{user.email}}</span>
+        <span  style="cursor:default">{{user.email}}</span>
         <br>
         <i class="fa fa-phone-square" aria-hidden="true"></i>
-        <span>{{user.telephone}}</span>
+        <span style="cursor:default">{{user.telephone}}</span>
         <br>
         <i class="fa fa-pencil-square" aria-hidden="true"></i>
-        <span (click)="hua()">编辑资料</span>
+        <span (click)="hua()" style="cursor:pointer ">编辑资料</span>
       </div>
     </div>
 
