@@ -18,7 +18,7 @@
     <li style="margin-left: 24%"><a style="cursor: pointer" [class.go]="tab_index==1" (click)="tab_index=1" >第二步</a></li>
     <li style="float: right"><a style="cursor: pointer" [class.go]="tab_index==2" (click)="tab_index=2" >第三步</a></li>
   </ul>
-  <div [ngSwitch]="tab_index">
+  <div [ngSwitch]="tab_index" >
     <div *ngSwitchCase="0" id="section1" style="box-shadow: 0 1px 3px rgba(13,3,9,0.2);background-color: white;margin-top: 15px"
          class="container-fluid">
 

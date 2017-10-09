@@ -101,19 +101,21 @@ export class OwnerComponent implements OnInit {
           "Accept": "application/json"
         });
         // let options = new RequestOptions({ headers });
-        // this.http.post("http://up.qiniu.com/", formData)
-        //   .subscribe(
-        //     function (result) {
-        //       // console.log(result);
-        //       that.imgIndex++;
-        //       that.status = 1;
-        //       // $('#preview').empty();
-        //       // console.log(that.shenfen)
-        //     },
-        //     function (error) {
-        //       console.log(error.message);
-        //     }
-        //   )
+
+
+        this.http.post("http://up.qiniu.com/", formData)
+          .subscribe(
+            function (result) {
+              // console.log(result);
+              that.imgIndex++;
+              that.status = 1;
+              // $('#preview').empty();
+              // console.log(that.shenfen)
+            },
+            function (error) {
+              console.log(error.message);
+            }
+          )
       }
     }else{
       this.status = 2;

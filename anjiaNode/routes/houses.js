@@ -51,6 +51,21 @@ router.get('/getNews', function(req, res, next) {
 
 });
 
+//通过id获取头条
+router.post('/getNewsById', function(req, res, next) {
+    var news = req.body;
+    console.log(news)
+    housesDao.getNewsById(news.id,function (result) {
+        if(result.length==0){
+            res.json({"stateCode":30});
+        }else{
+            res.json(result);
+        }
+    })
+
+
+
+});
 
 //添加看房信息
 router.post('/addArrInfo', function(req, res, next) {

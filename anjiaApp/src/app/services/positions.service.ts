@@ -173,6 +173,14 @@ export class PositionsService {
     })
   }
 
+//通过id获取头条信息
+  getNewsById(news,callback){
+    this.http.post(this.url+'/getNewsById',news).subscribe(function (result) {
+      callback(result);
+    })
+  }
+
+
 
   getHouseById(houseId,callback){
     this.getAllHouses(function (houses) {

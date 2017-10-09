@@ -13,6 +13,7 @@ exports.sql={
     unFocus:"delete from focus where  userId = ? and houseId = ?",
     delHouse:"delete from houses where  houseId = ?",
     getNews:"select * from news ",
+    getNewsById:"select * from news where id = ?",
     editHouse:"update houses set houseName = ? where houseId = ?",
     isFocus:"select count(*) num from focus where userId = ? and houseId = ?",
     isAsk:"select count(*) num from arrange where userId = ? and houseId = ?",

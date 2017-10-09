@@ -20,23 +20,24 @@
 
   <div class="mid01" style="color: white;position: absolute;top: -150px">
     <img class="headIcon" src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/default.png'" style="border-radius: 50px;" height="100" width="100"/>
-    <div *ngIf="bianhua2" style="width: 490px;margin-left: 33%;background-color: white;color:#7b7b7b;padding-top: 10px;border-radius: 5px">
+    <div *ngIf="bianhua2" class="editInfo" style="width: 490px;margin-left: 33%;background-color: white;color:#7b7b7b;padding-top: 10px;border-radius: 5px">
       <form #userForm="ngForm">
         昵称    <input #userName="ngModel" [(ngModel)]="user.userName" id="userName" name="userName" style="width: 20%;height: 30px;margin-bottom: 5px" type="text" placeholder="{{user.userName}}">
         <br>
         个性签名    <input #personInfo="ngModel" [(ngModel)]="user.personInfo" id="personInfo" name="personInfo" style="width: 60%;height: 30px" type="text" placeholder="{{user.personInfo}}">
         <br>
-        <div class="middet" style="margin-left: 30%">
-          <img src="http://owhah4u2f.bkt.clouddn.com/email.png
+        <div class="middet1" style="margin-left: 30%">
+          <div class="row">
+            <img src="http://owhah4u2f.bkt.clouddn.com/email.png" width="20" height="20">
+            <input #email="ngModel" [(ngModel)]="user.email" id="email" name="email"  type="text" placeholder="{{user.email}}">
 
-" width="20" height="20">
-          <input #email="ngModel" [(ngModel)]="user.email" id="email" name="email"  type="text" placeholder="{{user.email}}">
-          <br>
-          <img src="http://owhah4u2f.bkt.clouddn.com/phone.png
+          </div>
+          <div class="row">
+            <img src="http://owhah4u2f.bkt.clouddn.com/phone.png" width="20" height="20">
+            <input #telephone="ngModel" [(ngModel)]="user.telephone" id="telephone" name="telephone"  type="text" placeholder="{{user.telephone}}">
 
-" width="20" height="20">
-          <input #telephone="ngModel" [(ngModel)]="user.telephone" id="telephone" name="telephone"  type="text" placeholder="{{user.telephone}}">
-          <br>
+          </div>
+
           <button (click)="bian(userForm)" style="height: 30px;width: 60%;background-color: #00AE66;color: white;border-radius: 5px;border: none;margin-top: 5px">保存</button>
         </div>
 
