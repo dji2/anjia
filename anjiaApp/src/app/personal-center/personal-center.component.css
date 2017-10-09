@@ -86,7 +86,15 @@
   margin-left: 43%;
   color: whitesmoke;
 }
+.middet1{
+  margin-top: 6px;
+  width: 300px;
+  height: 100px;
 
+  /*margin-left: 30%;*/
+  text-align: left;
+  color: whitesmoke;
+}
 
 .middet span{
   font-size:14px;

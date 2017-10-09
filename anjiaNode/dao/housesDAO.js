@@ -91,6 +91,30 @@ exports.housesDao={
             })
         })
     },
+
+
+
+    //通过id获取所有头条
+    getNewsById:function (newsId,callback) {
+        pool.getConnection(function (error,client) {
+            if(error){
+                console.log("error");
+                return
+            }
+            client.query(housesSql.getNewsById,[newsId],function (error,result) {
+                if(error){
+                    callback('e004');
+                    return;
+                }
+
+                callback(result);
+                client.release();
+            })
+        })
+    },
+
+
+
     //通过arrangeId获取看房记录
     getArrInfoByArrId:function (arrangeId,callback) {
         pool.getConnection(function (error,client) {

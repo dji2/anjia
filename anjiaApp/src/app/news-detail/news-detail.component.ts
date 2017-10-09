@@ -28,19 +28,14 @@ export class NewsDetailComponent implements OnInit {
     //   that.getNews=getNews[0];
     // })
     // let that=this;
-    // that.house.getNewsById(id,function (house) {
-    //   console.log(house);
-    //   that.getNews = result[0];
-    // })
-    let that = this;
-    that.house.getNews(function (result) {
-      console.log(result);
-      that.getNews = result;
-      that.newsId=that.getNews.id;
 
-    //
-    //
-    });
+    let that = this;
+    that.newsId=this.route.snapshot.paramMap.get('id');
+
+    that.house.getNewsById({"id":that.newsId},function (result) {
+      console.log(result);
+      that.getNews = result[0];
+    })
 
   }
 
