@@ -7,6 +7,11 @@ ul, ol, li {
   margin: 0;
   padding: 0;
 }
+.house-list{
+  min-height: 200px;
+  background-image: url("http://owhah4u2f.bkt.clouddn.com/list.png");
+  background-size: cover;
+}
 .house-list li {
   padding: 26px 26px;
   border-bottom: 1px dotted #e1e1e1;
