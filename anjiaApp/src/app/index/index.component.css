@@ -453,13 +453,33 @@ display: none;
 
 }
 /*///////////////////////////////下拉框////////////////////////////*/
+#myself-nav{
+  /*background-color: #E53941;*/
+
+}
+
+#downlist-box{
+  position: absolute;
+  right: -50px;
+  height: 50px;
+  line-height: 50px;
+}
+#navbar-right{
+
+
+}
+
+
 #downlist{
+
   width: 90px;
   height: 50px;
   position: relative;
   top:-3px;
+
   display: inline-block;
-  background-color: #1d7db1;
+
+
 }
 
 
@@ -467,7 +487,6 @@ display: none;
 .user_icon{
   height:30px;
   width:30px;
-  background-color: #b18a66;
 }
 .user_icon img{
   height:30px;
@@ -493,7 +512,9 @@ display: none;
   height: 50px;
   z-index: 1000;
   position: absolute;
-  right: 80px;
+  right: 0px;
+
+
 }
 .quick_menu > li {
   width: 70px;
@@ -505,7 +526,6 @@ display: none;
   position: relative;
   top: 3px;
   right: 50px;
-  margin-right: 10px;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   -ms-perspective: 1000px;
@@ -562,7 +582,7 @@ display: none;
   -moz-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
-  top: 51px;
+  top: 40px;
 }
 
 
@@ -657,6 +677,7 @@ display: none;
   /*top:-3px;*/
   /*display: inline-block;*/
   /*background-color: #1d7db1;*/
+
 /*}*/
 
 
@@ -678,9 +699,9 @@ display: none;
   /*color: #fff;*/
   /*line-height: 30px;*/
   /*width: 120px;*/
-  /*height: 130px;*/
+  /*height: 50px;*/
   /*margin-top: -25px;*/
-
+  /*background-color: #b11429;*/
 
 /*}*/
 
@@ -692,7 +713,7 @@ display: none;
 /*font-weight: 100;*/
   /*display: inline-block;*/
   /*position: relative;*/
-
+  /*top: 0;*/
   /*right: 50px;*/
   /*margin-right: 10px;*/
   /*-webkit-perspective: 1000px;*/
@@ -734,7 +755,6 @@ display: none;
   /*animation: turn 2s ease-in-out;*/
   /*visibility: visible;*/
   /*list-style: none;*/
-/*background-color: darkorange;*/
 
 /*}*/
 
@@ -766,13 +786,13 @@ display: none;
   /*background-color: #302fb1;*/
 /*}*/
 /*.user_fun_sub a {*/
-
   /*display: block;*/
   /*text-shadow: 0 1px 1px rgba(0,0,0,.2);*/
   /*margin: 2px 5px 2px 5px;*/
   /*padding-left:5px;*/
 /*}*/
 /*.user_fun_sub a:hover {*/
+  /*h*/
   /*border-radius: 3px;*/
   /*color: #3c763d;*/
   /*background-color: #443eaf;*/

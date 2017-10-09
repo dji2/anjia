@@ -21,7 +21,7 @@
           </div>
           <div class="collapse navbar-collapse " id="navbar-collapse" >
 
-            <ul class="nav navbar-nav navbar-right " id="navbar-right" style="position: absolute;right: 80px;">
+            <ul class="nav navbar-nav navbar-right " id="navbar-right" style="position: absolute;right: 180px;">
               <li class="active "><a href="#"> <span class="glyphicon glyphicon-home "> </span>首页</a></li>
               <li ><a href="/houses" ><span ></span>租房</a></li>
               <li><a href="/news"><span class="nav-lvju"><img src="../../assets/images/lvju.png" alt="" ></span>头条</a></li>
@@ -30,11 +30,11 @@
               <!--<li *ngIf="islogin"><a href="/personal-center"><span class="glyphicon glyphicon-user" ></span>{{userName}}</a></li>-->
               <li  *ngIf="!islogin" ><a href="/login">   <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>&nbsp;登录/注册</a></li>
 
-              <li *ngIf="islogin" class="user_fun quick_menu">
+              <li *ngIf="islogin" class="user_fun quick_menu" id="downlist-box" >
                 <a id="downlist">
-                  <ul class="quick_menu">
+                  <ul class="quick_menu" >
                     <li class="user_fun" style="height: 52px">
-                     <a href="/personal-center" title="PandaThemes" style="display: inline-block;position: absolute;width: 100px">
+                     <a href="/personal-center" title="PandaThemes" style="display: inline-block;position: absolute;width: 100px;top:-5px">
                          <span class="user_icon">
                        <img  src="http://owhah4u2f.bkt.clouddn.com/images/user/{{userId}}.jpg" onerror="this.src='http://owhah4u2f.bkt.clouddn.com/images/user/dead-white.png'" alt="">
                      </span>
