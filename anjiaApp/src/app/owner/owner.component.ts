@@ -17,7 +17,7 @@ export class OwnerComponent implements OnInit {
   imgIndex:number = 1;
   owner_res:string;
   formstatus:boolean = false;
-  tab_index:number=0;
+  tab_index=0;
   shenfen:any;
   status:number = 0;
   constructor(
@@ -29,7 +29,7 @@ export class OwnerComponent implements OnInit {
 ) { }
 
   ngOnInit() {
-    this.preview("http://owhah4u2f.bkt.clouddn.com/addpic.png");
+    // alert("sdsds");
   }
   toRelease(ownerForm){
     let owner  = ownerForm.form.value;
