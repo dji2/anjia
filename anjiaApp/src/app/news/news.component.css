@@ -21,6 +21,9 @@ background-color: #3f3f3f;
 .media{
 border-radius: 5px;
 }
+#news-list-style:hover{
+  background-color: rgba(107, 123, 181, 0.27);
+}
 .text-bottom {
   position: relative;
   top: 50px;
