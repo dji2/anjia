@@ -20,12 +20,13 @@
                 <div class="media" *ngFor="let getNew of getNews| paginate: { itemsPerPage: 6, currentPage: p }">
 
                   <div class="media-left">
-                    <a href="#">
+                    <a (click)="toNewsDetail(getNew.id)" >
                       <img class="media-object" src="http://owhah4u2f.bkt.clouddn.com/images/news/redian{{getNew.id}}.jpg" alt="...">
                     </a>
                   </div>
                   <div class="media-body">
-                    <h3 class="media-heading"><a href="">{{getNew.newsName}}</a></h3>
+                    <p>{{getNew.id}}</p>
+                    <h3 class="media-heading"><a (click)="toNewsDetail(getNew.id)">{{getNew.newsName}}</a></h3>
                     {{getNew.newsContent1}}
 
                     <h5 class="text-bottom ">作者：{{getNew.newsWriter}} | <span>{{getNew.publishTime}}</span></h5>
@@ -185,17 +186,18 @@
           <div *ngSwitchDefault="" >
 
             <div class="row">
-              <div class="col-md-12 media-left-big" >
+              <div class="col-md-12 media-left-big"  >
 
-                <div class="media" *ngFor="let getNew of getNews| paginate: { itemsPerPage: 5, currentPage: p }">
+                <div class="media" id="news-list-style" *ngFor="let getNew of getNews| paginate: { itemsPerPage: 5, currentPage: p }" >
 
                   <div class="media-left">
-                    <a href="#">
+                    <a (click)="toNewsDetail(getNew.id)" style="cursor: pointer">
                       <img class="media-object" src="http://owhah4u2f.bkt.clouddn.com/images/news/redian{{getNew.id}}.jpg" alt="...">
                     </a>
                   </div>
                   <div class="media-body">
-                    <h3 class="media-heading"><a href="">{{getNew.newsName}}</a></h3>
+                    <p>{{getNew.id}}</p>
+                    <h3 class="media-heading"><a (click)="toNewsDetail(getNew.id)" style="cursor: pointer">{{getNew.newsName}}</a></h3>
                     {{getNew.newsContent1}}
 
                     <h5 class="text-bottom ">作者：{{getNew.newsWriter}} | <span>{{getNew.publishTime}}</span></h5>

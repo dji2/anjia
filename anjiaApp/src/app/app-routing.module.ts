@@ -55,6 +55,10 @@ const routes: Routes = [
     component: NewsDetailComponent
   },
   {
+    path: 'news-detail/:id',
+    component: NewsDetailComponent
+  },
+  {
     path: 'detail/:id',
     component: HousesDetailsComponent
   },

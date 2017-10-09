@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PositionsService} from '../services/positions.service';
+import {Router} from '@angular/router';
 declare var $:any;
 @Component({
   selector: 'app-news',
@@ -12,18 +13,17 @@ export class NewsComponent implements OnInit {
   getNews:any;
 
   arr_li=['热点新闻','安家帮住','经验分享'];
-  constructor(
+  constructor( private router:Router,
     private house: PositionsService
   ) {
   }
 
   ngOnInit() {
+
     let that = this;
     that.house.getNews(function (result) {
       console.log(result)
       that.getNews = result;
-
-
     });
     $(document).ready(function(){
       $("#zf").click(function(){
@@ -62,6 +62,9 @@ export class NewsComponent implements OnInit {
 
   }
 
+  toNewsDetail(id){
+    this.router.navigate(['/news-detail',id]);
+  }
 }
 
 
