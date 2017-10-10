@@ -180,6 +180,9 @@ input, button {
 .foot-lnk{
   text-align:center;
 }
+.foot-lnk a:hover{
+color: wheat;
+}
 /*////////////////////////////////////////////////////////////////////////*/
 .btn-login{
   width: 380px;
