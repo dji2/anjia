@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-09-15 10:32:24
+Date: 2017-10-10 15:32:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,36 +34,42 @@ CREATE TABLE `agent` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for arrangeinfo
+-- Table structure for arrange
 -- ----------------------------
-DROP TABLE IF EXISTS `arrangeinfo`;
-CREATE TABLE `arrangeinfo` (
-  `arrangeId` int(11) NOT NULL,
+DROP TABLE IF EXISTS `arrange`;
+CREATE TABLE `arrange` (
+  `arrangeId` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) DEFAULT NULL,
   `houseId` int(11) DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL,
   `adate` datetime DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `status` int(9) DEFAULT '0',
+  `agreeNum` int(11) DEFAULT '0',
+  `agreePerson` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`arrangeId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of arrangeinfo
+-- Records of arrange
 -- ----------------------------
+INSERT INTO `arrange` VALUES ('1', '3', '2', '这房子真好', '2017-10-04 15:19:56', '0', '0', null);
 
 -- ----------------------------
--- Table structure for collect
+-- Table structure for focus
 -- ----------------------------
-DROP TABLE IF EXISTS `collect`;
-CREATE TABLE `collect` (
-  `collectId` int(11) NOT NULL,
+DROP TABLE IF EXISTS `focus`;
+CREATE TABLE `focus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `houseId` int(11) NOT NULL,
   `userId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`collectId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of collect
+-- Records of focus
 -- ----------------------------
+INSERT INTO `focus` VALUES ('1', '1', '1');
+INSERT INTO `focus` VALUES ('2', '2', '1');
 
 -- ----------------------------
 -- Table structure for houseareas
@@ -109,30 +115,22 @@ CREATE TABLE `houses` (
   `houseName` varchar(255) DEFAULT NULL,
   `housePrice` varchar(255) DEFAULT NULL COMMENT '价格',
   `publishTime` date DEFAULT NULL COMMENT '发布时间',
-  `houseAreaId` int(11) DEFAULT NULL COMMENT '小区ID',
-  `houseInfo` varchar(255) DEFAULT NULL COMMENT '房屋配置信息',
   `houseTypeId` int(11) DEFAULT NULL COMMENT '房屋类型',
   `ownerId` int(11) DEFAULT NULL,
   `area` float DEFAULT NULL COMMENT '房屋面积',
-  `startTime` date DEFAULT NULL COMMENT '开始出租时间',
-  `endTime` date DEFAULT NULL,
-  `houseStatus` varchar(255) DEFAULT NULL COMMENT '房屋状态',
-  PRIMARY KEY (`houseId`),
-  KEY `areasId` (`houseAreaId`),
-  KEY `typeId` (`houseTypeId`),
-  KEY `owner` (`ownerId`),
-  CONSTRAINT `areasId` FOREIGN KEY (`houseAreaId`) REFERENCES `houseareas` (`id`),
-  CONSTRAINT `owner` FOREIGN KEY (`ownerId`) REFERENCES `owner` (`id`),
-  CONSTRAINT `typeId` FOREIGN KEY (`houseTypeId`) REFERENCES `housetype` (`id`)
+  `areaName` varchar(255) DEFAULT NULL COMMENT '房屋状态',
+  `address` varchar(255) DEFAULT NULL,
+  `floor` int(11) DEFAULT NULL,
+  PRIMARY KEY (`houseId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of houses
 -- ----------------------------
-INSERT INTO `houses` VALUES ('1', '实地看房，钥匙在店，空气清新，上门实拍', '3300', '2017-09-11', '1', null, '1', '1', '90', '2017-09-15', '2018-09-15', '待出租');
-INSERT INTO `houses` VALUES ('2', '空气清新，实地看房，小户型', '2500', '2017-09-13', '1', null, '1', '1', '67', '2017-10-05', '2018-05-25', '待出租');
-INSERT INTO `houses` VALUES ('3', '人气房源，适合自住，要是在安家，采光棒', '3000', '2017-09-13', '2', null, '2', '1', '87', '2017-09-28', '2018-04-20', '待出租');
-INSERT INTO `houses` VALUES ('4', '交通方便，高清实拍，高区景观房', '2000', '2017-09-13', '2', null, '2', '1', '67', '2017-09-21', '2018-05-24', '待出租');
+INSERT INTO `houses` VALUES ('1', '实地看房，钥匙在店，空气清新，上门实拍', '3300', '2017-09-11', '1', '2', '90', '姑苏 云鼎鑫城', '园区干将路22号', '2');
+INSERT INTO `houses` VALUES ('2', '空气清新，实地看房，小户型', '2500', '2017-09-13', '1', '2', '67', '姑苏 新野小区', '新业路干将路交界处', '34');
+INSERT INTO `houses` VALUES ('3', '人气房源，适合自住，要是在安家，采光棒', '3000', '2017-09-13', '2', '2', '87', '姑苏 东塔福居', '东塔路西22号', '5');
+INSERT INTO `houses` VALUES ('4', '交通方便，高清实拍，高区景观房', '2000', '2017-09-13', '2', '2', '67', '姑苏 南门小区', '南门二环33号', '2');
 
 -- ----------------------------
 -- Table structure for housetype
@@ -184,16 +182,15 @@ CREATE TABLE `user` (
   `telephone` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `city_id` int(11) DEFAULT NULL,
-  `token` varchar(255) DEFAULT NULL,
+  `personInfo` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('2', null, '18362202673', 'fcea920f7412b5da7be0cf42b8c93759', '', '81', null);
-INSERT INTO `user` VALUES ('3', null, '15503878257', 'e10adc3949ba59abbe56e057f20f883e', '', '81', '15054399107090.10255915357884948');
+INSERT INTO `user` VALUES ('2', 'desong', '18362202673', 'fcea920f7412b5da7be0cf42b8c93759', '764922900@qq.com', '这是个帅气的小伙');
+INSERT INTO `user` VALUES ('3', '边龙', '15503878257', 'e10adc3949ba59abbe56e057f20f883e', 'bianlong@qq.com', '真是个帅气的小伙');
 
 -- ----------------------------
 -- Table structure for user_icon
@@ -212,7 +209,20 @@ CREATE TABLE `user_icon` (
 -- ----------------------------
 
 -- ----------------------------
--- View structure for houseinfo
+-- View structure for arrangeinfo
 -- ----------------------------
-DROP VIEW IF EXISTS `houseinfo`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `houseinfo` AS select `houses`.`houseId` AS `houseId`,`houses`.`houseName` AS `houseName`,`houseareas`.`areaName` AS `areaName`,`houses`.`housePrice` AS `housePrice`,`houses`.`publishTime` AS `publishTime`,`houseareas`.`introduce` AS `introduce`,`houseareas`.`traffic` AS `traffic`,`houseareas`.`address` AS `address`,`housetype`.`room` AS `room`,`housetype`.`livingroom` AS `livingroom`,`housetype`.`bathroom` AS `bathroom`,`housetype`.`kitchen` AS `kitchen`,`housetype`.`balcony` AS `balcony`,`housetype`.`aspect` AS `aspect`,`houses`.`area` AS `area`,`houses`.`startTime` AS `startTime`,`houses`.`endTime` AS `endTime`,`houses`.`houseStatus` AS `houseStatus` from ((`houses` join `houseareas` on((`houses`.`houseAreaId` = `houseareas`.`id`))) join `housetype` on((`houses`.`houseTypeId` = `housetype`.`id`))) ;
+DROP VIEW IF EXISTS `arrangeinfo`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `arrangeinfo` AS select `arrange`.`arrangeId` AS `arrangeId`,`arrange`.`houseId` AS `houseId`,`arrange`.`userId` AS `userId`,`u1`.`userName` AS `userName`,`u1`.`telephone` AS `telephone`,`houses`.`ownerId` AS `ownerId`,`u2`.`userName` AS `ownerName`,`u2`.`telephone` AS `ownerTelephone`,`arrange`.`status` AS `status`,`arrange`.`comment` AS `comment`,`houses`.`houseName` AS `houseName`,`houses`.`housePrice` AS `housePrice`,`arrange`.`adate` AS `publishTime`,`houses`.`area` AS `area`,`houses`.`areaName` AS `areaName`,`houses`.`address` AS `address`,`housetype`.`room` AS `room`,`housetype`.`livingroom` AS `livingroom`,`arrange`.`agreeNum` AS `agreeNum` from ((((`arrange` join `houses` on((`arrange`.`houseId` = `houses`.`houseId`))) join `user` `u1` on((`arrange`.`userId` = `u1`.`id`))) join `housetype` on((`houses`.`houseTypeId` = `housetype`.`id`))) join `user` `u2` on((`houses`.`ownerId` = `u2`.`id`))) ;
+
+-- ----------------------------
+-- View structure for focusinfo
+-- ----------------------------
+DROP VIEW IF EXISTS `focusinfo`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `focusinfo` AS select `focus`.`houseId` AS `houseId`,`focus`.`userId` AS `userId`,`houses`.`houseName` AS `houseName`,`houses`.`housePrice` AS `housePrice`,`houses`.`publishTime` AS `publishTime`,`houses`.`area` AS `area`,`houses`.`areaName` AS `areaName`,`houses`.`address` AS `address`,`houses`.`floor` AS `floor`,`housetype`.`room` AS `room`,`housetype`.`livingroom` AS `livingroom` from ((`focus` join `houses` on((`focus`.`houseId` = `houses`.`houseId`))) join `housetype` on((`houses`.`houseTypeId` = `housetype`.`id`))) ;
+
+-- ----------------------------
+-- View structure for housesinfo
+-- ----------------------------
+DROP VIEW IF EXISTS `housesinfo`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `housesinfo` AS select `houses`.`houseId` AS `houseId`,`houses`.`houseName` AS `houseName`,`houses`.`housePrice` AS `housePrice`,`houses`.`publishTime` AS `publishTime`,`housetype`.`room` AS `room`,`housetype`.`livingroom` AS `livingroom`,`housetype`.`bathroom` AS `bathroom`,`housetype`.`kitchen` AS `kitchen`,`housetype`.`balcony` AS `balcony`,`housetype`.`aspect` AS `aspect`,`user`.`id` AS `ownerId`,`user`.`userName` AS `ownerName`,`user`.`telephone` AS `telphone`,`user`.`personInfo` AS `personInfo`,`houses`.`area` AS `area`,`houses`.`areaName` AS `areaName`,`houses`.`address` AS `address`,`houses`.`floor` AS `floor` from ((`houses` join `housetype` on((`houses`.`houseTypeId` = `housetype`.`id`))) join `user` on((`user`.`id` = `houses`.`ownerId`))) ;
+SET FOREIGN_KEY_CHECKS=1;
