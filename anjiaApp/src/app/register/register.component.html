@@ -21,7 +21,7 @@
     <!--验证码-->
     <div class="group">
       <!--<label for="telyzm" class="label">验证码</label>-->
-      <input type="text" class="input" value="验证码:" id="telyzm" #yzm="ngModel" minlength="5"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
+      <input type="text" class="input" value="验证码:" id="telyzm" #yzm="ngModel" minlength="4" maxlength="4"  [(ngModel)]="registeryzm" name="code" placeholder="请输入您手机收到的验证码" required>
     </div>
     <div *ngIf="yzm.invalid && (yzm.dirty || yzm.touched)"
         >
