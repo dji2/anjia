@@ -46,6 +46,7 @@ import { HotHousesComponent } from './hot-houses/hot-houses.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 // import { StatusPipe } from './pipes/status.pipe';
 
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 
 
   ],
-  providers: [GlobalPropertyService,LocalStorageService],
+  providers: [GlobalPropertyService,LocalStorageService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

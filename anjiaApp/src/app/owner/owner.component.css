@@ -7,7 +7,7 @@
   padding-top: 26px;
   position: relative;
   margin: 0 auto;
-  background: url(../../assets/images/head_img.png) no-repeat top;
+  background: url(http://owhah4u2f.bkt.clouddn.com/head_img.png) no-repeat top;
 }
 .yz-banner .nav {
   height: 31px;
@@ -360,7 +360,7 @@ body, h1{
   position: relative;
   top: -200px;
   overflow: hidden;
-background: url("../../assets/images/sfzcard.png") no-repeat;
+background: url("http://owhah4u2f.bkt.clouddn.com/sfzcard.png") no-repeat;
 
 }
 #sfzpreview img{

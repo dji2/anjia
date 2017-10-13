@@ -23,14 +23,14 @@ border-radius: 20px;
 .panel{}
 
 .mapstyle{
-  background: url("../../../assets/images/loginbg1.jpg");
+  background: url("http://owhah4u2f.bkt.clouddn.com/loginbg1.jpg");
   background-color: #c7524b;
 }
 .infowindow-content{
   padding:12px 8px;
   color:#fff;
   background:#ccc;
-  background: url("../../../assets/images/bannerV2.jpg");
+  background: url("http://owhah4u2f.bkt.clouddn.com/bannerV2.jpg");
   border-radius: 10px;
 }
 /*//////////////////////////////////////////*/
