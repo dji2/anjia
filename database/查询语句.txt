@@ -1,0 +1,144 @@
+  create view focusinfo as
+  SELECT focus.houseId,userId,houseName,housePrice,publishTime,area,areaName,address,floor,room,livingroom from focus
+  join houses on focus.houseId = houses.houseId
+  join housetype on houses.houseTypeId = housetype.id
+
+
+-- 
+--  create view arrangeinfo(arrangeId,houseId,userId,ownerId,userName,status,comment,houseName,housePrice,publishTime,area,areaName,address,room,livingroom,agreeNum ) as
+--  SELECT arrangeId,arrange.houseId,arrange.userId,ownerId,userName,status,comment,houseName,housePrice,adate,area,areaName,address,room,livingroom,agreeNum from arrange join houses on arrange.houseId = houses.houseId
+--  join user on arrange.userId = user.id 
+--  join housetype on houses.houseTypeId = housetype.id
+
+
+-- 创建看房视图
+-- create view arrangeinfo(arrangeId,houseId,userId,userName,telephone,ownerId,ownerName,ownerTelephone,status,comment,houseName,housePrice,publishTime,area,areaName,address,room,livingroom,agreeNum ) as
+--  SELECT arrangeId,arrange.houseId,arrange.userId,u1.userName,u1.telephone,ownerId,u2.userName,u2.telephone,status,comment,houseName,housePrice,adate,area,areaName,address,room,livingroom,agreeNum from arrange join houses on arrange.houseId = houses.houseId
+--  join user u1 on arrange.userId = u1.id 
+--  join housetype on houses.houseTypeId = housetype.id
+-- join user u2 on houses.ownerId = u2.id
+-- 
+-- 获取关注人数
+-- select count(houseId) focusNum from focusinfo where houseId = 11
+-- 
+--  create view housesinfo(houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,ownerId,ownerName,telphone,personInfo,area,areaName,address,floor) as
+--  SELECT houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,user.id,userName,telephone,personInfo,area,areaName,address,floor from houses 
+-- join housetype on houses.houseTypeId = housetype.id
+-- join user on user.id = houses.ownerId
+-- 
+
+-- select * from arrangeinfo where userId = 2
+
+-- insert into houses(houseId,houseName,housePrice,publishTime,houseTypeId,ownerId,area,areaName,address,floor)values(20,'小户型，居住方便，生活便利',2600,'2017-08-11',2,2,54,'姑苏 狮子小区','狮子林路33号',12)
+-- insert into arrange(userId,houseId,adate,comment) values(2,3,'2017-08-11','哈哈哈房子不错e')
+
+-- 点赞功能，不能重复点赞 不能自己给自己点赞
+-- update arrange set agreeNum=agreeNum+1,agreePerson=CONCAT(agreePerson,',','33') where arrangeId = 2 and not FIND_IN_SET('33',agreePerson)
+
+-- 	关注功能   
+-- insert into focus(userId,houseId)  
+-- SELECT '3', '2'  
+-- 
+-- FROM DUAL 
+-- 
+-- WHERE not exists (select id from focus   
+-- 
+-- where userId = 3 and houseId = 2)
+-- 
+
+
+-- 取消点赞
+-- delete from focus where  userId = 3 and houseId = 2
+
+-- 创建我的房源视图
+--  create view myhousesinfo(houseId,ownerId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,network,hotwater,bed,ownerId,ownerName,telphone,personInfo,area,areaName,address,floor) as
+-- SELECT houseId,ownerId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,network,hotwater,bed,user.id,userName,telephone,personInfo,area,areaName,address,floor from houses 
+-- 
+-- join housetype on houses.houseTypeId = housetype.id  
+--  join user on user.id = houses.ownerId
+--  
+
+-- 获取对应id 拥有房源信息
+
+-- select * from housesinfo where 
+
+
+-- 通过id获取我发布的房源
+
+-- select * from housesinfo  where ownerId = 2
+
+-- 删除看房记录
+-- delete from arrange where  userId = 9 and houseId = 12
+
+
+-- 删除房源
+-- delete from houses where  houseId = 41
+
+-- 编辑房源信息
+-- update housesinfo set houseName = '你说你想要逃',housePrice = 666,publishTime='2017-9-13',room = 2,livingroom = 1,bathroom = 1, 
+-- kitchen = 1,balcony = 1,aspect = '北',network  = '无',hotwater = '热水器',bed = 2,area = 66,areaName = '园区 南门小区',address = '园区南门路118号',floor = 9
+-- where houseId = 11	
+-- -- 
+-- 获取头条信息
+-- select * from news 
+
+-- 编辑房源信息（只允许更新房源名称）
+-- update houses set houseName = '地中海极简风格装修' where houseId = 7
+
+-- 进入detail页面判断当前用户是否关注该房源
+-- select count(*) num from focus where userId = 3 and houseId = 1
+
+
+-- 修改用户信息
+-- update user set userName = '德松',telephone = '18362202673',email = '764922900@qq.com' where id = 2
+-- 
+
+-- 用户提出看房
+-- insert into arrange(userId,houseId) 
+--  SELECT '2', '10'  
+--  FROM DUAL 
+-- WHERE not exists (select * from arrange   
+-- where userId = 2 and houseId = 10) 
+
+
+-- 业主同意看房
+-- update arrange set status = 1 where arrangeId = 89
+
+-- 用户评论则完成看房流程
+-- update arrange set adate = '2017-9-2',comment = '终于看完房了，哈哈哈',status = 2 where arrangeId = 89
+
+-- 获取我预约要看的所有房源
+-- select * from arrange where userId  = 2 and status = 1
+
+
+-- 获取所有看房记录 
+-- select * from arrangeinfo where userId = 2 order by status
+
+
+-- 判断是否已经点击我要看房
+-- select count(*) num from arrange where userId = 2 and houseId = 2
+
+-- 业主删除看房信息
+
+-- delete from arrange where  arrangeId = 174
+
+-- 获取用户信息
+
+-- select * from user where id = 2
+-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
