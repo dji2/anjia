@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PositionsService} from './../services/positions.service';
 import {Router} from '@angular/router';
+import {GlobalPropertyService} from './../services/global-property.service';
 
 import { LocalStorageService } from './../services/local-storage.service';
 import {HttpClient} from '@angular/common/http';
@@ -24,12 +25,13 @@ export class OwnerComponent implements OnInit {
     private userSer:PositionsService,
     private router:Router,
   private localStorage:LocalStorageService,
-  private http:HttpClient
-
+  private http:HttpClient,
+  private glo:GlobalPropertyService
 ) { }
 
   ngOnInit() {
     // alert("sdsds");
+    this.glo.hiddenNavs = false;
   }
   toRelease(ownerForm){
     let owner  = ownerForm.form.value;

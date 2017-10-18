@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PositionsService} from '../services/positions.service';
 import {Router} from '@angular/router';
+import {GlobalPropertyService} from './../services/global-property.service';
+
 declare var $:any;
 @Component({
   selector: 'app-news',
@@ -13,14 +15,19 @@ export class NewsComponent implements OnInit {
   getNews:any;
 
   arr_li=['热点新闻','安家帮住','经验分享'];
-  constructor( private router:Router,
-    private house: PositionsService
+  constructor(
+    private router:Router,
+    private house: PositionsService,
+    private glo:GlobalPropertyService
+
   ) {
   }
 
   ngOnInit() {
 
     let that = this;
+    that.glo.hiddenNavs = false;
+
     that.house.getNews(function (result) {
       console.log(result)
       that.getNews = result;
