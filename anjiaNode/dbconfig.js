@@ -11,10 +11,10 @@
 
 
 var options={
-    host:'rm-uf623h3fm710t6flpo.mysql.rds.aliyuncs.com',
+    host:'rm-uf63f29525bwh5v6do.mysql.rds.aliyuncs.com',
     port:'3306',
     user:'root',
-    password:'Zl321324',
+    password:'Jdsoon0221',
     database:'anjia'
 };
 
