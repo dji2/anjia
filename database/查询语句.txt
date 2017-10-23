@@ -4,11 +4,6 @@
   join housetype on houses.houseTypeId = housetype.id
 
 
--- 
---  create view arrangeinfo(arrangeId,houseId,userId,ownerId,userName,status,comment,houseName,housePrice,publishTime,area,areaName,address,room,livingroom,agreeNum ) as
---  SELECT arrangeId,arrange.houseId,arrange.userId,ownerId,userName,status,comment,houseName,housePrice,adate,area,areaName,address,room,livingroom,agreeNum from arrange join houses on arrange.houseId = houses.houseId
---  join user on arrange.userId = user.id 
---  join housetype on houses.houseTypeId = housetype.id
 
 
 -- 创建看房视图
@@ -21,10 +16,11 @@
 -- 获取关注人数
 -- select count(houseId) focusNum from focusinfo where houseId = 11
 -- 
---  create view housesinfo(houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,ownerId,ownerName,telphone,personInfo,area,areaName,address,floor) as
---  SELECT houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,user.id,userName,telephone,personInfo,area,areaName,address,floor from houses 
--- join housetype on houses.houseTypeId = housetype.id
--- join user on user.id = houses.ownerId
+create view housesinfo(houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,ownerId,ownerName,telphone,personInfo,area,areaName,address,floor) as
+ SELECT houseId,houseName,housePrice,publishTime,room,livingroom,bathroom,kitchen,balcony,aspect,user.id,userName,telephone,personInfo,area,areaName,address,floor from houses 
+join housetype on houses.houseTypeId = housetype.id
+ join user on user.id = houses.ownerId
+order by publishTime desc
 -- 
 
 -- select * from arrangeinfo where userId = 2

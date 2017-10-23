@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class UsersService {
-  url:string='http://127.0.0.1:3000/users';
+  url:string='http://115.159.104.128:3000/users';
 
    constructor(
     private http:HttpClient
