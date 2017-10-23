@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>苏州</ion-col>
+        <ion-col col-4>猎聘</ion-col>
+        <ion-col col-4 align-self-end>...</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-slides loop="true" autoplay="2000"  (ionSlideDidChange)="slideChanged()" #slides>
+    <ion-slide *ngFor="let item of imgs">
+      <img src="assets/images/{{item}}" alt="" (click)="showImg(item)">
+    </ion-slide>
+  </ion-slides>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="小蜜正在为您加载哦...">
+
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item-sliding *ngFor="let house of houses;trackBy: trackByHouses">
+
+      <ion-item (click)="toDetail(house)">
+        <ion-avatar item-start>
+          <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg">
+        </ion-avatar>
+        <h2>{{house.houseName}}</h2>
+        <h3>{{house.areaName}}</h3>
+        <p>{{house.address}}</p>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="delete(house.houseId)">Delete
+          <ion-icon name="delete"></ion-icon>
+
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!--下拉加载-->
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))">
+    <ion-infinite-scroll-content
+      oadingSpinner="bubbles"
+      loadingText="Loading more data...">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-item *ngIf="noMore">
+    没有更多房源了哦~~
+  </ion-item>
+</ion-content>
