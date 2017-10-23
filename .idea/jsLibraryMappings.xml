@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/anjiaApp" libraries="{anjia/anjiaApp/node_modules}" />
+    <file url="file://$PROJECT_DIR$/anjiaNode" libraries="{anjia/anjiaNode/node_modules}" />
+    <file url="PROJECT" libraries="{anjia/anjiaApp/node_modules, anjia/anjiaNode/node_modules}" />
+  </component>
+</project>
