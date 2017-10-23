@@ -5,255 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="019fb9e9-eaaa-4bf0-8a55-abcd0042e0be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/gopher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/crc32" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/crc32.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/os-name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/os-name.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/osx-release" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/osx-release.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/semver" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/.bin/semver.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/address/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/address/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/address/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/address/lib/address.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/address/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/lib/_http_agent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/lib/agent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/lib/https_agent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/agentkeepalive/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/implementation.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/implementation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/index.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/optional.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register-shim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/bluebird.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/bluebird.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/es6-promise.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/es6-promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/lie.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/lie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/native-promise-only.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/native-promise-only.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/pinkie.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/pinkie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/promise.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/q.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/q.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/rsvp.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/rsvp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/vow.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/vow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/when.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/any-promise/register/when.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/LICENSE.MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/bin/runner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/lib/crc32.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/genCheckValues.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/runTests.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/testFiles/declaration.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/testFiles/helloWorld.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/testFiles/lorem.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/crc32/test/testFiles/random.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/default-user-agent/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/default-user-agent/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/default-user-agent/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/default-user-agent/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/default-user-agent/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/AUTHORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/digest-header/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/formstream/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/formstream/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/formstream/lib/formstream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/formstream/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/humanize-ms/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/humanize-ms/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/humanize-ms/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/humanize-ms/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/humanize-ms/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/.p/a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/lib/jwt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/test/test.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/jwt-simple/test/test.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/os-name/cli.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/os-name/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/os-name/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/os-name/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/cli.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/license" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/example/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/readme.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/all_bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/dash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/default_bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/dotted.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/kv_short.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/long.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/num.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/parse_modified.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/short.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/stop_early.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/unknown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/node_modules/minimist/test/whitespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/osx-release/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/readme.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/test/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/pause-stream/test/pause-end.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/bucket_image_unimage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_create_timestamp_antileech_url.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_get_bandwidth_data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_get_flux_data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_get_log_list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_prefetch_urls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/cdn_refresh_urls_dirs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/create_uptoken.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/form_upload_simple.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/http_https_proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/prefop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/resume_upload_simple.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_change_type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_chgm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_copy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_delete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_delete_after_days.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_move.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_batch_stat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_change_mime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_change_type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_copy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_delete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_delete_after_days.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_download.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_fetch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_list_prefix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_move.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_prefetch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_stat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/rs_upload_token.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/examples/video_pfop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/index.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/.bin/mime" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/.bin/mime.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/build/build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/build/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/cli.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/mime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/node_modules/mime/types.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/auth/digest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/cdn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/fop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/rpc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/storage/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/storage/resume.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/storage/rs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/qiniu/qiniu/zone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/bin/semver" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/range.bnf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/semver/semver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/LICENSE.APACHE2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/LICENSE.MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/readme.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/test/async.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/test/auto-destroy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/test/buffering.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/test/end.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/through/test/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/tunnel-agent/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/tunnel-agent/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/tunnel-agent/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/tunnel-agent/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urlencode/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urlencode/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urlencode/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urlencode/lib/urlencode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urlencode/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/lib/httpclient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/lib/httpclient2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/lib/urllib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/urllib/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/AUTHORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/benchmark/date_YYYYMMDD.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/benchmark/date_format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/benchmark/get_paramnames.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/benchmark/md5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/lib/utility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/utility/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/win-release/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/win-release/license" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/win-release/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anjiaNode/node_modules/win-release/readme.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ionic" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/11.txt" afterPath="$PROJECT_DIR$/ionic/11.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -268,14 +22,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anjiaApp/src/app/index/index.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="48" />
+            <state relative-caret-position="-7">
+              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="11.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ionic/11.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -402,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/anjiaApp/src/app/public/house-list-item/test-list-item.component.html" />
         <option value="$PROJECT_DIR$/anjiaApp/src/app/personal-center/setting/password/password.component.ts" />
         <option value="$PROJECT_DIR$/anjiaApp/src/app/personal-center/setting/password/password.component.html" />
         <option value="$PROJECT_DIR$/anjiaApp/src/app/houses/houses-details/houses-details.component.html" />
@@ -453,6 +216,7 @@
         <option value="$PROJECT_DIR$/anjiaNode/dao/housesSql.js" />
         <option value="$PROJECT_DIR$/anjiaNode/routes/users.js" />
         <option value="$PROJECT_DIR$/code_number" />
+        <option value="$PROJECT_DIR$/ionic/11.txt" />
       </list>
     </option>
   </component>
@@ -476,12 +240,13 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/anjiaApp/node_modules" />
     <handled-path value="$PROJECT_DIR$/anjiaNode/node_modules" />
+    <handled-path value="$PROJECT_DIR$/ionic/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="81" />
-    <option name="width" value="1188" />
-    <option name="height" value="1084" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -499,8 +264,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -513,6 +278,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anjia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anjia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -520,7 +299,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="E:/HTML5/ionic/liepin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
@@ -716,21 +495,8 @@
       <workItem from="1508726755097" duration="1923000" />
       <workItem from="1508729587669" duration="395000" />
       <workItem from="1508730192291" duration="3442000" />
-      <workItem from="1508737622052" duration="113000" />
-    </task>
-    <task id="LOCAL-00083" summary="个人中心switch名称错乱">
-      <created>1506499219306</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1506499219306</updated>
-    </task>
-    <task id="LOCAL-00084" summary="添加获取业主的看房信息&#10;添加判断用户是否已预约过该房源&#10;前台修改业主bootstrap样式">
-      <created>1506513473666</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1506513473666</updated>
+      <workItem from="1508737622052" duration="916000" />
+      <workItem from="1508739252878" duration="812000" />
     </task>
     <task id="LOCAL-00085" summary="业主点击同意看房">
       <created>1506514125064</created>
@@ -1061,19 +827,33 @@
       <option name="project" value="LOCAL" />
       <updated>1508737119045</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="删除模块ionic">
+      <created>1508737804538</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1508737804538</updated>
+    </task>
+    <task id="LOCAL-00133" summary="创建ionic文件夹">
+      <created>1508739291822</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1508739291822</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499615000" />
+    <option name="totallyTimeSpent" value="501230000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="81" width="1188" height="1084" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32723358" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25555557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15572916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30819672" sideWeight="0.50208336" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3035522" sideWeight="0.50208336" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5073948" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3387978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1123,8 +903,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="首页添加默认头像" />
-    <MESSAGE value="修改添加图片  样式  删除弹窗" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ionic" />
+    </ignored-roots>
     <MESSAGE value="点击search跳转" />
     <MESSAGE value="短信模板修改" />
     <MESSAGE value="简单修改" />
@@ -1148,7 +929,9 @@
     <MESSAGE value="页面加载性能优化" />
     <MESSAGE value="连接到自己的阿里云数据库" />
     <MESSAGE value="添加ionic模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加ionic模块" />
+    <MESSAGE value="删除模块ionic" />
+    <MESSAGE value="创建ionic文件夹" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建ionic文件夹" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1157,13 +940,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/anjiaApp/src/app/news-detail/news-detail.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/anjiaApp/src/app/news-detail/news-detail.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1438,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/anjiaApp/src/app/index/index.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="48" />
+        <state relative-caret-position="-7">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
@@ -1532,5 +1308,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ionic/src/app/main.ts" />
+    <entry file="file://$PROJECT_DIR$/ionic/11.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
