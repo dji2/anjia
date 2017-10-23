@@ -81,7 +81,7 @@ export class HomePage {
 
     return new Promise((resolve) => {
       setTimeout(() => {
-        console.log(this.all_houses);
+        // console.log(this.all_houses);
         this.houses.push(...this.all_houses.slice(this.pageNum * this.pageSize,(this.pageNum+1) * this.pageSize));
         this.pageNum = this.pageNum+1;
         if((this.all_houses.length / this.pageSize) <= this.pageNum -1){

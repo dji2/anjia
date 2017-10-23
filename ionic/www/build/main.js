@@ -44,7 +44,7 @@ var HouseDetailPage = (function () {
 }());
 HouseDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-house-detail',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\house-detail\house-detail.html"*/'<!--\n  Generated template for the HouseDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n      <button  (click)="back()">back</button>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\house-detail\house-detail.html"*/,
+        selector: 'page-house-detail',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\house-detail\house-detail.html"*/'<!--\n  Generated template for the HouseDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n      <button  (click)="back()">back</button>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\house-detail\house-detail.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_houses_service__["a" /* HousesService */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
@@ -100,7 +100,7 @@ var MePage = (function () {
 }());
 MePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-me',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\me\me.html"*/'<!--\n  Generated template for the MePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>me</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\me\me.html"*/,
+        selector: 'page-me',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\me\me.html"*/'<!--\n  Generated template for the MePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>me</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\me\me.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -159,7 +159,7 @@ var PersonalPage = (function () {
 }());
 PersonalPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-personal',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\personal\personal.html"*/'<!--\n  Generated template for the PersonalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        <ion-icon name="arrow-back" style="font-size: 30px; color:red;" (click)="back()"></ion-icon>\n      </ion-col>\n      <ion-col col-4>\n        <ion-label>个人中心</ion-label>\n      </ion-col>\n      <ion-col col-4 align-self-end>\n        <ion-icon name="more"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-header>\n\n<ion-content padding>\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/marty-avatar.png">\n      </ion-avatar>\n      <h2>Marty McFly</h2>\n      <p>November 5, 1955</p>\n    </ion-item>\n\n    <img src="img/advance-card-bttf.png">\n\n    <ion-card-content>\n      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="thumbs-up"></ion-icon>\n          <div>12 Likes</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="text"></ion-icon>\n          <div>4 Comments</div>\n        </button>\n      </ion-col>\n      <ion-col center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n  <ion-list>\n    <ion-item>\n        <ion-icon name="albums" item-start></ion-icon>\n          我的简历\n        <ion-icon name="arrow-forward" item-end></ion-icon>\n    </ion-item>\n    <ion-item (click)="toSetting()">\n        <ion-icon name="settings" item-start></ion-icon>\n          设置\n        <ion-icon name="arrow-forward" item-end></ion-icon>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\personal\personal.html"*/,
+        selector: 'page-personal',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\personal\personal.html"*/'<!--\n  Generated template for the PersonalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        <ion-icon name="arrow-back" style="font-size: 30px; color:red;" (click)="back()"></ion-icon>\n      </ion-col>\n      <ion-col col-4>\n        <ion-label>个人中心</ion-label>\n      </ion-col>\n      <ion-col col-4 align-self-end>\n        <ion-icon name="more"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-header>\n\n<ion-content padding>\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/marty-avatar.png">\n      </ion-avatar>\n      <h2>Marty McFly</h2>\n      <p>November 5, 1955</p>\n    </ion-item>\n\n    <img src="img/advance-card-bttf.png">\n\n    <ion-card-content>\n      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="thumbs-up"></ion-icon>\n          <div>12 Likes</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="text"></ion-icon>\n          <div>4 Comments</div>\n        </button>\n      </ion-col>\n      <ion-col center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n  <ion-list>\n    <ion-item>\n        <ion-icon name="albums" item-start></ion-icon>\n          我的简历\n        <ion-icon name="arrow-forward" item-end></ion-icon>\n    </ion-item>\n    <ion-item (click)="toSetting()">\n        <ion-icon name="settings" item-start></ion-icon>\n          设置\n        <ion-icon name="arrow-forward" item-end></ion-icon>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\personal\personal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -220,7 +220,7 @@ var SettingPage = (function () {
 }());
 SettingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-setting',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\setting\setting.html"*/'<!--\n  Generated template for the SettingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n\n\n</ion-header>\n\n\n<ion-content padding>\n  <button ion-button color="danger" (click)="loginout()">Danger Clear</button>\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\setting\setting.html"*/,
+        selector: 'page-setting',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\setting\setting.html"*/'<!--\n  Generated template for the SettingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n\n\n</ion-header>\n\n\n<ion-content padding>\n  <button ion-button color="danger" (click)="loginout()">Danger Clear</button>\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\setting\setting.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -254,23 +254,23 @@ webpackEmptyAsyncContext.id = 118;
 
 var map = {
 	"../pages/house-detail/house-detail.module": [
-		286,
+		283,
 		4
 	],
 	"../pages/login/login.module": [
-		283,
+		284,
 		3
 	],
 	"../pages/me/me.module": [
-		284,
+		285,
 		2
 	],
 	"../pages/personal/personal.module": [
-		287,
+		286,
 		1
 	],
 	"../pages/setting/setting.module": [
-		285,
+		287,
 		0
 	]
 };
@@ -316,7 +316,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\about\about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\about\about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
 ], AboutPage);
@@ -351,7 +351,7 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\contact\contact.html"*/
+        selector: 'page-contact',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\contact\contact.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
 ], ContactPage);
@@ -441,7 +441,7 @@ var HomePage = (function () {
         console.log('Begin async operation');
         return new Promise(function (resolve) {
             setTimeout(function () {
-                console.log(_this.all_houses);
+                // console.log(this.all_houses);
                 (_a = _this.houses).push.apply(_a, _this.all_houses.slice(_this.pageNum * _this.pageSize, (_this.pageNum + 1) * _this.pageSize));
                 _this.pageNum = _this.pageNum + 1;
                 if ((_this.all_houses.length / _this.pageSize) <= _this.pageNum - 1) {
@@ -458,20 +458,17 @@ var HomePage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]) === "function" && _a || Object)
 ], HomePage.prototype, "slides", void 0);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-4>苏州</ion-col>\n        <ion-col col-4>猎聘</ion-col>\n        <ion-col col-4 align-self-end>...</ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-navbar>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-slides loop="true" autoplay="2000"  (ionSlideDidChange)="slideChanged()" #slides>\n    <ion-slide *ngFor="let item of imgs">\n      <img src="assets/images/{{item}}" alt="" (click)="showImg(item)">\n    </ion-slide>\n  </ion-slides>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="下拉刷新"\n      refreshingSpinner="circles"\n      refreshingText="小蜜正在为您加载哦...">\n\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list>\n    <ion-item-sliding *ngFor="let house of houses;trackBy: trackByHouses">\n\n      <ion-item (click)="toDetail(house)">\n        <ion-avatar item-start>\n          <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg">\n        </ion-avatar>\n        <h2>{{house.houseName}}</h2>\n        <h3>{{house.areaName}}</h3>\n        <p>{{house.address}}</p>\n      </ion-item>\n\n      <ion-item-options side="right">\n        <button ion-button color="danger" (click)="delete(house.houseId)">Delete\n          <ion-icon name="delete"></ion-icon>\n\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n\n  <!--下拉加载-->\n  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))">\n    <ion-infinite-scroll-content\n      oadingSpinner="bubbles"\n      loadingText="Loading more data...">\n\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n\n  <ion-item *ngIf="noMore">\n    没有更多房源了哦~~\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\home\home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-4>苏州</ion-col>\n        <ion-col col-4>猎聘</ion-col>\n        <ion-col col-4 align-self-end>...</ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-navbar>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-slides loop="true" autoplay="2000"  (ionSlideDidChange)="slideChanged()" #slides>\n    <ion-slide *ngFor="let item of imgs">\n      <img src="assets/images/{{item}}" alt="" (click)="showImg(item)">\n    </ion-slide>\n  </ion-slides>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="下拉刷新"\n      refreshingSpinner="circles"\n      refreshingText="小蜜正在为您加载哦...">\n\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list>\n    <ion-item-sliding *ngFor="let house of houses;trackBy: trackByHouses">\n\n      <ion-item (click)="toDetail(house)">\n        <ion-avatar item-start>\n          <img src="http://owhah4u2f.bkt.clouddn.com/images/houses/{{house.houseId}}/1.jpg">\n        </ion-avatar>\n        <h2>{{house.houseName}}</h2>\n        <h3>{{house.areaName}}</h3>\n        <p>{{house.address}}</p>\n      </ion-item>\n\n      <ion-item-options side="right">\n        <button ion-button color="danger" (click)="delete(house.houseId)">Delete\n          <ion-icon name="delete"></ion-icon>\n\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n\n  <!--下拉加载-->\n  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))">\n    <ion-infinite-scroll-content\n      oadingSpinner="bubbles"\n      loadingText="Loading more data...">\n\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n\n  <ion-item *ngIf="noMore">\n    没有更多房源了哦~~\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\home\home.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_houses_service__["a" /* HousesService */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_houses_service__["a" /* HousesService */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_houses_service__["a" /* HousesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_houses_service__["a" /* HousesService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" && _f || Object])
 ], HomePage);
 
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -705,11 +702,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
+                    { loadChildren: '../pages/house-detail/house-detail.module#HouseDetailPageModule', name: 'HouseDetailPage', segment: 'house-detail', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/me/me.module#MePageModule', name: 'MePage', segment: 'me', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/house-detail/house-detail.module#HouseDetailPageModule', name: 'HouseDetailPage', segment: 'house-detail', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/personal/personal.module#PersonalPageModule', name: 'PersonalPage', segment: 'personal', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/personal/personal.module#PersonalPageModule', name: 'PersonalPage', segment: 'personal', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -802,7 +799,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\app\app.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\app\app.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
@@ -855,7 +852,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\tabs\tabs.html"*/'<ion-tabs #rootTabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Me" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\tabs\tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\tabs\tabs.html"*/'<ion-tabs #rootTabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Me" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], TabsPage);
@@ -976,7 +973,7 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"E:\HTML5\ionic\liepin\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-12 class="login-title">\n        猎聘同道\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <form  [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" novalidate>\n          <ion-item [class.error]="!username.valid && username.touched">\n            <ion-input type="tel" placeholder="请输入用户名"  [formControl]="username" clearInput=true></ion-input>\n          </ion-item>\n          <ion-label *ngIf="username.hasError(\'required\') && username.touched" class="error-message">* 请输入用户名</ion-label>\n          <ion-label *ngIf="(username.hasError(\'minlength\')||username.hasError(\'maxlength\')||username.hasError(\'pattern\')) && username.touched" class="error-message">* 请输入正确的电话号码</ion-label>\n          <ion-item>\n            <ion-input type="password" placeholder="请输入密码"  [formControl]="password" clearInput=true></ion-input>\n          </ion-item>\n          <ion-label *ngIf="password.hasError(\'required\') && password.touched" class="error-message">* 请输入密码</ion-label>\n          <ion-label *ngIf="(password.hasError(\'minlength\')) && password.touched" class="error-message">* 密码长度最少为六位</ion-label>\n          <button ion-button block color="secondary" type="submit" [disabled]="!loginForm.valid">登录</button>\n        </form>\n\n      </ion-col>\n      <!--end form-->\n      <ion-col col-6>\n        <a href="#">忘记密码 ？</a>\n      </ion-col>\n      <ion-col col-6 style="text-align: right">\n        <a href="#">通过验证码登录</a>\n      </ion-col>\n    </ion-row>\n\n\n  </ion-grid>\n\n  <ion-footer >\n    <ion-toolbar style="background-color: white !important;">\n      <p style="text-align: center;">\n        没有账号 ？ <a href="#">立即注册</a>\n      </p>\n\n    </ion-toolbar>\n  </ion-footer>\n\n</ion-content>\n'/*ion-inline-end:"E:\HTML5\ionic\liepin\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"E:\anjia921\anjia\ionic\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-12 class="login-title">\n        猎聘同道\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <form  [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" novalidate>\n          <ion-item [class.error]="!username.valid && username.touched">\n            <ion-input type="tel" placeholder="请输入用户名"  [formControl]="username" clearInput=true></ion-input>\n          </ion-item>\n          <ion-label *ngIf="username.hasError(\'required\') && username.touched" class="error-message">* 请输入用户名</ion-label>\n          <ion-label *ngIf="(username.hasError(\'minlength\')||username.hasError(\'maxlength\')||username.hasError(\'pattern\')) && username.touched" class="error-message">* 请输入正确的电话号码</ion-label>\n          <ion-item>\n            <ion-input type="password" placeholder="请输入密码"  [formControl]="password" clearInput=true></ion-input>\n          </ion-item>\n          <ion-label *ngIf="password.hasError(\'required\') && password.touched" class="error-message">* 请输入密码</ion-label>\n          <ion-label *ngIf="(password.hasError(\'minlength\')) && password.touched" class="error-message">* 密码长度最少为六位</ion-label>\n          <button ion-button block color="secondary" type="submit" [disabled]="!loginForm.valid">登录</button>\n        </form>\n\n      </ion-col>\n      <!--end form-->\n      <ion-col col-6>\n        <a href="#">忘记密码 ？</a>\n      </ion-col>\n      <ion-col col-6 style="text-align: right">\n        <a href="#">通过验证码登录</a>\n      </ion-col>\n    </ion-row>\n\n\n  </ion-grid>\n\n  <ion-footer >\n    <ion-toolbar style="background-color: white !important;">\n      <p style="text-align: center;">\n        没有账号 ？ <a href="#">立即注册</a>\n      </p>\n\n    </ion-toolbar>\n  </ion-footer>\n\n</ion-content>\n'/*ion-inline-end:"E:\anjia921\anjia\ionic\src\pages\login\login.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_4__providers_users_service__["a" /* UsersService */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
